@@ -8723,7 +8723,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal('form-mo
 document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id);}));
 
 // Backup helpers
-window.exportJSON=()=>{ exportJSON(); }; // redirect to full exportJSON that includes categories
 // Legacy importJSON handler removed in v4.5.1; the compatible importJSON function below supports both array-only and backup-object JSON files.
 
 
@@ -8953,20 +8952,36 @@ function clearForm(){
 }
 
 function exportJSON(){
-  const backup = {
-    version:'y90-publication-database-v3',
-    exportedAt:new Date().toISOString(),
-    categories:ALL_CATEGORIES,
-    pdfFolderUrl:pdfFolderUrl,
-    publications:publications
-  };
-  const b=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(b);
-  a.download=`y90_database_backup_${new Date().toISOString().slice(0,10)}.json`;
-  document.body.appendChild(a); a.click(); a.remove();
-  URL.revokeObjectURL(a.href);
-  showToast('JSON backup exported.','success');
+  try {
+    const backup = {
+      version: 'y90-publication-database-v5',
+      exportedAt: new Date().toISOString(),
+      categories: Array.isArray(ALL_CATEGORIES) ? ALL_CATEGORIES : [],
+      pdfFolderUrl: pdfFolderUrl || '',
+      publications: Array.isArray(publications) ? publications : []
+    };
+
+    const blob = new Blob(
+      [JSON.stringify(backup, null, 2)],
+      { type: 'application/json;charset=utf-8' }
+    );
+
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `y90_database_backup_${new Date().toISOString().slice(0,10)}.json`;
+    a.style.display = 'none';
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    showToast('JSON backup exported.', 'success');
+  } catch (err) {
+    console.error('Export JSON failed:', err);
+    showToast('Export JSON failed. Please check browser console.', 'error');
+  }
 }
 
 function importJSONFile(input){
