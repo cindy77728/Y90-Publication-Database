@@ -12400,7 +12400,6 @@ function saveGitHubSettingsFromForm() {
 async function saveToGitHub() {
   const s = getGitHubSettings();
 
-  // First time: no settings yet — open setup modal
   if (!s.token || !s.owner || !s.repo) {
     openGitHubSettingsModal();
     return;
@@ -12413,9 +12412,14 @@ async function saveToGitHub() {
 
   try {
     const filePath = 'publications.json';
+    const headers = {
+      Authorization: `token ${s.token}`,
+      Accept: 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json'
+    };
     const apiBase = `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${filePath}`;
 
-    // Build the JSON payload (same format as exportJSON)
+    // Build payload
     const payload = {
       version: 'y90-publication-database-v3',
       savedAt: new Date().toISOString(),
@@ -12423,45 +12427,76 @@ async function saveToGitHub() {
       pdfFolderUrl: pdfFolderUrl,
       publications: publications.map(p => { const c = {...p}; delete c.pdfData; return c; })
     };
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
 
-    // Get current file SHA (needed for updates)
-    let sha = null;
+    // Encode to base64 safely (handles Unicode/Chinese characters)
+    const jsonStr = JSON.stringify(payload, null, 2);
+    const bytes = new TextEncoder().encode(jsonStr);
+    let binary = '';
+    bytes.forEach(b => binary += String.fromCharCode(b));
+    const encoded = btoa(binary);
+
+    // Get file SHA using the Git refs API (works regardless of file size)
+    // First get the latest commit SHA on the branch
+    let fileSha = null;
     try {
-      const res = await fetch(`${apiBase}?ref=${s.branch}`, {
-        headers: { Authorization: `token ${s.token}`, Accept: 'application/vnd.github.v3+json' }
-      });
-      if (res.ok) { const d = await res.json(); sha = d.sha; }
-    } catch(_) {}
+      const refRes = await fetch(
+        `https://api.github.com/repos/${s.owner}/${s.repo}/git/ref/heads/${s.branch}`,
+        { headers }
+      );
+      if (!refRes.ok) {
+        const e = await refRes.json().catch(()=>({}));
+        if (refRes.status === 401) throw new Error('Token rejected by GitHub — please check your token in settings.');
+        if (refRes.status === 404) throw new Error(`Branch "${s.branch}" not found. Check repo name and branch in settings.`);
+        throw new Error(e.message || `GitHub error ${refRes.status}`);
+      }
+      const refData = await refRes.json();
+      const commitSha = refData.object.sha;
 
-    // Commit the file
-    const body = {
-      message: `Update publications.json — ${new Date().toLocaleString()}`,
-      content,
-      branch: s.branch,
-      ...(sha ? { sha } : {})
-    };
+      // Get the tree for that commit to find the file blob SHA
+      const commitRes = await fetch(
+        `https://api.github.com/repos/${s.owner}/${s.repo}/git/commits/${commitSha}`,
+        { headers }
+      );
+      const commitData = await commitRes.json();
+      const treeSha = commitData.tree.sha;
 
+      const treeRes = await fetch(
+        `https://api.github.com/repos/${s.owner}/${s.repo}/git/trees/${treeSha}`,
+        { headers }
+      );
+      const treeData = await treeRes.json();
+      const fileEntry = treeData.tree.find(f => f.path === filePath);
+      if (fileEntry) fileSha = fileEntry.sha;
+    } catch(e) {
+      if (e.message.includes('Token') || e.message.includes('Branch') || e.message.includes('GitHub error')) throw e;
+      // If SHA lookup fails just proceed without it (will fail if file exists, but we try)
+    }
+
+    // Commit the file via Contents API
     const putRes = await fetch(apiBase, {
       method: 'PUT',
-      headers: {
-        Authorization: `token ${s.token}`,
-        Accept: 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
+      headers,
+      body: JSON.stringify({
+        message: `Update publications.json — ${new Date().toLocaleString()}`,
+        content: encoded,
+        branch: s.branch,
+        ...(fileSha ? { sha: fileSha } : {})
+      })
     });
 
     if (!putRes.ok) {
       const err = await putRes.json().catch(() => ({}));
-      if (putRes.status === 401) throw new Error('Invalid token — check your GitHub token in ⚙️ GitHub Settings.');
-      if (putRes.status === 404) throw new Error('Repo or file not found — check owner/repo name in ⚙️ GitHub Settings.');
+      if (putRes.status === 401) throw new Error('Token rejected — check your GitHub token in settings.');
+      if (putRes.status === 404) throw new Error('Repo not found — check owner/repo name in settings.');
+      if (putRes.status === 409) throw new Error('Conflict — please try again.');
+      if (putRes.status === 422) throw new Error('SHA mismatch — please refresh the page and try again.');
       throw new Error(err.message || `GitHub API error ${putRes.status}`);
     }
 
-    showToast('✅ Saved to GitHub! Changes are live.', 'success');
+    showToast('✅ Saved to GitHub! Your changes are now live.', 'success');
   } catch (e) {
-    showToast('❌ ' + e.message, 'error');
+    showToast('❌ Save failed: ' + e.message, 'error');
+    console.error('saveToGitHub error:', e);
   } finally {
     btn.textContent = originalText;
     btn.disabled = false;
