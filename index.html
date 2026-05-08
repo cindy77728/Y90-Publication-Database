@@ -896,7 +896,7 @@ td.td-findings{
   <div class="header-top">
     <div class="logo-area">
       <h1>Y<span>90</span> Publication Database</h1>
-      <p>Radioembolization Literature Management · v5.0.1 · Manual Subcategory Support + paper1/paper2 import</p>
+      <p>Radioembolization Literature Management · v5.5 · Hard Category Save Fix</p>
     </div>
     <div class="header-actions">
       <div class="header-stats">
@@ -1198,18 +1198,11 @@ const DEFAULT_CATEGORIES = [
   'TRACE'
 ];
 let ALL_CATEGORIES = JSON.parse(localStorage.getItem('y90categories') || 'null') || [...DEFAULT_CATEGORIES];
-function getLocalModifiedAt(){
-  return Number(localStorage.getItem('y90dbLastModifiedAt') || 0);
-}
-function markLocalModified(){
-  localStorage.setItem('y90dbLastModifiedAt', String(Date.now()));
-}
-function saveCategories(markModified = true){
+function saveCategories(){
   ALL_CATEGORIES = [...new Set(ALL_CATEGORIES.map(c => String(c).trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
   localStorage.setItem('y90categories', JSON.stringify(ALL_CATEGORIES));
-  if(markModified) markLocalModified();
 }
-saveCategories(false);
+saveCategories();
 
 // ══════════════════════════════════════════════════════════ DATA
 let publications = JSON.parse(localStorage.getItem('y90db') || '[]');
@@ -7184,10 +7177,7 @@ function mergeImportedPapersLabMetastases20260507(){
 }
 mergeImportedPapersLabMetastases20260507();
 
-function save(markModified = true) {
-  localStorage.setItem('y90db', JSON.stringify(publications));
-  if(markModified) markLocalModified();
-}
+function save() { localStorage.setItem('y90db', JSON.stringify(publications)); }
 
 
 // ══════════════════════════════════════════════════════════
@@ -8735,7 +8725,8 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal('form-mo
 document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id);}));
 
 // Backup helpers
-window.exportJSON=()=>{const b=new Blob([JSON.stringify(publications,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`y90_backup_${new Date().toISOString().slice(0,10)}.json`;a.click();};
+// v5.4: old array-only export disabled. The final exportJSON override near the end writes the real GitHub source file.
+// window.exportJSON = legacy array-only backup export;
 // Legacy importJSON handler removed in v4.5.1; the compatible importJSON function below supports both array-only and backup-object JSON files.
 
 
@@ -8965,21 +8956,7 @@ function clearForm(){
 }
 
 function exportJSON(){
-  const backup = {
-    version:'y90-publication-database-v5.2',
-    exportedAt:new Date().toISOString(),
-    categories:ALL_CATEGORIES,
-    pdfFolderUrl:pdfFolderUrl,
-    publications:publications
-  };
-  const b=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(b);
-  // Important: GitHub Pages reads exactly this filename. Upload this file to replace the old publications.json.
-  a.download='publications.json';
-  document.body.appendChild(a); a.click(); a.remove();
-  URL.revokeObjectURL(a.href);
-  showToast('GitHub-ready publications.json exported. Upload it to GitHub to replace the existing publications.json.','success');
+  return exportGitHubPublicationsJSON();
 }
 
 function importJSONFile(input){
@@ -12315,9 +12292,8 @@ function savePublication(){
   save(); closeModal('form-modal'); applyFilters(); renderDashboard(); buildCategoryStrip();
 }
 
-// v5.2 — Safer GitHub/local persistence logic.
-// Local edits should survive refresh. GitHub publications.json is loaded only when it is newer
-// than the browser's locally modified database, or when no local database exists.
+// v5.1 — GitHub publications.json is the source of truth.
+// This prevents a new index.html upload from restoring old hardcoded categories.
 async function loadGitHubPublicationsJsonAsSourceOfTruth(){
   try{
     const resp = await fetch('publications.json?ts=' + Date.now(), { cache: 'no-store' });
@@ -12325,16 +12301,6 @@ async function loadGitHubPublicationsJsonAsSourceOfTruth(){
     const data = await resp.json();
     const incomingPublications = Array.isArray(data) ? data : data.publications;
     if(!Array.isArray(incomingPublications) || !incomingPublications.length) return false;
-
-    const localPublications = JSON.parse(localStorage.getItem('y90db') || '[]');
-    const localModifiedAt = getLocalModifiedAt();
-    const githubExportedAt = Array.isArray(data) ? 0 : (Date.parse(data.exportedAt || '') || 0);
-
-    // If the browser has newer manual edits, do NOT overwrite them on refresh.
-    // This is the key fix for category edits disappearing after page refresh.
-    if(Array.isArray(localPublications) && localPublications.length && localModifiedAt && localModifiedAt > githubExportedAt){
-      return false;
-    }
 
     publications = incomingPublications.map(p => ({
       ...p,
@@ -12362,9 +12328,8 @@ async function loadGitHubPublicationsJsonAsSourceOfTruth(){
       if(p.primaryCategory && !ALL_CATEGORIES.includes(p.primaryCategory)) ALL_CATEGORIES.push(p.primaryCategory);
     });
 
-    saveCategories(false);
-    save(false);
-    localStorage.setItem('y90dbLastLoadedFromGitHubAt', String(Date.now()));
+    saveCategories();
+    save();
     return true;
   }catch(e){
     console.warn('Could not load publications.json as source of truth. Falling back to local browser data.', e);
@@ -12372,12 +12337,99 @@ async function loadGitHubPublicationsJsonAsSourceOfTruth(){
   }
 }
 
+
+// ══════════════════════════════════════════════════════════
+// v5.5 — FINAL SAVE / EXPORT OVERRIDES
+// This block must stay at the very end because older duplicate helpers exist above.
+function buildGitHubPublicationsPayload(){
+  const cleanPublications = (publications || []).map(p => {
+    const primary = p.primaryCategory || (Array.isArray(p.categories) && p.categories[0]) || '';
+    const cats = primary
+      ? [primary, ...[...new Set((p.categories || []).filter(c => c && c !== primary))]]
+      : [...new Set((p.categories || []).filter(Boolean))];
+    return {
+      ...p,
+      categories: cats,
+      primaryCategory: primary,
+      reviewStatus: p.reviewStatus || p.review || 'AI Draft'
+    };
+  });
+
+  const allCats = [...new Set([
+    ...(Array.isArray(ALL_CATEGORIES) ? ALL_CATEGORIES : []),
+    ...cleanPublications.flatMap(p => p.categories || []),
+    ...cleanPublications.map(p => p.primaryCategory).filter(Boolean)
+  ].filter(Boolean))];
+
+  return {
+    version: 'y90-publication-database-v5.5',
+    exportedAt: new Date().toISOString(),
+    categories: allCats,
+    pdfFolderUrl: pdfFolderUrl || '',
+    publications: cleanPublications
+  };
+}
+
+function exportGitHubPublicationsJSON(){
+  const payload = buildGitHubPublicationsPayload();
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'publications.json';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(a.href);
+  if(typeof showToast === 'function') showToast('✅ Exported publications.json. Upload this file to GitHub and replace the old one.', 'success');
+}
+
+// Hard override: make sure any older duplicate export helper cannot win.
+window.exportJSON = exportGitHubPublicationsJSON;
+
+function forceSaveCurrentDatabase(){
+  try{
+    const payload = buildGitHubPublicationsPayload();
+    publications = payload.publications;
+    ALL_CATEGORIES = payload.categories;
+    localStorage.setItem('y90db', JSON.stringify(publications));
+    localStorage.setItem('y90categories', JSON.stringify(ALL_CATEGORIES));
+    localStorage.setItem('y90LastManualSaveAt', String(Date.now()));
+  }catch(e){
+    console.warn('Could not force-save current database:', e);
+  }
+}
+
+const __originalSavePublication_v55 = savePublication;
+function savePublicationHardWrapped(){
+  if(typeof __originalSavePublication_v55 === 'function'){
+    __originalSavePublication_v55.apply(this, arguments);
+  }
+  forceSaveCurrentDatabase();
+}
+// Hard override both the global property and the top-level function binding.
+// Inline onclick handlers may resolve either depending on browser quirks.
+savePublication = savePublicationHardWrapped;
+window.savePublication = savePublicationHardWrapped;
+
+// Hard override export in the same way, so the toolbar always downloads the real GitHub source file.
+exportJSON = exportGitHubPublicationsJSON;
+window.exportJSON = exportGitHubPublicationsJSON;
+
+window.addEventListener('beforeunload', () => {
+  try { forceSaveCurrentDatabase(); } catch(e) {}
+});
+
 async function bootY90Database(){
   const loadedFromGitHubJson = await loadGitHubPublicationsJsonAsSourceOfTruth();
   if(!loadedFromGitHubJson){
     stabilizeDatasetBeforeInit();
   }
   init();
+  try {
+    const footer = document.querySelector('footer p');
+    if(footer && !footer.textContent.includes('v5.5')) footer.textContent += ' · running v5.5 hard-save';
+    console.info('Y90 Database running v5.5 hard category save fix');
+  } catch(e) {}
 }
 bootY90Database();
 
