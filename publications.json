@@ -1,10 +1,8 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-08T12:46:56.356Z",
+  "savedAt": "2026-05-08T12:56:48.363Z",
   "categories": [
-    "AAAAAAA",
     "Asian Data",
-    "BBB",
     "Carbon",
     "Chemotherapy",
     "Combination Therapy",
@@ -44,7 +42,7 @@
     "SBRT",
     "TARGET"
   ],
-  "pdfFolderUrl": "",
+  "pdfFolderUrl": "https://bostonscientific-my.sharepoint.com/:f:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper?csf=1&web=1&e=rNVSPM",
   "publications": [
     {
       "id": 2026050905,
