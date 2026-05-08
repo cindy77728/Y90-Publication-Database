@@ -8723,7 +8723,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal('form-mo
 document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id);}));
 
 // Backup helpers
-window.exportJSON=()=>{const b=new Blob([JSON.stringify(publications,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`y90_backup_${new Date().toISOString().slice(0,10)}.json`;a.click();};
+window.exportJSON=()=>{ exportJSON(); }; // redirect to full exportJSON that includes categories
 // Legacy importJSON handler removed in v4.5.1; the compatible importJSON function below supports both array-only and backup-object JSON files.
 
 
@@ -8992,7 +8992,14 @@ function importJSON(s){
     saveCategories(); save();
     activeCategory=''; smartFilterActive=false; smartFilteredIds=[];
     populateCategoryFilter(); buildCategoryStrip(); buildCatSelectGrid(); populateCountryFilter(); applyFilters(); renderDashboard();
-    showToast('JSON imported successfully.','success');
+    showToast('JSON imported successfully. Saving to GitHub…','success');
+    // Auto-save to GitHub so changes persist on next page load
+    const ghSettings = getGitHubSettings();
+    if(ghSettings.token && ghSettings.owner && ghSettings.repo){
+      setTimeout(saveToGitHub, 800);
+    } else {
+      showToast('Imported locally. Click ☁️ Save to GitHub to make it permanent.','success');
+    }
   }catch(e){showToast('Invalid JSON backup file.','error');}
 }
 
