@@ -12471,7 +12471,7 @@ async function saveToGitHub() {
 </script>
 
 <!-- ══ GITHUB SETTINGS MODAL ══ -->
-<div class="modal-overlay" id="github-settings-modal" style="display:none">
+<div class="modal-overlay" id="github-settings-modal" onclick="if(event.target===this)closeModal('github-settings-modal')">
   <div class="modal" style="max-width:520px">
     <div class="modal-header">
       <h2 class="modal-title">☁️ GitHub Save Settings</h2>
