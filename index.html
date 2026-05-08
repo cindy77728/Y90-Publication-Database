@@ -896,7 +896,7 @@ td.td-findings{
   <div class="header-top">
     <div class="logo-area">
       <h1>Y<span>90</span> Publication Database</h1>
-      <p>Radioembolization Literature Management · v5.5 · Hard Category Save Fix</p>
+      <p>Radioembolization Literature Management · v5.0.1 · Manual Subcategory Support + paper1/paper2 import</p>
     </div>
     <div class="header-actions">
       <div class="header-stats">
@@ -907,6 +907,7 @@ td.td-findings{
         <div class="stat-pill">PMC Free: <strong id="stat-pmc" style="color:#4cca5a">0</strong></div>
       </div>
       <button class="btn btn-secondary" onclick="openCategoryManager()">🏷️ Manage Categories</button>
+      <button class="btn btn-green" onclick="saveToGitHub()" id="github-save-btn" title="Save all changes directly to GitHub">☁️ Save to GitHub</button>
       <button class="btn btn-blue" onclick="exportJSON()">💾 Export JSON</button>
       <button class="btn btn-secondary" onclick="document.getElementById('json-import-input').click()">📥 Import JSON</button>
       <button class="btn btn-secondary" onclick="setPdfFolderUrl()">📁 Set PDF Folder</button>
@@ -7403,13 +7404,10 @@ function resetAllSubcategoriesNow(){
   showToast('All subcategories were removed from publication records.','success');
 }
 function autoResetOldSubcategoriesOnce(){
-  const key = 'y90SubcategoryManualModeReset_v20260507_1515';
-  if(localStorage.getItem(key) === 'done') return;
-  const hasSubcats = (ALL_CATEGORIES || []).some(c => String(c).includes('/')) || (publications || []).some(p => String(p.primaryCategory || '').includes('/') || (p.categories || []).some(c => String(c).includes('/')));
-  if(hasSubcats){
-    flattenAllSubcategoriesInData();
-    localStorage.setItem(key, 'done');
-  }
+  // Disabled: this function was forcibly remapping and dropping user-defined categories
+  // (e.g. HCC, Key Study, Real-world evidence) on every fresh load. Categories are now
+  // preserved as-is from publications.json and localStorage.
+  return;
 }
 
 // ══════════════════════════════════════════════════════════ INIT
@@ -8725,8 +8723,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal('form-mo
 document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id);}));
 
 // Backup helpers
-// v5.4: old array-only export disabled. The final exportJSON override near the end writes the real GitHub source file.
-// window.exportJSON = legacy array-only backup export;
+window.exportJSON=()=>{const b=new Blob([JSON.stringify(publications,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`y90_backup_${new Date().toISOString().slice(0,10)}.json`;a.click();};
 // Legacy importJSON handler removed in v4.5.1; the compatible importJSON function below supports both array-only and backup-object JSON files.
 
 
@@ -8956,7 +8953,20 @@ function clearForm(){
 }
 
 function exportJSON(){
-  return exportGitHubPublicationsJSON();
+  const backup = {
+    version:'y90-publication-database-v3',
+    exportedAt:new Date().toISOString(),
+    categories:ALL_CATEGORIES,
+    pdfFolderUrl:pdfFolderUrl,
+    publications:publications
+  };
+  const b=new Blob([JSON.stringify(backup,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(b);
+  a.download=`y90_database_backup_${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a); a.click(); a.remove();
+  URL.revokeObjectURL(a.href);
+  showToast('JSON backup exported.','success');
 }
 
 function importJSONFile(input){
@@ -12337,102 +12347,166 @@ async function loadGitHubPublicationsJsonAsSourceOfTruth(){
   }
 }
 
-
-// ══════════════════════════════════════════════════════════
-// v5.5 — FINAL SAVE / EXPORT OVERRIDES
-// This block must stay at the very end because older duplicate helpers exist above.
-function buildGitHubPublicationsPayload(){
-  const cleanPublications = (publications || []).map(p => {
-    const primary = p.primaryCategory || (Array.isArray(p.categories) && p.categories[0]) || '';
-    const cats = primary
-      ? [primary, ...[...new Set((p.categories || []).filter(c => c && c !== primary))]]
-      : [...new Set((p.categories || []).filter(Boolean))];
-    return {
-      ...p,
-      categories: cats,
-      primaryCategory: primary,
-      reviewStatus: p.reviewStatus || p.review || 'AI Draft'
-    };
-  });
-
-  const allCats = [...new Set([
-    ...(Array.isArray(ALL_CATEGORIES) ? ALL_CATEGORIES : []),
-    ...cleanPublications.flatMap(p => p.categories || []),
-    ...cleanPublications.map(p => p.primaryCategory).filter(Boolean)
-  ].filter(Boolean))];
-
-  return {
-    version: 'y90-publication-database-v5.5',
-    exportedAt: new Date().toISOString(),
-    categories: allCats,
-    pdfFolderUrl: pdfFolderUrl || '',
-    publications: cleanPublications
-  };
-}
-
-function exportGitHubPublicationsJSON(){
-  const payload = buildGitHubPublicationsPayload();
-  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'publications.json';
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(a.href);
-  if(typeof showToast === 'function') showToast('✅ Exported publications.json. Upload this file to GitHub and replace the old one.', 'success');
-}
-
-// Hard override: make sure any older duplicate export helper cannot win.
-window.exportJSON = exportGitHubPublicationsJSON;
-
-function forceSaveCurrentDatabase(){
-  try{
-    const payload = buildGitHubPublicationsPayload();
-    publications = payload.publications;
-    ALL_CATEGORIES = payload.categories;
-    localStorage.setItem('y90db', JSON.stringify(publications));
-    localStorage.setItem('y90categories', JSON.stringify(ALL_CATEGORIES));
-    localStorage.setItem('y90LastManualSaveAt', String(Date.now()));
-  }catch(e){
-    console.warn('Could not force-save current database:', e);
-  }
-}
-
-const __originalSavePublication_v55 = savePublication;
-function savePublicationHardWrapped(){
-  if(typeof __originalSavePublication_v55 === 'function'){
-    __originalSavePublication_v55.apply(this, arguments);
-  }
-  forceSaveCurrentDatabase();
-}
-// Hard override both the global property and the top-level function binding.
-// Inline onclick handlers may resolve either depending on browser quirks.
-savePublication = savePublicationHardWrapped;
-window.savePublication = savePublicationHardWrapped;
-
-// Hard override export in the same way, so the toolbar always downloads the real GitHub source file.
-exportJSON = exportGitHubPublicationsJSON;
-window.exportJSON = exportGitHubPublicationsJSON;
-
-window.addEventListener('beforeunload', () => {
-  try { forceSaveCurrentDatabase(); } catch(e) {}
-});
-
 async function bootY90Database(){
   const loadedFromGitHubJson = await loadGitHubPublicationsJsonAsSourceOfTruth();
   if(!loadedFromGitHubJson){
     stabilizeDatasetBeforeInit();
   }
   init();
-  try {
-    const footer = document.querySelector('footer p');
-    if(footer && !footer.textContent.includes('v5.5')) footer.textContent += ' · running v5.5 hard-save';
-    console.info('Y90 Database running v5.5 hard category save fix');
-  } catch(e) {}
 }
 bootY90Database();
 
+// ══════════════════════════════════════════════════════════
+// ☁️ SAVE TO GITHUB — commits publications.json directly via GitHub API
+// Settings stored in localStorage: y90ghToken, y90ghOwner, y90ghRepo, y90ghBranch
+// ══════════════════════════════════════════════════════════
+
+function getGitHubSettings() {
+  return {
+    token:  localStorage.getItem('y90ghToken')  || '',
+    owner:  localStorage.getItem('y90ghOwner')  || '',
+    repo:   localStorage.getItem('y90ghRepo')   || '',
+    branch: localStorage.getItem('y90ghBranch') || 'main',
+  };
+}
+
+function saveGitHubSettings({ token, owner, repo, branch }) {
+  localStorage.setItem('y90ghToken',  token.trim());
+  localStorage.setItem('y90ghOwner',  owner.trim());
+  localStorage.setItem('y90ghRepo',   repo.trim());
+  localStorage.setItem('y90ghBranch', branch.trim() || 'main');
+}
+
+function openGitHubSettingsModal() {
+  const s = getGitHubSettings();
+  document.getElementById('gh-token').value  = s.token;
+  document.getElementById('gh-owner').value  = s.owner;
+  document.getElementById('gh-repo').value   = s.repo;
+  document.getElementById('gh-branch').value = s.branch;
+  openModal('github-settings-modal');
+}
+
+function saveGitHubSettingsFromForm() {
+  saveGitHubSettings({
+    token:  document.getElementById('gh-token').value,
+    owner:  document.getElementById('gh-owner').value,
+    repo:   document.getElementById('gh-repo').value,
+    branch: document.getElementById('gh-branch').value,
+  });
+  closeModal('github-settings-modal');
+  showToast('GitHub settings saved. Click ☁️ Save to GitHub to push your changes.', 'success');
+}
+
+async function saveToGitHub() {
+  const s = getGitHubSettings();
+
+  // First time: no settings yet — open setup modal
+  if (!s.token || !s.owner || !s.repo) {
+    openGitHubSettingsModal();
+    return;
+  }
+
+  const btn = document.getElementById('github-save-btn');
+  const originalText = btn.textContent;
+  btn.textContent = '⏳ Saving…';
+  btn.disabled = true;
+
+  try {
+    const filePath = 'publications.json';
+    const apiBase = `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${filePath}`;
+
+    // Build the JSON payload (same format as exportJSON)
+    const payload = {
+      version: 'y90-publication-database-v3',
+      savedAt: new Date().toISOString(),
+      categories: ALL_CATEGORIES,
+      pdfFolderUrl: pdfFolderUrl,
+      publications: publications.map(p => { const c = {...p}; delete c.pdfData; return c; })
+    };
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+
+    // Get current file SHA (needed for updates)
+    let sha = null;
+    try {
+      const res = await fetch(`${apiBase}?ref=${s.branch}`, {
+        headers: { Authorization: `token ${s.token}`, Accept: 'application/vnd.github.v3+json' }
+      });
+      if (res.ok) { const d = await res.json(); sha = d.sha; }
+    } catch(_) {}
+
+    // Commit the file
+    const body = {
+      message: `Update publications.json — ${new Date().toLocaleString()}`,
+      content,
+      branch: s.branch,
+      ...(sha ? { sha } : {})
+    };
+
+    const putRes = await fetch(apiBase, {
+      method: 'PUT',
+      headers: {
+        Authorization: `token ${s.token}`,
+        Accept: 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (!putRes.ok) {
+      const err = await putRes.json().catch(() => ({}));
+      if (putRes.status === 401) throw new Error('Invalid token — check your GitHub token in ⚙️ GitHub Settings.');
+      if (putRes.status === 404) throw new Error('Repo or file not found — check owner/repo name in ⚙️ GitHub Settings.');
+      throw new Error(err.message || `GitHub API error ${putRes.status}`);
+    }
+
+    showToast('✅ Saved to GitHub! Changes are live.', 'success');
+  } catch (e) {
+    showToast('❌ ' + e.message, 'error');
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }
+}
+
 </script>
+
+<!-- ══ GITHUB SETTINGS MODAL ══ -->
+<div class="modal-overlay" id="github-settings-modal" style="display:none">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-header">
+      <h2 class="modal-title">☁️ GitHub Save Settings</h2>
+      <button class="icon-btn" onclick="closeModal('github-settings-modal')">✕</button>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <p style="color:#ccc;font-size:14px;margin:0">
+        One-time setup. Your token is stored only in this browser and never sent anywhere except GitHub's API.
+      </p>
+      <div style="background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:12px;font-size:13px;color:#aad4ff;line-height:1.6">
+        <strong>How to get a token:</strong><br>
+        GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token<br>
+        → Select scope: <strong>repo</strong> → Copy the token and paste below.
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Personal Access Token
+        <input id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="width:100%;margin-top:6px;font-family:'DM Mono',monospace;font-size:13px">
+      </label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label style="color:#ccc;font-size:13px;font-weight:700">GitHub Username (owner)
+          <input id="gh-owner" type="text" placeholder="your-username" style="width:100%;margin-top:6px">
+        </label>
+        <label style="color:#ccc;font-size:13px;font-weight:700">Repository Name
+          <input id="gh-repo" type="text" placeholder="your-repo-name" style="width:100%;margin-top:6px">
+        </label>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Branch (usually main or master)
+        <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
+      </label>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
+        <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings & Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
