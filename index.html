@@ -12412,8 +12412,9 @@ async function saveToGitHub() {
 
   try {
     const filePath = 'publications.json';
+    // Fine-grained tokens use 'Bearer', classic tokens use 'token' — both work with 'Bearer'
     const headers = {
-      Authorization: `token ${s.token}`,
+      Authorization: `Bearer ${s.token}`,
       Accept: 'application/vnd.github.v3+json',
       'Content-Type': 'application/json'
     };
@@ -12439,14 +12440,17 @@ async function saveToGitHub() {
     // First get the latest commit SHA on the branch
     let fileSha = null;
     try {
+      console.log('saveToGitHub: fetching ref for', s.owner, s.repo, s.branch);
       const refRes = await fetch(
         `https://api.github.com/repos/${s.owner}/${s.repo}/git/ref/heads/${s.branch}`,
         { headers }
       );
+      console.log('refRes status:', refRes.status);
       if (!refRes.ok) {
         const e = await refRes.json().catch(()=>({}));
-        if (refRes.status === 401) throw new Error('Token rejected by GitHub — please check your token in settings.');
-        if (refRes.status === 404) throw new Error(`Branch "${s.branch}" not found. Check repo name and branch in settings.`);
+        console.error('refRes error body:', e);
+        if (refRes.status === 401) throw new Error('Token rejected by GitHub (401) — please check your token in settings.');
+        if (refRes.status === 404) throw new Error(`Branch "${s.branch}" or repo not found (404). Check owner/repo/branch in settings.`);
         throw new Error(e.message || `GitHub error ${refRes.status}`);
       }
       const refData = await refRes.json();
@@ -12493,8 +12497,10 @@ async function saveToGitHub() {
       throw new Error(err.message || `GitHub API error ${putRes.status}`);
     }
 
+    console.log('GitHub save SUCCESS - putRes status:', putRes.status);
     showToast('✅ Saved to GitHub! Your changes are now live.', 'success');
   } catch (e) {
+    alert('❌ Save failed:\n\n' + e.message + '\n\nCheck browser Console (F12) for details.');
     showToast('❌ Save failed: ' + e.message, 'error');
     console.error('saveToGitHub error:', e);
   } finally {
