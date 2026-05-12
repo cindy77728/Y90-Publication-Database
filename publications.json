@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-12T03:42:06.587Z",
+  "savedAt": "2026-05-12T03:51:30.359Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -6775,6 +6775,32 @@
       "categories": [
         "Dosimetry",
         "Safety"
+      ]
+    },
+    {
+      "id": 1778557878837,
+      "year": 2026,
+      "title": "Knowledge mapping of ⁹⁰Y transarterial radioembolization combined with immunotherapy in hepatocellular carcinoma: a bibl",
+      "country": "China",
+      "authors": "He SN, Zeng CH, Du RJ, et al.",
+      "journal": "Discov Oncol",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42096002/",
+      "pmcid": "",
+      "pdfUrl": "",
+      "pdfFileName": "",
+      "fullTextStatus": "paywall",
+      "fullTextNote": "",
+      "results": "• Co-citation and keyword analyses revealed three research frontiers: mechanisms of radio-immunologic synergy, optimization of treatment sequencing and dosimetry, and predictive biomarker development.\n• Future research requires more phase III trials, incorporating multi-omics technologies and individualized dosimetry models to validate survival benefits and explore more precise immuno-combination strategies.",
+      "findings": "• Co-citation and keyword analyses revealed three research frontiers: mechanisms of radio-immunologic synergy, optimization of treatment sequencing and dosimetry, and predictive biomarker development.\n• Future research requires more phase III trials, incorporating multi-omics technologies and individualized dosimetry models to validate survival benefits and explore more precise immuno-combination strategies.",
+      "notes": "",
+      "abstract": "Hepatocellular carcinoma (HCC) is a highly aggressive malignancy with substantial mortality globally. The synergistic potential between immunotherapy and yttrium-90 transarterial radioembolization (⁹⁰Y-TARE) has stimulated extensive research into HCC combined therapeutic strategies. However, a comprehensive bibliometric analysis elucidating the evolutionary trajectory, research trends, and collaborative networks within this field remains absent. Unlike conventional systematic reviews, which are inherently subjective and lack the capacity for large-scale quantitative synthesis, bibliometric analysis offers a robust, data-driven approach to construct a holistic knowledge atlas. A total of 143 relevant publications were extracted from the Web of Science Core Collection (WoSCC) database, spanning 1 January 2003 to 24 October 2025. Utilizing VOSviewer, CiteSpace, and the R package bibliometrix, a multidimensional analysis encompassing publication volume, journal impact, national/contributions, institutional collaborations, authorship networks, co-citation patterns, and keyword clustering was conducted. From 2015 to 2025, the number of publications in this field has steadily increased. The United States was the dominant contributor. Global institutional collaboration was limited, highlighting the need for multinational cooperation. Co-citation and keyword analyses revealed three research frontiers: mechanisms of radio-immunologic synergy, optimization of treatment sequencing and dosimetry, and predictive biomarker development. Future research requires more phase III trials, incorporating multi-omics technologies and individualized dosimetry models to validate survival benefits and explore more precise immuno-combination strategies.",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
+      "product": "ns",
+      "categories": [
+        "Dosimetry",
+        "HCC",
+        "Mapping / Failed Evaluation"
       ]
     }
   ]
