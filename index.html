@@ -8779,9 +8779,9 @@ async function callClaudeForFindings(text, title, mode) {
     systemPrompt = `You are a medical literature expert specialising in Y-90 radioembolization (SIRT/TARE). Summarise PubMed abstracts concisely for clinicians. Reply in plain text only, no markdown.`;
     userPrompt = `Publication title: ${title || 'Unknown'}\n\nAbstract:\n${truncated}\n\nWrite a concise summary for a clinician:\n1. Study design and patient population (1 sentence)\n2. Key results with numbers (2-3 bullet points)\n3. Main conclusion (1 sentence)\n4. Likely categories: choose from HCC, Metastases, Dosimetry, Safety/Complications, Clinical Efficacy, Mapping, Lung Shunt, PVT, Downstaging, Guidelines, Comparative, Glass vs Resin, etc.\n\nReply format:\nPubMed Abstract Key Findings\n\n[Study design sentence]\n\n• [Result with numbers]\n• [Result with numbers]\n• [Result with numbers]\n\nConclusion: [sentence]\n\nLikely categories: [list]\n\nPlease verify against the full paper before importing.`;
   } else {
-    // default: findings
-    systemPrompt = `You are a medical literature expert specialising in Y-90 radioembolization (SIRT/TARE). Extract key clinical findings from publication text for a literature database. Reply in plain text only, no markdown.`;
-    userPrompt = `Publication title: ${title || 'Unknown'}\n\nText:\n${truncated}\n\nExtract the 3-5 most important clinical findings. Include specific numbers (survival months, response rates, doses in Gy, patient counts, p-values) wherever available. Do not copy sentences verbatim — rewrite as clear, concise bullet points a clinician can scan quickly.\n\nReply format:\nKey Findings\n\n• [specific finding with numbers]\n• [specific finding with numbers]\n…\n\nSource used: abstract / full text / saved fields. Please manually verify before saving.`;
+    // default: findings — returns RESULTS and KEY FINDINGS separately
+    systemPrompt = `You are a medical literature expert specialising in Y-90 radioembolization (SIRT/TARE). Extract structured information from publication text for a literature database. Reply in plain text only, no markdown.`;
+    userPrompt = `Publication title: ${title || 'Unknown'}\n\nText:\n${truncated}\n\nExtract two separate sections:\n\n1. RESULTS — Raw data and statistics only: patient numbers (n=), survival times, response rates, p-values, doses in Gy, specific percentages. These are facts and numbers from the study. 3-5 bullet points.\n\n2. KEY FINDINGS — Clinical interpretation and significance: what these results mean clinically, what conclusions the authors drew, what is important for practice. Do NOT repeat the numbers from Results — focus on the meaning. 3-4 bullet points.\n\nReply EXACTLY in this format:\nRESULTS\n• [statistic/number]\n• [statistic/number]\n\nKEY FINDINGS\n• [clinical meaning]\n• [clinical meaning]\n\nPlease manually verify before saving.`;
   }
 
   try {
@@ -8961,18 +8961,23 @@ async function aiSummarizeForm() {
     // Use Claude AI for findings extraction
     resultEl.innerHTML=`<div class="ai-thinking"><span></span><span></span><span></span></div><span style="margin-left:9px">Analysing with AI…</span>`;
     const aiResult=await callClaudeForFindings(sourceText, title, 'findings');
-    const findingText=aiResult.replace(/^Key Findings\s*/i,'').replace(/Source used:[^\n]*/,'').trim();
 
-    // Fill Key Findings only when empty, or ask before overwriting.
-    const findingsEl=document.getElementById('f-findings');
-    if(findingText && (!findingsEl.value.trim() || confirm('Replace current Key Findings with AI findings?'))){
-      findingsEl.value=findingText.substring(0,1500);
+    // Parse the two sections: RESULTS and KEY FINDINGS
+    const resultsMatch = aiResult.match(/RESULTS\s*\n([\s\S]*?)(?=KEY FINDINGS|$)/i);
+    const findingsMatch = aiResult.match(/KEY FINDINGS\s*\n([\s\S]*?)(?=Please manually|$)/i);
+    const resultsText = resultsMatch ? resultsMatch[1].trim() : '';
+    const findingsText = findingsMatch ? findingsMatch[1].trim() : aiResult.replace(/^Key Findings\s*/i,'').replace(/Source used:[^\n]*/,'').trim();
+
+    // Fill Results field
+    const resultsEl=document.getElementById('f-results');
+    if(resultsText && (!resultsEl.value.trim() || confirm('Replace current Results with AI-extracted data?'))){
+      resultsEl.value=resultsText.substring(0,1500);
     }
 
-    // Fill Results if empty
-    const resultsEl=document.getElementById('f-results');
-    if(!resultsEl.value.trim() && findingText){
-      resultsEl.value=findingText.substring(0,1500);
+    // Fill Key Findings field
+    const findingsEl=document.getElementById('f-findings');
+    if(findingsText && (!findingsEl.value.trim() || confirm('Replace current Key Findings with AI findings?'))){
+      findingsEl.value=findingsText.substring(0,1500);
     }
 
     resultEl.className='ai-result';
@@ -8988,23 +8993,42 @@ async function aiSummarizeForm() {
 
 function applyAISuggestion(id) {
   const outputEl=document.getElementById('ai-output');
-  // v5.1 fix: use the visible analysis text as a fallback if dataset.lastResult was not set.
-  // This prevents the false "Run AI first" message after an API-key fallback response.
   const text=(outputEl.dataset.lastResult || outputEl.textContent || '').trim();
   if(!text || outputEl.classList.contains('loading')){showToast('Run AI first.','error');return;}
   const p=publications.find(x=>x.id===id); if(!p) return;
-  if(!p.findings||confirm('Overwrite existing Key Findings with current analysis text?')){
-    let saveText=text
-      .replace(/^Key Findings\s*/i,'')
-      .replace(/\n\nSource used:[\s\S]*$/i,'')
-      .trim();
-    p.findings=(saveText || text).substring(0,1200);
-    const reviewSelectValue=p.reviewStatus || 'AI Draft';
-    p.reviewStatus=reviewSelectValue;
-    save();
-    applyFilters();
-    renderDashboard();
-    showToast('Key findings saved to record. Remember to Export JSON if you want to keep this change on GitHub.','success');
+
+  // Parse RESULTS and KEY FINDINGS sections if Claude returned them separately
+  const resultsMatch = text.match(/RESULTS\s*
+([\s\S]*?)(?=KEY FINDINGS|$)/i);
+  const findingsMatch = text.match(/KEY FINDINGS\s*
+([\s\S]*?)(?=Please manually|Source used|Product guess|$)/i);
+
+  if(resultsMatch && findingsMatch){
+    const newResults = (resultsMatch[1]||'').trim();
+    const newFindings = (findingsMatch[1]||'').trim();
+    const overwrite = (!p.findings && !p.results) || confirm('Overwrite existing Results and Key Findings with AI analysis?');
+    if(overwrite){
+      if(newResults) p.results = newResults.substring(0,1500);
+      if(newFindings) p.findings = newFindings.substring(0,1500);
+      p.reviewStatus = p.reviewStatus || 'AI Draft';
+      save(); applyFilters(); renderDashboard();
+      showToast('Results and Key Findings saved separately to record.','success');
+      closeModal('ai-modal');
+    }
+  } else {
+    // Fallback: save everything to Key Findings only
+    if(!p.findings||confirm('Overwrite existing Key Findings with current analysis text?')){
+      let saveText=text
+        .replace(/^Key Findings\s*/i,'')
+        .replace(/
+
+Source used:[\s\S]*$/i,'')
+        .trim();
+      p.findings=(saveText || text).substring(0,1500);
+      p.reviewStatus = p.reviewStatus || 'AI Draft';
+      save(); applyFilters(); renderDashboard();
+      showToast('Key findings saved to record.','success');
+    }
   }
 }
 
