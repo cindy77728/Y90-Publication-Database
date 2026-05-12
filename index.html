@@ -1036,80 +1036,91 @@ td.td-findings{
 .fulltext-link.uploaded-link{color:#79b8ff !important;}
 
 
-
-/* v5.7 — Full title display fix for PubMed import and publication list */
-.title-textarea,
-#f-title{
-  min-height:88px !important;
-  resize:vertical !important;
-  white-space:normal !important;
-  overflow-wrap:anywhere !important;
-  line-height:1.45 !important;
-}
-.pubmed-result-card > div:first-child > div:first-child{
-  min-width:0 !important;
-}
-.pubmed-title{
-  white-space:normal !important;
-  overflow:visible !important;
-  text-overflow:clip !important;
-  display:block !important;
-  max-height:none !important;
-  word-break:normal !important;
-  overflow-wrap:anywhere !important;
-  line-height:1.35 !important;
-}
-.td-title,
-.card-title,
-.detail-title{
-  white-space:normal !important;
-  overflow:visible !important;
-  text-overflow:clip !important;
-  max-height:none !important;
-  word-break:normal !important;
-  overflow-wrap:anywhere !important;
-}
-.td-title a{
-  white-space:normal !important;
-  overflow:visible !important;
-  text-overflow:clip !important;
-  display:inline !important;
-  word-break:normal !important;
-  overflow-wrap:anywhere !important;
-}
-@media (max-width:768px){
-  .td-title{
-    min-width:240px !important;
-    max-width:none !important;
-  }
-  .pubmed-title{
-    font-size:15px !important;
-    line-height:1.4 !important;
-  }
-  .title-textarea,
-  #f-title{
-    min-height:96px !important;
-  }
+/* ══════════════════════════════════════════════════════════
+   MOBILE FRIENDLY — iPhone & small screen
+   ══════════════════════════════════════════════════════════ */
+#mobile-menu-btn {
+  display: none;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 48px; height: 48px;
+  align-items: center; justify-content: center;
+  cursor: pointer; color: #fff; font-size: 22px;
+  flex-shrink: 0;
 }
 
-
-
-/* v5.8 — hard fix: publication title field must show full imported title */
-#form-modal #f-title,
-#f-title.title-textarea{
-  display:block !important;
-  width:100% !important;
-  min-height:128px !important;
-  height:128px !important;
-  max-height:none !important;
-  padding:14px 15px !important;
-  line-height:1.45 !important;
-  white-space:pre-wrap !important;
-  overflow-y:auto !important;
-  overflow-x:hidden !important;
-  resize:vertical !important;
-  word-break:normal !important;
-  overflow-wrap:anywhere !important;
+@media (max-width: 768px) {
+  body { font-size: 15px !important; }
+  header { padding: 12px 14px !important; }
+  .header-top { flex-wrap: nowrap !important; align-items: center !important; gap: 10px !important; }
+  .logo-area { flex: 1; min-width: 0; }
+  .logo-area h1 { font-size: 22px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .logo-area p { font-size: 11px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #mobile-menu-btn { display: flex !important; }
+  .header-actions { display: none; flex-direction: column !important; width: 100% !important; gap: 8px !important; margin-top: 12px; }
+  .header-actions.mobile-open { display: flex !important; }
+  .header-stats { width: 100% !important; display: grid !important; grid-template-columns: repeat(3,1fr) !important; gap: 6px !important; }
+  .stat-pill { height:auto !important; min-height:0 !important; max-height:none !important; padding:8px 6px !important; font-size:11px !important; border-radius:10px !important; flex-direction:column !important; gap:2px !important; text-align:center !important; }
+  .stat-pill strong { font-size: 15px !important; }
+  .header-actions > .btn { height:auto !important; min-height:44px !important; max-height:none !important; font-size:14px !important; padding:10px 14px !important; border-radius:10px !important; width:100% !important; justify-content:center !important; }
+  #github-save-btn { width: 100% !important; }
+  .tabs { display:flex !important; overflow-x:auto !important; scrollbar-width:none !important; gap:0 !important; padding:0 !important; }
+  .tabs::-webkit-scrollbar { display:none; }
+  .tab { font-size:13px !important; padding:12px 16px !important; white-space:nowrap !important; flex-shrink:0 !important; }
+  .smart-search-bar { padding:12px 14px !important; flex-wrap:wrap !important; gap:8px !important; }
+  .smart-search-input { font-size:15px !important; padding:10px 12px !important; min-width:0 !important; width:100% !important; }
+  .smart-badge { display:none !important; }
+  .controls { padding:10px 14px !important; flex-direction:column !important; gap:8px !important; align-items:stretch !important; }
+  .search-wrap { min-width:0 !important; width:100% !important; position:relative !important; }
+  .search-wrap svg, .controls .search-wrap svg { left:12px !important; width:16px !important; height:16px !important; top:50% !important; transform:translateY(-50%) !important; position:absolute !important; pointer-events:none !important; z-index:2 !important; }
+  .search-wrap input, .controls .search-wrap input { font-size:16px !important; padding-left:36px !important; width:100% !important; min-height:0 !important; line-height:normal !important; }
+  select { font-size:16px !important; padding:11px 12px !important; width:100% !important; }
+  .controls .btn { width:100% !important; font-size:14px !important; min-height:44px !important; }
+  .view-toggle { align-self:flex-end !important; }
+  .category-strip { padding:8px 14px !important; gap:6px !important; flex-wrap:nowrap !important; overflow-x:auto !important; }
+  .cat-chip { font-size:12px !important; padding:6px 11px !important; }
+  .table-wrap { overflow-x:auto !important; -webkit-overflow-scrolling:touch !important; }
+  table { font-size:13px !important; min-width:560px !important; }
+  th { font-size:11px !important; padding:10px !important; }
+  td { font-size:13px !important; padding:10px !important; }
+  .td-title { min-width:150px !important; max-width:200px !important; font-size:13px !important; }
+  .td-findings { min-width:130px !important; max-width:180px !important; font-size:12px !important; }
+  .icon-btn { width:32px !important; height:32px !important; font-size:14px !important; }
+  .cards-grid { grid-template-columns:1fr !important; gap:10px !important; }
+  .pub-card { padding:14px !important; }
+  .card-title { font-size:15px !important; }
+  .card-findings { font-size:13px !important; }
+  .dashboard-grid { grid-template-columns:1fr !important; gap:10px !important; }
+  .dash-card { padding:14px !important; }
+  .big-stat .num { font-size:52px !important; }
+  .bar-row { grid-template-columns:100px 1fr 36px !important; gap:6px !important; }
+  .bar-label,.bar-val { font-size:12px !important; }
+  .modal-overlay { padding:0 !important; align-items:flex-end !important; }
+  .modal { max-width:100% !important; width:100% !important; max-height:92vh !important; border-radius:18px 18px 0 0 !important; padding:20px 16px 32px !important; margin:0 !important; overflow-y:auto !important; }
+  .modal h2 { font-size:18px !important; }
+  .form-grid { grid-template-columns:1fr !important; gap:10px !important; }
+  label { font-size:12px !important; }
+  input[type=text],input[type=number],input[type=url],textarea { font-size:16px !important; padding:10px 12px !important; }
+  #f-title { font-size:15px !important; min-height:72px !important; }
+  .radio-group { flex-direction:column !important; gap:6px !important; }
+  .form-actions { flex-direction:column-reverse !important; }
+  .form-actions .btn { width:100% !important; justify-content:center !important; min-height:44px !important; }
+  .detail-title { font-size:18px !important; }
+  .detail-value { font-size:14px !important; }
+  .category-manager-group-header { flex-direction:column !important; align-items:flex-start !important; gap:10px !important; padding:12px !important; }
+  .category-manager-main { font-size:16px !important; width:100% !important; }
+  .category-manager-actions { display:flex !important; flex-wrap:wrap !important; gap:8px !important; width:100% !important; }
+  .category-manager-actions .btn { flex:1 !important; min-width:120px !important; min-height:40px !important; font-size:13px !important; padding:8px 12px !important; }
+  .category-manager-row { grid-template-columns:1fr !important; gap:6px !important; padding:10px 12px !important; }
+  .category-manager-tools input { min-width:0 !important; width:100% !important; font-size:16px !important; }
+  .category-manager-tools .btn { width:100% !important; min-height:44px !important; }
+  .pubmed-result-card { padding:12px !important; }
+  .pubmed-title { font-size:14px !important; }
+  .pubmed-meta { font-size:12px !important; }
+  .toast { bottom:10px !important; right:10px !important; left:10px !important; max-width:none !important; font-size:14px !important; }
+  .results-info { font-size:13px !important; }
+  .no-results { font-size:14px !important; padding:28px !important; }
 }
 
 </style>
@@ -1275,7 +1286,7 @@ td.td-findings{
     <div class="form-grid">
       <div class="form-group"><label>Year *</label><input type="number" id="f-year" min="1990" max="2099" placeholder="2024"></div>
       <div class="form-group"><label>Country *</label><input type="text" id="f-country" placeholder="USA, UK, Korea…"></div>
-      <div class="form-group full"><label>Title *</label><textarea id="f-title" class="title-textarea" rows="4" placeholder="Full publication title"></textarea></div>
+      <div class="form-group full"><label>Title *</label><textarea id="f-title" placeholder="Full publication title" rows="3" style="resize:vertical;min-height:72px;font-family:inherit;font-size:inherit;line-height:1.5"></textarea></div>
       <div class="form-group full"><label>Authors</label><input type="text" id="f-authors" placeholder="Smith J, Doe A, et al."></div>
       <div class="form-group full"><label>Journal</label><input type="text" id="f-journal" placeholder="Journal of Vascular and Interventional Radiology"></div>
       <div class="form-group">
@@ -8359,22 +8370,11 @@ async function fetchByPMID(pmid) {
   } catch(e){showToast('Fetch failed. Try from GitHub Pages.','error');}
 }
 
-function escQ(s){
-  // v5.9: keep the full PubMed title when passing data through onclick.
-  // Previous version used substring(0,120), which cut imported titles before they reached the edit form.
-  return String(s||'')
-    .replace(/\\/g,'\\\\')
-    .replace(/'/g,"\\'")
-    .replace(/?
-/g,' ')
-    .replace(/"/g,'&quot;');
-}
+function escQ(s){return(s||'').replace(/'/g,"\\'").replace(/"/g,'&quot;');}
 
 async function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
   editingId=null; clearForm();
-  const titleField=document.getElementById('f-title');
-  titleField.value=title;
-  try { titleField.style.height='auto'; titleField.style.height=Math.max(128, titleField.scrollHeight + 8) + 'px'; } catch(e){}
+  document.getElementById('f-title').value=title;
   document.getElementById('f-authors').value=authors;
   document.getElementById('f-journal').value=journal;
   document.getElementById('f-year').value=year||'';
@@ -12970,6 +12970,69 @@ function toggleMobileMenu(){
   document.getElementById('mobile-menu-btn').textContent = drawer.classList.contains('mobile-open') ? '✕' : '☰';
 }
 
+
+// ══════════════════════════════════════════════════════════
+// ☁️ SAVE TO GITHUB
+// ══════════════════════════════════════════════════════════
+function getGitHubSettings(){
+  return { token:localStorage.getItem('y90ghToken')||'', owner:localStorage.getItem('y90ghOwner')||'', repo:localStorage.getItem('y90ghRepo')||'', branch:localStorage.getItem('y90ghBranch')||'main' };
+}
+function saveGitHubSettings({token,owner,repo,branch}){
+  localStorage.setItem('y90ghToken',token.trim()); localStorage.setItem('y90ghOwner',owner.trim());
+  localStorage.setItem('y90ghRepo',repo.trim()); localStorage.setItem('y90ghBranch',branch.trim()||'main');
+}
+function openGitHubSettingsModal(){
+  const s=getGitHubSettings();
+  document.getElementById('gh-token').value=s.token; document.getElementById('gh-owner').value=s.owner;
+  document.getElementById('gh-repo').value=s.repo; document.getElementById('gh-branch').value=s.branch;
+  openModal('github-settings-modal');
+}
+function saveGitHubSettingsFromForm(){
+  saveGitHubSettings({ token:document.getElementById('gh-token').value, owner:document.getElementById('gh-owner').value, repo:document.getElementById('gh-repo').value, branch:document.getElementById('gh-branch').value });
+  closeModal('github-settings-modal');
+  showToast('GitHub settings saved.','success');
+}
+async function saveToGitHub(){
+  const s=getGitHubSettings();
+  if(!s.token||!s.owner||!s.repo){ openGitHubSettingsModal(); return; }
+  const btn=document.getElementById('github-save-btn');
+  const orig=btn.textContent; btn.textContent='⏳ Saving…'; btn.disabled=true;
+  try{
+    const filePath='publications.json';
+    const headers={ Authorization:`Bearer ${s.token}`, Accept:'application/vnd.github.v3+json', 'Content-Type':'application/json' };
+    const apiBase=`https://api.github.com/repos/${s.owner}/${s.repo}/contents/${filePath}`;
+    const payload={ version:'y90-publication-database-v3', savedAt:new Date().toISOString(), categories:ALL_CATEGORIES, pdfFolderUrl:pdfFolderUrl, publications:publications.map(p=>{const c={...p};delete c.pdfData;return c;}) };
+    const jsonStr=JSON.stringify(payload,null,2);
+    const bytes=new TextEncoder().encode(jsonStr);
+    let binary=''; bytes.forEach(b=>binary+=String.fromCharCode(b));
+    const encoded=btoa(binary);
+    let fileSha=null;
+    try{
+      const refRes=await fetch(`https://api.github.com/repos/${s.owner}/${s.repo}/git/ref/heads/${s.branch}`,{headers});
+      if(!refRes.ok){ const e=await refRes.json().catch(()=>({})); if(refRes.status===401) throw new Error('Token rejected — check your GitHub token in settings.'); if(refRes.status===404) throw new Error('Repo or branch not found — check settings.'); throw new Error(e.message||`GitHub error ${refRes.status}`); }
+      const refData=await refRes.json();
+      const commitRes=await fetch(`https://api.github.com/repos/${s.owner}/${s.repo}/git/commits/${refData.object.sha}`,{headers});
+      const commitData=await commitRes.json();
+      const treeRes=await fetch(`https://api.github.com/repos/${s.owner}/${s.repo}/git/trees/${commitData.tree.sha}`,{headers});
+      const treeData=await treeRes.json();
+      const fe=treeData.tree.find(f=>f.path===filePath); if(fe) fileSha=fe.sha;
+    }catch(e){ if(e.message.includes('Token')||e.message.includes('Repo')||e.message.includes('GitHub error')) throw e; }
+    const putRes=await fetch(apiBase,{ method:'PUT', headers, body:JSON.stringify({ message:`Update publications.json — ${new Date().toLocaleString()}`, content:encoded, branch:s.branch, ...(fileSha?{sha:fileSha}:{}) }) });
+    if(!putRes.ok){ const err=await putRes.json().catch(()=>({})); throw new Error(err.message||`GitHub API error ${putRes.status}`); }
+    showToast('✅ Saved to GitHub! Changes are live.','success');
+  }catch(e){
+    alert('❌ Save failed:\n\n'+e.message);
+    showToast('❌ '+e.message,'error');
+  }finally{ btn.textContent=orig; btn.disabled=false; }
+}
+
+// ── Mobile menu toggle ──
+function toggleMobileMenu(){
+  const drawer=document.getElementById('header-actions-drawer');
+  drawer.classList.toggle('mobile-open');
+  document.getElementById('mobile-menu-btn').textContent=drawer.classList.contains('mobile-open')?'✕':'☰';
+}
+
 </script>
 
 <!-- ══ GITHUB SETTINGS MODAL ══ -->
@@ -13047,41 +13110,40 @@ function toggleMobileMenu(){
 </div>
 
 
-<script>
-/* v5.8 fallback: if an older cached/dynamic form still creates the Title as a one-line input, convert it to a textarea. */
-(function(){
-  function ensureFullTitleTextarea(){
-    var el = document.getElementById('f-title');
-    if(!el) return;
-    if(String(el.tagName).toLowerCase() !== 'textarea'){
-      var ta = document.createElement('textarea');
-      ta.id = el.id;
-      ta.className = (el.className ? el.className + ' ' : '') + 'title-textarea';
-      ta.placeholder = el.placeholder || 'Full publication title';
-      ta.value = el.value || '';
-      ta.rows = 4;
-      if(el.required) ta.required = true;
-      el.parentNode.replaceChild(ta, el);
-      el = ta;
-    }
-    el.setAttribute('rows','4');
-    el.style.display = 'block';
-    el.style.width = '100%';
-    el.style.minHeight = '128px';
-    el.style.height = '128px';
-    el.style.whiteSpace = 'pre-wrap';
-    el.style.overflowY = 'auto';
-    el.style.overflowX = 'hidden';
-    el.style.resize = 'vertical';
-  }
-  document.addEventListener('DOMContentLoaded', function(){
-    ensureFullTitleTextarea();
-    var bodyObserver = new MutationObserver(ensureFullTitleTextarea);
-    bodyObserver.observe(document.body, {childList:true, subtree:true});
-  });
-  window.ensureFullTitleTextarea = ensureFullTitleTextarea;
-})();
-</script>
+<!-- ══ GITHUB SETTINGS MODAL ══ -->
+<div class="modal-overlay" id="github-settings-modal" onclick="if(event.target===this)closeModal('github-settings-modal')">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-header">
+      <h2 class="modal-title">☁️ GitHub Save Settings</h2>
+      <button class="icon-btn" onclick="closeModal('github-settings-modal')">✕</button>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <p style="color:#ccc;font-size:14px;margin:0">One-time setup. Token stored only in this browser.</p>
+      <div style="background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:12px;font-size:13px;color:#aad4ff;line-height:1.6">
+        <strong>How to get a token:</strong><br>
+        GitHub → Settings → Developer settings → Personal access tokens → Fine-grained → Generate → Repository permissions → Contents: <strong>Read and write</strong>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Personal Access Token
+        <input id="gh-token" type="password" placeholder="github_pat_xxxx" style="width:100%;margin-top:6px;font-family:monospace;font-size:13px">
+      </label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label style="color:#ccc;font-size:13px;font-weight:700">GitHub Username
+          <input id="gh-owner" type="text" placeholder="your-username" style="width:100%;margin-top:6px">
+        </label>
+        <label style="color:#ccc;font-size:13px;font-weight:700">Repository Name
+          <input id="gh-repo" type="text" placeholder="Y90-Publication-Database" style="width:100%;margin-top:6px">
+        </label>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Branch
+        <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
+      </label>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
+        <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
