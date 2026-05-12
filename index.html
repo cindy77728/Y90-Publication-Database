@@ -8282,13 +8282,7 @@ async function fetchByPMID(pmid) {
   } catch(e){showToast('Fetch failed. Try from GitHub Pages.','error');}
 }
 
-function escQ(s){
-  return String(s || '')
-    .replace(/\/g, '\\')
-    .replace(/'/g, "\'")
-    .replace(/\r?\n/g, ' ')
-    .replace(/"/g, '&quot;');
-}
+function escQ(s){return(s||'').replace(/'/g,"\\'").replace(/"/g,'&quot;').substring(0,120);}
 
 async function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
   editingId=null; clearForm();
