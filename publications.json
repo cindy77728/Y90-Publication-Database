@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-12T03:29:45.340Z",
+  "savedAt": "2026-05-12T03:42:06.587Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -6750,6 +6750,31 @@
       "categories": [
         "Dosimetry",
         "HCC"
+      ]
+    },
+    {
+      "id": 1778557202663,
+      "year": 2026,
+      "title": "Selective internal radiotherapy and chemosaturation show equivalent survival in metastatic uveal melanoma: a retrospective multicenter study",
+      "country": "Germany",
+      "authors": "Koch EAT, Schielein LA, Reitmajer M, et al.",
+      "journal": "Oncologist",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42104930/",
+      "pmcid": "",
+      "pdfUrl": "",
+      "pdfFileName": "",
+      "fullTextStatus": "paywall",
+      "fullTextNote": "",
+      "results": "• The estimated median overall survival (OS) for SIRT was 25.1 months (95% confidence interval [CI], 15.3-34.8), for TACE, 11.4 months (95% CI, 7.8-14.9), and for PHP, 24.9 months (95% CI, 13.7-36.0).\n• In the multivariate analysis that included LDH and additional systemic therapies, there was no significant difference in OS between SIRT and PHP (HR 1.14, 95% CI 0.67-1.93, p = 0.63), whereas TACE was found to be associated with a substantially reduced in OS compared to PHP (HR 3.25, 95% CI 1.31-8.04, p = 0.01).",
+      "findings": "• The estimated median overall survival (OS) for SIRT was 25.1 months (95% confidence interval [CI], 15.3-34.8), for TACE, 11.4 months (95% CI, 7.8-14.9), and for PHP, 24.9 months (95% CI, 13.7-36.0).\n• In the multivariate analysis that included LDH and additional systemic therapies, there was no significant difference in OS between SIRT and PHP (HR 1.14, 95% CI 0.67-1.93, p = 0.63), whereas TACE was found to be associated with a substantially reduced in OS compared to PHP (HR 3.25, 95% CI 1.31-8.04, p = 0.01).",
+      "notes": "",
+      "abstract": "BACKGROUND: Metastatic uveal melanoma (UM) primarily affects the liver, and due to low response rates to systemic therapies, liver-directed therapies (LDT) are commonly used for hepatic tumor control. Direct head-to-head trials comparing these LDTs are still lacking. METHODS: A retrospective multicenter explorative analysis was conducted to evaluate the clinical outcomes of transarterial chemoembolization (TACE), selective internal radiotherapy (SIRT), and percutaneous hepatic perfusion (PHP, chemosaturation). RESULTS: The present analysis was conducted on a cohort of 121 patients who had been treated for metastatic UM with LDT at five different skin cancer centers. A total of n = 15 patients received TACE (12.4%), n = 51 SIRT (42.1%), and n = 55 PHP (45.5%). The estimated median overall survival (OS) for SIRT was 25.1 months (95% confidence interval [CI], 15.3-34.8), for TACE, 11.4 months (95% CI, 7.8-14.9), and for PHP, 24.9 months (95% CI, 13.7-36.0). In the multivariate analysis that included LDH and additional systemic therapies, there was no significant difference in OS between SIRT and PHP (HR 1.14, 95% CI 0.67-1.93, p = 0.63), whereas TACE was found to be associated with a substantially reduced in OS compared to PHP (HR 3.25, 95% CI 1.31-8.04, p = 0.01). Adverse events occurred in 41.6% of patients undergoing SIRT, 64.3% of patients receiving TACE, and 84.6% of patients receiving PHP. CONCLUSION: The findings of this study indicate that SIRT and PHP demonstrate equivalent survival rates in a real-world setting.",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
+      "product": "ns",
+      "categories": [
+        "Dosimetry",
+        "Safety"
       ]
     }
   ]
