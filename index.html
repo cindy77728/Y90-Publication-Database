@@ -8777,7 +8777,11 @@ async function aiSummarizeForm() {
   };
 
   try{
-    const source=await collectPublicationSourceText(tempPub);
+    // v5.5 fix: Auto-extract in the Edit form should use raw source text only.
+    // Do NOT use existing Results / Key Findings as source, otherwise the tool can copy
+    // the same bullet text back into Results, Key Findings, and make the form look duplicated.
+    const extractionPub={...tempPub, findings:'', results:''};
+    const source=await collectPublicationSourceText(extractionPub);
     const sourceText=source.text || '';
     const titleOnlyText=normalizeExtractedText(title);
     const journal=document.getElementById('f-journal')?.value.trim() || '';
