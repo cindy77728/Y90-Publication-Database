@@ -425,8 +425,8 @@ select{padding:0 42px 0 16px !important;background-color:var(--control-bg) !impo
 input[type=text], input[type=number], input[type=url]{min-height:var(--control-h) !important;}
 .search-wrap input{min-height:var(--control-h) !important;}
 .search-wrap{position:relative !important;display:flex !important;align-items:center !important;}
-.search-wrap svg{left:20px !important;top:50% !important;transform:translateY(-50%) !important;width:18px !important;height:18px !important;z-index:2 !important;opacity:.95 !important;}
-.search-wrap input{padding-left:60px !important;line-height:1.2 !important;}
+.search-wrap svg{left:14px !important;top:50% !important;transform:translateY(-50%) !important;width:18px !important;height:18px !important;z-index:2 !important;opacity:.95 !important;}
+.search-wrap input{padding-left:44px !important;line-height:1.2 !important;}
 .search-wrap input::placeholder{line-height:1.2 !important;}
 .smart-search-input{min-height:var(--control-h) !important;}
 .smart-ex,.smart-badge,.cat-chip{padding:0 16px !important;}
@@ -888,6 +888,144 @@ td.td-findings{
   .category-form-top label{white-space:normal !important;}
 }
 
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE FRIENDLY — iPhone & small screen
+   ══════════════════════════════════════════════════════════ */
+#mobile-menu-btn {
+  display: none;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 48px; height: 48px;
+  align-items: center; justify-content: center;
+  cursor: pointer; color: #fff; font-size: 22px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  body { font-size: 15px !important; }
+  header { padding: 12px 14px !important; }
+
+  /* Header row: logo + hamburger */
+  .header-top { flex-wrap: nowrap !important; align-items: center !important; gap: 10px !important; }
+  .logo-area { flex: 1; min-width: 0; }
+  .logo-area h1 { font-size: 22px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .logo-area p { font-size: 11px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #mobile-menu-btn { display: flex !important; }
+
+  /* Header actions: hidden until hamburger tapped */
+  .header-actions { display: none; flex-direction: column !important; width: 100% !important; gap: 8px !important; margin-top: 12px; }
+  .header-actions.mobile-open { display: flex !important; }
+
+  /* Stats grid */
+  .header-stats { width: 100% !important; display: grid !important; grid-template-columns: repeat(3,1fr) !important; gap: 6px !important; }
+  .stat-pill { height:auto !important; min-height:0 !important; max-height:none !important; padding:8px 6px !important; font-size:11px !important; border-radius:10px !important; flex-direction:column !important; gap:2px !important; text-align:center !important; }
+  .stat-pill strong { font-size: 15px !important; }
+
+  /* Action buttons */
+  .header-actions > .btn { height:auto !important; min-height:44px !important; max-height:none !important; font-size:14px !important; padding:10px 14px !important; border-radius:10px !important; width:100% !important; justify-content:center !important; white-space:nowrap !important; }
+  #github-save-btn { width: 100% !important; }
+
+  /* Tabs: horizontal scroll */
+  .tabs { display:flex !important; overflow-x:auto !important; scrollbar-width:none !important; gap:0 !important; padding:0 !important; }
+  .tabs::-webkit-scrollbar { display:none; }
+  .tab { font-size:13px !important; padding:12px 16px !important; white-space:nowrap !important; flex-shrink:0 !important; }
+
+  /* Smart search bar */
+  .smart-search-bar { padding:12px 14px !important; flex-wrap:wrap !important; gap:8px !important; }
+  .smart-search-input { font-size:15px !important; padding:10px 12px !important; min-width:0 !important; width:100% !important; }
+  .smart-badge { display:none !important; }
+  .smart-ex { display:none !important; }
+
+  /* Controls: stacked column */
+  .controls { padding:10px 14px !important; flex-direction:column !important; gap:8px !important; align-items:stretch !important; }
+
+  /* SEARCH BOX FIX — icon never overlaps text */
+  .search-wrap { min-width:0 !important; width:100% !important; position:relative !important; }
+  .search-wrap svg,
+  .controls .search-wrap svg { left:12px !important; width:16px !important; height:16px !important; top:50% !important; transform:translateY(-50%) !important; position:absolute !important; pointer-events:none !important; z-index:2 !important; }
+  .search-wrap input,
+  .controls .search-wrap input { font-size:16px !important; padding:11px 12px 11px 36px !important; padding-left:36px !important; width:100% !important; min-height:0 !important; line-height:normal !important; }
+
+  select { font-size:16px !important; padding:11px 12px !important; width:100% !important; }
+  .controls .btn { width:100% !important; font-size:14px !important; min-height:44px !important; }
+  .view-toggle { align-self:flex-end !important; }
+
+  /* Category strip */
+  .category-strip { padding:8px 14px !important; gap:6px !important; flex-wrap:nowrap !important; overflow-x:auto !important; }
+  .cat-chip { font-size:12px !important; padding:6px 11px !important; }
+
+  /* Table: horizontal scroll */
+  .table-wrap { overflow-x:auto !important; -webkit-overflow-scrolling:touch !important; }
+  table { font-size:13px !important; min-width:560px !important; }
+  th { font-size:11px !important; padding:10px !important; }
+  td { font-size:13px !important; padding:10px !important; }
+  .td-title { min-width:150px !important; max-width:200px !important; font-size:13px !important; }
+  .td-findings { min-width:130px !important; max-width:180px !important; font-size:12px !important; }
+  .td-country { font-size:12px !important; }
+  .td-year { font-size:13px !important; }
+  .icon-btn { width:32px !important; height:32px !important; font-size:14px !important; }
+  .icon-btn svg { width:14px !important; height:14px !important; }
+
+  /* Cards */
+  .cards-grid { grid-template-columns:1fr !important; gap:10px !important; }
+  .pub-card { padding:14px !important; }
+  .card-title { font-size:15px !important; }
+  .card-findings { font-size:13px !important; }
+
+  /* Panel */
+  div[style*="padding:16px 28px"] { padding:12px 14px !important; }
+  .section-title { font-size:20px !important; }
+  .results-info { font-size:13px !important; }
+  .no-results { font-size:14px !important; padding:28px !important; }
+
+  /* Dashboard */
+  .dashboard-grid { grid-template-columns:1fr !important; gap:10px !important; }
+  .dash-card { padding:14px !important; }
+  .big-stat .num { font-size:52px !important; }
+  .bar-row { grid-template-columns:100px 1fr 36px !important; gap:6px !important; }
+  .bar-label,.bar-val { font-size:12px !important; }
+  .dash-cat-row { grid-template-columns:1fr 1fr 36px !important; }
+
+  /* Modals: slide up full-width sheet */
+  .modal-overlay { padding:0 !important; align-items:flex-end !important; }
+  .modal { max-width:100% !important; width:100% !important; max-height:92vh !important; border-radius:18px 18px 0 0 !important; padding:20px 16px 32px !important; margin:0 !important; }
+  .modal h2 { font-size:18px !important; }
+  .form-grid { grid-template-columns:1fr !important; gap:10px !important; }
+  label { font-size:12px !important; }
+  input[type=text],input[type=number],input[type=url],textarea { font-size:16px !important; padding:10px 12px !important; }
+  .radio-group { flex-direction:column !important; gap:6px !important; }
+  .form-actions { flex-direction:column-reverse !important; }
+  .form-actions .btn { width:100% !important; justify-content:center !important; min-height:44px !important; }
+  .detail-title { font-size:18px !important; }
+  .detail-value { font-size:14px !important; }
+
+  /* Category manager — fully stacked on mobile */
+  .category-manager-group-header { flex-direction:column !important; align-items:flex-start !important; gap:10px !important; padding:12px !important; }
+  .category-manager-main { font-size:16px !important; width:100% !important; }
+  .category-manager-main small { font-size:12px !important; }
+  .category-manager-actions { display:flex !important; flex-wrap:wrap !important; gap:8px !important; width:100% !important; justify-content:flex-start !important; }
+  .category-manager-actions .btn { flex:1 !important; min-width:120px !important; height:auto !important; min-height:40px !important; font-size:13px !important; padding:8px 12px !important; white-space:nowrap !important; }
+  .category-manager-row { grid-template-columns:1fr !important; gap:6px !important; padding:10px 12px !important; }
+  .category-manager-count { text-align:left !important; font-size:13px !important; }
+  .category-manager-tools { flex-direction:column !important; gap:8px !important; }
+  .category-manager-tools input { min-width:0 !important; width:100% !important; font-size:16px !important; }
+  .category-manager-tools .btn { width:100% !important; min-height:44px !important; }
+  .category-manager-note { font-size:14px !important; }
+  .subcategory-chip-list { padding:8px 12px !important; }
+
+  /* PubMed */
+  .pubmed-panel { max-width:100% !important; }
+  .pubmed-result-card { padding:12px !important; }
+  .pubmed-title { font-size:14px !important; }
+  .pubmed-meta { font-size:12px !important; }
+  .pubmed-abstract { font-size:13px !important; }
+
+  /* Toast */
+  .toast { bottom:10px !important; right:10px !important; left:10px !important; max-width:none !important; font-size:14px !important; }
+}
+
 </style>
 </head>
 <body>
@@ -898,7 +1036,8 @@ td.td-findings{
       <h1>Y<span>90</span> Publication Database</h1>
       <p>Radioembolization Literature Management · v5.0.1 · Manual Subcategory Support + paper1/paper2 import</p>
     </div>
-    <div class="header-actions">
+    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+    <div class="header-actions" id="header-actions-drawer">
       <div class="header-stats">
         <div class="stat-pill">Total: <strong id="stat-total">0</strong></div>
         <div class="stat-pill">Resin: <strong id="stat-resin" style="color:var(--resin)">0</strong></div>
@@ -12529,6 +12668,14 @@ async function saveToGitHub() {
   }
 }
 
+
+// ── Mobile menu toggle ──
+function toggleMobileMenu(){
+  const drawer = document.getElementById('header-actions-drawer');
+  drawer.classList.toggle('mobile-open');
+  document.getElementById('mobile-menu-btn').textContent = drawer.classList.contains('mobile-open') ? '✕' : '☰';
+}
+
 </script>
 
 <!-- ══ GITHUB SETTINGS MODAL ══ -->
@@ -12564,6 +12711,42 @@ async function saveToGitHub() {
       <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
         <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
         <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings & Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══ GITHUB SETTINGS MODAL ══ -->
+<div class="modal-overlay" id="github-settings-modal" onclick="if(event.target===this)closeModal('github-settings-modal')">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-header">
+      <h2 class="modal-title">☁️ GitHub Save Settings</h2>
+      <button class="icon-btn" onclick="closeModal('github-settings-modal')">✕</button>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <p style="color:#ccc;font-size:14px;margin:0">One-time setup. Token stored only in this browser, never shared.</p>
+      <div style="background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:12px;font-size:13px;color:#aad4ff;line-height:1.6">
+        <strong>How to get a token:</strong><br>
+        GitHub → Settings → Developer settings → Personal access tokens → Fine-grained → Generate new token → Repository permissions → Contents: <strong>Read and write</strong>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Personal Access Token
+        <input id="gh-token" type="password" placeholder="github_pat_xxxx" style="width:100%;margin-top:6px;font-family:monospace;font-size:13px">
+      </label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label style="color:#ccc;font-size:13px;font-weight:700">GitHub Username
+          <input id="gh-owner" type="text" placeholder="your-username" style="width:100%;margin-top:6px">
+        </label>
+        <label style="color:#ccc;font-size:13px;font-weight:700">Repository Name
+          <input id="gh-repo" type="text" placeholder="Y90-Publication-Database" style="width:100%;margin-top:6px">
+        </label>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Branch
+        <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
+      </label>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
+        <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings</button>
       </div>
     </div>
   </div>
