@@ -8286,7 +8286,8 @@ function escQ(s){
   return String(s || '')
     .replace(/\\/g, '\\\\')
     .replace(/'/g, "\\'")
-    .replace(/?
+    .replace(/
+?
 /g, ' ')
     .replace(/"/g, '&quot;');
 }
@@ -12722,6 +12723,14 @@ async function loadGitHubPublicationsJsonAsSourceOfTruth(){
 async function bootY90Database(){
   const loadedFromGitHubJson = await loadGitHubPublicationsJsonAsSourceOfTruth();
   if(!loadedFromGitHubJson){
+    // When this HTML is opened/uploaded without a same-folder publications.json,
+    // browser localStorage may be empty. In that case, restore the bundled records
+    // already embedded in this HTML instead of showing a blank Library.
+    if(!Array.isArray(publications) || publications.length === 0){
+      if(typeof ensureBundledPublicationRecords20260507 === 'function'){
+        ensureBundledPublicationRecords20260507();
+      }
+    }
     stabilizeDatasetBeforeInit();
   }
   init();
