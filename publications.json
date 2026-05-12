@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-12T03:51:30.359Z",
+  "savedAt": "2026-05-12T07:53:45.506Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -6728,31 +6728,6 @@
       ]
     },
     {
-      "id": 1778555384590,
-      "year": 2026,
-      "title": "Consortium on Bridging Radiation Segmentectomy (COBRAS): A Multicenter Study of Complete Pathologic Necrosis in Hepatoce",
-      "country": "Worldwide",
-      "authors": "Berman ZT, De la Garza-Ramos C, Montazeri SA, et al.",
-      "journal": "Radiology",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42084516/",
-      "pmcid": "",
-      "pdfUrl": "",
-      "pdfFileName": "",
-      "fullTextStatus": "paywall",
-      "fullTextNote": "",
-      "results": "• Background Complete pathologic necrosis (CPN) at liver transplant is a positive predictor of freedom from recurrence and overall survival for patients with hepatocellular carcinoma (HCC).\n• Treatment parameters were compared for patients that achieved CPN versus those without CPN using Mann-Whitney U or χ2 tests.\n• Tumors had a median size of 2.4 cm (IQR, 2.0-3.1 cm) and demonstrated a CPN rate of 68% (246 of 364).\n• Compared with tumors without CPN, those with CPN had a higher microsphere activity (median, 1242 Bq vs 1203 Bq; P <.03), microspheres per milliliter (median, 9000 per mL vs 7600 per mL; P =.02), single-compartment dose (median, 544 Gy vs 379 Gy; P <.001), and angiosome-to-tumor volume ratio (median, 25.2 vs 15.6; P =.02).",
-      "findings": "• Background Complete pathologic necrosis (CPN) at liver transplant is a positive predictor of freedom from recurrence and overall survival for patients with hepatocellular carcinoma (HCC).\n• Treatment parameters were compared for patients that achieved CPN versus those without CPN using Mann-Whitney U or χ2 tests.\n• Tumors had a median size of 2.4 cm (IQR, 2.0-3.1 cm) and demonstrated a CPN rate of 68% (246 of 364).\n• Compared with tumors without CPN, those with CPN had a higher microsphere activity (median, 1242 Bq vs 1203 Bq; P <.03), microspheres per milliliter (median, 9000 per mL vs 7600 per mL; P =.02), single-compartment dose (median, 544 Gy vs 379 Gy; P <.001), and angiosome-to-tumor volume ratio (median, 25.2 vs 15.6; P =.02).\n• Multivariable logistic regression showed that a microsphere activity of 1087 Bq or greater (P =.03), a dose of 440 Gy or greater (P <.001), and an angiosome-to-tumor volume ratio of 16 or greater (P <.001) were independent predictors of CPN.",
-      "notes": "",
-      "abstract": "Background Complete pathologic necrosis (CPN) at liver transplant is a positive predictor of freedom from recurrence and overall survival for patients with hepatocellular carcinoma (HCC). Comprehensive authorized user parameters for yttrium 90 radiation segmentectomy CPN rates at explant remain undefined. Purpose To evaluate established outcomes for radiation segmentectomy before liver transplant and determine optimal parameters to achieve CPN among patients with treatment-naive HCC. Materials and Methods This multicenter retrospective study included patients with treatment-naive HCC who underwent glass microsphere radiation segmentectomy before liver transplant from January 2016 to December 2024. Treatment parameters were compared for patients that achieved CPN versus those without CPN using Mann-Whitney U or χ2 tests. Receiver operating characteristic analysis was performed to determine treatment parameter thresholds and subsequently predict CPN. Results A total of 303 patients with 364 tumors were included in the study. Tumors had a median size of 2.4 cm (IQR, 2.0-3.1 cm) and demonstrated a CPN rate of 68% (246 of 364). Compared with tumors without CPN, those with CPN had a higher microsphere activity (median, 1242 Bq vs 1203 Bq; P <.03), microspheres per milliliter (median, 9000 per mL vs 7600 per mL; P =.02), single-compartment dose (median, 544 Gy vs 379 Gy; P <.001), and angiosome-to-tumor volume ratio (median, 25.2 vs 15.6; P =.02). Multivariable logistic regression showed that a microsphere activity of 1087 Bq or greater (P =.03), a dose of 440 Gy or greater (P <.001), and an angiosome-to-tumor volume ratio of 16 or greater (P <.001) were independent predictors of CPN. There was a positive association between the number of optimized parameters and CPN at liver transplant, with a positive predictive value of 74% (198 of 269) with one threshold met and 91% (57 of 63) with all thresholds met (P <.001). Conclusion Among patients with treatment-naive HCC, glass microsphere radiation segmentectomy before liver transplant achieved high rates of CPN, which was associated with optimized parameter thresholds determined for microsphere activity, microspheres per milliliter, dose, and angiosome-to-tumor volume ratio. © RSNA, 2026 Supplemental material is available for this article. See also the editorial by Gordon and Lewandowski in this issue.",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry",
-      "product": "glass",
-      "categories": [
-        "Dosimetry",
-        "HCC"
-      ]
-    },
-    {
       "id": 1778557202663,
       "year": 2026,
       "title": "Selective internal radiotherapy and chemosaturation show equivalent survival in metastatic uveal melanoma: a retrospective multicenter study",
@@ -6778,29 +6753,28 @@
       ]
     },
     {
-      "id": 1778557878837,
+      "id": 1778572367711,
       "year": 2026,
-      "title": "Knowledge mapping of ⁹⁰Y transarterial radioembolization combined with immunotherapy in hepatocellular carcinoma: a bibl",
-      "country": "China",
-      "authors": "He SN, Zeng CH, Du RJ, et al.",
-      "journal": "Discov Oncol",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42096002/",
+      "title": "Consortium on Bridging Radiation Segmentectomy (COBRAS): A Multicenter Study of Complete Pathologic Necrosis in Hepatocellular Carcinoma.",
+      "country": "USA",
+      "authors": "Berman ZT, De la Garza-Ramos C, Montazeri SA, et al.",
+      "journal": "Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42084516/",
       "pmcid": "",
       "pdfUrl": "",
       "pdfFileName": "",
       "fullTextStatus": "paywall",
       "fullTextNote": "",
-      "results": "• Co-citation and keyword analyses revealed three research frontiers: mechanisms of radio-immunologic synergy, optimization of treatment sequencing and dosimetry, and predictive biomarker development.\n• Future research requires more phase III trials, incorporating multi-omics technologies and individualized dosimetry models to validate survival benefits and explore more precise immuno-combination strategies.",
-      "findings": "• Co-citation and keyword analyses revealed three research frontiers: mechanisms of radio-immunologic synergy, optimization of treatment sequencing and dosimetry, and predictive biomarker development.\n• Future research requires more phase III trials, incorporating multi-omics technologies and individualized dosimetry models to validate survival benefits and explore more precise immuno-combination strategies.",
+      "results": "• Background Complete pathologic necrosis (CPN) at liver transplant is a positive predictor of freedom from recurrence and overall survival for patients with hepatocellular carcinoma (HCC).\n• Treatment parameters were compared for patients that achieved CPN versus those without CPN using Mann-Whitney U or χ2 tests.\n• Tumors had a median size of 2.4 cm (IQR, 2.0-3.1 cm) and demonstrated a CPN rate of 68% (246 of 364).\n• Compared with tumors without CPN, those with CPN had a higher microsphere activity (median, 1242 Bq vs 1203 Bq; P <.03), microspheres per milliliter (median, 9000 per mL vs 7600 per mL; P =.02), single-compartment dose (median, 544 Gy vs 379 Gy; P <.001), and angiosome-to-tumor volume ratio (median, 25.2 vs 15.6; P =.02).",
+      "findings": "• Background Complete pathologic necrosis (CPN) at liver transplant is a positive predictor of freedom from recurrence and overall survival for patients with hepatocellular carcinoma (HCC).\n• Treatment parameters were compared for patients that achieved CPN versus those without CPN using Mann-Whitney U or χ2 tests.\n• Tumors had a median size of 2.4 cm (IQR, 2.0-3.1 cm) and demonstrated a CPN rate of 68% (246 of 364).\n• Compared with tumors without CPN, those with CPN had a higher microsphere activity (median, 1242 Bq vs 1203 Bq; P <.03), microspheres per milliliter (median, 9000 per mL vs 7600 per mL; P =.02), single-compartment dose (median, 544 Gy vs 379 Gy; P <.001), and angiosome-to-tumor volume ratio (median, 25.2 vs 15.6; P =.02).\n• Multivariable logistic regression showed that a microsphere activity of 1087 Bq or greater (P =.03), a dose of 440 Gy or greater (P <.001), and an angiosome-to-tumor volume ratio of 16 or greater (P <.001) were independent predictors of CPN.",
       "notes": "",
-      "abstract": "Hepatocellular carcinoma (HCC) is a highly aggressive malignancy with substantial mortality globally. The synergistic potential between immunotherapy and yttrium-90 transarterial radioembolization (⁹⁰Y-TARE) has stimulated extensive research into HCC combined therapeutic strategies. However, a comprehensive bibliometric analysis elucidating the evolutionary trajectory, research trends, and collaborative networks within this field remains absent. Unlike conventional systematic reviews, which are inherently subjective and lack the capacity for large-scale quantitative synthesis, bibliometric analysis offers a robust, data-driven approach to construct a holistic knowledge atlas. A total of 143 relevant publications were extracted from the Web of Science Core Collection (WoSCC) database, spanning 1 January 2003 to 24 October 2025. Utilizing VOSviewer, CiteSpace, and the R package bibliometrix, a multidimensional analysis encompassing publication volume, journal impact, national/contributions, institutional collaborations, authorship networks, co-citation patterns, and keyword clustering was conducted. From 2015 to 2025, the number of publications in this field has steadily increased. The United States was the dominant contributor. Global institutional collaboration was limited, highlighting the need for multinational cooperation. Co-citation and keyword analyses revealed three research frontiers: mechanisms of radio-immunologic synergy, optimization of treatment sequencing and dosimetry, and predictive biomarker development. Future research requires more phase III trials, incorporating multi-omics technologies and individualized dosimetry models to validate survival benefits and explore more precise immuno-combination strategies.",
+      "abstract": "Background Complete pathologic necrosis (CPN) at liver transplant is a positive predictor of freedom from recurrence and overall survival for patients with hepatocellular carcinoma (HCC). Comprehensive authorized user parameters for yttrium 90 radiation segmentectomy CPN rates at explant remain undefined. Purpose To evaluate established outcomes for radiation segmentectomy before liver transplant and determine optimal parameters to achieve CPN among patients with treatment-naive HCC. Materials and Methods This multicenter retrospective study included patients with treatment-naive HCC who underwent glass microsphere radiation segmentectomy before liver transplant from January 2016 to December 2024. Treatment parameters were compared for patients that achieved CPN versus those without CPN using Mann-Whitney U or χ2 tests. Receiver operating characteristic analysis was performed to determine treatment parameter thresholds and subsequently predict CPN. Results A total of 303 patients with 364 tumors were included in the study. Tumors had a median size of 2.4 cm (IQR, 2.0-3.1 cm) and demonstrated a CPN rate of 68% (246 of 364). Compared with tumors without CPN, those with CPN had a higher microsphere activity (median, 1242 Bq vs 1203 Bq; P <.03), microspheres per milliliter (median, 9000 per mL vs 7600 per mL; P =.02), single-compartment dose (median, 544 Gy vs 379 Gy; P <.001), and angiosome-to-tumor volume ratio (median, 25.2 vs 15.6; P =.02). Multivariable logistic regression showed that a microsphere activity of 1087 Bq or greater (P =.03), a dose of 440 Gy or greater (P <.001), and an angiosome-to-tumor volume ratio of 16 or greater (P <.001) were independent predictors of CPN. There was a positive association between the number of optimized parameters and CPN at liver transplant, with a positive predictive value of 74% (198 of 269) with one threshold met and 91% (57 of 63) with all thresholds met (P <.001). Conclusion Among patients with treatment-naive HCC, glass microsphere radiation segmentectomy before liver transplant achieved high rates of CPN, which was associated with optimized parameter thresholds determined for microsphere activity, microspheres per milliliter, dose, and angiosome-to-tumor volume ratio. © RSNA, 2026 Supplemental material is available for this article. See also the editorial by Gordon and Lewandowski in this issue.",
       "reviewStatus": "AI Draft",
       "primaryCategory": "Dosimetry",
-      "product": "ns",
+      "product": "glass",
       "categories": [
         "Dosimetry",
-        "HCC",
-        "Mapping / Failed Evaluation"
+        "HCC"
       ]
     }
   ]
