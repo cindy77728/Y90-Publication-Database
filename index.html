@@ -1092,6 +1092,26 @@ td.td-findings{
   }
 }
 
+
+
+/* v5.8 — hard fix: publication title field must show full imported title */
+#form-modal #f-title,
+#f-title.title-textarea{
+  display:block !important;
+  width:100% !important;
+  min-height:128px !important;
+  height:128px !important;
+  max-height:none !important;
+  padding:14px 15px !important;
+  line-height:1.45 !important;
+  white-space:pre-wrap !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  resize:vertical !important;
+  word-break:normal !important;
+  overflow-wrap:anywhere !important;
+}
+
 </style>
 </head>
 <body>
@@ -1255,7 +1275,7 @@ td.td-findings{
     <div class="form-grid">
       <div class="form-group"><label>Year *</label><input type="number" id="f-year" min="1990" max="2099" placeholder="2024"></div>
       <div class="form-group"><label>Country *</label><input type="text" id="f-country" placeholder="USA, UK, Korea…"></div>
-      <div class="form-group full"><label>Title *</label><textarea id="f-title" class="title-textarea" placeholder="Full publication title"></textarea></div>
+      <div class="form-group full"><label>Title *</label><textarea id="f-title" class="title-textarea" rows="4" placeholder="Full publication title"></textarea></div>
       <div class="form-group full"><label>Authors</label><input type="text" id="f-authors" placeholder="Smith J, Doe A, et al."></div>
       <div class="form-group full"><label>Journal</label><input type="text" id="f-journal" placeholder="Journal of Vascular and Interventional Radiology"></div>
       <div class="form-group">
@@ -13014,6 +13034,43 @@ function toggleMobileMenu(){
     </div>
   </div>
 </div>
+
+
+<script>
+/* v5.8 fallback: if an older cached/dynamic form still creates the Title as a one-line input, convert it to a textarea. */
+(function(){
+  function ensureFullTitleTextarea(){
+    var el = document.getElementById('f-title');
+    if(!el) return;
+    if(String(el.tagName).toLowerCase() !== 'textarea'){
+      var ta = document.createElement('textarea');
+      ta.id = el.id;
+      ta.className = (el.className ? el.className + ' ' : '') + 'title-textarea';
+      ta.placeholder = el.placeholder || 'Full publication title';
+      ta.value = el.value || '';
+      ta.rows = 4;
+      if(el.required) ta.required = true;
+      el.parentNode.replaceChild(ta, el);
+      el = ta;
+    }
+    el.setAttribute('rows','4');
+    el.style.display = 'block';
+    el.style.width = '100%';
+    el.style.minHeight = '128px';
+    el.style.height = '128px';
+    el.style.whiteSpace = 'pre-wrap';
+    el.style.overflowY = 'auto';
+    el.style.overflowX = 'hidden';
+    el.style.resize = 'vertical';
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    ensureFullTitleTextarea();
+    var bodyObserver = new MutationObserver(ensureFullTitleTextarea);
+    bodyObserver.observe(document.body, {childList:true, subtree:true});
+  });
+  window.ensureFullTitleTextarea = ensureFullTitleTextarea;
+})();
+</script>
 
 </body>
 </html>
