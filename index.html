@@ -3,47 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Y90 Publication Database v5.6</title>
+<title>Y90 Publication Database v5.0.1</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
-<!-- ══ GITHUB SETTINGS MODAL ══ -->
-<div class="modal-overlay" id="github-settings-modal" onclick="if(event.target===this)closeModal('github-settings-modal')">
-  <div class="modal" style="max-width:520px">
-    <div class="modal-header">
-      <h2 class="modal-title">☁️ GitHub Save Settings</h2>
-      <button class="icon-btn" onclick="closeModal('github-settings-modal')">✕</button>
-    </div>
-    <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
-      <p style="color:#ccc;font-size:14px;margin:0">
-        One-time setup. Your token is stored only in this browser and never sent anywhere except GitHub's API.
-      </p>
-      <div style="background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:12px;font-size:13px;color:#aad4ff;line-height:1.6">
-        <strong>How to get a token:</strong><br>
-        GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token<br>
-        → Select scope: <strong>repo</strong> → Copy the token and paste below.
-      </div>
-      <label style="color:#ccc;font-size:13px;font-weight:700">Personal Access Token
-        <input id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="width:100%;margin-top:6px;font-family:'DM Mono',monospace;font-size:13px">
-      </label>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-        <label style="color:#ccc;font-size:13px;font-weight:700">GitHub Username (owner)
-          <input id="gh-owner" type="text" placeholder="your-username" style="width:100%;margin-top:6px">
-        </label>
-        <label style="color:#ccc;font-size:13px;font-weight:700">Repository Name
-          <input id="gh-repo" type="text" placeholder="your-repo-name" style="width:100%;margin-top:6px">
-        </label>
-      </div>
-      <label style="color:#ccc;font-size:13px;font-weight:700">Branch (usually main or master)
-        <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
-      </label>
-      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
-        <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
-        <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings & Close</button>
-      </div>
-    </div>
-  </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <style>
 :root {
@@ -1169,7 +1131,7 @@ td.td-findings{
   <div class="header-top">
     <div class="logo-area">
       <h1>Y<span>90</span> Publication Database</h1>
-      <p>Radioembolization Literature Management · v5.6 · Mobile + AI Findings + Save to GitHub</p>
+      <p>Radioembolization Literature Management · v5.0.1 · Manual Subcategory Support + paper1/paper2 import</p>
     </div>
     <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
     <div class="header-actions" id="header-actions-drawer">
@@ -8797,78 +8759,18 @@ ${bullets.map(b=>'• '+b).join('\n')}
 
 Source used: ${sourceLabel}. Please manually verify before saving.`;
 }
-
-// ══════════════════════════════════════════════════════════
-// 🤖 CLAUDE AI — Key Findings Analysis
-// Uses the Anthropic API to extract real insights from abstracts
-// ══════════════════════════════════════════════════════════
-async function callClaudeForFindings(text, title, mode) {
-  const truncated = text.length > 6000 ? text.slice(0, 6000) + '…' : text;
-
-  let systemPrompt, userPrompt;
-
-  if (mode === 'categorize') {
-    systemPrompt = `You are a medical literature expert specialising in Y-90 radioembolization (SIRT/TARE). Extract category suggestions from publication text. Reply in plain text only, no markdown.`;
-    userPrompt = `Publication title: ${title || 'Unknown'}\n\nText:\n${truncated}\n\nSuggest 2-5 relevant categories for this paper from fields like: HCC, Metastases, Dosimetry, Safety/Complications, Clinical Efficacy, Mapping, Lung Shunt, PVT, Downstaging, Guidelines, Comparative, Glass vs Resin, SBRT, etc.\n\nReply format:\nCategory Suggestions\n\n[list each category on its own line]\n\nRationale: [1-2 sentences]`;
-  } else if (mode === 'dosimetry') {
-    systemPrompt = `You are a dosimetry expert in Y-90 radioembolization. Extract dosimetry-specific findings. Reply in plain text only, no markdown.`;
-    userPrompt = `Publication title: ${title || 'Unknown'}\n\nText:\n${truncated}\n\nExtract the key dosimetry findings (tumour dose, normal liver dose, lung shunt, MAA, voxel dosimetry, absorbed dose thresholds, dose-response). Write 3-5 bullet points. If no clear dosimetry data exists, say so.\n\nReply format:\nDosimetry-Relevant Findings\n\n• [finding]\n• [finding]\n…`;
-  } else if (mode === 'pubmed_preview') {
-    systemPrompt = `You are a medical literature expert specialising in Y-90 radioembolization (SIRT/TARE). Summarise PubMed abstracts concisely for clinicians. Reply in plain text only, no markdown.`;
-    userPrompt = `Publication title: ${title || 'Unknown'}\n\nAbstract:\n${truncated}\n\nWrite a concise summary for a clinician:\n1. Study design and patient population (1 sentence)\n2. Key results with numbers (2-3 bullet points)\n3. Main conclusion (1 sentence)\n4. Likely categories: choose from HCC, Metastases, Dosimetry, Safety/Complications, Clinical Efficacy, Mapping, Lung Shunt, PVT, Downstaging, Guidelines, Comparative, Glass vs Resin, etc.\n\nReply format:\nPubMed Abstract Key Findings\n\n[Study design sentence]\n\n• [Result with numbers]\n• [Result with numbers]\n• [Result with numbers]\n\nConclusion: [sentence]\n\nLikely categories: [list]\n\nPlease verify against the full paper before importing.`;
-  } else {
-    // default: findings — returns RESULTS and KEY FINDINGS separately
-    systemPrompt = `You are a medical literature expert specialising in Y-90 radioembolization (SIRT/TARE). Extract structured information from publication text for a literature database. Reply in plain text only, no markdown.`;
-    userPrompt = `Publication title: ${title || 'Unknown'}\n\nText:\n${truncated}\n\nExtract two separate sections:\n\n1. RESULTS — Raw data and statistics only: patient numbers (n=), survival times, response rates, p-values, doses in Gy, specific percentages. These are facts and numbers from the study. 3-5 bullet points.\n\n2. KEY FINDINGS — Clinical interpretation and significance: what these results mean clinically, what conclusions the authors drew, what is important for practice. Do NOT repeat the numbers from Results — focus on the meaning. 3-4 bullet points.\n\nReply EXACTLY in this format:\nRESULTS\n• [statistic/number]\n• [statistic/number]\n\nKEY FINDINGS\n• [clinical meaning]\n• [clinical meaning]\n\nPlease manually verify before saving.`;
-  }
-
-  try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system: systemPrompt,
-        messages: [{ role: 'user', content: userPrompt }]
-      })
-    });
-    if (!response.ok) throw new Error(`API error ${response.status}`);
-    const data = await response.json();
-    const reply = (data.content || []).map(b => b.text || '').join('').trim();
-    return reply || 'No findings could be extracted.';
-  } catch(e) {
-    console.warn('Claude API failed, falling back to keyword extraction:', e);
-    // Graceful fallback to keyword extraction
-    const bullets = extractKeyFindingBullets(text, 5);
-    if (bullets.length) {
-      return `Key Findings\n\n${bullets.map(b=>'• '+b).join('\n')}\n\nSource used: keyword extraction (AI unavailable). Please manually verify before saving.`;
-    }
-    const compact = normalizeExtractedText(text);
-    if (compact && compact.length > 40) {
-      return `Key Findings\n\n${compact.slice(0, 800)}\n\nSource used: abstract text (AI unavailable). Please manually verify before saving.`;
-    }
-    return `Key Findings\n\nCould not extract findings automatically. Please paste the abstract or key results manually.`;
-  }
-}
-
 async function aiAnalyzePubMed(pmid,title) {
   const el=document.getElementById(`ai-pm-${pmid}`);
   el.style.display='block';
   el.className='ai-result loading';
-  el.textContent='Fetching abstract from PubMed…';
+  el.textContent='Fetching PubMed abstract…';
   try{
     const temp={pmid, title};
     const abstract=await fetchPubMedAbstractText(temp);
-    if(!abstract){
-      el.className='ai-result';
-      el.textContent='Could not fetch abstract from PubMed. Open the PubMed link to read it, then import and paste the abstract manually.';
-      return;
-    }
-    el.textContent='Analysing with AI…';
-    const result=await callClaudeForFindings(abstract, title, 'pubmed_preview');
+    const guessed=guessLocalCategoriesFromText([title,abstract].join(' '));
+    const bullets=extractKeyFindingBullets(abstract,4);
     el.className='ai-result';
-    el.textContent=result;
+    el.textContent=`PubMed Abstract Key Findings\n\n${bullets.length ? bullets.map(b=>'• '+b).join('\n') : 'No abstract-level findings could be extracted automatically.'}\n\nLikely categories: ${guessed.length ? guessed.join(', ') : 'No confident suggestion'}\n\nPlease verify against the full paper before importing.`;
   }catch(e){
     el.className='ai-result';
     el.textContent='Could not fetch PubMed abstract from this browser. Open the link or import the paper and attach the PDF.';
@@ -8905,25 +8807,27 @@ async function runAI(id,mode='findings') {
   const p=publications.find(x=>x.id===id); if(!p) return;
   const outputEl=document.getElementById('ai-output');
   outputEl.className='ai-result loading';
-  outputEl.innerHTML=`<div class="ai-thinking"><span></span><span></span><span></span></div><span style="margin-left:9px">Collecting text from saved fields, PDF, PMC, or PubMed…</span>`;
+  outputEl.innerHTML=`<div class="ai-thinking"><span></span><span></span><span></span></div><span style="margin-left:9px">Extracting content from saved fields, PDF, PMC, or PubMed…</span>`;
   try{
     const source=await collectPublicationSourceText(p);
-    if(!source.text){
+    let text='';
+    if(source.text){
+      text=buildContentBasedAnalysis(p, source.text, source.source, mode);
+    }else{
       const hasOnlyFolder=!!(p.pdfFileName && pdfFolderUrl && !p.pdfData && !p.pdfUrl);
-      const text=`Key Findings\n\nNo extractable publication text was found.\n\nWhat I checked:\n• Saved Key Findings / Results / Abstract\n• Uploaded PDF attached inside this record\n• PMC full text / PDF URL / PubMed abstract when available\n\n${hasOnlyFolder ? 'This record only has a PDF file name/folder link — the browser cannot read files inside your folder automatically. Please attach the PDF directly to the record, add a direct PDF URL, or paste the abstract.\n\n' : ''}Please attach the PDF directly in Edit Publication, add the abstract/results, or provide a direct PDF/PubMed/PMC link.`;
-      outputEl.className='ai-result'; outputEl.textContent=text; outputEl.dataset.lastResult=text; outputEl.dataset.pubId=id;
-      return;
+      text=`Key Findings\n\nNo extractable publication text was found.\n\nWhat I checked:\n• Saved Key Findings / Results / Abstract\n• Uploaded PDF attached inside this record\n• PMC full text / PDF URL / PubMed abstract when available\n\n${hasOnlyFolder ? 'This record only has a PDF file name/folder link. A browser cannot search inside your OneDrive/GitHub folder link automatically. Please attach the PDF directly to the record, add a direct PDF URL, or paste the abstract/results.\n\n' : ''}Please attach the PDF directly in Edit Publication, add the abstract/results, or provide a direct PDF/PubMed/PMC link.`;
     }
-    outputEl.querySelector && (outputEl.innerHTML=`<div class="ai-thinking"><span></span><span></span><span></span></div><span style="margin-left:9px">Analysing with AI (source: ${source.source})…</span>`);
-    const text=await callClaudeForFindings(source.text, p.title, mode);
     outputEl.className='ai-result';
     outputEl.textContent=text;
     outputEl.dataset.lastResult=text;
     outputEl.dataset.pubId=id;
   }catch(e){
     console.error(e);
-    const text='Key Findings\n\nExtraction failed. Please attach the PDF directly, add abstract/results text, or provide a PubMed/PMC link.';
-    outputEl.className='ai-result'; outputEl.textContent=text; outputEl.dataset.lastResult=text; outputEl.dataset.pubId=id;
+    const text='Key Findings\n\nExtraction failed in the browser. This can happen when the PDF/link blocks browser access. Please attach the PDF directly to the publication record, add abstract/results text, or use a direct PubMed/PMC link.';
+    outputEl.className='ai-result';
+    outputEl.textContent=text;
+    outputEl.dataset.lastResult=text;
+    outputEl.dataset.pubId=id;
   }
 }
 
@@ -8996,31 +8900,29 @@ async function aiSummarizeForm() {
       return;
     }
 
-    // Use Claude AI for findings extraction
-    resultEl.innerHTML=`<div class="ai-thinking"><span></span><span></span><span></span></div><span style="margin-left:9px">Analysing with AI…</span>`;
-    const aiResult=await callClaudeForFindings(sourceText, title, 'findings');
+    const bullets=extractKeyFindingBullets(sourceText,5);
+    const findingText=bullets.length
+      ? bullets.map(b=>'• '+b).join('\n')
+      : normalizeExtractedText(sourceText).slice(0,700);
 
-    // Parse the two sections: RESULTS and KEY FINDINGS
-    const resultsMatch = aiResult.match(/RESULTS\s*\n([\s\S]*?)(?=KEY FINDINGS|$)/i);
-    const findingsMatch = aiResult.match(/KEY FINDINGS\s*\n([\s\S]*?)(?=Please manually|$)/i);
-    const resultsText = resultsMatch ? resultsMatch[1].trim() : '';
-    const findingsText = findingsMatch ? findingsMatch[1].trim() : aiResult.replace(/^Key Findings\s*/i,'').replace(/Source used:[^\n]*/,'').trim();
-
-    // Fill Results field
-    const resultsEl=document.getElementById('f-results');
-    if(resultsText && (!resultsEl.value.trim() || confirm('Replace current Results with AI-extracted data?'))){
-      resultsEl.value=resultsText.substring(0,1500);
+    // Fill Key Findings only when empty, or ask before overwriting.
+    const findingsEl=document.getElementById('f-findings');
+    if(findingText && (!findingsEl.value.trim() || confirm('Replace current Key Findings with extracted findings?'))){
+      findingsEl.value=findingText.substring(0,1200);
     }
 
-    // Fill Key Findings field
-    const findingsEl=document.getElementById('f-findings');
-    if(findingsText && (!findingsEl.value.trim() || confirm('Replace current Key Findings with AI findings?'))){
-      findingsEl.value=findingsText.substring(0,1500);
+    // Add a compact Results draft if the Results field is empty and the extracted text contains outcome/statistical sentences.
+    const resultsEl=document.getElementById('f-results');
+    if(!resultsEl.value.trim()){
+      const resultBullets=extractKeyFindingBullets(sourceText,8)
+        .filter(b=>/(n\s*=|patients?|median|mean|%|months?|OS|PFS|TTP|ORR|DCR|response|survival|toxicity|adverse|grade|Gy|p\s*[=<]|CI|HR)/i.test(b))
+        .slice(0,4);
+      if(resultBullets.length) resultsEl.value=resultBullets.map(b=>'• '+b).join('\n').substring(0,1200);
     }
 
     resultEl.className='ai-result';
-    resultEl.textContent=`✅ AI extraction completed from ${source.source}.\n\n${aiResult}\n\nProduct guess: ${product}\nSuggested categories: ${categories.join(', ') || '—'}\n\nPlease verify before saving.`;
-    showToast('AI key findings extracted. Review before saving.','success');
+    resultEl.textContent=`✅ Extraction completed from ${source.source}.\n\nKey Findings draft:\n${findingText || '—'}\n\nProduct guess: ${product}\nSuggested categories: ${categories.join(', ') || '—'}\n\nPlease manually verify before saving.`;
+    showToast('Key findings extracted. Review, then Save Publication and Export JSON.','success');
   }catch(e){
     console.error(e);
     resultEl.className='ai-result';
@@ -9031,42 +8933,23 @@ async function aiSummarizeForm() {
 
 function applyAISuggestion(id) {
   const outputEl=document.getElementById('ai-output');
+  // v5.1 fix: use the visible analysis text as a fallback if dataset.lastResult was not set.
+  // This prevents the false "Run AI first" message after an API-key fallback response.
   const text=(outputEl.dataset.lastResult || outputEl.textContent || '').trim();
   if(!text || outputEl.classList.contains('loading')){showToast('Run AI first.','error');return;}
   const p=publications.find(x=>x.id===id); if(!p) return;
-
-  // Parse RESULTS and KEY FINDINGS sections if Claude returned them separately
-  const resultsMatch = text.match(/RESULTS\s*
-([\s\S]*?)(?=KEY FINDINGS|$)/i);
-  const findingsMatch = text.match(/KEY FINDINGS\s*
-([\s\S]*?)(?=Please manually|Source used|Product guess|$)/i);
-
-  if(resultsMatch && findingsMatch){
-    const newResults = (resultsMatch[1]||'').trim();
-    const newFindings = (findingsMatch[1]||'').trim();
-    const overwrite = (!p.findings && !p.results) || confirm('Overwrite existing Results and Key Findings with AI analysis?');
-    if(overwrite){
-      if(newResults) p.results = newResults.substring(0,1500);
-      if(newFindings) p.findings = newFindings.substring(0,1500);
-      p.reviewStatus = p.reviewStatus || 'AI Draft';
-      save(); applyFilters(); renderDashboard();
-      showToast('Results and Key Findings saved separately to record.','success');
-      closeModal('ai-modal');
-    }
-  } else {
-    // Fallback: save everything to Key Findings only
-    if(!p.findings||confirm('Overwrite existing Key Findings with current analysis text?')){
-      let saveText=text
-        .replace(/^Key Findings\s*/i,'')
-        .replace(/
-
-Source used:[\s\S]*$/i,'')
-        .trim();
-      p.findings=(saveText || text).substring(0,1500);
-      p.reviewStatus = p.reviewStatus || 'AI Draft';
-      save(); applyFilters(); renderDashboard();
-      showToast('Key findings saved to record.','success');
-    }
+  if(!p.findings||confirm('Overwrite existing Key Findings with current analysis text?')){
+    let saveText=text
+      .replace(/^Key Findings\s*/i,'')
+      .replace(/\n\nSource used:[\s\S]*$/i,'')
+      .trim();
+    p.findings=(saveText || text).substring(0,1200);
+    const reviewSelectValue=p.reviewStatus || 'AI Draft';
+    p.reviewStatus=reviewSelectValue;
+    save();
+    applyFilters();
+    renderDashboard();
+    showToast('Key findings saved to record. Remember to Export JSON if you want to keep this change on GitHub.','success');
   }
 }
 
@@ -12879,28 +12762,8 @@ async function loadGitHubPublicationsJsonAsSourceOfTruth(){
     const resp = await fetch('publications.json?ts=' + Date.now(), { cache: 'no-store' });
     if(!resp.ok) return false;
     const data = await resp.json();
-
-    // Accept either:
-    // 1) direct array [...]
-    // 2) { publications:[...] }
-    // 3) { data:[...] }
-    // 4) legacy { items:[...] }
-    let incomingPublications = [];
-
-    if(Array.isArray(data)){
-      incomingPublications = data;
-    } else if(Array.isArray(data?.publications)){
-      incomingPublications = data.publications;
-    } else if(Array.isArray(data?.data)){
-      incomingPublications = data.data;
-    } else if(Array.isArray(data?.items)){
-      incomingPublications = data.items;
-    }
-
-    if(!Array.isArray(incomingPublications) || incomingPublications.length === 0){
-      console.warn('publications.json loaded but no valid publications array found:', data);
-      return false;
-    }
+    const incomingPublications = Array.isArray(data) ? data : data.publications;
+    if(!Array.isArray(incomingPublications) || !incomingPublications.length) return false;
 
     publications = incomingPublications.map(p => ({
       ...p,
@@ -12938,42 +12801,11 @@ async function loadGitHubPublicationsJsonAsSourceOfTruth(){
 }
 
 async function bootY90Database(){
-  let loadedFromGitHub = false;
-  try {
-    loadedFromGitHub = await loadGitHubPublicationsJsonAsSourceOfTruth();
-  } catch(e) {
-    console.warn('GitHub JSON load error:', e);
-  }
-
-  if(!loadedFromGitHub){
+  const loadedFromGitHubJson = await loadGitHubPublicationsJsonAsSourceOfTruth();
+  if(!loadedFromGitHubJson){
     stabilizeDatasetBeforeInit();
   }
-
   init();
-
-  // Show a clear warning if no publications loaded at all
-  if(!publications || publications.length === 0){
-    setTimeout(()=>{
-      const container = document.getElementById('cards-container') || document.getElementById('table-body') || document.querySelector('.panel');
-      const warning = document.createElement('div');
-      warning.style.cssText = 'margin:40px auto;max-width:560px;background:rgba(255,200,50,.08);border:1px solid rgba(255,200,50,.3);border-radius:14px;padding:28px 24px;text-align:center;font-size:15px;color:#f0c040;line-height:1.7';
-      warning.innerHTML = `
-        <div style="font-size:32px;margin-bottom:12px">⚠️</div>
-        <strong style="font-size:17px;color:#fff">No publications loaded</strong><br><br>
-        The database could not load <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:4px">publications.json</code> from GitHub.<br><br>
-        <strong>Most likely causes:</strong><br>
-        • GitHub Pages is still deploying (wait 1-2 min, then refresh)<br>
-        • The <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:4px">publications.json</code> file is missing or empty on GitHub<br>
-        • You're opening the file locally instead of from your GitHub Pages URL<br><br>
-        <button onclick="location.reload()" style="background:#f0c040;color:#000;border:none;border-radius:8px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px">🔄 Refresh Page</button>
-        <br><br>
-        <span style="font-size:13px;color:#aaa">If the problem persists, click <strong style="color:#fff">☁️ Save to GitHub</strong> from another device where your data is visible, then refresh here.</span>
-      `;
-      // Insert at top of main content area
-      const mainPanel = document.getElementById('panel-library') || document.querySelector('.panel') || document.body;
-      mainPanel.insertBefore(warning, mainPanel.firstChild);
-    }, 500);
-  }
 }
 bootY90Database();
 
@@ -13042,7 +12874,6 @@ async function saveToGitHub() {
     const apiBase = `https://api.github.com/repos/${s.owner}/${s.repo}/contents/${filePath}`;
 
     // Build payload
-    // Canonical publications.json structure written to GitHub
     const payload = {
       version: 'y90-publication-database-v3',
       savedAt: new Date().toISOString(),
@@ -13140,18 +12971,178 @@ function toggleMobileMenu(){
 }
 
 
+// ══════════════════════════════════════════════════════════
+// ☁️ SAVE TO GITHUB
+// ══════════════════════════════════════════════════════════
+function getGitHubSettings(){
+  return { token:localStorage.getItem('y90ghToken')||'', owner:localStorage.getItem('y90ghOwner')||'', repo:localStorage.getItem('y90ghRepo')||'', branch:localStorage.getItem('y90ghBranch')||'main' };
+}
+function saveGitHubSettings({token,owner,repo,branch}){
+  localStorage.setItem('y90ghToken',token.trim()); localStorage.setItem('y90ghOwner',owner.trim());
+  localStorage.setItem('y90ghRepo',repo.trim()); localStorage.setItem('y90ghBranch',branch.trim()||'main');
+}
+function openGitHubSettingsModal(){
+  const s=getGitHubSettings();
+  document.getElementById('gh-token').value=s.token; document.getElementById('gh-owner').value=s.owner;
+  document.getElementById('gh-repo').value=s.repo; document.getElementById('gh-branch').value=s.branch;
+  openModal('github-settings-modal');
+}
+function saveGitHubSettingsFromForm(){
+  saveGitHubSettings({ token:document.getElementById('gh-token').value, owner:document.getElementById('gh-owner').value, repo:document.getElementById('gh-repo').value, branch:document.getElementById('gh-branch').value });
+  closeModal('github-settings-modal');
+  showToast('GitHub settings saved.','success');
+}
+async function saveToGitHub(){
+  const s=getGitHubSettings();
+  if(!s.token||!s.owner||!s.repo){ openGitHubSettingsModal(); return; }
+  const btn=document.getElementById('github-save-btn');
+  const orig=btn.textContent; btn.textContent='⏳ Saving…'; btn.disabled=true;
+  try{
+    const filePath='publications.json';
+    const headers={ Authorization:`Bearer ${s.token}`, Accept:'application/vnd.github.v3+json', 'Content-Type':'application/json' };
+    const apiBase=`https://api.github.com/repos/${s.owner}/${s.repo}/contents/${filePath}`;
+    const payload={ version:'y90-publication-database-v3', savedAt:new Date().toISOString(), categories:ALL_CATEGORIES, pdfFolderUrl:pdfFolderUrl, publications:publications.map(p=>{const c={...p};delete c.pdfData;return c;}) };
+    const jsonStr=JSON.stringify(payload,null,2);
+    const bytes=new TextEncoder().encode(jsonStr);
+    let binary=''; bytes.forEach(b=>binary+=String.fromCharCode(b));
+    const encoded=btoa(binary);
+    let fileSha=null;
+    try{
+      const refRes=await fetch(`https://api.github.com/repos/${s.owner}/${s.repo}/git/ref/heads/${s.branch}`,{headers});
+      if(!refRes.ok){ const e=await refRes.json().catch(()=>({})); if(refRes.status===401) throw new Error('Token rejected — check your GitHub token in settings.'); if(refRes.status===404) throw new Error('Repo or branch not found — check settings.'); throw new Error(e.message||`GitHub error ${refRes.status}`); }
+      const refData=await refRes.json();
+      const commitRes=await fetch(`https://api.github.com/repos/${s.owner}/${s.repo}/git/commits/${refData.object.sha}`,{headers});
+      const commitData=await commitRes.json();
+      const treeRes=await fetch(`https://api.github.com/repos/${s.owner}/${s.repo}/git/trees/${commitData.tree.sha}`,{headers});
+      const treeData=await treeRes.json();
+      const fe=treeData.tree.find(f=>f.path===filePath); if(fe) fileSha=fe.sha;
+    }catch(e){ if(e.message.includes('Token')||e.message.includes('Repo')||e.message.includes('GitHub error')) throw e; }
+    const putRes=await fetch(apiBase,{ method:'PUT', headers, body:JSON.stringify({ message:`Update publications.json — ${new Date().toLocaleString()}`, content:encoded, branch:s.branch, ...(fileSha?{sha:fileSha}:{}) }) });
+    if(!putRes.ok){ const err=await putRes.json().catch(()=>({})); throw new Error(err.message||`GitHub API error ${putRes.status}`); }
+    showToast('✅ Saved to GitHub! Changes are live.','success');
+  }catch(e){
+    alert('❌ Save failed:\n\n'+e.message);
+    showToast('❌ '+e.message,'error');
+  }finally{ btn.textContent=orig; btn.disabled=false; }
+}
+
+// ── Mobile menu toggle ──
+function toggleMobileMenu(){
+  const drawer=document.getElementById('header-actions-drawer');
+  drawer.classList.toggle('mobile-open');
+  document.getElementById('mobile-menu-btn').textContent=drawer.classList.contains('mobile-open')?'✕':'☰';
+}
 
 </script>
 
-
+<!-- ══ GITHUB SETTINGS MODAL ══ -->
+<div class="modal-overlay" id="github-settings-modal" onclick="if(event.target===this)closeModal('github-settings-modal')">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-header">
+      <h2 class="modal-title">☁️ GitHub Save Settings</h2>
+      <button class="icon-btn" onclick="closeModal('github-settings-modal')">✕</button>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <p style="color:#ccc;font-size:14px;margin:0">
+        One-time setup. Your token is stored only in this browser and never sent anywhere except GitHub's API.
+      </p>
+      <div style="background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:12px;font-size:13px;color:#aad4ff;line-height:1.6">
+        <strong>How to get a token:</strong><br>
+        GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token<br>
+        → Select scope: <strong>repo</strong> → Copy the token and paste below.
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Personal Access Token
+        <input id="gh-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="width:100%;margin-top:6px;font-family:'DM Mono',monospace;font-size:13px">
+      </label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label style="color:#ccc;font-size:13px;font-weight:700">GitHub Username (owner)
+          <input id="gh-owner" type="text" placeholder="your-username" style="width:100%;margin-top:6px">
+        </label>
+        <label style="color:#ccc;font-size:13px;font-weight:700">Repository Name
+          <input id="gh-repo" type="text" placeholder="your-repo-name" style="width:100%;margin-top:6px">
+        </label>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Branch (usually main or master)
+        <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
+      </label>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
+        <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings & Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-
+<!-- ══ GITHUB SETTINGS MODAL ══ -->
+<div class="modal-overlay" id="github-settings-modal" onclick="if(event.target===this)closeModal('github-settings-modal')">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-header">
+      <h2 class="modal-title">☁️ GitHub Save Settings</h2>
+      <button class="icon-btn" onclick="closeModal('github-settings-modal')">✕</button>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <p style="color:#ccc;font-size:14px;margin:0">One-time setup. Token stored only in this browser, never shared.</p>
+      <div style="background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:12px;font-size:13px;color:#aad4ff;line-height:1.6">
+        <strong>How to get a token:</strong><br>
+        GitHub → Settings → Developer settings → Personal access tokens → Fine-grained → Generate new token → Repository permissions → Contents: <strong>Read and write</strong>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Personal Access Token
+        <input id="gh-token" type="password" placeholder="github_pat_xxxx" style="width:100%;margin-top:6px;font-family:monospace;font-size:13px">
+      </label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label style="color:#ccc;font-size:13px;font-weight:700">GitHub Username
+          <input id="gh-owner" type="text" placeholder="your-username" style="width:100%;margin-top:6px">
+        </label>
+        <label style="color:#ccc;font-size:13px;font-weight:700">Repository Name
+          <input id="gh-repo" type="text" placeholder="Y90-Publication-Database" style="width:100%;margin-top:6px">
+        </label>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Branch
+        <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
+      </label>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
+        <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-
+<!-- ══ GITHUB SETTINGS MODAL ══ -->
+<div class="modal-overlay" id="github-settings-modal" onclick="if(event.target===this)closeModal('github-settings-modal')">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-header">
+      <h2 class="modal-title">☁️ GitHub Save Settings</h2>
+      <button class="icon-btn" onclick="closeModal('github-settings-modal')">✕</button>
+    </div>
+    <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <p style="color:#ccc;font-size:14px;margin:0">One-time setup. Token stored only in this browser.</p>
+      <div style="background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:8px;padding:12px;font-size:13px;color:#aad4ff;line-height:1.6">
+        <strong>How to get a token:</strong><br>
+        GitHub → Settings → Developer settings → Personal access tokens → Fine-grained → Generate → Repository permissions → Contents: <strong>Read and write</strong>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Personal Access Token
+        <input id="gh-token" type="password" placeholder="github_pat_xxxx" style="width:100%;margin-top:6px;font-family:monospace;font-size:13px">
+      </label>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label style="color:#ccc;font-size:13px;font-weight:700">GitHub Username
+          <input id="gh-owner" type="text" placeholder="your-username" style="width:100%;margin-top:6px">
+        </label>
+        <label style="color:#ccc;font-size:13px;font-weight:700">Repository Name
+          <input id="gh-repo" type="text" placeholder="Y90-Publication-Database" style="width:100%;margin-top:6px">
+        </label>
+      </div>
+      <label style="color:#ccc;font-size:13px;font-weight:700">Branch
+        <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
+      </label>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
+        <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
