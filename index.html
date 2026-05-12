@@ -9044,7 +9044,19 @@ function showToast(msg,type='success'){
   setTimeout(()=>t.classList.remove('show'),3500);
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal('form-modal');closeModal('detail-modal');closeModal('ai-modal');}});
-document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id);}));
+// v5.0.2 — Prevent accidental modal close when clicking outside the edit box
+// Previously, clicking the dark overlay closed the modal and returned to the front page.
+// This is annoying while editing long records, so modals now close only via the × button,
+// Cancel button, Save button, or explicit navigation actions.
+document.querySelectorAll('.modal-overlay').forEach(o=>{
+  o.addEventListener('click',e=>{
+    if(e.target===o){
+      e.preventDefault();
+      e.stopPropagation();
+      // keep modal open
+    }
+  });
+});
 
 // Backup helpers
 // Legacy importJSON handler removed in v4.5.1; the compatible importJSON function below supports both array-only and backup-object JSON files.
