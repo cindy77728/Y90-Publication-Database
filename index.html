@@ -1123,6 +1123,20 @@ td.td-findings{
   .no-results { font-size:14px !important; padding:28px !important; }
 }
 
+
+
+/* v5.7 — PubMed result readability fix: do not cut abstract text */
+.pubmed-result-card{overflow:visible !important;}
+.pubmed-abstract{
+  max-height:none !important;
+  overflow:visible !important;
+  padding-bottom:6px !important;
+  margin-bottom:8px !important;
+  display:block !important;
+  white-space:normal !important;
+}
+.pubmed-actions{margin-top:14px !important;}
+
 </style>
 </head>
 <body>
@@ -1259,7 +1273,7 @@ td.td-findings{
 
     <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-bottom:14px">
       <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px"><strong style="color:var(--text)">Search query:</strong></div>
-      <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent2)">"Y-90"[tiab] OR "Y90"[tiab] OR "yttrium-90"[tiab] OR "yttrium 90"[tiab] OR "radioembolization"[tiab] OR "radio-embolization"[tiab] OR "SIRT"[tiab] OR "selective internal radiation therapy"[tiab] OR "yttrium-90 microspheres"[tiab] OR "Y-90 microspheres"[tiab]</div>
+      <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent2)">"Y-90"[tiab] OR "Y90"[tiab] OR "yttrium-90"[tiab] OR "yttrium 90"[tiab] OR "radioembolization"[tiab] OR "radio-embolization"[tiab] OR "selective internal radiation therapy"[tiab] OR "yttrium-90 microspheres"[tiab] OR "Y-90 microspheres"[tiab] OR ("SIRT"[tiab] AND radioembolization/liver terms)</div>
       <div style="margin-top:8px;font-size:11px;color:var(--text-muted)">
         <span class="badge-pmc" style="display:inline-flex;margin-right:6px">PMC FREE</span> = Full text automatically available from PubMed Central (free, legal) · ~30% of papers
       </div>
@@ -8252,19 +8266,30 @@ async function fetchPubMed(days=7) {
   const importAllBtn=document.getElementById('pubmed-import-all-btn');
   if(importAllBtn) importAllBtn.style.display='none';
 
-  const query=encodeURIComponent('"Y-90"[tiab] OR "Y90"[tiab] OR "yttrium-90"[tiab] OR "yttrium 90"[tiab] OR "radioembolization"[tiab] OR "radio-embolization"[tiab] OR "SIRT"[tiab] OR "selective internal radiation therapy"[tiab] OR "yttrium-90 microspheres"[tiab] OR "Y-90 microspheres"[tiab]');
+  // v5.7: safer Y90 query. Bare "SIRT" pulls unrelated sirtuin / skincare papers, so SIRT is now constrained by radioembolization/liver terms.
+  const queryString='("Y-90"[tiab] OR "Y90"[tiab] OR "yttrium-90"[tiab] OR "yttrium 90"[tiab] OR "radioembolization"[tiab] OR "radio-embolization"[tiab] OR "selective internal radiation therapy"[tiab] OR "yttrium-90 microspheres"[tiab] OR "Y-90 microspheres"[tiab] OR ("SIRT"[tiab] AND (radioembolization[tiab] OR yttrium[tiab] OR microsphere*[tiab] OR liver[tiab] OR hepatic[tiab] OR hepatocellular[tiab] OR HCC[tiab])))';
+  const query=encodeURIComponent(queryString);
 
   try {
-    const retmax = days > 365 ? 200 : (days > 90 ? 100 : 25);
-    const searchData=await eutilsJson(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${query}&reldate=${days}&datetype=pdat&retmax=${retmax}&retmode=json&sort=date`);
+    // v5.7: previous retmax was 25 for both 30 and 90 days, so both could appear identical.
+    // Use explicit publication date range and a higher cap so 30/90/custom windows behave differently.
+    const endDate=new Date();
+    const startDate=new Date();
+    startDate.setDate(endDate.getDate()-Number(days));
+    const fmt=d=>`${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}`;
+    const mindate=fmt(startDate);
+    const maxdate=fmt(endDate);
+    const retmax = 500;
+    const searchData=await eutilsJson(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${query}&datetype=pdat&mindate=${mindate}&maxdate=${maxdate}&retmax=${retmax}&retmode=json&sort=pub+date`);
     const ids=searchData.esearchresult?.idlist||[];
+    const totalFound=Number(searchData.esearchresult?.count || ids.length || 0);
 
     if (!ids.length) {
       statusEl.innerHTML=`<span style="color:var(--accent3)">✓</span><span style="margin-left:8px">No new publications in the last ${days} days.</span>`;
       return;
     }
 
-    statusEl.innerHTML=`<span class="pulse-dot"></span><span style="margin-left:8px">Found ${ids.length} papers — checking PMC free text availability…</span>`;
+    statusEl.innerHTML=`<span class="pulse-dot"></span><span style="margin-left:8px">Found ${totalFound} PubMed match${totalFound===1?'':'es'} in the last ${days} days${ids.length<totalFound?' — loading the newest '+ids.length:''} — checking abstracts and PMC availability…</span>`;
 
     // Fetch summaries + PMC availability + abstracts in parallel
     const [summaryData, pmcData, abstractMap] = await Promise.all([
@@ -8284,7 +8309,18 @@ async function fetchPubMed(days=7) {
       });
     } catch(e){}
 
-    const papers=ids.map(id=>summaryData.result?.[id]).filter(Boolean);
+    const isLikelyY90Paper=(paper, abstract='')=>{
+      const txt=[paper?.title, paper?.source, abstract].filter(Boolean).join(' ').toLowerCase();
+      if(/sirtuin|antiaging|anti-aging|cosmeceutical|skin aging|pentapeptide|vialox|leuphasyl/.test(txt)) return false;
+      return /y-?90|yttrium[- ]?90|radioembolization|radio-embolization|selective internal radiation therapy|microsphere|hepatic|hepatocellular|hcc|liver/.test(txt);
+    };
+    const papers=ids.map(id=>summaryData.result?.[id]).filter(Boolean).filter(p=>isLikelyY90Paper(p, abstractMap?.[p.uid]||''));
+    if (!papers.length) {
+      statusEl.innerHTML=`<span style="color:var(--accent3)">✓</span><span style="margin-left:8px">No likely Y90/radioembolization publications found in the last ${days} days after filtering unrelated SIRT/sirtuin records.</span>`;
+      return;
+    }
+    const validPmids=new Set(papers.map(p=>String(p.uid)));
+    Object.keys(pmcMap).forEach(k=>{ if(!validPmids.has(String(k))) delete pmcMap[k]; });
     const pmcCount=Object.keys(pmcMap).length;
     lastPubMedSearchResults = papers.map(paper => {
       const pmid=paper.uid;
@@ -8304,7 +8340,7 @@ async function fetchPubMed(days=7) {
     }
 
     statusEl.innerHTML=`<span class="pulse-dot" style="background:var(--accent3)"></span>
-      <span style="color:var(--accent3);margin-left:8px">✓ ${papers.length} Y90 papers found · 
+      <span style="color:var(--accent3);margin-left:8px">✓ ${papers.length}${totalFound>papers.length?' of '+totalFound:''} Y90 papers loaded · 
       <span style="color:#4cca5a">🟢 ${pmcCount} with FREE full text on PMC</span> · 
       ${papers.length-pmcCount} paywalled</span>`;
 
