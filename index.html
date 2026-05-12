@@ -8190,10 +8190,11 @@ async function fetchPubMed(days=7) {
 
     statusEl.innerHTML=`<span class="pulse-dot"></span><span style="margin-left:8px">Found ${ids.length} papers — checking PMC free text availability…</span>`;
 
-    // Fetch summaries + check PMC availability in parallel
-    const [summaryData, pmcData] = await Promise.all([
+    // Fetch summaries + PMC availability + abstracts in parallel
+    const [summaryData, pmcData, abstractMap] = await Promise.all([
       fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${ids.join(',')}&retmode=json`).then(r=>r.json()),
-      fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pmc&id=${ids.join(',')}&retmode=json`).then(r=>r.json()).catch(()=>null)
+      fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pmc&id=${ids.join(',')}&retmode=json`).then(r=>r.json()).catch(()=>null),
+      fetchPubMedAbstractsByPmids(ids).catch(()=>({}))
     ]);
 
     // Build PMC map: pubmed ID -> PMC ID
@@ -8216,7 +8217,8 @@ async function fetchPubMed(days=7) {
       const journal=paper.source||'';
       const year=paper.pubdate?.split(' ')[0]||'';
       const pmcid=pmcMap[pmid]||'';
-      return {pmid,title,authors,journal,year,pmcid};
+      const abstract=abstractMap[pmid] || '';
+      return {pmid,title,authors,journal,year,pmcid,abstract};
     });
     const importAllBtn=document.getElementById('pubmed-import-all-btn');
     const newCount=lastPubMedSearchResults.filter(r => !publications.some(p => p.url?.includes(r.pmid) || p.title?.toLowerCase()===r.title.toLowerCase())).length;
@@ -8237,6 +8239,7 @@ async function fetchPubMed(days=7) {
       const journal=paper.source||'';
       const year=paper.pubdate?.split(' ')[0]||'';
       const pmcid=pmcMap[pmid]||'';
+      const abstract=abstractMap[pmid] || '';
       const isFree=!!pmcid;
       const alreadyIn=publications.some(p=>p.url?.includes(pmid)||p.title?.toLowerCase()===title.toLowerCase());
 
@@ -8263,6 +8266,7 @@ async function fetchPubMed(days=7) {
             <a href="${pmcViewUrl(pmcid)}" target="_blank" class="btn btn-pmc" style="font-size:11px">Read Free</a>
             <a href="${pmcUrl(pmcid)}" target="_blank" class="btn btn-green" style="font-size:11px">⬇ PDF</a>
           </div>`:''}
+          ${abstract?`<div class="pubmed-abstract" style="margin-top:10px">${escapeHtml(abstract)}</div>`:''}
           <div class="pubmed-actions">
             <a href="https://pubmed.ncbi.nlm.nih.gov/${pmid}/" target="_blank" class="btn btn-secondary" style="font-size:11px">🔗 PubMed</a>
             ${!alreadyIn?`<button class="btn btn-primary" style="font-size:11px" onclick="importFromPubMed('${pmid}','${escQ(title)}','${escQ(authors)}','${escQ(journal)}','${year}','${pmcid}')">+ Import to Database</button>`:''}
@@ -8316,15 +8320,15 @@ function importAllPubMedResults(){
       product: 'ns',
       categories: ['PubMed Updates'],
       primaryCategory: 'PubMed Updates',
-      results: '',
-      findings: 'Imported from PubMed search. Please review the abstract/full text and replace this with curated key findings.',
-      notes: 'Imported via PubMed search results. Needs human review before internal or external use.',
+      results: r.abstract ? extractKeyFindingBullets(r.abstract,4).map(b=>'• '+b).join('\n') : '',
+      findings: r.abstract ? extractKeyFindingBullets(r.abstract,5).map(b=>'• '+b).join('\n') : 'Imported from PubMed search. Please review the abstract/full text and replace this with curated key findings.',
+      notes: r.abstract ? 'Imported via PubMed search results. Abstract-level findings were auto-drafted and need human review.' : 'Imported via PubMed search results. Needs human review before internal or external use.',
       url: r.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/` : '',
       pmcid: r.pmcid || '',
       pdfUrl: r.pmcid ? pmcUrl(r.pmcid) : '',
       pdfFileName: '',
       pdfData: null,
-      abstract: '',
+      abstract: r.abstract || '',
       reviewStatus: 'AI Draft',
       pmid: r.pmid || ''
     });
@@ -8396,6 +8400,12 @@ async function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
     const abstractText=await fetchPubMedAbstractText(temp);
     if(abstractText && !document.getElementById('f-abstract').value.trim()){
       document.getElementById('f-abstract').value=abstractText;
+    }
+    if(abstractText){
+      const draftBullets=extractKeyFindingBullets(abstractText,5);
+      const draftText=draftBullets.length ? draftBullets.map(b=>'• '+b).join('\n') : normalizeExtractedText(abstractText).slice(0,700);
+      if(draftText && !document.getElementById('f-findings').value.trim()) document.getElementById('f-findings').value=draftText.substring(0,1200);
+      if(draftText && !document.getElementById('f-results').value.trim()) document.getElementById('f-results').value=draftText.substring(0,1200);
     }
     const combined=[title,journal,authors,abstractText].filter(Boolean).join(' ');
     const autoCats=guessLocalCategoriesFromText(combined);
@@ -8684,42 +8694,94 @@ async function collectPublicationSourceText(p){
 }
 
 function splitSentencesForFindings(text){
-  return normalizeExtractedText(text)
+  const normalized=normalizeExtractedText(text)
+    .replace(/\b(BACKGROUND|OBJECTIVE|PURPOSE|METHODS?|RESULTS?|CONCLUSIONS?|DISCUSSION|FINDINGS|INTERPRETATION):/gi, '. $1: ')
+    .replace(/^\.+\s*/, '');
+  return normalized
     .split(/(?<=[.!?])\s+(?=[A-Z0-9])/)
-    .map(s=>s.trim())
-    .filter(s=>s.length>35 && s.length<380)
-    .filter(s=>!/(copyright|all rights reserved|author information|introduction and objective|background and objective|published by|creative commons)/i.test(s));
+    .map(s=>s.trim().replace(/^\.+\s*/,''))
+    .filter(s=>s.length>30 && s.length<520)
+    .filter(s=>!/(copyright|all rights reserved|author information|published by|creative commons|clinical trial registration)/i.test(s));
+}
+
+function extractAbstractSections(text){
+  const clean=normalizeExtractedText(text);
+  const sections={};
+  const re=/\b(BACKGROUND|OBJECTIVE|OBJECTIVES|PURPOSE|MATERIALS AND METHODS|METHODS|RESULTS|CONCLUSION|CONCLUSIONS|FINDINGS|INTERPRETATION)\s*:\s*/gi;
+  const matches=[...clean.matchAll(re)];
+  if(!matches.length) return sections;
+  matches.forEach((m,idx)=>{
+    const key=m[1].toLowerCase().replace(/s$/,'');
+    const start=m.index + m[0].length;
+    const end=idx+1<matches.length ? matches[idx+1].index : clean.length;
+    const val=clean.slice(start,end).trim();
+    if(val) sections[key]=val;
+  });
+  return sections;
 }
 
 function scoreFindingSentence(s){
   let score=0;
+  if(/^\s*(results?|findings?|conclusions?|interpretation)\s*:/i.test(s)) score+=5;
   if(/\b(n\s*=|patients?|cohort|retrospective|prospective|phase|randomi[sz]ed|single[- ]institution|multicenter)\b/i.test(s)) score+=1;
-  if(/\b(OS|overall survival|PFS|progression[- ]free|TTP|time to progression|ORR|objective response|complete response|partial response|disease control|DCR|response rate)\b/i.test(s)) score+=4;
+  if(/\b(OS|overall survival|PFS|progression[- ]free|TTP|time to progression|ORR|objective response|complete response|partial response|disease control|DCR|response rate|local control)\b/i.test(s)) score+=5;
   if(/\b(safety|toxicity|adverse event|complication|grade\s*[3-5]|REILD|radioembolization-induced liver disease)\b/i.test(s)) score+=4;
   if(/\b(median|mean|hazard ratio|HR|odds ratio|OR|p\s*[=<]|CI|confidence interval|%|months?|Gy|GBq)\b/i.test(s)) score+=3;
-  if(/\b(dose|dosimetry|absorbed|tumou?r dose|normal liver|lung shunt|mapping|MAA)\b/i.test(s)) score+=3;
-  if(/\b(conclusion|conclude|associated with|significant|predict|improved|higher|lower|reduced|safe|effective|efficacy|feasible)\b/i.test(s)) score+=2;
-  if(/\b(title|authors?|journal|copyright|methods?\b only)\b/i.test(s)) score-=3;
+  if(/\b(dose|dosimetry|absorbed|tumou?r dose|normal liver|lung shunt|mapping|MAA|microspheres?)\b/i.test(s)) score+=3;
+  if(/\b(conclusion|conclude|associated with|significant|predict|improved|higher|lower|reduced|safe|effective|efficacy|feasible|promising|comparable)\b/i.test(s)) score+=2;
+  if(/\b(title|authors?|journal|methods? only)\b/i.test(s)) score-=3;
   return score;
 }
 
+function cleanFindingSentence(s){
+  return normalizeExtractedText(s)
+    .replace(/^(RESULTS?|CONCLUSIONS?|CONCLUSION|FINDINGS|INTERPRETATION)\s*:\s*/i,'')
+    .replace(/^(BACKGROUND|OBJECTIVE|OBJECTIVES|PURPOSE|METHODS?|MATERIALS AND METHODS)\s*:\s*/i,'')
+    .trim();
+}
+
 function extractKeyFindingBullets(text, maxBullets=5){
-  const sentences=splitSentencesForFindings(text);
-  const ranked=sentences.map((s,i)=>({s,i,score:scoreFindingSentence(s)}))
-    .filter(x=>x.score>=3)
-    .sort((a,b)=>b.score-a.score || a.i-b.i)
-    .slice(0,Math.max(maxBullets*2,8))
-    .sort((a,b)=>a.i-b.i);
+  const clean=normalizeExtractedText(text);
+  if(!clean) return [];
+
+  const sections=extractAbstractSections(clean);
+  const priorityText=[sections.result,sections.finding,sections.conclusion,sections.interpretation].filter(Boolean).join(' ');
+  const candidateText=priorityText || clean;
+  const sentences=splitSentencesForFindings(candidateText);
+
+  let ranked=sentences.map((s,i)=>({s:cleanFindingSentence(s),i,score:scoreFindingSentence(s)}))
+    .filter(x=>x.s && x.score>=2)
+    .sort((a,b)=>b.score-a.score || a.i-b.i);
+
+  if(!ranked.length){
+    ranked=sentences.map((s,i)=>({s:cleanFindingSentence(s),i,score:1}))
+      .filter(x=>x.s && x.s.length>35);
+  }
+
+  ranked=ranked.slice(0,Math.max(maxBullets*2,8)).sort((a,b)=>a.i-b.i);
   const seen=new Set();
   const out=[];
   for(const item of ranked){
-    const key=item.s.toLowerCase().replace(/\d+/g,'#').slice(0,120);
-    if(seen.has(key)) continue;
+    let sentence=item.s;
+    if(sentence.length>360) sentence=sentence.slice(0,360).replace(/\s+\S*$/,'')+'…';
+    const key=sentence.toLowerCase().replace(/\d+/g,'#').replace(/[^a-z#]+/g,' ').trim().slice(0,120);
+    if(!key || seen.has(key)) continue;
     seen.add(key);
-    out.push(item.s.replace(/^Results?:\s*/i,'').replace(/^Conclusions?:\s*/i,'').trim());
+    out.push(sentence);
     if(out.length>=maxBullets) break;
   }
   return out;
+}
+
+function buildAbstractKeyFindingPreview(title, abstract, maxBullets=4){
+  const clean=normalizeExtractedText(abstract);
+  if(!clean){
+    return 'No abstract text was available from PubMed efetch. If the PubMed webpage shows an abstract, try importing the paper first or paste the abstract into the edit form.';
+  }
+  const bullets=extractKeyFindingBullets(clean, maxBullets);
+  if(bullets.length) return bullets.map(b=>'• '+b).join('\n');
+  const fallback=clean.length>900 ? clean.slice(0,900).replace(/\s+\S*$/,'')+'…' : clean;
+  return '• '+fallback;
 }
 
 function buildContentBasedAnalysis(p, sourceText, sourceLabel, mode='findings'){
@@ -8763,19 +8825,27 @@ async function aiAnalyzePubMed(pmid,title) {
   const el=document.getElementById(`ai-pm-${pmid}`);
   el.style.display='block';
   el.className='ai-result loading';
-  el.textContent='Fetching PubMed abstract…';
+  el.textContent='Reading PubMed abstract and drafting key findings…';
   try{
+    const cached=(lastPubMedSearchResults||[]).find(r=>String(r.pmid)===String(pmid));
     const temp={pmid, title};
-    const abstract=await fetchPubMedAbstractText(temp);
+    const abstract=cached?.abstract || await fetchPubMedAbstractText(temp);
     const guessed=guessLocalCategoriesFromText([title,abstract].join(' '));
-    const bullets=extractKeyFindingBullets(abstract,4);
+    const findings=buildAbstractKeyFindingPreview(title, abstract, 4);
     el.className='ai-result';
-    el.textContent=`PubMed Abstract Key Findings\n\n${bullets.length ? bullets.map(b=>'• '+b).join('\n') : 'No abstract-level findings could be extracted automatically.'}\n\nLikely categories: ${guessed.length ? guessed.join(', ') : 'No confident suggestion'}\n\nPlease verify against the full paper before importing.`;
+    el.textContent=`PubMed Abstract Key Findings
+
+${findings}
+
+Likely categories: ${guessed.length ? guessed.join(', ') : 'No confident suggestion'}
+
+Source: PubMed abstract${cached?.abstract ? ' fetched with search results' : ''}. Please verify against the full paper before importing.`;
   }catch(e){
     el.className='ai-result';
-    el.textContent='Could not fetch PubMed abstract from this browser. Open the link or import the paper and attach the PDF.';
+    el.textContent='Could not fetch PubMed abstract from this browser. Open the link or import the paper and attach/paste the abstract.';
   }
 }
+
 
 // ══════════════════════════════════════════════════════════ AI MODAL
 async function openAIModal(id) {
