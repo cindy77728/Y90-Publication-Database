@@ -1026,6 +1026,15 @@ td.td-findings{
   .toast { bottom:10px !important; right:10px !important; left:10px !important; max-width:none !important; font-size:14px !important; }
 }
 
+
+
+/* v5.2 — Full text status management */
+.fulltext-note{display:block;margin-top:4px;font-size:12px;color:#ffffff;opacity:.72;font-family:'DM Sans',sans-serif;line-height:1.3;max-width:200px;word-break:break-word}
+.fulltext-link.hardcopy-link{color:#d6b3ff !important;}
+.fulltext-link.request-link{color:#ffd580 !important;}
+.fulltext-link.paywall-link{color:#ffffff !important;opacity:.72;}
+.fulltext-link.uploaded-link{color:#79b8ff !important;}
+
 </style>
 </head>
 <body>
@@ -1208,6 +1217,17 @@ td.td-findings{
       </select><div class="review-note">Use AI Draft until the paper has been manually checked.</div></div>
       <div class="form-group"><label>PubMed / DOI URL</label><input type="url" id="f-url" placeholder="https://pubmed.ncbi.nlm.nih.gov/…"></div>
       <div class="form-group"><label>PMC ID (if free full text)</label><input type="text" id="f-pmcid" placeholder="e.g. PMC9876543"></div>
+      <div class="form-group"><label>Full Text Status</label><select id="f-fulltextstatus">
+        <option value="auto">Auto-detect from fields</option>
+        <option value="free_pmc">Free PMC / Free full text</option>
+        <option value="direct_pdf">Direct PDF Link</option>
+        <option value="pdf_folder">PDF in Folder</option>
+        <option value="uploaded_pdf">Uploaded PDF attached</option>
+        <option value="hard_copy">Hard Copy</option>
+        <option value="request_needed">Need to Request</option>
+        <option value="paywall">Paywall / Not available</option>
+      </select><div class="review-note">Use this when the article is not in the shared PDF folder or when you only have a hard copy.</div></div>
+      <div class="form-group"><label>Full Text Note / Location</label><input type="text" id="f-fulltextnote" placeholder="e.g. office binder, ask Anson, library request…"></div>
       <div class="form-group"><label>PDF Link (optional)</label><input type="url" id="f-pdfurl" placeholder="OneDrive / SharePoint / PDF URL"></div>
       <div class="form-group"><label>PDF File Name</label><input type="text" id="f-pdffilename" placeholder="Exact PDF file name in your OneDrive folder"></div>
       <div class="form-group full">
@@ -7617,18 +7637,53 @@ function setPdfFolderUrl(){
   showToast(pdfFolderUrl ? 'PDF folder link saved.' : 'PDF folder link cleared.', 'success');
   applyFilters();
 }
+function getFullTextStatus(p){
+  const explicit = String(p.fullTextStatus || '').trim();
+  if(explicit && explicit !== 'auto') return explicit;
+  if(p.pdfData) return 'uploaded_pdf';
+  if(p.pmcid && String(p.pmcid).trim()) return 'free_pmc';
+  if(p.pdfUrl && String(p.pdfUrl).trim()) return 'direct_pdf';
+  if(p.pdfFileName && String(p.pdfFileName).trim()) return 'pdf_folder';
+  return 'paywall';
+}
+function fullTextNoteHtml(p){
+  const note = String(p.fullTextNote || '').trim();
+  const file = String(p.pdfFileName || '').trim();
+  if(note) return `<span class="fulltext-note">${htmlSafe(note)}</span>`;
+  if(file) return `<span class="fulltext-note">${htmlSafe(file)}</span>`;
+  return '';
+}
 function paperPdfAccessLinks(p){
+  const status = getFullTextStatus(p);
   let html = '';
-  if(p.pdfUrl){
+  if(status === 'free_pmc' && p.pmcid){
+    const url = pmcViewUrl(p.pmcid);
+    html += `<a class="fulltext-link pmc-link" href="${htmlSafe(url)}" target="_blank" onclick="event.stopPropagation()" title="Open PMC full text">🟢 PMC</a>`;
+  } else if(status === 'uploaded_pdf' && p.pdfData){
+    html += `<span class="fulltext-link uploaded-link" title="PDF is attached inside this browser database">📎 Uploaded PDF</span>`;
+  } else if((status === 'direct_pdf' || status === 'uploaded_pdf') && p.pdfUrl){
+    html += `<a class="fulltext-link pdf-link" href="${htmlSafe(p.pdfUrl)}" target="_blank" onclick="event.stopPropagation()" title="Open PDF link">📄 Show PDF</a>`;
+  } else if(status === 'pdf_folder' && pdfFolderUrl){
+    const title = p.pdfFileName ? `Open PDF folder and search: ${htmlSafe(p.pdfFileName)}` : 'Open PDF folder';
+    html += `<a class="fulltext-link folder-link" href="${htmlSafe(pdfFolderUrl)}" target="_blank" onclick="event.stopPropagation()" title="${title}">📁 PDF Folder</a>`;
+  } else if(status === 'hard_copy'){
+    html += `<span class="fulltext-link hardcopy-link" title="Hard copy only">🗂️ Hard Copy</span>`;
+  } else if(status === 'request_needed'){
+    html += `<span class="fulltext-link request-link" title="Need to request full text">📨 Request Needed</span>`;
+  } else if(p.pdfUrl){
     html += `<a class="fulltext-link pdf-link" href="${htmlSafe(p.pdfUrl)}" target="_blank" onclick="event.stopPropagation()" title="Open PDF link">📄 Show PDF</a>`;
   } else if(p.pdfFileName && pdfFolderUrl){
     html += `<a class="fulltext-link folder-link" href="${htmlSafe(pdfFolderUrl)}" target="_blank" onclick="event.stopPropagation()" title="Open PDF folder and search: ${htmlSafe(p.pdfFileName)}">📁 PDF Folder</a>`;
+  } else {
+    html += `<span class="fulltext-link paywall-link">paywall</span>`;
   }
-  return html;
+  return html + fullTextNoteHtml(p);
 }
 function paperPdfButtons(p){
+  const status = getFullTextStatus(p);
+  if(status === 'free_pmc' && p.pmcid) return `<a href="${htmlSafe(pmcViewUrl(p.pmcid))}" target="_blank" class="btn btn-green">🟢 View PMC</a>`;
   if(p.pdfUrl) return `<a href="${htmlSafe(p.pdfUrl)}" target="_blank" class="btn btn-green">📄 View PDF</a>`;
-  if(p.pdfFileName && pdfFolderUrl) return `<a href="${htmlSafe(pdfFolderUrl)}" target="_blank" class="btn btn-green" title="Search file name: ${htmlSafe(p.pdfFileName)}">📁 Open PDF Folder</a>`;
+  if(status === 'pdf_folder' && pdfFolderUrl) return `<a href="${htmlSafe(pdfFolderUrl)}" target="_blank" class="btn btn-green" title="Search file name: ${htmlSafe(p.pdfFileName || '')}">📁 Open PDF Folder</a>`;
   return '';
 }
 
@@ -8238,6 +8293,7 @@ function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
   document.getElementById('f-url').value=`https://pubmed.ncbi.nlm.nih.gov/${pmid}/`;
   document.getElementById('f-pmcid').value=pmcid||'';
   const reviewSelect=document.getElementById('f-reviewstatus'); if(reviewSelect) reviewSelect.value='AI Draft';
+  const fullTextSelect=document.getElementById('f-fulltextstatus'); if(fullTextSelect) fullTextSelect.value=pmcid ? 'free_pmc' : 'paywall';
   document.getElementById('modal-title').textContent='📄 Import from PubMed';
   if(pmcid){
     document.getElementById('pdf-label').innerHTML=`🟢 <strong>Free full text available (${pmcid})</strong> — will be linked automatically`;
@@ -8601,6 +8657,8 @@ async function aiSummarizeForm() {
     pdfUrl,
     pdfData:selectedPdfData,
     pdfFileName:document.getElementById('f-pdffilename').value.trim(),
+    fullTextStatus:document.getElementById('f-fulltextstatus')?.value || 'auto',
+    fullTextNote:document.getElementById('f-fulltextnote')?.value.trim() || '',
     country:document.getElementById('f-country').value.trim()
   };
 
@@ -8705,6 +8763,8 @@ function openEditModal(id){
   document.getElementById('f-pmcid').value=p.pmcid||'';
   document.getElementById('f-pdfurl').value=p.pdfUrl||'';
   document.getElementById('f-pdffilename').value=p.pdfFileName||'';
+  const fullTextSelect=document.getElementById('f-fulltextstatus'); if(fullTextSelect) fullTextSelect.value=p.fullTextStatus || 'auto';
+  const fullTextNote=document.getElementById('f-fulltextnote'); if(fullTextNote) fullTextNote.value=p.fullTextNote || '';
   document.getElementById('f-results').value=p.results||'';
   document.getElementById('f-findings').value=p.findings||'';
   document.getElementById('f-notes').value=p.notes||'';
@@ -8779,6 +8839,8 @@ function savePublication(){
     pmcid:document.getElementById('f-pmcid').value.trim(),
     pdfUrl:document.getElementById('f-pdfurl').value.trim(),
     pdfFileName:document.getElementById('f-pdffilename').value.trim(),
+    fullTextStatus:document.getElementById('f-fulltextstatus')?.value || 'auto',
+    fullTextNote:document.getElementById('f-fulltextnote')?.value.trim() || '',
     results:document.getElementById('f-results').value.trim(),
     findings:document.getElementById('f-findings').value.trim(),
     notes:document.getElementById('f-notes').value.trim(),
@@ -9064,6 +9126,8 @@ function savePublication(){
     pmcid:document.getElementById('f-pmcid').value.trim(),
     pdfUrl:document.getElementById('f-pdfurl').value.trim(),
     pdfFileName:document.getElementById('f-pdffilename').value.trim(),
+    fullTextStatus:document.getElementById('f-fulltextstatus')?.value || 'auto',
+    fullTextNote:document.getElementById('f-fulltextnote')?.value.trim() || '',
     results:document.getElementById('f-results').value.trim(),
     findings:document.getElementById('f-findings').value.trim(),
     notes:document.getElementById('f-notes').value.trim(),
@@ -9078,7 +9142,7 @@ function savePublication(){
 }
 
 function clearForm(){
-  ['f-year','f-country','f-title','f-authors','f-journal','f-url','f-pmcid','f-pdfurl','f-pdffilename','f-results','f-findings','f-notes','f-abstract','category-form-search'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  ['f-year','f-country','f-title','f-authors','f-journal','f-url','f-pmcid','f-pdfurl','f-pdffilename','f-fulltextnote','f-results','f-findings','f-notes','f-abstract','category-form-search'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
   document.querySelector('input[name="product"][value="ns"]').checked=true;
   populatePrimaryCategorySelect('');
   document.querySelectorAll('.cat-select-chip').forEach(c=>{c.classList.remove('selected'); c.style.display='inline-flex';});
@@ -12389,12 +12453,13 @@ function syncPrimaryCategoryWithSelections(){
 }
 
 function clearForm(){
-  ['f-year','f-country','f-title','f-authors','f-journal','f-url','f-pmcid','f-pdfurl','f-pdffilename','f-results','f-findings','f-notes','f-abstract','category-form-search'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  ['f-year','f-country','f-title','f-authors','f-journal','f-url','f-pmcid','f-pdfurl','f-pdffilename','f-fulltextnote','f-results','f-findings','f-notes','f-abstract','category-form-search'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
   document.querySelector('input[name="product"][value="ns"]').checked=true;
   formSecondaryCategories = [];
   populatePrimaryCategorySelect('');
   renderSecondaryCategoryPicker();
   const reviewSelect=document.getElementById('f-reviewstatus'); if(reviewSelect) reviewSelect.value='AI Draft';
+  const fullTextSelect=document.getElementById('f-fulltextstatus'); if(fullTextSelect) fullTextSelect.value='auto';
   document.getElementById('pdf-label').textContent='Click to attach PDF · or enter PMC ID above for auto free-text';
   document.getElementById('ai-form-result').style.display='none';
   selectedPdfData=null;
@@ -12414,6 +12479,8 @@ function openEditModal(id){
   document.getElementById('f-pmcid').value=p.pmcid||'';
   document.getElementById('f-pdfurl').value=p.pdfUrl||'';
   document.getElementById('f-pdffilename').value=p.pdfFileName||'';
+  const fullTextSelect=document.getElementById('f-fulltextstatus'); if(fullTextSelect) fullTextSelect.value=p.fullTextStatus || 'auto';
+  const fullTextNote=document.getElementById('f-fulltextnote'); if(fullTextNote) fullTextNote.value=p.fullTextNote || '';
   document.getElementById('f-results').value=p.results||'';
   document.getElementById('f-findings').value=p.findings||'';
   document.getElementById('f-notes').value=p.notes||'';
@@ -12448,6 +12515,8 @@ function savePublication(){
     pmcid:document.getElementById('f-pmcid').value.trim(),
     pdfUrl:document.getElementById('f-pdfurl').value.trim(),
     pdfFileName:document.getElementById('f-pdffilename').value.trim(),
+    fullTextStatus:document.getElementById('f-fulltextstatus')?.value || 'auto',
+    fullTextNote:document.getElementById('f-fulltextnote')?.value.trim() || '',
     results:document.getElementById('f-results').value.trim(),
     findings:document.getElementById('f-findings').value.trim(),
     notes:document.getElementById('f-notes').value.trim(),
