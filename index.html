@@ -8359,11 +8359,22 @@ async function fetchByPMID(pmid) {
   } catch(e){showToast('Fetch failed. Try from GitHub Pages.','error');}
 }
 
-function escQ(s){return(s||'').replace(/'/g,"\\'").replace(/"/g,'&quot;').substring(0,120);}
+function escQ(s){
+  // v5.9: keep the full PubMed title when passing data through onclick.
+  // Previous version used substring(0,120), which cut imported titles before they reached the edit form.
+  return String(s||'')
+    .replace(/\\/g,'\\\\')
+    .replace(/'/g,"\\'")
+    .replace(/?
+/g,' ')
+    .replace(/"/g,'&quot;');
+}
 
 async function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
   editingId=null; clearForm();
-  document.getElementById('f-title').value=title;
+  const titleField=document.getElementById('f-title');
+  titleField.value=title;
+  try { titleField.style.height='auto'; titleField.style.height=Math.max(128, titleField.scrollHeight + 8) + 'px'; } catch(e){}
   document.getElementById('f-authors').value=authors;
   document.getElementById('f-journal').value=journal;
   document.getElementById('f-year').value=year||'';
