@@ -8167,6 +8167,82 @@ function fetchPubMedCustomDays(){
   fetchPubMed(days);
 }
 
+
+// v5.7 — PubMed request helpers
+// The previous file called fetchPubMedAbstractsByPmids() but the helper was missing,
+// which made the PubMed search fall into the catch block and show a misleading CORS warning.
+async function eutilsJson(url){
+  try{
+    const res=await fetch(url);
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    return await res.json();
+  }catch(fetchError){
+    // JSONP fallback helps when a browser/network blocks normal fetch.
+    return await eutilsJsonp(url);
+  }
+}
+
+function eutilsJsonp(url, timeoutMs=15000){
+  return new Promise((resolve,reject)=>{
+    const cb='eutils_cb_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+    const sep=url.includes('?') ? '&' : '?';
+    const script=document.createElement('script');
+    let done=false;
+    const cleanup=()=>{
+      try{ delete window[cb]; }catch(e){ window[cb]=undefined; }
+      if(script.parentNode) script.parentNode.removeChild(script);
+    };
+    const timer=setTimeout(()=>{
+      if(done) return;
+      done=true; cleanup(); reject(new Error('NCBI JSONP timeout'));
+    }, timeoutMs);
+    window[cb]=(data)=>{
+      if(done) return;
+      done=true; clearTimeout(timer); cleanup(); resolve(data);
+    };
+    script.onerror=()=>{
+      if(done) return;
+      done=true; clearTimeout(timer); cleanup(); reject(new Error('NCBI JSONP failed'));
+    };
+    script.src=url+sep+'callback='+encodeURIComponent(cb);
+    document.head.appendChild(script);
+  });
+}
+
+async function eutilsText(url){
+  const res=await fetch(url);
+  if(!res.ok) throw new Error('HTTP '+res.status);
+  return await res.text();
+}
+
+async function fetchPubMedAbstractsByPmids(ids){
+  const map={};
+  const cleanIds=(ids||[]).map(x=>String(x).trim()).filter(Boolean);
+  if(!cleanIds.length) return map;
+  // Keep chunks modest so URLs do not become too long.
+  for(let i=0;i<cleanIds.length;i+=40){
+    const chunk=cleanIds.slice(i,i+40);
+    try{
+      const url=`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=${chunk.join(',')}&retmode=xml`;
+      const xmlText=await eutilsText(url);
+      const xml=new DOMParser().parseFromString(xmlText,'text/xml');
+      xml.querySelectorAll('PubmedArticle').forEach(article=>{
+        const pmid=article.querySelector('PMID')?.textContent?.trim();
+        if(!pmid) return;
+        const abstract=[...article.querySelectorAll('AbstractText')].map(n=>{
+          const label=n.getAttribute('Label');
+          const txt=normalizeExtractedText(n.textContent || '');
+          return txt ? ((label ? label+': ' : '') + txt) : '';
+        }).filter(Boolean).join(' ');
+        if(abstract) map[pmid]=normalizeExtractedText(abstract);
+      });
+    }catch(e){
+      console.warn('PubMed abstract batch fetch failed for chunk', chunk, e);
+    }
+  }
+  return map;
+}
+
 async function fetchPubMed(days=7) {
   const statusEl=document.getElementById('pubmed-status');
   const resultsEl=document.getElementById('pubmed-results');
@@ -8180,8 +8256,7 @@ async function fetchPubMed(days=7) {
 
   try {
     const retmax = days > 365 ? 200 : (days > 90 ? 100 : 25);
-    const searchResp=await fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${query}&reldate=${days}&datetype=pdat&retmax=${retmax}&retmode=json&sort=date`);
-    const searchData=await searchResp.json();
+    const searchData=await eutilsJson(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${query}&reldate=${days}&datetype=pdat&retmax=${retmax}&retmode=json&sort=date`);
     const ids=searchData.esearchresult?.idlist||[];
 
     if (!ids.length) {
@@ -8193,8 +8268,8 @@ async function fetchPubMed(days=7) {
 
     // Fetch summaries + PMC availability + abstracts in parallel
     const [summaryData, pmcData, abstractMap] = await Promise.all([
-      fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${ids.join(',')}&retmode=json`).then(r=>r.json()),
-      fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pmc&id=${ids.join(',')}&retmode=json`).then(r=>r.json()).catch(()=>null),
+      eutilsJson(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${ids.join(',')}&retmode=json`),
+      eutilsJson(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pmc&id=${ids.join(',')}&retmode=json`).catch(()=>null),
       fetchPubMedAbstractsByPmids(ids).catch(()=>({}))
     ]);
 
@@ -8278,13 +8353,14 @@ async function fetchPubMed(days=7) {
     }).join('');
 
   } catch(e) {
-    statusEl.innerHTML=`<span style="color:var(--text-muted)">⚠️ PubMed fetch failed (CORS when opened as local file). Upload to GitHub Pages to enable live fetching.</span>`;
+    const isLocal=location.protocol==='file:';
+    statusEl.innerHTML=`<span style="color:var(--text-muted)">⚠️ PubMed fetch failed${isLocal?' because this page is opened as a local file':' from this browser/network'}. ${isLocal?'Upload to GitHub Pages or use a local server.':'Please hard refresh, clear GitHub Pages cache, or try again later.'}</span>`;
     resultsEl.innerHTML=`
       <div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:14px;font-size:13px">
         <strong style="color:var(--text)">Workarounds:</strong>
         <ul style="margin-top:8px;padding-left:18px;color:var(--text-muted);line-height:2">
-          <li>Upload this file to <strong style="color:var(--accent)">GitHub Pages</strong> — PubMed fetching will work automatically</li>
-          <li>Use the <strong>Import by PMID</strong> box above to add papers one at a time</li>
+          <li>If you are on GitHub Pages already, hard refresh once and make sure the uploaded file is named <strong style="color:var(--accent)">index.html</strong></li>
+          <li>Use the <strong>Import by PMID</strong> box above to add papers one at a time if PubMed search is temporarily blocked</li>
           <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=%22Y-90%22+OR+%22yttrium-90%22+OR+%22radioembolization%22&sort=date" target="_blank" style="color:var(--accent2)">Open PubMed directly →</a></li>
         </ul>
       </div>`;
@@ -8360,8 +8436,8 @@ async function fetchByPMID(pmid) {
   showToast('Fetching PMID '+pmid+'…','info');
   try {
     const [summRes, pmcRes] = await Promise.all([
-      fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${pmid}&retmode=json`).then(r=>r.json()),
-      fetch(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pmc&id=${pmid}&retmode=json`).then(r=>r.json()).catch(()=>null)
+      eutilsJson(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${pmid}&retmode=json`),
+      eutilsJson(`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pmc&id=${pmid}&retmode=json`).catch(()=>null)
     ]);
     const paper=summRes.result?.[pmid];
     if(!paper){showToast('PMID not found.','error');return;}
@@ -8372,7 +8448,7 @@ async function fetchByPMID(pmid) {
     let pmcid='';
     try { const links=pmcRes?.linksets?.[0]?.linksetdbs?.find(l=>l.linkname==='pubmed_pmc')?.links||[]; if(links.length) pmcid='PMC'+links[0]; } catch(e){}
     importFromPubMed(pmid,title,authors,journal,year,pmcid);
-  } catch(e){showToast('Fetch failed. Try from GitHub Pages.','error');}
+  } catch(e){console.warn('PMID fetch failed', e); showToast('Fetch failed from PubMed. Please hard refresh or try again later.','error');}
 }
 
 function escQ(s){return(s||'').replace(/'/g,"\\'").replace(/"/g,'&quot;');}
@@ -8508,7 +8584,7 @@ async function fetchPubMedXMLDoc(p){
   if(!pmid) return null;
   try{
     const url=`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=${encodeURIComponent(pmid)}&retmode=xml`;
-    const xmlText=await fetch(url).then(r=>r.text());
+    const xmlText=await eutilsText(url);
     return new DOMParser().parseFromString(xmlText,'text/xml');
   }catch(e){
     console.warn('PubMed XML fetch failed', e);
@@ -8612,7 +8688,7 @@ async function fetchPubMedAbstractText(p){
   if(!pmid) return '';
   try{
     const url=`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=${encodeURIComponent(pmid)}&retmode=xml`;
-    const xmlText=await fetch(url).then(r=>r.text());
+    const xmlText=await eutilsText(url);
     const xml=new DOMParser().parseFromString(xmlText,'text/xml');
     const abstract=[...xml.querySelectorAll('AbstractText')].map(n=>{
       const label=n.getAttribute('Label');
@@ -8631,7 +8707,7 @@ async function fetchPubMedAbstractByTitle(title){
   try{
     const term='"'+cleanTitle+'"[Title]';
     const url=`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmode=json&retmax=1&term=${encodeURIComponent(term)}`;
-    const data=await fetch(url).then(r=>r.json());
+    const data=await eutilsJson(url);
     const pmid=(data.esearchresult && data.esearchresult.idlist && data.esearchresult.idlist[0]) || '';
     if(!pmid) return {text:'', pmid:''};
     const text=await fetchPubMedAbstractText({pmid});
@@ -8647,7 +8723,7 @@ async function fetchPMCFullText(p){
   const pmc=p.pmcid.replace(/^PMC/i,'');
   try{
     const url=`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=${encodeURIComponent(pmc)}&retmode=xml`;
-    const xmlText=await fetch(url).then(r=>r.text());
+    const xmlText=await eutilsText(url);
     const xml=new DOMParser().parseFromString(xmlText,'text/xml');
     const parts=[];
     const preferred=['abstract','sec'];
