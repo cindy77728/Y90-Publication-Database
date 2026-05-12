@@ -8282,7 +8282,18 @@ async function fetchByPMID(pmid) {
   } catch(e){showToast('Fetch failed. Try from GitHub Pages.','error');}
 }
 
-function escQ(s){return(s||'').replace(/'/g,"\\'").replace(/"/g,'&quot;').substring(0,120);}
+function escQ(s){
+  // Keep the full PubMed title/authors/journal when passing values through inline onclick.
+  // Previous version used .substring(0,120), which truncated long titles during '+ Import to Database'.
+  return String(s||'')
+    .replace(/\/g,'\\')
+    .replace(/?
+/g,' ')
+    .replace(/'/g,"\\'")
+    .replace(/"/g,'&quot;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;');
+}
 
 async function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
   editingId=null; clearForm();
