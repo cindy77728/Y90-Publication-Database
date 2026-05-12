@@ -12880,11 +12880,42 @@ async function loadGitHubPublicationsJsonAsSourceOfTruth(){
 }
 
 async function bootY90Database(){
-  const loadedFromGitHubJson = await loadGitHubPublicationsJsonAsSourceOfTruth();
-  if(!loadedFromGitHubJson){
+  let loadedFromGitHub = false;
+  try {
+    loadedFromGitHub = await loadGitHubPublicationsJsonAsSourceOfTruth();
+  } catch(e) {
+    console.warn('GitHub JSON load error:', e);
+  }
+
+  if(!loadedFromGitHub){
     stabilizeDatasetBeforeInit();
   }
+
   init();
+
+  // Show a clear warning if no publications loaded at all
+  if(!publications || publications.length === 0){
+    setTimeout(()=>{
+      const container = document.getElementById('cards-container') || document.getElementById('table-body') || document.querySelector('.panel');
+      const warning = document.createElement('div');
+      warning.style.cssText = 'margin:40px auto;max-width:560px;background:rgba(255,200,50,.08);border:1px solid rgba(255,200,50,.3);border-radius:14px;padding:28px 24px;text-align:center;font-size:15px;color:#f0c040;line-height:1.7';
+      warning.innerHTML = `
+        <div style="font-size:32px;margin-bottom:12px">⚠️</div>
+        <strong style="font-size:17px;color:#fff">No publications loaded</strong><br><br>
+        The database could not load <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:4px">publications.json</code> from GitHub.<br><br>
+        <strong>Most likely causes:</strong><br>
+        • GitHub Pages is still deploying (wait 1-2 min, then refresh)<br>
+        • The <code style="background:rgba(255,255,255,.1);padding:2px 6px;border-radius:4px">publications.json</code> file is missing or empty on GitHub<br>
+        • You're opening the file locally instead of from your GitHub Pages URL<br><br>
+        <button onclick="location.reload()" style="background:#f0c040;color:#000;border:none;border-radius:8px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px">🔄 Refresh Page</button>
+        <br><br>
+        <span style="font-size:13px;color:#aaa">If the problem persists, click <strong style="color:#fff">☁️ Save to GitHub</strong> from another device where your data is visible, then refresh here.</span>
+      `;
+      // Insert at top of main content area
+      const mainPanel = document.getElementById('panel-library') || document.querySelector('.panel') || document.body;
+      mainPanel.insertBefore(warning, mainPanel.firstChild);
+    }, 500);
+  }
 }
 bootY90Database();
 
