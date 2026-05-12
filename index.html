@@ -8284,7 +8284,7 @@ async function fetchByPMID(pmid) {
 
 function escQ(s){return(s||'').replace(/'/g,"\\'").replace(/"/g,'&quot;').substring(0,120);}
 
-function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
+async function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
   editingId=null; clearForm();
   document.getElementById('f-title').value=title;
   document.getElementById('f-authors').value=authors;
@@ -8300,7 +8300,26 @@ function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
   }
   switchTab('library');
   openModal('form-modal');
-  showToast(pmcid?`✅ Imported with FREE full text (${pmcid})`:'Imported — paywall paper, add PDF manually','info');
+  showToast(pmcid?`✅ Imported with FREE full text (${pmcid})`:'Imported — fetching PubMed details for auto category/country…','info');
+
+  // v5.6: immediately try to fill abstract, country, product and categories after PubMed import.
+  try{
+    const temp={pmid, url:`https://pubmed.ncbi.nlm.nih.gov/${pmid}/`, title, authors, journal, pmcid};
+    const abstractText=await fetchPubMedAbstractText(temp);
+    if(abstractText && !document.getElementById('f-abstract').value.trim()){
+      document.getElementById('f-abstract').value=abstractText;
+    }
+    const combined=[title,journal,authors,abstractText].filter(Boolean).join(' ');
+    const autoCats=guessLocalCategoriesFromText(combined);
+    if(autoCats.length) addFormCategories(autoCats);
+    const product=/glass/i.test(combined)&&/resin|sir-spheres|sirspheres|sirtax/i.test(combined)?'both':/glass/i.test(combined)?'glass':/resin|sir-spheres|sirspheres|sirtax/i.test(combined)?'resin':'ns';
+    const r=document.querySelector(`input[name="product"][value="${product}"]`); if(r) r.checked=true;
+    const country=await inferCountryFromPublication(temp, combined);
+    if(country && !document.getElementById('f-country').value.trim()) document.getElementById('f-country').value=country;
+    showToast(`Auto-filled ${[country?'country':'',autoCats.length?'categories':'',abstractText?'abstract':''].filter(Boolean).join(', ') || 'available PubMed fields'}. Please review before saving.`, 'success');
+  }catch(e){
+    console.warn('Auto PubMed analysis after import failed', e);
+  }
 }
 
 
@@ -8320,6 +8339,101 @@ function guessLocalCategoriesFromText(text) {
   if(/glass/.test(t)) add('Glass');
   if(/resin|sir-spheres|sirspheres|sirtax/.test(t)) add('Resin');
   return picks.slice(0,6);
+}
+
+
+/* v5.6 — Auto-classification helpers for Add/Edit form
+   These are intentionally browser-only and conservative. They use PubMed XML,
+   abstracts, title terms, and affiliation country patterns. Manual review is still required. */
+function addFormCategories(categories){
+  const valid=[...new Set((categories||[]).filter(c => c && ALL_CATEGORIES.includes(c)))];
+  if(!valid.length) return;
+  const primarySelect=document.getElementById('f-primarycategory');
+  const currentPrimary=(primarySelect?.value||'').trim();
+  const primary=currentPrimary || valid[0];
+  if(primarySelect && [...primarySelect.options].some(o => o.value === primary)) primarySelect.value=primary;
+  formSecondaryCategories=[...new Set([...(formSecondaryCategories||[]), ...valid.filter(c => c !== primary)])];
+  renderSecondaryCategoryPicker();
+  populateSecondaryCategoryDropdown();
+}
+
+function countryPatterns(){
+  return [
+    ['USA', /\b(United States|U\.S\.A\.|USA)\b/i],
+    ['UK', /\b(United Kingdom|England|Scotland|Wales|Northern Ireland|UK)\b/i],
+    ['Korea', /\b(South Korea|Republic of Korea|Korea)\b/i],
+    ['China', /\b(China|People\'s Republic of China|PR China|P\.R\. China)\b/i],
+    ['Taiwan', /\b(Taiwan|Taipei)\b/i],
+    ['Hong Kong', /\b(Hong Kong)\b/i],
+    ['Japan', /\b(Japan|Tokyo|Osaka|Kyoto)\b/i],
+    ['Singapore', /\b(Singapore)\b/i],
+    ['France', /\b(France|Paris)\b/i],
+    ['Germany', /\b(Germany|Deutschland|Munich|Berlin|Bonn|Essen|Frankfurt|Hamburg)\b/i],
+    ['Italy', /\b(Italy|Italia|Milan|Rome|Bologna|Turin|Pisa)\b/i],
+    ['Spain', /\b(Spain|España|Madrid|Barcelona)\b/i],
+    ['Netherlands', /\b(Netherlands|The Netherlands|Amsterdam|Utrecht|Rotterdam|Leiden)\b/i],
+    ['Belgium', /\b(Belgium|Brussels|Leuven)\b/i],
+    ['Switzerland', /\b(Switzerland|Zurich|Geneva|Bern|Lausanne)\b/i],
+    ['Austria', /\b(Austria|Vienna)\b/i],
+    ['Canada', /\b(Canada|Toronto|Vancouver|Montreal)\b/i],
+    ['Australia', /\b(Australia|Sydney|Melbourne|Brisbane)\b/i],
+    ['New Zealand', /\b(New Zealand)\b/i],
+    ['India', /\b(India|New Delhi|Mumbai)\b/i],
+    ['Turkey', /\b(Turkey|Türkiye|Istanbul|Ankara)\b/i],
+    ['Thailand', /\b(Thailand|Bangkok)\b/i],
+    ['Malaysia', /\b(Malaysia|Kuala Lumpur)\b/i],
+    ['Indonesia', /\b(Indonesia|Jakarta)\b/i],
+    ['Brazil', /\b(Brazil|Brasil|São Paulo|Sao Paulo)\b/i],
+    ['Israel', /\b(Israel|Tel Aviv)\b/i],
+    ['Saudi Arabia', /\b(Saudi Arabia|Riyadh)\b/i],
+    ['Egypt', /\b(Egypt|Cairo)\b/i]
+  ];
+}
+
+function inferCountryFromText(text){
+  const raw=String(text||'');
+  if(!raw.trim()) return '';
+  const counts=new Map();
+  countryPatterns().forEach(([country, re]) => {
+    const m=raw.match(new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags+'g'));
+    if(m && m.length) counts.set(country, (counts.get(country)||0) + m.length);
+  });
+  const ranked=[...counts.entries()].sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0]));
+  if(!ranked.length) return '';
+  if(ranked.length === 1) return ranked[0][0];
+  const top=ranked.slice(0,3).map(x=>x[0]);
+  return top.length > 2 ? `${top.join(' / ')} / International` : top.join(' / ');
+}
+
+async function fetchPubMedXMLDoc(p){
+  const pmid=getPMIDFromPublication(p);
+  if(!pmid) return null;
+  try{
+    const url=`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=${encodeURIComponent(pmid)}&retmode=xml`;
+    const xmlText=await fetch(url).then(r=>r.text());
+    return new DOMParser().parseFromString(xmlText,'text/xml');
+  }catch(e){
+    console.warn('PubMed XML fetch failed', e);
+    return null;
+  }
+}
+
+async function inferCountryFromPublication(p, sourceText=''){
+  // Priority 1: PubMed affiliation country, because it usually reflects author institution.
+  const xml=await fetchPubMedXMLDoc(p);
+  if(xml){
+    const affiliations=[...xml.querySelectorAll('AffiliationInfo > Affiliation, Affiliation')]
+      .map(n=>n.textContent || '')
+      .filter(Boolean)
+      .join(' | ');
+    const fromAff=inferCountryFromText(affiliations);
+    if(fromAff) return fromAff;
+  }
+  // Priority 2: any pasted abstract/results/source text, useful if affiliations were pasted.
+  const fromSource=inferCountryFromText(sourceText);
+  if(fromSource) return fromSource;
+  // Priority 3: title/journal/authors fallback. Usually weak, so only catches explicit country words.
+  return inferCountryFromText([p.title,p.journal,p.authors,p.notes].filter(Boolean).join(' '));
 }
 
 function isGeneratedLocalAnalysisText(text) {
@@ -8666,17 +8780,21 @@ async function aiSummarizeForm() {
     const source=await collectPublicationSourceText(tempPub);
     const sourceText=source.text || '';
     const titleOnlyText=normalizeExtractedText(title);
-    const textForClassification=[sourceText,titleOnlyText].filter(Boolean).join(' ');
+    const textForClassification=[sourceText,titleOnlyText,journal,document.getElementById('f-results').value.trim(),document.getElementById('f-notes').value.trim()].filter(Boolean).join(' ');
     const categories=guessLocalCategoriesFromText(textForClassification);
     const product=/glass/i.test(textForClassification)&&/resin|sir-spheres|sirspheres|sirtax/i.test(textForClassification)?'both':/glass/i.test(textForClassification)?'glass':/resin|sir-spheres|sirspheres|sirtax/i.test(textForClassification)?'resin':'ns';
+    const inferredCountry=await inferCountryFromPublication(tempPub, textForClassification);
 
     if(product){
       const r=document.querySelector(`input[name="product"][value="${product}"]`);
       if(r) r.checked=true;
     }
     if(categories.length){
-      categories.forEach(cat=>{const c=document.querySelector(`.cat-select-chip[data-cat="${cat}"]`);if(c)c.classList.add('selected');});
-      syncPrimaryCategoryWithSelections();
+      addFormCategories(categories);
+    }
+    const countryEl=document.getElementById('f-country');
+    if(inferredCountry && !countryEl.value.trim()){
+      countryEl.value=inferredCountry;
     }
     const reviewSelect=document.getElementById('f-reviewstatus'); if(reviewSelect) reviewSelect.value='AI Draft';
 
