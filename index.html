@@ -8780,7 +8780,10 @@ async function aiSummarizeForm() {
     const source=await collectPublicationSourceText(tempPub);
     const sourceText=source.text || '';
     const titleOnlyText=normalizeExtractedText(title);
-    const textForClassification=[sourceText,titleOnlyText,journal,document.getElementById('f-results').value.trim(),document.getElementById('f-notes').value.trim()].filter(Boolean).join(' ');
+    const journal=document.getElementById('f-journal')?.value.trim() || '';
+    const notes=document.getElementById('f-notes')?.value.trim() || '';
+    const resultsForClassification=document.getElementById('f-results')?.value.trim() || '';
+    const textForClassification=[sourceText,titleOnlyText,journal,resultsForClassification,notes].filter(Boolean).join(' ');
     const categories=guessLocalCategoriesFromText(textForClassification);
     const product=/glass/i.test(textForClassification)&&/resin|sir-spheres|sirspheres|sirtax/i.test(textForClassification)?'both':/glass/i.test(textForClassification)?'glass':/resin|sir-spheres|sirspheres|sirtax/i.test(textForClassification)?'resin':'ns';
     const inferredCountry=await inferCountryFromPublication(tempPub, textForClassification);
