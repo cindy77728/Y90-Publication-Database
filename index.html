@@ -1035,6 +1035,14 @@ td.td-findings{
 .fulltext-link.paywall-link{color:#ffffff !important;opacity:.72;}
 .fulltext-link.uploaded-link{color:#79b8ff !important;}
 
+
+/* v5.0.3 — show full imported PubMed title in the edit/import form */
+#f-title{
+  min-height:76px !important;
+  line-height:1.35 !important;
+  white-space:normal !important;
+}
+
 </style>
 </head>
 <body>
@@ -1198,7 +1206,7 @@ td.td-findings{
     <div class="form-grid">
       <div class="form-group"><label>Year *</label><input type="number" id="f-year" min="1990" max="2099" placeholder="2024"></div>
       <div class="form-group"><label>Country *</label><input type="text" id="f-country" placeholder="USA, UK, Korea…"></div>
-      <div class="form-group full"><label>Title *</label><input type="text" id="f-title" placeholder="Full publication title"></div>
+      <div class="form-group full"><label>Title *</label><textarea id="f-title" placeholder="Full publication title" style="min-height:76px"></textarea></div>
       <div class="form-group full"><label>Authors</label><input type="text" id="f-authors" placeholder="Smith J, Doe A, et al."></div>
       <div class="form-group full"><label>Journal</label><input type="text" id="f-journal" placeholder="Journal of Vascular and Interventional Radiology"></div>
       <div class="form-group">
@@ -8283,16 +8291,16 @@ async function fetchByPMID(pmid) {
 }
 
 function escQ(s){
-  // Keep the full PubMed title/authors/journal when passing values through inline onclick.
-  // Previous version used .substring(0,120), which truncated long titles during '+ Import to Database'.
-  return String(s||'')
-    .replace(/\/g,'\\')
+  // Keep full PubMed title/authors/journal when passing values through inline onclick.
+  // Do not truncate long titles.
+  return String(s || '')
+    .replace(/\/g, '\\')
     .replace(/?
-/g,' ')
-    .replace(/'/g,"\\'")
-    .replace(/"/g,'&quot;')
-    .replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;');
+/g, ' ')
+    .replace(/'/g, "\'")
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
 async function importFromPubMed(pmid,title,authors,journal,year,pmcid='') {
