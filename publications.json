@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-13T05:55:45.829Z",
+  "savedAt": "2026-05-13T06:39:18.319Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -1716,30 +1716,6 @@
       "abstract": "",
       "reviewStatus": "AI Draft",
       "primaryCategory": "Dosimetry"
-    },
-    {
-      "id": 2026050704,
-      "year": 2024,
-      "title": "Using voxel-based dosimetry to evaluate sphere concentration and tumor dose in hepatocellular carcinoma treated with yttrium-90 radiation segmentectomy with glass microspheres",
-      "authors": "Sandow T, Gimenez J, Nunez K, et al.",
-      "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Dosimetry / Voxel-based",
-        "Dosimetry / Dose Response",
-        "HCC"
-      ],
-      "results": "Voxel-based dosimetry study evaluating sphere concentration and tumor dose after radiation segmentectomy using glass microspheres.",
-      "findings": "Links sphere concentration and voxel-level tumor dose assessment to radiation segmentectomy outcome interpretation.",
-      "notes": "Added from Dosimetry ZIP.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2024 Sandow Using Voxel-based Dosimetry to evaluate sphere concentration and tumor dose.PDF",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry / Voxel-based"
     },
     {
       "id": 202605073026,
@@ -4853,7 +4829,7 @@
       "journal": "CardioVascular and Interventional Radiology",
       "url": "https://doi.org/10.1007/s00270-017-1688-z",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Balloon%20Occlusion/2017%20Choi%20Prophylactic%20Temporary%20Occlusion%20of%20the%20Cystic%20Artery%20Using%20a%20Fibered%20Detachable%20Coil%20During%2090Y%20Radioembolization.pdf?csf=1&web=1&e=wb5BaG",
       "pdfFileName": "2017 Choi Prophylactic Temporary Occlusion of the Cystic Artery Using a Fibered Detachable Coil During 90Y Radioembolization.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -4993,9 +4969,9 @@
       "country": "Worldwide",
       "authors": "Kennedy A, Brown DB, Feilchenfeldt J, et al.",
       "journal": "Journal of Gastrointestinal Oncology",
-      "url": "",
-      "pmcid": "",
-      "pdfUrl": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29299370/",
+      "pmcid": "PMC5750172",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Chemotherapy/Kennedy%202017%20-%20Consenus%20Guidelines%20Y90%20use%20with%20Chemotherapy.pdf?csf=1&web=1&e=kYeWM6",
       "pdfFileName": "Kennedy 2017 - Consenus Guidelines Y90 use with Chemotherapy.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -5004,10 +4980,10 @@
       "notes": "Added from Chemotherapy ZIP folder. Product inferred from SIRT/resin-focused consensus context; verify if needed.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Combination Therapy",
+      "primaryCategory": "Chemotherapy",
       "product": "resin",
       "categories": [
-        "Combination Therapy",
+        "Chemotherapy",
         "Guidelines / Expert Consensus",
         "Complications"
       ]
@@ -6783,6 +6759,109 @@
         "Key Clinical Data / COBRAS",
         "HCC",
         "Dosimetry"
+      ]
+    },
+    {
+      "id": 1778652958265,
+      "year": 2019,
+      "title": "Temporary Balloon Occlusion for Hepatic Arterial Flow Redistribution during Yttrium-90 Radioembolization",
+      "country": "USA",
+      "authors": "James Meek, Savannah Fletcher, C Heath Gauss et al.",
+      "journal": "Journal of Vascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31155499/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Balloon%20Occlusion/2019%20Meek%20Temporary%20Balloon%20Occlusion%20for%20Hepatic%20Arterial%20Flow%20Redistribution%20during%20Y90%20Radioembolization.pdf?csf=1&web=1&e=gNIt4x",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• A median of 199 Gy was delivered to a median of 3% of total liver volume.",
+      "findings": "• A median of 199 Gy was delivered to a median of 3% of total liver volume.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Balloon Occlusion",
+      "product": "ns",
+      "categories": [
+        "Balloon Occlusion",
+        "Dosimetry",
+        "HCC"
+      ]
+    },
+    {
+      "id": 1778653268226,
+      "year": 2025,
+      "title": "Balloon-Occluded Hepatic Radioembolization with Yttrium-90 (b-TARE) in Selected Patients with Unresectable Heterogeneous Hepatocellular Carcinoma (HCC): A Safe and Effective Approach to Improve the Dose Rate",
+      "country": "Italy",
+      "authors": "Leonardo Teodoli, Nicolò Ubaldi, Claudio Trobiani et al.",
+      "journal": "Diagnostics (Basel)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41464236/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Balloon%20Occlusion/2025%20Teodoli%20Balloon%20Occluded%20Hepatic%20Radioembolization%20with%20Y90%20in%20Selected%20Patients%20with%20Unresectable%20HCC%20A%20Safe%20and%20Effective%20Approach%20to%20Improve%20the%20Dose%20Rate.pdf?csf=1&web=1&e=G8IW8F",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• Both 2D and 3D SPECT-CT analyses demonstrated a better dosimetry profile in the b-TARE group.\n• Regarding 3D dose analysis, the mean intra-lesion dose administered was significantly higher in the b-TARE group (162.7 ± 54.3 Gy vs.\n• There was no increase in significant complications or in the mean dose delivered to the normal liver in the b-TARE group.\n• The employment of balloon occlusion in TARE was associated with a higher activity intensity peak and lesion absorbed dose on voxel-based dosimetry, compared to standard TARE, in patients with heterogeneous HCC and uneven macroaggregate distribution, without increasing mean non-tumoral liver dose.",
+      "findings": "• Both 2D and 3D SPECT-CT analyses demonstrated a better dosimetry profile in the b-TARE group.\n• Concerning 2D evaluation, the activity intensity peak was significantly higher in the b-TARE group compared to the TARE group (998.6 ± 394.9 vs.\n• Regarding 3D dose analysis, the mean intra-lesion dose administered was significantly higher in the b-TARE group (162.7 ± 54.3 Gy vs.\n• There was no increase in significant complications or in the mean dose delivered to the normal liver in the b-TARE group.\n• The employment of balloon occlusion in TARE was associated with a higher activity intensity peak and lesion absorbed dose on voxel-based dosimetry, compared to standard TARE, in patients with heterogeneous HCC and uneven macroaggregate distribution, without increasing mean non-tumoral liver dose.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Balloon Occlusion",
+      "product": "ns",
+      "categories": [
+        "Balloon Occlusion",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
+    },
+    {
+      "id": 1778653778037,
+      "year": 2025,
+      "title": "A new radioactive microsphere: Y-90 carbon microsphere for selective internal radiation therapy of advanced liver cancer",
+      "country": "China",
+      "authors": "Xiaosheng Zhao,  Jie Gao, Kun Shi et al.",
+      "journal": "",
+      "url": "https://doi.org/10.1016/j.cclet.2024.110662",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Carbon/2025%20Zhao%20A%20new%20radioactive%20microsphere%20Y-90%20carbon%20microsphere%20for%20selective%20internal%20radiation%20therapy%20of%20advanced%20liver%20cancer.pdf?csf=1&web=1&e=zlkXCf",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "",
+      "findings": "",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Carbon",
+      "product": "ns",
+      "categories": [
+        "Carbon"
+      ]
+    },
+    {
+      "id": 1778654170707,
+      "year": 2017,
+      "title": "Safety of selective internal radiation therapy (SIRT) with yttrium-90 microspheres combined with systemic anticancer agents: expert consensus",
+      "country": "Worldwide",
+      "authors": "Andrew Kennedy, Daniel B Brown, Jonas Feilchenfeldt et al.",
+      "journal": "Journal of Gastrointestinal Oncology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29299370/",
+      "pmcid": "PMC5750172",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Chemotherapy/Kennedy%202017%20-%20Consenus%20Guidelines%20Y90%20use%20with%20Chemotherapy.pdf?csf=1&web=1&e=kYeWM6",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• Selective internal radiation therapy (SIRT) with microspheres labelled with the β-emitter yttrium-90 (Y-90) enables targeted delivery of radiation to hepatic tumors.\n• Data from phase III studies combining SIRT with fluorouracil (5FU) or folinic acid/5FU/oxaliplatin (FOLFOX) suggest that hematological toxicity is more common from the combination than it is from chemotherapy without SIRT.\n• There is no evidence to suggest that chemotherapy increases SIRT-specific gastro-intestinal or liver toxicities.",
+      "findings": "• Selective internal radiation therapy (SIRT) with microspheres labelled with the β-emitter yttrium-90 (Y-90) enables targeted delivery of radiation to hepatic tumors.\n• SIRT is primarily used to treat inoperable primary or metastatic liver tumors.\n• All these treatments have potential interactions with SIRT; however, robust evidence on the safety of these potential combinations is lacking.\n• Data from phase III studies combining SIRT with fluorouracil (5FU) or folinic acid/5FU/oxaliplatin (FOLFOX) suggest that hematological toxicity is more common from the combination than it is from chemotherapy without SIRT.\n• There is no evidence to suggest that chemotherapy increases SIRT-specific gastro-intestinal or liver toxicities.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Chemotherapy",
+      "product": "ns",
+      "categories": [
+        "Chemotherapy",
+        "Dosimetry",
+        "Safety"
       ]
     }
   ]
