@@ -1141,6 +1141,105 @@ td.td-findings{
 /* v5.0.2 — Full text access cleanup: one PMC link + visible PDF link */
 button.fulltext-link{font:inherit;cursor:pointer;}
 .access-links .fulltext-link{margin-right:6px;margin-bottom:4px;}
+
+
+/* ══════════════════════════════════════════════════════════
+   v5.0.3 — one-line header + sticky library filters
+   Added by ChatGPT
+   ══════════════════════════════════════════════════════════ */
+@media (min-width: 769px){
+  header{
+    padding:7px 12px 6px !important;
+    min-height:auto !important;
+    z-index:1200 !important;
+  }
+  .header-top{
+    display:block !important;
+  }
+  .logo-area{
+    display:none !important;
+  }
+  .header-actions{
+    width:100% !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:10px !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    white-space:nowrap !important;
+    padding-bottom:2px !important;
+    scrollbar-width:thin;
+  }
+  .header-stats{
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+    flex-wrap:nowrap !important;
+    flex:0 0 auto !important;
+  }
+  .header-actions .stat-pill,
+  .header-actions > .btn{
+    height:64px !important;
+    min-height:64px !important;
+    max-height:64px !important;
+    flex:0 0 auto !important;
+    margin:0 !important;
+  }
+  .header-actions > .btn{
+    padding:0 18px !important;
+  }
+  .header-actions .stat-pill{
+    padding:0 18px !important;
+  }
+  #mobile-menu-btn{
+    display:none !important;
+  }
+
+  /* Keep the library search/filter/category controls visible while scrolling. */
+  .library-filter-sticky{
+    position:sticky !important;
+    top:78px !important;
+    z-index:1100 !important;
+    background:var(--bg) !important;
+    box-shadow:0 10px 22px rgba(0,0,0,.22) !important;
+  }
+  .library-filter-sticky .smart-search-bar,
+  .library-filter-sticky .controls,
+  .library-filter-sticky .category-strip{
+    position:relative !important;
+    top:auto !important;
+    z-index:auto !important;
+    background-color:var(--surface) !important;
+  }
+  .library-filter-sticky .smart-search-bar{
+    padding-top:12px !important;
+    padding-bottom:12px !important;
+  }
+  .library-filter-sticky .controls{
+    padding-top:12px !important;
+    padding-bottom:12px !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+  }
+  .library-filter-sticky .category-strip{
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+  }
+  .library-filter-sticky .search-wrap{
+    flex:1 1 360px !important;
+    min-width:300px !important;
+  }
+  .library-filter-sticky select,
+  .library-filter-sticky .btn,
+  .library-filter-sticky .view-toggle{
+    flex:0 0 auto !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1164,7 +1263,6 @@ button.fulltext-link{font:inherit;cursor:pointer;}
       <button class="btn btn-green" onclick="saveToGitHub()" id="github-save-btn" title="Save all changes directly to GitHub">☁️ Save to GitHub</button>
       <button class="btn btn-blue" onclick="exportJSON()">💾 Export JSON</button>
       <button class="btn btn-secondary" onclick="setPdfFolderUrl()">📁 Set PDF Folder</button>
-      <button class="btn btn-green" onclick="exportExcel()">📊 Excel + Dashboard</button>
       <button class="btn btn-primary" onclick="openAddModal()">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         Add Publication
@@ -1181,6 +1279,8 @@ button.fulltext-link{font:inherit;cursor:pointer;}
 
 <!-- ═══ LIBRARY ═══ -->
 <div class="panel active" id="panel-library" style="padding:0">
+
+  <div class="library-filter-sticky">
 
   <div class="smart-search-bar">
     <span style="font-size:15px">🧠</span>
@@ -1219,6 +1319,8 @@ button.fulltext-link{font:inherit;cursor:pointer;}
   </div>
 
   <div class="category-strip" id="category-strip"></div>
+
+  </div><!-- /.library-filter-sticky -->
 
   <div style="padding:16px 28px">
     <div id="smart-result-banner" style="display:none"></div>
