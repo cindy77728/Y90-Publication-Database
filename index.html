@@ -1347,6 +1347,109 @@ button.fulltext-link{font:inherit;cursor:pointer;}
   .library-filter-sticky{top:72px !important;}
 }
 
+
+
+/* ══════════════════════════════════════════════════════════
+   v5.0.5 — title restored as its own top line + one-line buttons
+   Requested: title on a separate line above the header buttons.
+   ══════════════════════════════════════════════════════════ */
+@media (min-width: 769px){
+  header{
+    padding:16px 18px 8px !important;
+    min-height:auto !important;
+    z-index:1200 !important;
+  }
+  .header-top{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    gap:12px !important;
+    flex-wrap:nowrap !important;
+    width:100% !important;
+  }
+  .logo-area{
+    display:block !important;
+    flex:none !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    overflow:visible !important;
+  }
+  .logo-area h1{
+    display:block !important;
+    font-size:42px !important;
+    line-height:1.08 !important;
+    font-weight:900 !important;
+    white-space:normal !important;
+    overflow:visible !important;
+    text-overflow:clip !important;
+    margin:0 !important;
+    letter-spacing:-.8px !important;
+  }
+  .logo-area p{
+    display:block !important;
+    font-size:16px !important;
+    line-height:1.2 !important;
+    margin-top:3px !important;
+    white-space:normal !important;
+    overflow:visible !important;
+    text-overflow:clip !important;
+    color:#ffffff !important;
+  }
+  .header-actions{
+    width:100% !important;
+    min-width:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:10px !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    white-space:nowrap !important;
+    padding-bottom:2px !important;
+    scrollbar-width:thin !important;
+  }
+  .header-stats{
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+    flex-wrap:nowrap !important;
+    flex:0 0 auto !important;
+  }
+  .header-actions .stat-pill,
+  .header-actions > .btn{
+    height:64px !important;
+    min-height:64px !important;
+    max-height:64px !important;
+    flex:0 0 auto !important;
+    margin:0 !important;
+  }
+  .header-actions > .btn{padding:0 20px !important;}
+  .header-actions .stat-pill{padding:0 18px !important;}
+  #mobile-menu-btn{display:none !important;}
+
+  /* Dynamic top is set by JS to match the real header height. */
+  .library-filter-sticky{
+    top:var(--library-sticky-top, 160px) !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1320px){
+  .logo-area h1{font-size:36px !important;}
+  .logo-area p{font-size:14px !important;}
+  .header-actions{gap:8px !important;}
+  .header-actions .stat-pill,
+  .header-actions > .btn{
+    height:58px !important;
+    min-height:58px !important;
+    max-height:58px !important;
+    padding-left:14px !important;
+    padding-right:14px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -13774,6 +13877,25 @@ savePublication = function(){
     </div>
   </div>
 </div>
+
+
+<script>
+(function(){
+  function updateLibraryStickyTop(){
+    var header = document.querySelector('header');
+    if (!header) return;
+    if (window.innerWidth >= 769) {
+      document.documentElement.style.setProperty('--library-sticky-top', header.offsetHeight + 'px');
+    } else {
+      document.documentElement.style.setProperty('--library-sticky-top', '0px');
+    }
+  }
+  window.addEventListener('load', updateLibraryStickyTop);
+  window.addEventListener('resize', updateLibraryStickyTop);
+  setTimeout(updateLibraryStickyTop, 100);
+  setTimeout(updateLibraryStickyTop, 500);
+})();
+</script>
 
 </body>
 </html>
