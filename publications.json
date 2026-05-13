@@ -1,12 +1,11 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-13T06:39:18.319Z",
+  "savedAt": "2026-05-13T07:28:42.161Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
     "Carbon",
     "Chemotherapy",
-    "Clinical Efficacy",
     "Combination Therapy",
     "Comparative",
     "Comparative / Ablation",
@@ -601,9 +600,9 @@
       "country": "Worldwide",
       "authors": "Lam M, Salem R, Toskich B, et al.",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
-      "url": "",
-      "pmcid": "",
-      "pdfUrl": "",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12316795/",
+      "pmcid": "PMC12316795",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2025%20Lam%20Non-HCC%20Dosimetric%20Considerations.pdf?csf=1&web=1&e=HIiCp1",
       "pdfFileName": "metastases/2025 Lam Non-HCC Dosimetric Considerations.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -615,7 +614,8 @@
       "primaryCategory": "Dosimetry",
       "product": "glass",
       "categories": [
-        "Dosimetry"
+        "Dosimetry",
+        "Guidelines"
       ]
     },
     {
@@ -671,25 +671,27 @@
       "id": 2026050620,
       "year": 2025,
       "title": "Complications of Radioembolization: Prevention and Management",
+      "country": "Korea",
       "authors": "Kim GM",
       "journal": "Journal of the Korean Society of Radiology",
-      "country": "Korea",
+      "url": "https://doi.org/10.3348/jksr.2025.0046",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Complications/2025%20Kim%20Complications%20of%20Radioembolization%20Prevention%20and%20Management.pdf?csf=1&web=1&e=iDmzmB",
+      "pdfFileName": "2025 Kim Complications of Radioembolization Prevention and Management.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Review article covering common post-embolization symptoms and major adverse events such as REILD, radiation pneumonitis, and nontarget GI radioembolization, with prevention and management considerations.",
+      "findings": "Practical complications review emphasizing that radioembolization is generally safe, while serious complications can be mitigated through patient selection and careful preprocedural planning.",
+      "notes": "Added from Complications ZIP folder.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Complications",
       "product": "ns",
       "categories": [
         "Complications",
         "Radiation Pneumonitis",
         "Radiation Safety & Handling"
-      ],
-      "results": "Review article covering common post-embolization symptoms and major adverse events such as REILD, radiation pneumonitis, and nontarget GI radioembolization, with prevention and management considerations.",
-      "findings": "Practical complications review emphasizing that radioembolization is generally safe, while serious complications can be mitigated through patient selection and careful preprocedural planning.",
-      "notes": "Added from Complications ZIP folder.",
-      "url": "https://doi.org/10.3348/jksr.2025.0046",
-      "pmcid": "",
-      "pdfFileName": "2025 Kim Complications of Radioembolization Prevention and Management.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Complications"
+      ]
     },
     {
       "id": 202605073031,
@@ -797,24 +799,26 @@
       "id": 2026050619,
       "year": 2025,
       "title": "Histopathologic Response and Oncologic Outcomes after Segmental and Subsegmental TACE and Radioembolization for HCC",
+      "country": "USA",
       "authors": "Sher A, Todd RI, Shilo D, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "https://doi.org/10.1016/j.jvir.2025.05.009",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/TACE/2025%20Sher%20Histopathologic%20response%20and%20oncologic%20out%20comes%20after%20TACE%20and%20Radioembolization%20for%20HCC.pdf?csf=1&web=1&e=PLqg4t",
+      "pdfFileName": "2025 Sher Histopathologic response and oncologic out comes after TACE and Radioembolization for HCC.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Among 208 tumors in 148 transplanted patients, complete pathologic necrosis was 83.3% after TARE versus 29.0% after TACE; >90% necrosis occurred in 75.0% overall.",
       "findings": "Strong explant-pathology comparative signal favoring segmental or subsegmental TARE over TACE for complete pathologic necrosis in HCC.",
       "notes": "Added from Comparative / TACE ZIP folder.",
-      "url": "https://doi.org/10.1016/j.jvir.2025.05.009",
-      "pmcid": "",
-      "pdfFileName": "2025 Sher Histopathologic response and oncologic out comes after TACE and Radioembolization for HCC.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / TACE",
+      "product": "ns",
+      "categories": [
+        "Comparative / TACE",
+        "HCC"
+      ]
     },
     {
       "id": 2026150805,
@@ -1055,24 +1059,26 @@
       "id": 2026050618,
       "year": 2025,
       "title": "TACE vs. TARE for HCC ≥8 cm: A Propensity Score Analysis",
+      "country": "Korea",
       "authors": "Phan NH, Chun HJ, Oh JS, et al.",
       "journal": "Abdominal Radiology",
-      "country": "Korea",
-      "product": "ns",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "https://doi.org/10.1007/s00261-024-04573-5",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/TACE/2025%20Phan%20TACE%20vs%20TARE%20for%20HCC%208%20cm%20A%20propensity%20score%20analysis.pdf?csf=1&web=1&e=U0CsHG",
+      "pdfFileName": "2025 Phan TACE vs TARE for HCC 8 cm A propensity score analysis.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "After PSM, OS was 33.2 months for TACE and 38.1 months for TARE; ORR, DCR, OS, and PFS were comparable, while TARE showed a safer profile.",
       "findings": "Supports TARE as a reasonable initial option for unresectable HCC ≥8 cm, with comparable efficacy to TACE and potentially better safety.",
       "notes": "Added from Comparative / TACE ZIP folder.",
-      "url": "https://doi.org/10.1007/s00261-024-04573-5",
-      "pmcid": "",
-      "pdfFileName": "2025 Phan TACE vs TARE for HCC 8 cm A propensity score analysis.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / TACE",
+      "product": "ns",
+      "categories": [
+        "Comparative / TACE",
+        "HCC"
+      ]
     },
     {
       "id": 2026051108,
@@ -1125,24 +1131,26 @@
       "id": 2026050607,
       "year": 2025,
       "title": "Y90 Radiation Segmentectomy versus Microwave Ablation for Hepatocellular Carcinoma in Locations Suboptimal for Percutaneous Ablation",
+      "country": "USA",
       "authors": "Kola O, Cieslak JA, Chauhan N, et al.",
       "journal": "Digestive Disease Interventions",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/Ablation/2025%20Kola%20Y90%20Radiation%20Segmentectomy%20versus%20Microwave%20Ablation%20for%20HCC%20Locations%20Suboptimal%20for%20Percutaneous%20Ablation.pdf?csf=1&web=1&e=tWhr09",
+      "pdfFileName": "2025 Kola Y90 Radiation Segmentectomy versus Microwave Ablation for HCC Locations Suboptimal for Percutaneous Ablation.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Retrospective comparison of 23 lesions in 20 patients treated with Y90-RS and 30 lesions in 30 patients treated with MWA for HCC in suboptimal ablation locations.",
       "findings": "Y90 radiation segmentectomy was positioned as a valuable alternative to microwave ablation for early-stage HCC in locations suboptimal for percutaneous ablation, with favorable response and safety profile.",
       "notes": "Added from Comparative / Ablation ZIP folder.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2025 Kola Y90 Radiation Segmentectomy versus Microwave Ablation for HCC Locations Suboptimal for Percutaneous Ablation.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / Ablation",
+      "product": "glass",
+      "categories": [
+        "Comparative / Ablation",
+        "HCC"
+      ]
     },
     {
       "id": 2026150703,
@@ -1385,26 +1393,28 @@
     },
     {
       "id": 2026050811,
-      "year": 2024,
+      "year": 2023,
       "title": "Incidence and Risk Factors of Acute Ischemic Cholecystitis after Transarterial Chemoembolization: Correlation with Cone Beam CT Findings",
+      "country": "Korea",
       "authors": "Kim JY, Oh JS, Chun HJ, Kim SH",
       "journal": "Journal of the Korean Society of Radiology",
-      "country": "Korea",
-      "product": "ns",
-      "categories": [
-        "Complications",
-        "HCC"
-      ],
+      "url": "https://doi.org/10.3348/jksr.2023.0084",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Cystic%20Artery/2023%20Kim%20Incidence%20and%20Risk%20Factors%20of%20Acute%20Ischemic%20Cholecystitis%20after%20Transarterial%20ChemoembolizationCorrelation%20with%20CBCT%20Findings.pdf?csf=1&web=1&e=sPIf6O",
+      "pdfFileName": "2023 Kim Incidence and Risk Factors of Acute Ischemic Cholecystitis after Transarterial ChemoembolizationCorrelation with CBCT Findings.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Retrospective review of 2633 TACE procedures found acute cholecystitis requiring surgical intervention in 0.45% overall, but 10% among procedures with high-density embolic material retention in the gallbladder wall on immediate CBCT.",
       "findings": "Not a Y90 paper, but useful safety context for cystic artery and gallbladder-risk discussions; direct cystic arterial chemoembolization carried higher cholecystitis risk.",
       "notes": "Added from Cystic Artery folder in Glass vs Resin ZIP. This is TACE, not TARE.",
-      "url": "https://doi.org/10.3348/jksr.2023.0084",
-      "pmcid": "",
-      "pdfFileName": "2023 Kim Incidence and Risk Factors of Acute Ischemic Cholecystitis after Transarterial ChemoembolizationCorrelation with CBCT Findings.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Complications"
+      "primaryCategory": "Cystic Artery",
+      "product": "ns",
+      "categories": [
+        "Cystic Artery",
+        "HCC"
+      ]
     },
     {
       "id": 2026050812,
@@ -1462,25 +1472,27 @@
       "id": 2026050703,
       "year": 2024,
       "title": "MIRD Pamphlet No. 29: MIRDy90 — A 90Y Research Microsphere Dosimetry Tool",
+      "country": "USA",
       "authors": "Marquis H, Ocampo Ramos JC, Carter LM, et al.",
       "journal": "Journal of Nuclear Medicine",
-      "country": "USA",
+      "url": "https://doi.org/10.2967/jnumed.123.266743",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2024%20Marquis%20A%2090Y%20Research%20Microsphere%20Dosimetry%20Tool.pdf?csf=1&web=1&e=ux3tyn",
+      "pdfFileName": "2024 Marquis A 90Y Research Microsphere Dosimetry Tool.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "MIRDy90 is an Excel-based research worksheet integrating BSA, MIRD single-compartment, MIRD dual-compartment, and MIRD multicompartment models to estimate and compare prescribed activities for 90Y microsphere therapy.",
+      "findings": "Useful tool-focused reference for comparing how different dosimetry models and input assumptions influence prescribed activity calculations.",
+      "notes": "Added from Dosimetry ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
       "product": "both",
       "categories": [
         "Dosimetry",
         "Dosimetry / QA",
         "Dosimetry / Treatment Planning"
-      ],
-      "results": "MIRDy90 is an Excel-based research worksheet integrating BSA, MIRD single-compartment, MIRD dual-compartment, and MIRD multicompartment models to estimate and compare prescribed activities for 90Y microsphere therapy.",
-      "findings": "Useful tool-focused reference for comparing how different dosimetry models and input assumptions influence prescribed activity calculations.",
-      "notes": "Added from Dosimetry ZIP.",
-      "url": "https://doi.org/10.2967/jnumed.123.266743",
-      "pmcid": "",
-      "pdfFileName": "2024 Marquis A 90Y Research Microsphere Dosimetry Tool.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      ]
     },
     {
       "id": 202605073103,
@@ -1626,24 +1638,27 @@
       "id": 202605071103,
       "year": 2024,
       "title": "SBRT vs. Y90 HCC Treatment Outcomes and Costs",
+      "country": "USA",
       "authors": "deBettencourt MF, Liu Y, Cotler SJ, Molvar CA, Abdelrahman T, Thomas TO.",
       "journal": "American Journal of Clinical Oncology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "HCC",
-        "Comparative"
-      ],
+      "url": "https://doi.org/10.1097/COC.0000000000001064",
+      "pmcid": "",
+      "pdfUrl": "",
+      "pdfFileName": "SBRT/2024 deBettencourt SBRT vs Y90 HCC Treatment Outcomes and Costs.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Retrospective comparison of stereotactic body radiotherapy and Y90 as ablative treatment options for localized HCC, including treatment outcomes and cost-related analysis.",
       "findings": "Useful reference when discussing SBRT versus Y90 positioning, especially where both local control and cost considerations are part of treatment selection.",
       "notes": "Added from ROWAN ZIP. DOI 10.1097/COC.0000000000001064.",
-      "url": "https://doi.org/10.1097/COC.0000000000001064",
-      "pmcid": "",
-      "pdfFileName": "SBRT/2024 deBettencourt SBRT vs Y90 HCC Treatment Outcomes and Costs.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "HCC",
+      "product": "ns",
+      "categories": [
+        "HCC",
+        "Comparative",
+        "Cost Effectiveness"
+      ]
     },
     {
       "id": 202605071104,
@@ -1697,25 +1712,27 @@
       "id": 2026250704,
       "year": 2024,
       "title": "Using Voxel-Based Dosimetry to Evaluate Sphere Concentration and Tumor Dose in HCC Treated with Y90 Radiation Segmentectomy with Glass Microspheres",
+      "country": "USA",
       "authors": "Sandow T, Gimenez J, Nunez K, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
+      "url": "https://doi.org/10.1016/j.jvir.2024.05.020",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2024%20Sandow%20Using%20Voxel-based%20Dosimetry%20to%20evaluate%20sphere%20concentration%20and%20tumor%20dose.PDF?csf=1&web=1&e=AYib7N",
+      "pdfFileName": "2024 Sandow Using Voxel-based Dosimetry to evaluate sphere concentration and tumor dose.PDF",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Retrospective analysis of 56 solitary HCC tumors treated with glass Y90 radiation segmentectomy. Median tumor absorbed dose was 732 Gy; objective response was 96%, complete response was 82%, 2-year progression rate was 11%, and median tumor necrosis in transplanted patients was 99%.",
+      "findings": "Voxel-based post-treatment dosimetry can characterize sphere deposition and dose heterogeneity; higher D99 and lower tumor volume were associated with complete pathologic necrosis.",
+      "notes": "Added from Dosimetry ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
       "product": "glass",
       "categories": [
         "Dosimetry",
         "Dosimetry / Voxel-based",
         "HCC"
-      ],
-      "results": "Retrospective analysis of 56 solitary HCC tumors treated with glass Y90 radiation segmentectomy. Median tumor absorbed dose was 732 Gy; objective response was 96%, complete response was 82%, 2-year progression rate was 11%, and median tumor necrosis in transplanted patients was 99%.",
-      "findings": "Voxel-based post-treatment dosimetry can characterize sphere deposition and dose heterogeneity; higher D99 and lower tumor volume were associated with complete pathologic necrosis.",
-      "notes": "Added from Dosimetry ZIP.",
-      "url": "https://doi.org/10.1016/j.jvir.2024.05.020",
-      "pmcid": "",
-      "pdfFileName": "2024 Sandow Using Voxel-based Dosimetry to evaluate sphere concentration and tumor dose.PDF",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      ]
     },
     {
       "id": 202605073026,
@@ -1743,26 +1760,27 @@
       "id": 2026050705,
       "year": 2024,
       "title": "Yttrium-90 Radioembolization Dosimetry: Dose Considerations, Optimization, and Tips",
+      "country": "USA",
       "authors": "Villalobos A, du Pisanie JL, Kokabi N, Gandhi RT",
       "journal": "Seminars in Interventional Radiology",
-      "country": "USA",
+      "url": "https://doi.org/10.1055/s-0044-1779715",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2024%20Villalobos%20Y90%20Radioembolization%20Dosimetry%20Dose%20Considerations%20Optimization,%20and%20Tips.pdf?csf=1&web=1&e=NYEpAI",
+      "pdfFileName": "2024 Villalobos Y90 Radioembolization Dosimetry Dose Considerations Optimization, and Tips.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Practical review covering Y90 dosimetry fundamentals, activity, absorbed dose, compartment models, patient-level considerations, dose optimization, and tips for clinical implementation, primarily focused on HCC.",
+      "findings": "Good educational reference for building a practical dosimetry training section because it explains how to think about dose selection and model choice without requiring the audience to become medical physicists overnight.",
+      "notes": "Added from Dosimetry ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
       "product": "ns",
       "categories": [
         "Dosimetry",
         "Dosimetry / Treatment Planning",
-        "HCC",
-        "Guidelines"
-      ],
-      "results": "Practical review covering Y90 dosimetry fundamentals, activity, absorbed dose, compartment models, patient-level considerations, dose optimization, and tips for clinical implementation, primarily focused on HCC.",
-      "findings": "Good educational reference for building a practical dosimetry training section because it explains how to think about dose selection and model choice without requiring the audience to become medical physicists overnight.",
-      "notes": "Added from Dosimetry ZIP.",
-      "url": "https://doi.org/10.1055/s-0044-1779715",
-      "pmcid": "",
-      "pdfFileName": "2024 Villalobos Y90 Radioembolization Dosimetry Dose Considerations Optimization, and Tips.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+        "HCC"
+      ]
     },
     {
       "id": 2026051103,
@@ -2122,24 +2140,26 @@
       "id": 2026050810,
       "year": 2023,
       "title": "Safety of Radioembolization via the Cystic Artery in Patients with Hepatocellular Carcinoma and Parasitized Arterial Supply",
+      "country": "Korea",
       "authors": "Choi R, Lee M, Choi JW, Kim HC",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "Korea",
-      "product": "both",
-      "categories": [
-        "HCC",
-        "Complications"
-      ],
+      "url": "https://doi.org/10.1016/j.jvir.2023.06.024",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Cystic%20Artery/2023%20Choi%20Safety%20of%20Radioembolization%20via%20the%20Cystic%20Artery%20in%20Patients%20with%20Hepatocellular%20Carcinoma%20and%20Parasitized%20Arterial%20Supply.pdf?csf=1&web=1&e=A5PBWz",
+      "pdfFileName": "2023 Choi Safety of Radioembolization via the Cystic Artery in Patients with Hepatocellular Carcinoma and Parasitized Arterial Supply.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Single-center retrospective study of 24 HCC patients treated via cystic artery supply. No symptomatic cholecystitis requiring invasive intervention occurred; 23 of 24 patients showed objective response of the tumor supplied by the cystic artery.",
       "findings": "Important technical paper for HCC with cystic-artery parasitized supply: selective radioembolization via the cystic artery may be feasible and safe in experienced hands.",
       "notes": "Added from Cystic Artery folder in Glass vs Resin ZIP.",
-      "url": "https://doi.org/10.1016/j.jvir.2023.06.024",
-      "pmcid": "",
-      "pdfFileName": "2023 Choi Safety of Radioembolization via the Cystic Artery in Patients with Hepatocellular Carcinoma and Parasitized Arterial Supply.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "Cystic Artery",
+      "product": "both",
+      "categories": [
+        "Cystic Artery",
+        "Complications"
+      ]
     },
     {
       "id": 202605071101,
@@ -2526,50 +2546,30 @@
       "primaryCategory": "Downstaging"
     },
     {
-      "id": 2026050617,
-      "year": 2022,
-      "title": "Long-Term Outcomes of Transarterial Radioembolization for Large Single HCC: A Comparison to Resection",
-      "authors": "Kim J, Kim JY, Lee JH, et al.",
-      "journal": "Journal of Nuclear Medicine",
-      "country": "Korea",
-      "product": "ns",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
-      "results": "After inverse-probability weighting, OS and time to progression were comparable between TARE and resection for large single HCC, despite baseline differences between groups.",
-      "findings": "Useful comparative evidence for large single HCC where resection is a key comparator; supports discussion that TARE may offer comparable long-term outcomes in selected patients.",
-      "notes": "Added from Comparative / Resection ZIP folder.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2022 Kim Long Term Outcomes of Transarterial Radioembolization for Large Single Hepatocellular Carcinoma A Comparison to Resection.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
-    },
-    {
       "id": 202605073004,
       "year": 2022,
       "title": "Long-Term Outcomes of Transarterial Radioembolization for Large Single Hepatocellular Carcinoma: A Comparison to Resection",
+      "country": "Korea",
       "authors": "Kim HC, et al.",
       "journal": "",
-      "country": "Korea",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection",
-        "Comparative"
-      ],
-      "results": "Comparative analysis of long-term outcomes after TARE versus resection for large single HCC.",
-      "findings": "Useful comparator paper for large single HCC, comparing TARE outcomes with surgical resection in selected patients.",
-      "notes": "Added from Resection ZIP. Source file: Resection/2022 Kim Long Term Outcomes of Transarterial Radioembolization for Large Single Hepatocellular Carcinoma A Comparison to Resection.pdf",
-      "url": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34887340/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/Resection/2022%20Kim%20Long%20Term%20Outcomes%20of%20Transarterial%20Radioembolization%20for%20Large%20Single%20Hepatocellular%20Carcinoma%20A%20Comparison%20to%20Resection.pdf?csf=1&web=1&e=xRMwEk",
       "pdfFileName": "Resection/2022 Kim Long Term Outcomes of Transarterial Radioembolization for Large Single Hepatocellular Carcinoma A Comparison to Resection.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Comparative analysis of long-term outcomes after TARE versus resection for large single HCC.",
+      "findings": "• The resection group was younger (median, 60 vs.\n• 69 y) and had a smaller tumor size (median, 7.0 vs.\n• After baseline characteristics were balanced using inverse-probability-of-treatment weighting, the OS (hazard ratio [HR], 0.98; 95% CI, 0.40-2.43; P = 0.97), TTP (HR, 1.10; 95% CI, 0.55-2.20; P = 0.80), and TTIP (HR, 1.45; 95% CI, 0.72-2.93; P = 0.30) of the TARE group was comparable to the resection group.\n• TARE was not an independent risk for OS (adjusted HR, 1.04; 95% CI, 0.42-2.59; P = 0.93), TTP (adjusted HR, 0.98; 95% CI, 0.50-1.95; P = 0.96), or TTIP (adjusted HR, 1.30; 95% CI, 0.65-2.58; P = 0.46).\n• Compared with surgical resection for large single nodular HCC, TARE showed a comparable OS, TTP, and TTIP and a better safety profile.",
+      "notes": "Added from Resection ZIP. Source file: Resection/2022 Kim Long Term Outcomes of Transarterial Radioembolization for Large Single Hepatocellular Carcinoma A Comparison to Resection.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Comparative / Resection",
+      "product": "ns",
+      "categories": [
+        "Comparative / Resection",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 2026151007,
@@ -2692,47 +2692,51 @@
       "id": 2026050605,
       "year": 2022,
       "title": "Radiofrequency Ablation vs Radiation Therapy vs Transarterial Chemoembolization vs Yttrium-90 for Local Treatment of Liver Cancer: A Systematic Review and Network Meta-analysis",
-      "authors": "Chow R, Simone CB II, Jairam MP, et al.",
-      "journal": "Acta Oncologica",
       "country": "Canada / USA",
-      "product": "ns",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "authors": "Chow R, Simone CB, Jairam MP, et al.",
+      "journal": "Acta Oncologica",
+      "url": "https://doi.org/10.1080/0284186X.2021.2009563",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/Ablation/2022%20Chow%20Radiofrequency%20ablation%20vs%20radiation%20therapy%20vs%20transarterialchemoembolization%20vs%20yttrium%2090%20for%20local%20treatment%20of%20liver%20cancer%E2%80%93asystematic%20review.pdf?csf=1&web=1&e=m0R1Ao",
+      "pdfFileName": "2022 Chow Radiofrequency ablation vs radiation therapy vs transarterialchemoembolization vs yttrium 90 for local treatment of liver cancer#U2013asystematic review.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Network meta-analysis included 24 RCTs or propensity score matched observational studies with 5,549 patients. One-year OS favored Y90 over TACE, while most 1-, 2-, and 3-year OS comparisons were similar across modalities.",
       "findings": "Broad comparative review suggesting similar overall survival across local liver cancer therapies, while highlighting heterogeneity and selected timepoint differences such as 1-year OS favoring Y90 over TACE.",
       "notes": "Added from Comparative / Ablation ZIP folder.",
-      "url": "https://doi.org/10.1080/0284186X.2021.2009563",
-      "pmcid": "",
-      "pdfFileName": "2022 Chow Radiofrequency ablation vs radiation therapy vs transarterialchemoembolization vs yttrium 90 for local treatment of liver cancer#U2013asystematic review.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / Ablation",
+      "product": "ns",
+      "categories": [
+        "Comparative / Ablation",
+        "HCC"
+      ]
     },
     {
       "id": 2026050606,
       "year": 2022,
       "title": "Radiofrequency Ablation, Radiation Therapy, Transarterial Chemoembolization, and Yttrium-90: No Differences for Local Treatment of Liver Cancer?",
+      "country": "Italy",
       "authors": "Rizzo A, Brandi G",
       "journal": "Acta Oncologica",
-      "country": "Italy",
-      "product": "ns",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "https://doi.org/10.1080/0284186X.2022.2046849",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/Ablation/2022%20Rizzo%20Radiofrequency%20ablation%20%20radiation%20therapy%20%20transarterial%20chemoembolization%20%20and%20yttrium%2090%20%20no%20differences%20for%20local%20treatment%20of%20liver%20cancer.pdf?csf=1&web=1&e=2MRxTP",
+      "pdfFileName": "2022 Rizzo Radiofrequency ablation  radiation therapy  transarterial chemoembolization  and yttrium 90  no differences for local treatment of liver cancer.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Letter to the editor commenting on the network meta-analysis comparing RFA, radiation therapy, TACE, and Y90 for liver cancer, noting limitations such as heterogeneity reporting.",
       "findings": "Useful cautionary commentary when interpreting cross-modality comparative meta-analyses; highlights the need to consider methodology and heterogeneity before over-claiming equivalence.",
       "notes": "Added from Comparative / Ablation ZIP folder.",
-      "url": "https://doi.org/10.1080/0284186X.2022.2046849",
-      "pmcid": "",
-      "pdfFileName": "2022 Rizzo Radiofrequency ablation  radiation therapy  transarterial chemoembolization  and yttrium 90  no differences for local treatment of liver cancer.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / Ablation",
+      "product": "ns",
+      "categories": [
+        "Comparative / Ablation",
+        "HCC"
+      ]
     },
     {
       "id": 202605071118,
@@ -3009,7 +3013,7 @@
       "journal": "EJNMMI Physics",
       "url": "https://doi.org/10.1186/s40658-021-00394-3",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2021%20Chiesa%20EANM%20dosimetry%20committee%20series%20on%20standard%20operational%20procedures%20a%20unified%20methodology%20for%2099mTcMAA%20pre%20and%2090Y%20dosimetry.pdf?csf=1&web=1&e=aIf5YJ",
       "pdfFileName": "2021 Chiesa EANM dosimetry committee series on standard operational procedures a unified methodology for 99mTcMAA pre and 90Y dosimetry.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -3033,25 +3037,27 @@
     {
       "id": 2026050604,
       "year": 2021,
-      "title": "Evaluation of Medium-Term Efficacy of Y90 Radiation Segmentectomy vs Percutaneous Microwave Ablation in Patients with Solitary Surgically Unresectable <4 cm HCC",
+      "title": "Evaluation of Medium-Term Efficacy of Y90 Radiation Segmentectomy vs Percutaneous Microwave Ablation in Patients with Solitary Surgically Unresectable < 4 cm Hepatocellular Carcinoma: A Propensity Score Matched Study",
+      "country": "USA",
       "authors": "Arndt L, Villalobos A, Wagstaff W, et al.",
       "journal": "CardioVascular and Interventional Radiology",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33230652/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/Ablation/2021%20Arudt%20Evaluation%20of%20MediumTerm%20Efficacy%20of%20Y90%20Radiation%20Segmentectomy%20vs%20Microwave%20Ablation%20in%20Patients%20with%20Surgically%20Unresectable%20%204%20cm%20HCC.pdf?csf=1&web=1&e=7ywvXo",
+      "pdfFileName": "2021 Arudt Evaluation of MediumTerm Efficacy of Y90 Radiation Segmentectomy vs Microwave Ablation in Patients with Surgically Unresectable  4 cm HCC.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Propensity score matched comparison of Y90 radiation segmentectomy versus microwave ablation for solitary surgically unresectable HCC <4 cm; abstract reports no difference in toxicity or objective tumor response.",
       "findings": "Provides comparative evidence positioning Y90 radiation segmentectomy as an option alongside microwave ablation for small unresectable HCC, especially when ablation suitability is limited.",
       "notes": "Added from Comparative / Ablation ZIP folder.",
-      "url": "https://doi.org/10.1007/s00270-020-02712-1",
-      "pmcid": "",
-      "pdfFileName": "2021 Arudt Evaluation of MediumTerm Efficacy of Y90 Radiation Segmentectomy vs Microwave Ablation in Patients with Surgically Unresectable  4 cm HCC.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / Ablation",
+      "product": "glass",
+      "categories": [
+        "Comparative / Ablation",
+        "HCC"
+      ]
     },
     {
       "id": 2026050906,
@@ -3539,24 +3545,25 @@
       "id": 2026050601,
       "year": 2020,
       "title": "The Cost-Effectiveness of TheraSphere in Patients with Hepatocellular Carcinoma Who Are Eligible for Transarterial Embolization",
+      "country": "UK",
       "authors": "Manas D, Bell JK, Mealing S, et al.",
       "journal": "European Journal of Surgical Oncology",
-      "country": "UK",
-      "product": "glass",
-      "categories": [
-        "HCC",
-        "Downstaging"
-      ],
+      "url": "https://doi.org/10.1016/j.ejso.2020.08.027",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Cost%20effectiveness/2020%20Manas%20The%20cost-effectiveness%20of%20TheraSphere%20in%20patients%20with%20hepatocellular%20carcinoma%20who%20are%20eligible%20for%20transarterial%20embolization.pdf?csf=1&web=1&e=q11xJt",
+      "pdfFileName": "2020 Manas The cost-effectiveness of TheraSphere in patients with hepatocellular carcinoma who are eligible for transarterial embolization.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "TheraSphere was predicted to gain 0.7 additional QALYs versus comparator embolic treatments; base-case ICERs were £17,300, £17,279, and £23,020 per QALY gained versus TAE, cTACE, and DEB-TACE, respectively.",
       "findings": "Economic model suggests TheraSphere may be a cost-effective option for early to intermediate HCC patients eligible for transarterial embolization, with higher predicted downstaging versus comparator embolic therapies.",
       "notes": "Added from Cost effectiveness ZIP. Review source values before external use.",
-      "url": "https://doi.org/10.1016/j.ejso.2020.08.027",
-      "pmcid": "",
-      "pdfFileName": "2020 Manas The cost-effectiveness of TheraSphere in patients with hepatocellular carcinoma who are eligible for transarterial embolization.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "Cost Effectiveness",
+      "product": "glass",
+      "categories": [
+        "Cost Effectiveness"
+      ]
     },
     {
       "id": 20260507004,
@@ -3816,24 +3823,26 @@
       "id": 2026050616,
       "year": 2019,
       "title": "Patterns of Care and Outcomes of Definitive External Beam Radiotherapy and Radioembolization for Localized HCC: A Propensity Score-Adjusted Analysis",
+      "country": "USA",
       "authors": "Bitterman DS, Sanford NN, Niemierko A, et al.",
       "journal": "American Journal of Clinical Oncology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/EBRT/2019%20Bitterman%20DS%20Patterns%20of%20Care%20and%20Outcomes%20of%20Definitive%20External%20Beam%20Radiotherapy%20and%20Radioembolization%20for%20Localized%20Hepatocellular%20Carcinom%20(002).pdf?csf=1&web=1&e=mj7MJw",
+      "pdfFileName": "2019 Bitterman DS Patterns of Care and Outcomes of Definitive External Beam Radiotherapy and Radioembolization for Localized Hepatocellular Carcinom (002).pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "National database analysis found increased use of both XRT and TARE over time, with greater absolute uptake of TARE; no survival difference was observed between XRT and TARE after propensity adjustment.",
       "findings": "Helpful comparative context for localized HCC patients not eligible for surgery or transplant, especially when discussing radiotherapy-based alternatives.",
       "notes": "Added from Comparative / EBRT ZIP folder.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2019 Bitterman DS Patterns of Care and Outcomes of Definitive External Beam Radiotherapy and Radioembolization for Localized Hepatocellular Carcinom (002).pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / EBRT",
+      "product": "ns",
+      "categories": [
+        "Comparative / EBRT",
+        "HCC"
+      ]
     },
     {
       "id": 202605073046,
@@ -3975,24 +3984,26 @@
       "id": 2026050809,
       "year": 2019,
       "title": "Safety of Transarterial Radioembolization with Yttrium-90 Glass Microspheres Without Cystic Artery Occlusion",
+      "country": "Turkey",
       "authors": "Topcuoglu OM, Selcuk NA, Sarikaya B, Toklu T",
       "journal": "La Radiologia Medica",
-      "country": "Turkey",
-      "product": "glass",
-      "categories": [
-        "Complications",
-        "Radiation Safety & Handling"
-      ],
+      "url": "https://doi.org/10.1007/s11547-018-00984-9",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Cystic%20Artery/2019%20Topcuoglu%20Safety%20of!transarterial%20radioembolization%20with!Yttrium-90%20glass%20microspheres%20without!cystic%20artery%20occlusion.pdf?csf=1&web=1&e=WESXOl",
+      "pdfFileName": "2019 Topcuoglu Safety of!transarterial radioembolization with!Yttrium-90 glass microspheres without!cystic artery occlusion.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Retrospective study of 34 TARE procedures in 29 patients where the cystic artery was near the treatment zone. Mean gallbladder dose was 96.4 Gy; gallbladder activity was seen on SPECT/CT in 32.3%, with no grade 2 or 3 adverse events detected.",
       "findings": "Supports that glass Y90 TARE may be safely performed without cystic artery embolization in selected cases when cystic artery origin is close to the treatment area.",
       "notes": "Added from Cystic Artery folder in Glass vs Resin ZIP.",
-      "url": "https://doi.org/10.1007/s11547-018-00984-9",
-      "pmcid": "",
-      "pdfFileName": "2019 Topcuoglu Safety of!transarterial radioembolization with!Yttrium-90 glass microspheres without!cystic artery occlusion.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Complications"
+      "primaryCategory": "Cystic Artery",
+      "product": "glass",
+      "categories": [
+        "Cystic Artery",
+        "Radiation Safety & Handling"
+      ]
     },
     {
       "id": 202605071109,
@@ -4251,24 +4262,26 @@
       "id": 2026050609,
       "year": 2018,
       "title": "Radiation Segmentectomy versus Selective Chemoembolization in the Treatment of Early-Stage HCC",
+      "country": "USA",
       "authors": "Biederman DM, Titano JJ, Korff RA, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "https://doi.org/10.1016/j.jvir.2017.08.026",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/cTACE/2018%20Biederman%20DM%20Radiation%20Segmentectomy%20versus%20Selective%20Chemoembolization%20in%20the%20Treatment%20of%20Early-Stage%20Hepatocellular%20Carcinoma.pdf?csf=1&web=1&e=O0jhCJ",
+      "pdfFileName": "2018 Biederman DM Radiation Segmentectomy versus Selective Chemoembolization in the Treatment of Early-Stage Hepatocellular Carcinoma.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "After propensity score matching, complete response was 92.1% with radiation segmentectomy versus 52.6% with chemoembolization; time to secondary therapy was longer with radiation segmentectomy.",
       "findings": "Supports radiation segmentectomy over selective chemoembolization for early-stage solitary HCC in terms of complete response and durability before secondary therapy.",
       "notes": "Added from Comparative / cTACE ZIP folder.",
-      "url": "https://doi.org/10.1016/j.jvir.2017.08.026",
-      "pmcid": "",
-      "pdfFileName": "2018 Biederman DM Radiation Segmentectomy versus Selective Chemoembolization in the Treatment of Early-Stage Hepatocellular Carcinoma.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / cTACE",
+      "product": "glass",
+      "categories": [
+        "Comparative / cTACE",
+        "HCC"
+      ]
     },
     {
       "id": 202605072067,
@@ -4829,7 +4842,7 @@
       "journal": "CardioVascular and Interventional Radiology",
       "url": "https://doi.org/10.1007/s00270-017-1688-z",
       "pmcid": "",
-      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Balloon%20Occlusion/2017%20Choi%20Prophylactic%20Temporary%20Occlusion%20of%20the%20Cystic%20Artery%20Using%20a%20Fibered%20Detachable%20Coil%20During%2090Y%20Radioembolization.pdf?csf=1&web=1&e=wb5BaG",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Cystic%20Artery/2017%20Choi%20Prophylactic%20Temporary%20Occlusion%20of%20the%20Cystic%20Artery%20Using%20a%20Fibered%20Detachable%20Coil%20During%2090Y%20Radioembolization.pdf?csf=1&web=1&e=GSroPa",
       "pdfFileName": "2017 Choi Prophylactic Temporary Occlusion of the Cystic Artery Using a Fibered Detachable Coil During 90Y Radioembolization.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -4838,10 +4851,10 @@
       "notes": "Added from Cystic Artery folder in Glass vs Resin ZIP.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Balloon Occlusion",
+      "primaryCategory": "Cystic Artery",
       "product": "both",
       "categories": [
-        "Balloon Occlusion",
+        "Cystic Artery",
         "HCC",
         "Mapping",
         "Complications"
@@ -5015,25 +5028,27 @@
     {
       "id": 2026050608,
       "year": 2017,
-      "title": "Segmental Yttrium-90 Radioembolization versus Segmental Chemoembolization for Localized HCC: Single-Center Retrospective Propensity Score-Matched Study",
+      "title": "Segmental Yttrium-90 Radioembolization versus Segmental Chemoembolization for Localized Hepatocellular Carcinoma: Results of a Single-Center, Retrospective, Propensity Score–Matched Study",
+      "country": "USA",
       "authors": "Padia SA, Johnson GE, Horton KJ, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "https://doi.org/10.1016/j.jvir.2017.02.018",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/cTACE/2017%20Padia%20Segmental%20Yttrium-90%20vs%20cTACE%20retrospective.pdf?csf=1&web=1&e=LgRXpe",
+      "pdfFileName": "2017 Padia Segmental Yttrium-90 vs cTACE retrospective.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Index and overall complete response rates were 92% and 84% for radioembolization versus 74% and 58% for chemoembolization. One- and two-year index tumor progression were 8% and 15% versus 30% and 42%, respectively.",
       "findings": "Segmental Y90 radioembolization showed higher complete response and lower tumor progression than segmental chemoembolization in localized unresectable HCC not amenable to ablation.",
       "notes": "Added from Comparative / cTACE ZIP folder.",
-      "url": "https://doi.org/10.1016/j.jvir.2017.02.018",
-      "pmcid": "",
-      "pdfFileName": "2017 Padia Segmental Yttrium-90 vs cTACE retrospective.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / cTACE",
+      "product": "glass",
+      "categories": [
+        "Comparative / cTACE",
+        "HCC"
+      ]
     },
     {
       "id": 202605072071,
@@ -5524,25 +5539,27 @@
       "id": 2026050701,
       "year": 2015,
       "title": "Deviation in the Predefined Calibration Factors of the Dose Calibrators and the Associated Inaccuracy in the Radioactivity Measurements of Beta-Gamma Emitters",
+      "country": "India",
       "authors": "Sharma S, Singh B, Koul A, Mittal BR",
       "journal": "Indian Journal of Nuclear Medicine",
-      "country": "India",
+      "url": "https://doi.org/10.4103/0972-3919.152972",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2015%20sharma%20Deviation%20in%20the%20predefined%20calibration%20factors%20of%20the%20dose%20calibrators%20and%20the%20associated%20inaccuracy%20in%20the%20radioactivity%20measurements%20of%20beta%E2%80%91gamma%20emitters.pdf?csf=1&web=1&e=ybOH3F",
+      "pdfFileName": "2015 sharma Deviation in the predefined calibration factors of the dose calibrators and the associated inaccuracy in the radioactivity measurements of beta#U2011gamma emitters.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Dose calibrators underestimated 177Lu radioactivity by about 9.0% using manufacturer-provided settings. Variation of ±5% was observed across activity ranges, dilution volumes, and syringe sizes; cumulative inaccuracy could approach about 20%.",
+      "findings": "Relevant technical reference for activity measurement quality control: predefined dose calibrator factors may require local experimental resetting and periodic checks to avoid clinically meaningful activity measurement errors.",
+      "notes": "Added from Dosimetry ZIP. Not Y90-specific but relevant to radioactivity measurement accuracy and dose calibrator QA.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
       "product": "ns",
       "categories": [
         "Dosimetry",
         "Dosimetry / QA",
         "Radiation Safety & Handling"
-      ],
-      "results": "Dose calibrators underestimated 177Lu radioactivity by about 9.0% using manufacturer-provided settings. Variation of ±5% was observed across activity ranges, dilution volumes, and syringe sizes; cumulative inaccuracy could approach about 20%.",
-      "findings": "Relevant technical reference for activity measurement quality control: predefined dose calibrator factors may require local experimental resetting and periodic checks to avoid clinically meaningful activity measurement errors.",
-      "notes": "Added from Dosimetry ZIP. Not Y90-specific but relevant to radioactivity measurement accuracy and dose calibrator QA.",
-      "url": "https://doi.org/10.4103/0972-3919.152972",
-      "pmcid": "",
-      "pdfFileName": "2015 sharma Deviation in the predefined calibration factors of the dose calibrators and the associated inaccuracy in the radioactivity measurements of beta#U2011gamma emitters.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      ]
     },
     {
       "id": 202605072036,
@@ -5842,24 +5859,26 @@
       "id": 2026050603,
       "year": 2014,
       "title": "Unresectable Solitary Hepatocellular Carcinoma Not Amenable to Radiofrequency Ablation: Multicenter Radiology-Pathology Correlation and Survival of Radiation Segmentectomy",
+      "country": "USA",
       "authors": "Vouche M, Habib A, Ward TJ, et al.",
       "journal": "Hepatology",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Comparative",
-        "HCC"
-      ],
+      "url": "",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/Ablation/2014%20Vouche%20Unresectable%20Solitary%20Hepatocellular%20Carcinoma%20Not%20Amenable%20to%20Radiofrequency%20Ablation.pdf?csf=1&web=1&e=zhZkR3",
+      "pdfFileName": "2014 Vouche Unresectable Solitary Hepatocellular Carcinoma Not Amenable to Radiofrequency Ablation.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Radiation segmentectomy was evaluated in solitary HCC not amenable to RFA, with favorable radiology-pathology outcomes and survival in lesions where resection or ablation were not feasible.",
       "findings": "Supports radiation segmentectomy as a localized alternative for solitary HCC in difficult locations where RFA or resection is unsuitable.",
       "notes": "Added from Comparative / Ablation ZIP folder.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2014 Vouche Unresectable Solitary Hepatocellular Carcinoma Not Amenable to Radiofrequency Ablation.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Comparative / Ablation",
+      "product": "glass",
+      "categories": [
+        "Comparative / Ablation",
+        "HCC"
+      ]
     },
     {
       "id": 202605072033,
@@ -6836,32 +6855,6 @@
       "product": "ns",
       "categories": [
         "Carbon"
-      ]
-    },
-    {
-      "id": 1778654170707,
-      "year": 2017,
-      "title": "Safety of selective internal radiation therapy (SIRT) with yttrium-90 microspheres combined with systemic anticancer agents: expert consensus",
-      "country": "Worldwide",
-      "authors": "Andrew Kennedy, Daniel B Brown, Jonas Feilchenfeldt et al.",
-      "journal": "Journal of Gastrointestinal Oncology",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/29299370/",
-      "pmcid": "PMC5750172",
-      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Chemotherapy/Kennedy%202017%20-%20Consenus%20Guidelines%20Y90%20use%20with%20Chemotherapy.pdf?csf=1&web=1&e=kYeWM6",
-      "pdfFileName": "",
-      "fullTextStatus": "auto",
-      "fullTextNote": "",
-      "results": "• Selective internal radiation therapy (SIRT) with microspheres labelled with the β-emitter yttrium-90 (Y-90) enables targeted delivery of radiation to hepatic tumors.\n• Data from phase III studies combining SIRT with fluorouracil (5FU) or folinic acid/5FU/oxaliplatin (FOLFOX) suggest that hematological toxicity is more common from the combination than it is from chemotherapy without SIRT.\n• There is no evidence to suggest that chemotherapy increases SIRT-specific gastro-intestinal or liver toxicities.",
-      "findings": "• Selective internal radiation therapy (SIRT) with microspheres labelled with the β-emitter yttrium-90 (Y-90) enables targeted delivery of radiation to hepatic tumors.\n• SIRT is primarily used to treat inoperable primary or metastatic liver tumors.\n• All these treatments have potential interactions with SIRT; however, robust evidence on the safety of these potential combinations is lacking.\n• Data from phase III studies combining SIRT with fluorouracil (5FU) or folinic acid/5FU/oxaliplatin (FOLFOX) suggest that hematological toxicity is more common from the combination than it is from chemotherapy without SIRT.\n• There is no evidence to suggest that chemotherapy increases SIRT-specific gastro-intestinal or liver toxicities.",
-      "notes": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Chemotherapy",
-      "product": "ns",
-      "categories": [
-        "Chemotherapy",
-        "Dosimetry",
-        "Safety"
       ]
     }
   ]
