@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-12T09:45:50.506Z",
+  "savedAt": "2026-05-13T05:55:45.829Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -1029,26 +1029,27 @@
       "id": 2026051009,
       "year": 2025,
       "title": "Streamlining Radioembolization without Lung Shunt Estimation versus Regular Radioembolization in Patients with Hepatocellular Carcinoma within the Milan Criteria",
+      "country": "Korea",
       "authors": "Kim HC, Suh M, Paeng JC, Lee JH, Lee M, Chung JW, Choi JW",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "Korea",
-      "product": "ns",
-      "categories": [
-        "Lung Shunt",
-        "Downstaging",
-        "HCC",
-        "Mapping / Failed Evaluation"
-      ],
+      "url": "",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Asian%20data/2025%20Kim%20Streamlining%20Radioembolization%20without%20Lung%20Shun%20tEstimation%20versus%20Regular%20Radioembolization%20in%20Patients%20withHCC%20within%20the%20MilanCriteria.pdf?csf=1&web=1&e=ENfnfV",
+      "pdfFileName": "2025 Kim StreamliningRadioembolization without Lung Shunt Estimation versus Regular Radioembolization in Patients with HCC within the MilanCriteria.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Compared streamlined TARE without nuclear medicine lung shunt estimation versus regular TARE in HCC within Milan criteria.",
       "findings": "Supports selective streamlined workflow discussions for small HCC cases where lung shunt risk may be low, pending local practice and safety review.",
       "notes": "Added from Lung Shunt ZIP folder.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2025 Kim StreamliningRadioembolization without Lung Shunt Estimation versus Regular Radioembolization in Patients with HCC within the MilanCriteria.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Lung Shunt"
+      "primaryCategory": "Asian Data",
+      "product": "ns",
+      "categories": [
+        "Asian Data",
+        "HCC",
+        "Lung Shunt"
+      ]
     },
     {
       "id": 2026050618,
@@ -4847,25 +4848,28 @@
       "id": 2026050808,
       "year": 2017,
       "title": "Prophylactic Temporary Occlusion of the Cystic Artery Using a Fibered Detachable Coil During Y-90 Radioembolization",
+      "country": "Korea",
       "authors": "Choi JW, Yoo MY, Kim HC, et al.",
       "journal": "CardioVascular and Interventional Radiology",
-      "country": "Korea",
-      "product": "both",
-      "categories": [
-        "Complications",
-        "HCC",
-        "Mapping"
-      ],
+      "url": "https://doi.org/10.1007/s00270-017-1688-z",
+      "pmcid": "",
+      "pdfUrl": "",
+      "pdfFileName": "2017 Choi Prophylactic Temporary Occlusion of the Cystic Artery Using a Fibered Detachable Coil During 90Y Radioembolization.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Technical note of 9 patients using temporary detachable coil occlusion of the cystic artery during Y90 radioembolization. Gallbladder uptake was reduced and no clinical complications were identified during 3 months follow-up.",
       "findings": "Useful technical reference when discussing cystic artery management and temporary occlusion to reduce gallbladder non-target uptake.",
       "notes": "Added from Cystic Artery folder in Glass vs Resin ZIP.",
-      "url": "https://doi.org/10.1007/s00270-017-1688-z",
-      "pmcid": "",
-      "pdfFileName": "2017 Choi Prophylactic Temporary Occlusion of the Cystic Artery Using a Fibered Detachable Coil During 90Y Radioembolization.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Complications"
+      "primaryCategory": "Balloon Occlusion",
+      "product": "both",
+      "categories": [
+        "Balloon Occlusion",
+        "HCC",
+        "Mapping",
+        "Complications"
+      ]
     },
     {
       "id": 202605072041,
@@ -6712,17 +6716,22 @@
       "journal": "Journal of Nuclear Medicine Technology",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38839117/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Asian%20data/2024%20Safety%20and%20Efficacy%20of%2090Y%20Selective%20Internal%20Radiation%20Using%20Glass%20Microspheres%20in%20Hepatocellula.pdf?csf=1&web=1&e=TQbSev",
       "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "• Safety and Ef fi cacy of 90 Y Selective Internal Radiation Therapy Using Glass Microspheres in Hepatocellular Carcinoma: A Southeast Asian Single-Institution Initial Experience Cherie Wei Qi Ng 1, Muhammad Jai bin Hassan 1, Charles Goh 1,2, Aaron Kian Ti Tong 1,2, Wei Ying Tham 1,2, Sue Ping Thang 1,2, Winnie Wing-Chuen Lam 1,2, Han Chung Low 1, Butch M.\n• Although 5 patients had deranged liver function tests after the procedure, in only 1 patient did this constitute a grade 1 toxicity (in alkaline phosphatase) by the Common Terminology Criteria for Adverse Events.\n• Half the patients showed a reduction in serum a -fetoprotein measure- ments, and 6 of 11 patients demonstrated an objective response (complete or partial) on imaging.\n• In this case series, we highlight the initial safety of performing 90 Y SIRT using glass microspheres to deliver high tumor-absorbed doses in our local patient population within a single institution in Southeast Asia.",
-      "findings": "• Safety and Ef fi cacy of 90 Y Selective Internal Radiation Therapy Using Glass Microspheres in Hepatocellular Carcinoma: A Southeast Asian Single-Institution Initial Experience Cherie Wei Qi Ng 1, Muhammad Jai bin Hassan 1, Charles Goh 1,2, Aaron Kian Ti Tong 1,2, Wei Ying Tham 1,2, Sue Ping Thang 1,2, Winnie Wing-Chuen Lam 1,2, Han Chung Low 1, Butch M.\n• Although 5 patients had deranged liver function tests after the procedure, in only 1 patient did this constitute a grade 1 toxicity (in alkaline phosphatase) by the Common Terminology Criteria for Adverse Events.\n• Half the patients showed a reduction in serum a -fetoprotein measure- ments, and 6 of 11 patients demonstrated an objective response (complete or partial) on imaging.\n• In this case series, we highlight the initial safety of performing 90 Y SIRT using glass microspheres to deliver high tumor-absorbed doses in our local patient population within a single institution in Southeast Asia.\n• The perfused liver volume was calculated from OsiriX (Pixmeo SARL) applying both intraprocedural catheter – directed CT angiography using cone beam CT or hybrid CT/angiography and [ 99m Tc]Tc-MAA SPECT/CT.",
+      "findings": "• Although 5 patients had deranged liver function tests after the procedure, in only 1 patient did this constitute a grade 1 toxicity (in alkaline phosphatase) by the Common Terminology Criteria for Adverse Events.\n• Half the patients showed a reduction in serum α-fetoprotein measurements, and 6 of 11 patients demonstrated an objective response (complete or partial) on imaging.\n• SIRT with 90Y glass microspheres is a safe and efficacious locoregional therapy for unresectable HCC.\n• Despite these differences, SIRT is an equally effective and safe option for such patients.",
       "notes": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
       "primaryCategory": "Asian Data",
-      "product": "both",
+      "product": "glass",
       "categories": [
-        "Asian Data"
+        "Asian Data",
+        "Dosimetry",
+        "HCC",
+        "Safety"
       ]
     },
     {
@@ -6768,11 +6777,12 @@
       "notes": "",
       "abstract": "Background Complete pathologic necrosis (CPN) at liver transplant is a positive predictor of freedom from recurrence and overall survival for patients with hepatocellular carcinoma (HCC). Comprehensive authorized user parameters for yttrium 90 radiation segmentectomy CPN rates at explant remain undefined. Purpose To evaluate established outcomes for radiation segmentectomy before liver transplant and determine optimal parameters to achieve CPN among patients with treatment-naive HCC. Materials and Methods This multicenter retrospective study included patients with treatment-naive HCC who underwent glass microsphere radiation segmentectomy before liver transplant from January 2016 to December 2024. Treatment parameters were compared for patients that achieved CPN versus those without CPN using Mann-Whitney U or χ2 tests. Receiver operating characteristic analysis was performed to determine treatment parameter thresholds and subsequently predict CPN. Results A total of 303 patients with 364 tumors were included in the study. Tumors had a median size of 2.4 cm (IQR, 2.0-3.1 cm) and demonstrated a CPN rate of 68% (246 of 364). Compared with tumors without CPN, those with CPN had a higher microsphere activity (median, 1242 Bq vs 1203 Bq; P <.03), microspheres per milliliter (median, 9000 per mL vs 7600 per mL; P =.02), single-compartment dose (median, 544 Gy vs 379 Gy; P <.001), and angiosome-to-tumor volume ratio (median, 25.2 vs 15.6; P =.02). Multivariable logistic regression showed that a microsphere activity of 1087 Bq or greater (P =.03), a dose of 440 Gy or greater (P <.001), and an angiosome-to-tumor volume ratio of 16 or greater (P <.001) were independent predictors of CPN. There was a positive association between the number of optimized parameters and CPN at liver transplant, with a positive predictive value of 74% (198 of 269) with one threshold met and 91% (57 of 63) with all thresholds met (P <.001). Conclusion Among patients with treatment-naive HCC, glass microsphere radiation segmentectomy before liver transplant achieved high rates of CPN, which was associated with optimized parameter thresholds determined for microsphere activity, microspheres per milliliter, dose, and angiosome-to-tumor volume ratio. © RSNA, 2026 Supplemental material is available for this article. See also the editorial by Gordon and Lewandowski in this issue.",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry",
+      "primaryCategory": "Key Clinical Data / COBRAS",
       "product": "glass",
       "categories": [
-        "Dosimetry",
-        "HCC"
+        "Key Clinical Data / COBRAS",
+        "HCC",
+        "Dosimetry"
       ]
     }
   ]
