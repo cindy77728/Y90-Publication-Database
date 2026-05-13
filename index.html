@@ -1137,6 +1137,10 @@ td.td-findings{
 }
 .pubmed-actions{margin-top:14px !important;}
 
+
+/* v5.0.2 — Full text access cleanup: one PMC link + visible PDF link */
+button.fulltext-link{font:inherit;cursor:pointer;}
+.access-links .fulltext-link{margin-right:6px;margin-bottom:4px;}
 </style>
 </head>
 <body>
@@ -7758,36 +7762,47 @@ function fullTextNoteHtml(p){
 }
 function paperPdfAccessLinks(p){
   const status = getFullTextStatus(p);
-  let html = '';
-  if(status === 'free_pmc' && p.pmcid){
-    const url = pmcViewUrl(p.pmcid);
-    html += `<a class="fulltext-link pmc-link" href="${htmlSafe(url)}" target="_blank" onclick="event.stopPropagation()" title="Open PMC full text">🟢 PMC</a>`;
-  } else if(status === 'uploaded_pdf' && p.pdfData){
-    html += `<span class="fulltext-link uploaded-link" title="PDF is attached inside this browser database">📎 Uploaded PDF</span>`;
-  } else if((status === 'direct_pdf' || status === 'uploaded_pdf') && p.pdfUrl){
-    html += `<a class="fulltext-link pdf-link" href="${htmlSafe(p.pdfUrl)}" target="_blank" onclick="event.stopPropagation()" title="Open PDF link">📄 Show PDF</a>`;
-  } else if(status === 'pdf_folder' && pdfFolderUrl){
-    const title = p.pdfFileName ? `Open PDF folder and search: ${htmlSafe(p.pdfFileName)}` : 'Open PDF folder';
-    html += `<a class="fulltext-link folder-link" href="${htmlSafe(pdfFolderUrl)}" target="_blank" onclick="event.stopPropagation()" title="${title}">📁 PDF Folder</a>`;
-  } else if(status === 'hard_copy'){
-    html += `<span class="fulltext-link hardcopy-link" title="Hard copy only">🗂️ Hard Copy</span>`;
-  } else if(status === 'request_needed'){
-    html += `<span class="fulltext-link request-link" title="Need to request full text">📨 Request Needed</span>`;
-  } else if(p.pdfUrl){
-    html += `<a class="fulltext-link pdf-link" href="${htmlSafe(p.pdfUrl)}" target="_blank" onclick="event.stopPropagation()" title="Open PDF link">📄 Show PDF</a>`;
-  } else if(p.pdfFileName && pdfFolderUrl){
-    html += `<a class="fulltext-link folder-link" href="${htmlSafe(pdfFolderUrl)}" target="_blank" onclick="event.stopPropagation()" title="Open PDF folder and search: ${htmlSafe(p.pdfFileName)}">📁 PDF Folder</a>`;
-  } else {
-    html += `<span class="fulltext-link paywall-link">paywall</span>`;
+  const links = [];
+  const pmcid = String(p.pmcid || '').trim();
+  const pdfUrl = String(p.pdfUrl || '').trim();
+  const pdfFileName = String(p.pdfFileName || '').trim();
+
+  // Show PMC only once. Do not add the extra PMC PDF-download icon here.
+  if(pmcid){
+    links.push(`<a class="fulltext-link pmc-link" href="${htmlSafe(pmcViewUrl(pmcid))}" target="_blank" onclick="event.stopPropagation()" title="Open PMC full text">🟢 PMC</a>`);
   }
-  return html + fullTextNoteHtml(p);
+
+  // Always show a manually provided PDF link, even when a PMC ID also exists.
+  if(pdfUrl){
+    links.push(`<a class="fulltext-link pdf-link" href="${htmlSafe(pdfUrl)}" target="_blank" onclick="event.stopPropagation()" title="Open PDF link">📄 Show PDF</a>`);
+  }
+
+  if(p.pdfData){
+    links.push(`<button class="fulltext-link uploaded-link" onclick="event.stopPropagation();openPdf(${p.id})" title="Open uploaded PDF">📎 Uploaded PDF</button>`);
+  }
+
+  if(!pdfUrl && !p.pdfData && pdfFileName && pdfFolderUrl){
+    const title = `Open PDF folder and search: ${htmlSafe(pdfFileName)}`;
+    links.push(`<a class="fulltext-link folder-link" href="${htmlSafe(pdfFolderUrl)}" target="_blank" onclick="event.stopPropagation()" title="${title}">📁 PDF Folder</a>`);
+  }
+
+  if(!links.length){
+    if(status === 'hard_copy') links.push(`<span class="fulltext-link hardcopy-link" title="Hard copy only">🗂️ Hard Copy</span>`);
+    else if(status === 'request_needed') links.push(`<span class="fulltext-link request-link" title="Need to request full text">📨 Request Needed</span>`);
+    else links.push(`<span class="fulltext-link paywall-link">paywall</span>`);
+  }
+
+  return links.join('') + fullTextNoteHtml(p);
 }
 function paperPdfButtons(p){
-  const status = getFullTextStatus(p);
-  if(status === 'free_pmc' && p.pmcid) return `<a href="${htmlSafe(pmcViewUrl(p.pmcid))}" target="_blank" class="btn btn-green">🟢 View PMC</a>`;
-  if(p.pdfUrl) return `<a href="${htmlSafe(p.pdfUrl)}" target="_blank" class="btn btn-green">📄 View PDF</a>`;
-  if(status === 'pdf_folder' && pdfFolderUrl) return `<a href="${htmlSafe(pdfFolderUrl)}" target="_blank" class="btn btn-green" title="Search file name: ${htmlSafe(p.pdfFileName || '')}">📁 Open PDF Folder</a>`;
-  return '';
+  const buttons = [];
+  const pdfUrl = String(p.pdfUrl || '').trim();
+  const pdfFileName = String(p.pdfFileName || '').trim();
+
+  // Detail view already has PMC buttons above, so this helper only adds non-PMC PDF access.
+  if(pdfUrl) buttons.push(`<a href="${htmlSafe(pdfUrl)}" target="_blank" class="btn btn-green">📄 View PDF Link</a>`);
+  if(pdfFileName && pdfFolderUrl) buttons.push(`<a href="${htmlSafe(pdfFolderUrl)}" target="_blank" class="btn btn-green" title="Search file name: ${htmlSafe(pdfFileName)}">📁 Open PDF Folder</a>`);
+  return buttons.join('');
 }
 
 
@@ -8003,16 +8018,7 @@ function renderTable(data) {
       <td class="td-findings">${p.findings?`<div class="findings-preview ${p.findings.length>220?'long':'short'}" title="${htmlSafe(p.findings)}">${htmlSafe(p.findings)}</div>`:'<span style="color:var(--text-dim)">—</span>'}</td>
       <td>
         <div class="access-links">
-          ${hasPMC(p)?`
-            <a class="icon-btn pmc-btn" href="${pmcViewUrl(p.pmcid)}" target="_blank" onclick="event.stopPropagation()" title="Free Full Text on PMC">
-              <span style="font-size:10px;font-weight:700">PMC</span>
-            </a>
-            <a class="icon-btn pmc-btn" href="${pmcUrl(p.pmcid)}" target="_blank" onclick="event.stopPropagation()" title="Download Free PDF from PMC">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </a>`:''}
-          ${p.pdfData?`<button class="fulltext-link pdf-link" onclick="event.stopPropagation();openPdf(${p.id})" title="Uploaded PDF">📄 Show PDF</button>`:''}
           ${paperPdfAccessLinks(p)}
-          ${!hasPMC(p)&&!p.pdfData&&!p.pdfUrl&&!(p.pdfFileName&&pdfFolderUrl)?'<span class="fulltext-unavailable">paywall</span>':''}
         </div>
       </td>
       <td>${reviewStatusBadge(getReviewStatus(p))}</td>
@@ -8043,9 +8049,6 @@ function renderCards(data) {
       ${p.findings?`<div class="card-findings">${p.findings.substring(0,130)}${p.findings.length>130?'…':''}</div>`:''}
       <div class="card-footer">
         <div class="access-links">
-          ${hasPMC(p)?`<a class="icon-btn pmc-btn" href="${pmcViewUrl(p.pmcid)}" target="_blank" onclick="event.stopPropagation()" title="Free full text"><span style="font-size:9px;font-weight:700">PMC</span></a>
-          <a class="icon-btn pmc-btn" href="${pmcUrl(p.pmcid)}" target="_blank" onclick="event.stopPropagation()" title="Download free PDF"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>`:''}
-          ${p.pdfData?`<button class="icon-btn pdf-btn" onclick="event.stopPropagation();openPdf(${p.id})"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></button>`:''}
           ${paperPdfAccessLinks(p)}
         </div>
         <div style="display:flex;gap:4px">
