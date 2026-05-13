@@ -13319,6 +13319,138 @@ function toggleMobileMenu(){
   document.getElementById('mobile-menu-btn').textContent=drawer.classList.contains('mobile-open')?'✕':'☰';
 }
 
+
+
+// ══════════════════════════════════════════════════════════
+// v5.7 — Preserve Library / PubMed context after editing
+// Keeps the same search, filters, active category, view mode, and scroll position
+// after Save, Cancel, or × from the publication edit modal.
+let __publicationEditReturnState = null;
+let __publicationSaveInProgress = false;
+
+function __getValueSafe(id){
+  const el = document.getElementById(id);
+  return el ? el.value : '';
+}
+function __setValueSafe(id, value){
+  const el = document.getElementById(id);
+  if(el) el.value = value || '';
+}
+function capturePublicationReturnState(){
+  return {
+    tab: typeof getActiveTabName === 'function' ? getActiveTabName() : 'library',
+    scrollY: window.scrollY || document.documentElement.scrollTop || 0,
+    currentView: typeof currentView !== 'undefined' ? currentView : 'table',
+    activeCategory: typeof activeCategory !== 'undefined' ? activeCategory : '',
+    smartFilterActive: typeof smartFilterActive !== 'undefined' ? smartFilterActive : false,
+    smartFilteredIds: typeof smartFilteredIds !== 'undefined' ? [...smartFilteredIds] : [],
+    searchInput: __getValueSafe('search-input'),
+    smartSearch: __getValueSafe('smart-search'),
+    filterCategory: __getValueSafe('filter-category'),
+    filterProduct: __getValueSafe('filter-product'),
+    filterYear: __getValueSafe('filter-year'),
+    filterCountry: __getValueSafe('filter-country'),
+    sortBy: __getValueSafe('sort-by'),
+    pubmedKeyword: __getValueSafe('pubmed-keyword'),
+    pubmedDays: __getValueSafe('pubmed-days')
+  };
+}
+function restorePublicationReturnState(state, highlightId){
+  if(!state) return;
+
+  if(typeof switchTab === 'function') switchTab(state.tab || 'library');
+
+  if(state.tab === 'library'){
+    __setValueSafe('search-input', state.searchInput);
+    __setValueSafe('smart-search', state.smartSearch);
+    __setValueSafe('filter-category', state.filterCategory);
+    __setValueSafe('filter-product', state.filterProduct);
+    __setValueSafe('filter-year', state.filterYear);
+    __setValueSafe('filter-country', state.filterCountry);
+    __setValueSafe('sort-by', state.sortBy || 'year-desc');
+
+    if(typeof activeCategory !== 'undefined') activeCategory = state.activeCategory || '';
+    if(typeof smartFilterActive !== 'undefined') smartFilterActive = !!state.smartFilterActive;
+    if(typeof smartFilteredIds !== 'undefined') smartFilteredIds = [...(state.smartFilteredIds || [])];
+
+    const smartBanner = document.getElementById('smart-result-banner');
+    if(smartBanner && !smartFilterActive) smartBanner.style.display = 'none';
+
+    if(typeof buildCategoryStrip === 'function') buildCategoryStrip();
+    if(typeof applyFilters === 'function') applyFilters();
+    if(typeof setView === 'function') setView(state.currentView || 'table');
+
+    if(highlightId){
+      requestAnimationFrame(()=>{
+        const row = document.querySelector(`tr[onclick="openDetail(${highlightId})"]`) ||
+                    document.querySelector(`.pub-card[onclick="openDetail(${highlightId})"]`);
+        if(row){
+          row.scrollIntoView({block:'center', behavior:'smooth'});
+          row.style.outline = '2px solid var(--accent)';
+          row.style.outlineOffset = '3px';
+          setTimeout(()=>{ row.style.outline=''; row.style.outlineOffset=''; }, 1800);
+        } else {
+          window.scrollTo({top: state.scrollY || 0, behavior:'smooth'});
+        }
+      });
+    } else {
+      requestAnimationFrame(()=>window.scrollTo({top: state.scrollY || 0, behavior:'auto'}));
+    }
+  } else if(state.tab === 'pubmed'){
+    __setValueSafe('pubmed-keyword', state.pubmedKeyword);
+    __setValueSafe('pubmed-days', state.pubmedDays);
+    requestAnimationFrame(()=>window.scrollTo({top: state.scrollY || 0, behavior:'auto'}));
+  }
+}
+
+const __originalOpenEditModal_v57 = openEditModal;
+openEditModal = function(id){
+  __publicationEditReturnState = capturePublicationReturnState();
+  return __originalOpenEditModal_v57(id);
+};
+
+const __originalImportFromPubMed_v57 = typeof importFromPubMed === 'function' ? importFromPubMed : null;
+if(__originalImportFromPubMed_v57){
+  importFromPubMed = function(...args){
+    __publicationEditReturnState = capturePublicationReturnState();
+    return __originalImportFromPubMed_v57.apply(this,args);
+  };
+}
+
+const __originalOpenAddModal_v57 = typeof openAddModal === 'function' ? openAddModal : null;
+if(__originalOpenAddModal_v57){
+  openAddModal = function(){
+    __publicationEditReturnState = capturePublicationReturnState();
+    return __originalOpenAddModal_v57();
+  };
+}
+
+const __originalCloseModal_v57 = closeModal;
+closeModal = function(id){
+  const shouldRestore = id === 'form-modal' && __publicationEditReturnState && !__publicationSaveInProgress;
+  const state = __publicationEditReturnState;
+  __originalCloseModal_v57(id);
+  if(shouldRestore){
+    restorePublicationReturnState(state, editingId || null);
+    __publicationEditReturnState = null;
+  }
+};
+
+const __originalSavePublication_v57 = savePublication;
+savePublication = function(){
+  const state = __publicationEditReturnState || capturePublicationReturnState();
+  const idBeforeSave = editingId;
+  __publicationSaveInProgress = true;
+  try{
+    __originalSavePublication_v57();
+  } finally {
+    __publicationSaveInProgress = false;
+  }
+  const idAfterSave = idBeforeSave || (publications.length ? publications[publications.length - 1].id : null);
+  restorePublicationReturnState(state, idAfterSave);
+  __publicationEditReturnState = null;
+};
+
 </script>
 
 <!-- ══ GITHUB SETTINGS MODAL ══ -->
