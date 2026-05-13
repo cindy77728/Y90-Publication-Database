@@ -1,10 +1,11 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-13T07:28:42.161Z",
+  "savedAt": "2026-05-13T08:36:29.920Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
     "Carbon",
+    "Case Report",
     "Chemotherapy",
     "Combination Therapy",
     "Comparative",
@@ -18,20 +19,19 @@
     "Cystic Artery",
     "Dosimetry",
     "Dosimetry / Dose Response",
+    "Dosimetry / Dosimetry Steering Committee",
     "Dosimetry / Post-treatment",
     "Dosimetry / QA",
     "Dosimetry / TN Ratio",
     "Dosimetry / Treatment Planning",
     "Dosimetry / Voxel-based",
     "Downstaging",
-    "ESMO",
     "FL-HCC",
     "Glass vs Resin",
     "Guidelines",
     "Guidelines / BCLC",
     "Guidelines / EANM",
     "Guidelines / ESMO",
-    "Guidelines / Expert Consensus",
     "HCC",
     "Histotripsy",
     "Hypo Hyper Tumor",
@@ -49,7 +49,6 @@
     "Key Clinical Data / ROWAN",
     "Key Clinical Data / TARGET",
     "Key Clinical Data / TRACE",
-    "Key Study",
     "Laboratory Investigation",
     "Large Tumor",
     "Lung Shunt",
@@ -96,9 +95,9 @@
       "country": "Worldwide",
       "authors": "Reig M, Sanduzzi-Zamparelli M, Forner A, et al.",
       "journal": "Journal of Hepatology",
-      "url": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41151697/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Guideline/BCLC/BCLC%202026.pdf?csf=1&web=1&e=aBlsQQ",
       "pdfFileName": "BCLC 2026.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -107,13 +106,13 @@
       "notes": "Added from Guideline/BCLC folder in hypo/hyper tumor ZIP.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Guidelines",
+      "primaryCategory": "Guidelines / BCLC",
       "product": "ns",
       "categories": [
-        "Guidelines",
         "Guidelines / BCLC",
         "HCC",
-        "Dosimetry / Treatment Planning"
+        "Dosimetry / Treatment Planning",
+        "Guidelines"
       ]
     },
     {
@@ -149,7 +148,6 @@
       "country": "France",
       "product": "glass",
       "categories": [
-        "Key Study",
         "Safety",
         "HCC"
       ],
@@ -161,7 +159,7 @@
       "pdfFileName": "2026 Guiu PROACTIF.pdf",
       "reviewStatus": "AI Draft",
       "abstract": "",
-      "primaryCategory": "Key Study"
+      "primaryCategory": "Safety"
     },
     {
       "id": 2026150810,
@@ -382,26 +380,29 @@
       "id": 2026050610,
       "year": 2026,
       "title": "Radioembolization of Colorectal Liver Metastases: Comparative Dose–Response of Resin and Glass Microspheres",
+      "country": "Turkey",
       "authors": "Soydal C, Mesci I, Celebioglu EC, et al.",
       "journal": "Nuclear Medicine Communications",
-      "country": "Turkey",
+      "url": "DOI: 10.1097/MNM.0000000000002148",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/2026%20Soydal%20Radioembolization%20of%20colorectal%20liver%20metastases%20comparative%20dose%20response%20of%20resin%20and%20glass%20microspheres.pdf?csf=1&web=1&e=erQYgK",
+      "pdfFileName": "2026 Soydal Radioembolization of colorectal liver metastases comparative dose response of resin and glass microspheres.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Retrospective CRCLM study of 56 patients and 234 lesions using post-therapy Y90 PET/CT dosimetry. Glass n=30 and resin n=26; dose-response correlation was observed in both groups. Mean OS was not significantly different between glass and resin groups.",
+      "findings": "Strong support for a dose-response framing in CRCLM: response was linked to absorbed tumor dose, while product comparison should be interpreted through delivered dose and distribution rather than product name alone.",
+      "notes": "Added from Comparative / Dose Outcomes - Glass & Resin ZIP folder.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Glass vs Resin",
       "product": "both",
       "categories": [
         "Glass vs Resin",
         "Comparative",
         "Dosimetry",
-        "Dosimetry / Dose Response"
-      ],
-      "results": "Retrospective CRCLM study of 56 patients and 234 lesions using post-therapy Y90 PET/CT dosimetry. Glass n=30 and resin n=26; dose-response correlation was observed in both groups. Mean OS was not significantly different between glass and resin groups.",
-      "findings": "Strong support for a dose-response framing in CRCLM: response was linked to absorbed tumor dose, while product comparison should be interpreted through delivered dose and distribution rather than product name alone.",
-      "notes": "Added from Comparative / Dose Outcomes - Glass & Resin ZIP folder.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2026 Soydal Radioembolization of colorectal liver metastases comparative dose response of resin and glass microspheres.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Glass vs Resin"
+        "Dosimetry / Dose Response",
+        "Metastases / Metastatic Colorectal Cancer (mCRC)"
+      ]
     },
     {
       "id": 2026150816,
@@ -450,51 +451,30 @@
       "reviewStatus": "AI Draft"
     },
     {
-      "id": 202605073002,
-      "year": 2026,
-      "title": "Transarterial Radioembolization Medical Staff Dosimetry for 90Y-Resin, 90Y-Glass, and 166Ho-PLLA Microspheres",
-      "authors": "Kühnel C, et al.",
-      "journal": "Radiology",
-      "country": "Europe",
-      "product": "both",
-      "primaryCategory": "Dosimetry",
-      "categories": [
-        "Dosimetry",
-        "Glass vs Resin"
-      ],
-      "results": "Comparative staff dosimetry analysis across resin, glass, and holmium microsphere radioembolization workflows.",
-      "findings": "Useful staff dosimetry paper showing low occupational exposure during TARE and supporting workflow/handling as key drivers of exposure.",
-      "notes": "Added from Radiation safety and handling ZIP. Source file: Radiation safety and handling/2026 kühnel Transarterial Radioembolization Medical Staff Dosimetry for 90YResin Glass 166Ho PLLA Microspheres.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "Radiation safety and handling/2026 kühnel Transarterial Radioembolization Medical Staff Dosimetry for 90YResin Glass 166Ho PLLA Microspheres.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
-    },
-    {
       "id": 2026050805,
       "year": 2026,
       "title": "Transarterial Radioembolization: Medical Staff Dosimetry for Y-90 Resin, Y-90 Glass, and Ho-166 PLLA Microspheres",
+      "country": "Germany",
       "authors": "Kühnel C, Schmidt TN, Freesmeyer M, et al.",
       "journal": "Radiology",
-      "country": "Germany",
+      "url": "https://doi.org/10.1148/radiol.251822",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/2026%20k%C3%BChnel%20Transarterial%20Radioembolization%20Medical%20Staff%20Dosimetry%20for%2090YResin%20Glass%20166Ho%20PLLA%20Microspheres.pdf?csf=1&web=1&e=Th0Kbv",
+      "pdfFileName": "2026 k#U00fchnel Transarterial Radioembolization Medical Staff Dosimetry for 90YResin Glass 166Ho PLLA Microspheres.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Prospective single-center real-world staff dosimetry study comparing Y90 resin, Y90 glass, and Ho-166 PLLA workflows across multiple staff roles and procedure steps.",
+      "findings": "Supports the message that staff exposure is generally low and workflow/handling time matters. Glass workflow may reduce handling complexity because of ready-to-use design, but claims should stay tied to the measured workflow context.",
+      "notes": "Added from Glass vs Resin ZIP. Ho-166 included in paper but product filter kept as both because database product options are resin/glass/both/ns.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Glass vs Resin",
       "product": "both",
       "categories": [
         "Glass vs Resin",
         "Radiation Safety & Handling",
         "Comparative"
-      ],
-      "results": "Prospective single-center real-world staff dosimetry study comparing Y90 resin, Y90 glass, and Ho-166 PLLA workflows across multiple staff roles and procedure steps.",
-      "findings": "Supports the message that staff exposure is generally low and workflow/handling time matters. Glass workflow may reduce handling complexity because of ready-to-use design, but claims should stay tied to the measured workflow context.",
-      "notes": "Added from Glass vs Resin ZIP. Ho-166 included in paper but product filter kept as both because database product options are resin/glass/both/ns.",
-      "url": "https://doi.org/10.1148/radiol.251822",
-      "pmcid": "",
-      "pdfFileName": "2026 k#U00fchnel Transarterial Radioembolization Medical Staff Dosimetry for 90YResin Glass 166Ho PLLA Microspheres.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Glass vs Resin"
+      ]
     },
     {
       "id": 2026150817,
@@ -567,42 +547,15 @@
       "reviewStatus": "AI Draft"
     },
     {
-      "id": 2026050904,
-      "year": 2025,
-      "title": "BCLC Strategy for Prognosis Prediction and Treatment Recommendations: The 2025 Update",
-      "country": "Worldwide",
-      "authors": "Reig M, Sanduzzi-Zamparelli M, Forner A, et al.",
-      "journal": "Journal of Hepatology",
-      "url": "https://doi.org/10.1016/j.jhep.2025.10.020",
-      "pmcid": "",
-      "pdfUrl": "",
-      "pdfFileName": "2025 BCLC Update (pre-proof).pdf",
-      "fullTextStatus": "auto",
-      "fullTextNote": "",
-      "results": "Journal pre-proof update to the BCLC strategy, preserving the stage-based treatment framework while incorporating new therapeutic evidence and structured multidisciplinary decision-making considerations.",
-      "findings": "Useful transition document for tracking how the BCLC 2026 update developed. Keep as pre-proof / not final version when referencing internally.",
-      "notes": "Added from Guideline/BCLC folder in hypo/hyper tumor ZIP. Pre-proof version; use final 2026 record for external-facing claims when possible.",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Guidelines",
-      "product": "ns",
-      "categories": [
-        "Guidelines",
-        "Guidelines / BCLC",
-        "HCC",
-        "Dosimetry / Treatment Planning"
-      ]
-    },
-    {
       "id": 2026050706,
       "year": 2025,
-      "title": "Clinical and Dosimetric Considerations for Yttrium-90 Glass Microspheres Radioembolization of Intrahepatic Cholangiocarcinoma, Metastatic Colorectal Carcinoma, and Metastatic Neuroendocrine Carcinoma",
+      "title": "Clinical and dosimetric considerations for yttrium‑90 glass microspheres radioembolization of intrahepatic cholangiocarcinoma, metastatic colorectal carcinoma, and metastatic neuroendocrine\ncarcinoma: recommendations from an international multidisciplinary working group",
       "country": "Worldwide",
       "authors": "Lam M, Salem R, Toskich B, et al.",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12316795/",
       "pmcid": "PMC12316795",
-      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2025%20Lam%20Non-HCC%20Dosimetric%20Considerations.pdf?csf=1&web=1&e=HIiCp1",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/Raid%202025%20y90%20dosimetry%20recommendations.pdf?csf=1&web=1&e=9Dmjdk",
       "pdfFileName": "metastases/2025 Lam Non-HCC Dosimetric Considerations.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -615,7 +568,9 @@
       "product": "glass",
       "categories": [
         "Dosimetry",
-        "Guidelines"
+        "Guidelines",
+        "Dosimetry / Dosimetry Steering Committee",
+        "Metastases"
       ]
     },
     {
@@ -724,9 +679,9 @@
       "country": "Worldwide",
       "authors": "Vogel A, Chan SL, Dawson LA, et al.",
       "journal": "Annals of Oncology",
-      "url": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39986353/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/ESMO/ESMO%202025%20HCC.pdf?csf=1&web=1&e=yaQqRE",
       "pdfFileName": "ESMO 2025 HCC.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -898,8 +853,7 @@
       "country": "USA",
       "product": "glass",
       "categories": [
-        "HCC",
-        "Key Study"
+        "HCC"
       ],
       "results": "Expert opinion/review arguing that RADSEG should be recognized as curative for selected early HCC patients, citing ablative tumor dosing, complete pathologic necrosis at >400 Gy, durable time-to-progression, low local recurrence, and comparable outcomes to ablation or surgery in selected patients.",
       "findings": "Strong positioning reference for curative-intent radiation segmentectomy in carefully selected very early/early HCC, especially non-ablatable tumors or challenging locations near critical structures.",
@@ -1251,25 +1205,27 @@
       "id": 2026050901,
       "year": 2024,
       "title": "Arterial Hypoperfusion as a Negative Predictive Marker for Primary Hepatic Malignancies Treated with Y-90 Glass Microsphere Transarterial Radioembolization",
+      "country": "USA",
       "authors": "Kalaghchi B, Ince S, Barnes J, et al.",
       "journal": "Frontiers in Oncology",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "HCC",
-        "Dosimetry",
-        "Dosimetry / Post-treatment"
-      ],
+      "url": "https://doi.org/10.3389/fonc.2024.1433480",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/hypo%20hyper%20tumor/2024%20Kalaghchi%20Arterial%20hypoperfusion%20as%20a%20negative%20predictive%20marker%20for%20primary%20hepatic%20malignancies%20treated%20with%20Y-90%20glass%20microsphere%20transarterial%20radioembolization.pdf?csf=1&web=1&e=kFXgSw",
+      "pdfFileName": "2024 Kalaghchi Arterial hypoperfusion as a negative predictive marker for primary hepatic malignancies treated with Y-90 glass microsphere transarterial radioembolization.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Retrospective analysis of 88 patients from 400 Y90 treatments who received prescribed dose ≥150 Gy and had pre- or post-treatment SPECT/CT images. Hypoperfused lesions were seen in 11 patients and hyperperfused lesions in 77 patients. Hypoperfusion was associated with shorter PFS (HR 1.87, p=0.039), higher elsewhere liver failure (HR 3.36, p=0.019), higher distant failure (HR 7.64, p<0.001), and worse OS in inverse probability weighted analysis (p=0.032).",
       "findings": "Arterially hypoperfused primary liver tumors may respond less favorably to glass Y90 TARE than hyperperfused tumors. Useful for patient selection, expectation setting, and explaining why tumor perfusion and dose distribution matter beyond prescribed activity.",
       "notes": "Added from hypo/hyper tumor ZIP. Review exact cohort definitions before external use.",
-      "url": "https://doi.org/10.3389/fonc.2024.1433480",
-      "pmcid": "",
-      "pdfFileName": "2024 Kalaghchi Arterial hypoperfusion as a negative predictive marker for primary hepatic malignancies treated with Y-90 glass microsphere transarterial radioembolization.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "Hypo Hyper Tumor",
+      "product": "glass",
+      "categories": [
+        "Hypo Hyper Tumor",
+        "Dosimetry",
+        "Dosimetry / Post-treatment"
+      ]
     },
     {
       "id": 20260507008,
@@ -1344,12 +1300,12 @@
       "id": 2026050813,
       "year": 2024,
       "title": "EMERALD-Y90: A Phase 2 Study to Evaluate Transarterial Radioembolization Followed by Durvalumab and Bevacizumab for Unresectable HCC Eligible for Embolization",
-      "country": "Worldwide",
-      "authors": "Iyer R, Noonan A, Spieler B, et al.",
+      "country": "USA",
+      "authors": "Riad Salem, Anne M. Noonan, et al.",
       "journal": "International Journal of Radiation Oncology Biology Physics",
       "url": "",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/EMERALD-90/EMERALD-90.pdf?csf=1&web=1&e=eedkPR",
       "pdfFileName": "EMERALD-90.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -1358,38 +1314,40 @@
       "notes": "Added from EMERALD-90 folder. This appears to be an abstract/trial-in-progress record.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study",
+      "primaryCategory": "Key Clinical Data / EMERALD-90",
       "product": "glass",
       "categories": [
-        "Key Study",
-        "Combination Therapy",
+        "Key Clinical Data / EMERALD-90",
         "HCC",
-        "Dosimetry / Treatment Planning"
+        "Dosimetry / Treatment Planning",
+        "Immunotherapy"
       ]
     },
     {
       "id": 2026050804,
       "year": 2024,
       "title": "Glass or Resin: The Ends Justify the Means?",
+      "country": "Korea",
       "authors": "Choi JW",
       "journal": "CardioVascular and Interventional Radiology",
-      "country": "Korea",
+      "url": "https://doi.org/10.1007/s00270-024-03797-8",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/2024%20Choi%20Glass%20or%20Resin%20The%20Ends%20Justify%20the%20Means.pdf?csf=1&web=1&e=k9zbYW",
+      "pdfFileName": "2024 Choi Glass or Resin The Ends Justify the Means.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Commentary discussing the trade-off between high specific activity / lower particle number with glass and higher particle number / more embolic effect with resin, in the context of contemporary HCC comparative data.",
+      "findings": "Good conceptual piece for framing the debate: the question is not simply particle number versus dose, but whether each device is used appropriately for the treatment goal.",
+      "notes": "Added from Glass vs Resin ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Glass vs Resin",
       "product": "both",
       "categories": [
         "Glass vs Resin",
         "Comparative",
         "Dosimetry"
-      ],
-      "results": "Commentary discussing the trade-off between high specific activity / lower particle number with glass and higher particle number / more embolic effect with resin, in the context of contemporary HCC comparative data.",
-      "findings": "Good conceptual piece for framing the debate: the question is not simply particle number versus dose, but whether each device is used appropriately for the treatment goal.",
-      "notes": "Added from Glass vs Resin ZIP.",
-      "url": "https://doi.org/10.1007/s00270-024-03797-8",
-      "pmcid": "",
-      "pdfFileName": "2024 Choi Glass or Resin The Ends Justify the Means.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Glass vs Resin"
+      ]
     },
     {
       "id": 2026050811,
@@ -1420,27 +1378,29 @@
       "id": 2026050812,
       "year": 2024,
       "title": "Long-Term Overall Survival After Selective Internal Radiation Therapy for Locally Advanced Hepatocellular Carcinomas: Updated Analysis of DOSISPHERE-01 Trial",
+      "country": "France",
       "authors": "Garin E, Tselikas L, Guiu B, et al.",
       "journal": "Journal of Nuclear Medicine",
-      "country": "France",
+      "url": "https://doi.org/10.2967/jnumed.123.266211",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/DOSISPHERE/2024_Garin_long%20term%20OS%20SIRT%20in%20HCC%20updated%20analysis%20of%20DOSISPHERE.pdf?csf=1&web=1&e=de8EAL",
+      "pdfFileName": "2024_Garin_long term OS SIRT in HCC updated analysis of DOSISPHERE.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Updated long-term OS analysis of DOSISPHERE-01. In treated patients, median OS was 24.8 months with personalized dosimetry versus 10.7 months with standard dosimetry; OS was also longer when tumor dose reached at least 205 Gy.",
+      "findings": "High-value dose story: long-term follow-up continues to support personalized dosimetry and higher delivered tumor dose with glass microspheres in locally advanced HCC.",
+      "notes": "Added from DOSISPHERE folder in Glass vs Resin ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Key Clinical Data / DOSISPHERE",
       "product": "glass",
       "categories": [
-        "Key Study",
+        "Key Clinical Data / DOSISPHERE",
         "Dosimetry",
         "Dosimetry / Treatment Planning",
         "HCC",
         "Downstaging"
-      ],
-      "results": "Updated long-term OS analysis of DOSISPHERE-01. In treated patients, median OS was 24.8 months with personalized dosimetry versus 10.7 months with standard dosimetry; OS was also longer when tumor dose reached at least 205 Gy.",
-      "findings": "High-value dose story: long-term follow-up continues to support personalized dosimetry and higher delivered tumor dose with glass microspheres in locally advanced HCC.",
-      "notes": "Added from DOSISPHERE folder in Glass vs Resin ZIP.",
-      "url": "https://doi.org/10.2967/jnumed.123.266211",
-      "pmcid": "",
-      "pdfFileName": "2024_Garin_long term OS SIRT in HCC updated analysis of DOSISPHERE.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study"
+      ]
     },
     {
       "id": 202605071119,
@@ -1573,7 +1533,6 @@
       "country": "Korea",
       "product": "glass",
       "categories": [
-        "Key Study",
         "HCC",
         "Dosimetry / Treatment Planning"
       ],
@@ -1586,7 +1545,7 @@
       "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study"
+      "primaryCategory": "HCC"
     },
     {
       "id": 2026151003,
@@ -1692,7 +1651,7 @@
       "journal": "The Oncologist",
       "url": "https://doi.org/10.1093/oncolo/oyae128",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/EPOCH/Salem%20et%20al%20EPOCH%202.pdf?csf=1&web=1&e=z1fxID",
       "pdfFileName": "Salem et al EPOCH 2.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -1701,11 +1660,10 @@
       "notes": "Added from EPOCH folder in Glass vs Resin ZIP.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study",
+      "primaryCategory": "Key Clinical Data / EPOCH",
       "product": "glass",
       "categories": [
-        "Key Study",
-        "Combination Therapy"
+        "Key Clinical Data / EPOCH"
       ]
     },
     {
@@ -1883,25 +1841,27 @@
       "id": 2026050708,
       "year": 2023,
       "title": "Evolution of Personalized Dosimetry for Radioembolization of Hepatocellular Carcinoma",
+      "country": "USA",
       "authors": "Knight GM, Gordon AC, Gates V, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
+      "url": "https://doi.org/10.1016/j.jvir.2023.03.011",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/Knight%20GM%20et%20al%202023%20NW%20Evolution%20%20of%20personalized%20doismetry%20for%20HCC-%20Review%20Article.pdf?csf=1&web=1&e=NmBa5U",
+      "pdfFileName": "Knight GM et al 2023 NW Evolution  of personalized doismetry for HCC- Review Article.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Review article describing the evolution of Y90 TARE from palliative lobar therapy to personalized, goal-directed treatment across BCLC stages, including palliation, bridging/downstaging, conversion to resection, and ablative intent.",
+      "findings": "Strong narrative reference for why personalized dosimetry matters: treatment dose and distribution should be adapted to patient, lesion, and treatment intent rather than relying on one-size-fits-all activity planning.",
+      "notes": "Added from Dosimetry ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
       "product": "glass",
       "categories": [
         "Dosimetry",
         "Dosimetry / Treatment Planning",
         "HCC"
-      ],
-      "results": "Review article describing the evolution of Y90 TARE from palliative lobar therapy to personalized, goal-directed treatment across BCLC stages, including palliation, bridging/downstaging, conversion to resection, and ablative intent.",
-      "findings": "Strong narrative reference for why personalized dosimetry matters: treatment dose and distribution should be adapted to patient, lesion, and treatment intent rather than relying on one-size-fits-all activity planning.",
-      "notes": "Added from Dosimetry ZIP.",
-      "url": "https://doi.org/10.1016/j.jvir.2023.03.011",
-      "pmcid": "",
-      "pdfFileName": "Knight GM et al 2023 NW Evolution  of personalized doismetry for HCC- Review Article.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      ]
     },
     {
       "id": 3,
@@ -2086,11 +2046,9 @@
       "notes": "Added from metastases ZIP. Source file: metastases/ICC/2023 Yu Rad Seg using glass microspheres in ICC.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study",
+      "primaryCategory": "",
       "product": "glass",
-      "categories": [
-        "Key Study"
-      ]
+      "categories": []
     },
     {
       "id": 2026150704,
@@ -2120,21 +2078,25 @@
       "id": 2026050907,
       "year": 2023,
       "title": "Research Progress and Clinical Evaluation of Histotripsy: A Narrative Review",
+      "country": "China",
       "authors": "Li S, Wei Y, Zhang B, Li X",
       "journal": "Journal of Gastrointestinal Oncology",
-      "country": "China",
-      "product": "ns",
-      "categories": [],
+      "url": "https://doi.org/10.21037/jgo-22-1069",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Histotripsy/2023%20Li%20Research%20progress%20and%20clinical%20evaluation%20of%20histotripsy%20a%20narrative%20review.pdf?csf=1&web=1&e=5u0hGZ",
+      "pdfFileName": "2023 Li Research progress and clinical evaluation of histotripsy a narrative review.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Narrative review summarizing histotripsy mechanisms, animal studies, clinical trials, advantages, limitations, and optimization strategies. Literature search covered publications from January 2006 to March 2022.",
       "findings": "Useful review for tracking histotripsy development and early clinical evidence in liver tumors, benign prostatic hyperplasia, and aortic valve calcification stenosis.",
       "notes": "Added from Histotripsy folder in hypo/hyper tumor ZIP.",
-      "url": "https://doi.org/10.21037/jgo-22-1069",
-      "pmcid": "",
-      "pdfFileName": "2023 Li Research progress and clinical evaluation of histotripsy a narrative review.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": ""
+      "primaryCategory": "Histotripsy",
+      "product": "ns",
+      "categories": [
+        "Histotripsy"
+      ]
     },
     {
       "id": 2026050810,
@@ -2170,7 +2132,6 @@
       "country": "USA / Multicenter",
       "product": "glass",
       "categories": [
-        "Key Study",
         "Combination Therapy",
         "HCC"
       ],
@@ -2183,7 +2144,7 @@
       "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study"
+      "primaryCategory": "Combination Therapy"
     },
     {
       "id": 2026051005,
@@ -2259,9 +2220,21 @@
       "id": 2026050807,
       "year": 2023,
       "title": "Yttrium-90 Radiation Segmentectomy of Hepatocellular Carcinoma: A Comparative Study of the Effectiveness, Safety, and Dosimetry of Glass-Based versus Resin-Based Microspheres",
+      "country": "USA",
       "authors": "Villalobos A, Arndt L, Cheng B, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
+      "url": "https://doi.org/10.1016/j.jvir.2023.01.010",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/HCC%20resin%20vs%20glass%202023.pdf?csf=1&web=1&e=JhXAw0",
+      "pdfFileName": "HCC resin vs glass 2023.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Retrospective ablative TARE study in 81 HCC patients. Resin had higher tumor particle loading and lower specific activity and mean tumor dose; no significant differences in post-treatment adverse events were noted, and both approaches achieved high objective response.",
+      "findings": "Excellent practical comparison paper for the particle-number vs dose conversation: resin and glass can both achieve strong outcomes, but with very different particle loading, specific activity, and tumor dose profiles.",
+      "notes": "Added from Glass vs Resin ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Glass vs Resin",
       "product": "both",
       "categories": [
         "Glass vs Resin",
@@ -2269,17 +2242,7 @@
         "HCC",
         "Dosimetry",
         "Dosimetry / TN Ratio"
-      ],
-      "results": "Retrospective ablative TARE study in 81 HCC patients. Resin had higher tumor particle loading and lower specific activity and mean tumor dose; no significant differences in post-treatment adverse events were noted, and both approaches achieved high objective response.",
-      "findings": "Excellent practical comparison paper for the particle-number vs dose conversation: resin and glass can both achieve strong outcomes, but with very different particle loading, specific activity, and tumor dose profiles.",
-      "notes": "Added from Glass vs Resin ZIP.",
-      "url": "https://doi.org/10.1016/j.jvir.2023.01.010",
-      "pmcid": "",
-      "pdfFileName": "HCC resin vs glass 2023.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Glass vs Resin"
+      ]
     },
     {
       "id": 202605071120,
@@ -2290,7 +2253,6 @@
       "country": "Belgium",
       "product": "glass",
       "categories": [
-        "Key Study",
         "HCC"
       ],
       "results": "Phase II randomized controlled TRACE trial comparing Y90 radioembolization with drug-eluting bead TACE in unresectable HCC.",
@@ -2302,7 +2264,7 @@
       "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study"
+      "primaryCategory": "HCC"
     },
     {
       "id": 202605071112,
@@ -2322,10 +2284,9 @@
       "notes": "Added from ROWAN ZIP. DOI 10.1007/s00259-022-05774-0.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study",
+      "primaryCategory": "Dosimetry",
       "product": "glass",
       "categories": [
-        "Key Study",
         "Dosimetry",
         "HCC",
         "Safety"
@@ -2340,7 +2301,7 @@
       "journal": "Journal of Hepatology",
       "url": "https://doi.org/10.1016/j.jhep.2021.11.018",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Guideline/BCLC/BCLC%202022.pdf?csf=1&web=1&e=okQoG3",
       "pdfFileName": "BCLC 2022.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -2349,13 +2310,13 @@
       "notes": "Added from Guideline/BCLC folder in hypo/hyper tumor ZIP.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Guidelines",
+      "primaryCategory": "Guidelines / BCLC",
       "product": "ns",
       "categories": [
-        "Guidelines",
         "Guidelines / BCLC",
         "HCC",
-        "Dosimetry / Treatment Planning"
+        "Dosimetry / Treatment Planning",
+        "Guidelines"
       ]
     },
     {
@@ -2390,7 +2351,7 @@
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
       "url": "https://doi.org/10.1007/s00259-022-05956-w",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/Raid%202022%20y90%20dosimetry%20recommendations.pdf?csf=1&web=1&e=hNqkbf",
       "pdfFileName": "Raid 2022 y90 dosimetry recommendations.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -2406,7 +2367,8 @@
         "Guidelines",
         "HCC",
         "Dosimetry / Treatment Planning",
-        "Dosimetry / QA"
+        "Dosimetry / QA",
+        "Dosimetry / Dosimetry Steering Committee"
       ]
     },
     {
@@ -2434,23 +2396,27 @@
     {
       "id": 2,
       "year": 2022,
-      "title": "Dosimetry-Based Y90 Radioembolization for Unresectable HCC: DOSISPHERE-01",
+      "title": "Personalised versus standard dosimetry approach of selective internal radiation therapy in patients with locally advanced hepatocellular carcinoma (DOSISPHERE-01): a randomised, multicentre, open-label phase 2 trial",
+      "country": "France",
       "authors": "Garin E, et al.",
       "journal": "Journal of Hepatology",
-      "country": "France",
-      "product": "resin",
-      "categories": [
-        "Comparative",
-        "Dosimetry"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33166497/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/DOSISPHERE/2021%20Garin%20DOSISPHERE.pdf?csf=1&web=1&e=tsbR7c",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "n=183, mOS 26.6mo for >120 Gy vs 10.7mo for <120 Gy",
       "findings": "Personalized dosimetry targeting ≥120 Gy significantly improved overall survival. Dose-response relationship confirmed.",
       "notes": "DOSISPHERE-01",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/",
-      "pmcid": "",
       "abstract": "",
-      "primaryCategory": "Comparative",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Key Clinical Data / DOSISPHERE",
+      "product": "resin",
+      "categories": [
+        "Key Clinical Data / DOSISPHERE",
+        "Dosimetry"
+      ]
     },
     {
       "id": 2026050902,
@@ -2470,12 +2436,11 @@
       "notes": "Added from Guideline folder in hypo/hyper tumor ZIP. Published online 2022 from accepted 2021 guideline work.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Guidelines",
+      "primaryCategory": "Dosimetry",
       "product": "both",
       "categories": [
-        "Guidelines",
-        "Guidelines / EANM",
         "Dosimetry",
+        "Guidelines / EANM",
         "Dosimetry / Treatment Planning",
         "HCC"
       ]
@@ -2484,23 +2449,25 @@
       "id": 2026050908,
       "year": 2022,
       "title": "First-in-man Histotripsy of Hepatic Tumors: The THERESA Trial, a Feasibility Study",
+      "country": "Spain / USA",
       "authors": "Vidal-Jove J, Serres X, Vlaisavljevich E, et al.",
       "journal": "International Journal of Hyperthermia",
-      "country": "Spain / USA",
-      "product": "ns",
-      "categories": [
-        "HCC"
-      ],
+      "url": "https://doi.org/10.1080/02656736.2022.2112309",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Histotripsy/First-in-man%20histotripsy%20of%20hepatic%20tumors%20%20the%20THERESA%20trial%20%20a%20feasibility%20study.pdf?csf=1&web=1&e=5IVnV9",
+      "pdfFileName": "First-in-man histotripsy of hepatic tumors  the THERESA trial  a feasibility study.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Prospective multicenter first-in-human feasibility trial. Eight eligible patients with 11 liver tumors were treated. Primary endpoint of acute technical success was achieved in all procedures, and no device-related adverse events were identified through 2 months.",
       "findings": "Important first-in-human hepatic histotripsy study. It supports feasibility and early safety, while longer follow-up and larger studies are needed before making broader efficacy comparisons against established locoregional therapies.",
       "notes": "Added from Histotripsy folder in hypo/hyper tumor ZIP. Non-Y90 technology landscape record.",
-      "url": "https://doi.org/10.1080/02656736.2022.2112309",
-      "pmcid": "",
-      "pdfFileName": "First-in-man histotripsy of hepatic tumors  the THERESA trial  a feasibility study.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "Histotripsy",
+      "product": "ns",
+      "categories": [
+        "Histotripsy"
+      ]
     },
     {
       "id": 202605072019,
@@ -3013,7 +2980,7 @@
       "journal": "EJNMMI Physics",
       "url": "https://doi.org/10.1186/s40658-021-00394-3",
       "pmcid": "",
-      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2021%20Chiesa%20EANM%20dosimetry%20committee%20series%20on%20standard%20operational%20procedures%20a%20unified%20methodology%20for%2099mTcMAA%20pre%20and%2090Y%20dosimetry.pdf?csf=1&web=1&e=aIf5YJ",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Guideline/2021%20Weber%20EANM%20procedure%20guideline%20for%C2%A0the%C2%A0treatment%20of%C2%A0liver%20cancer%20and%C2%A0liver%20metastases.pdf?csf=1&web=1&e=hvqQyP",
       "pdfFileName": "2021 Chiesa EANM dosimetry committee series on standard operational procedures a unified methodology for 99mTcMAA pre and 90Y dosimetry.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -3022,16 +2989,17 @@
       "notes": "Added from Dosimetry ZIP.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry",
+      "primaryCategory": "Guidelines / EANM",
       "product": "both",
       "categories": [
-        "Dosimetry",
+        "Guidelines / EANM",
         "Guidelines",
         "MAA",
         "Dosimetry / Post-treatment",
         "Dosimetry / Voxel-based",
         "Lung Shunt",
-        "Dosimetry / Treatment Planning"
+        "Dosimetry / Treatment Planning",
+        "Dosimetry"
       ]
     },
     {
@@ -3063,21 +3031,25 @@
       "id": 2026050906,
       "year": 2021,
       "title": "Histotripsy: The First Noninvasive, Non-ionizing, Non-thermal Ablation Technique Based on Ultrasound",
+      "country": "USA",
       "authors": "Xu Z, Hall TL, Vlaisavljevich E, Lee FT Jr.",
       "journal": "International Journal of Hyperthermia",
-      "country": "USA",
-      "product": "ns",
-      "categories": [],
+      "url": "https://doi.org/10.1080/02656736.2021.1905189",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Histotripsy/2021%20Xu%20Histotripsy%20the%20first%20noninvasive,%20non-ionizing,%20non-thermal%20ablation%20technique%20based%20on%20ultrasound.pdf?csf=1&web=1&e=XhRWkE",
+      "pdfFileName": "2021 Xu Histotripsy the first noninvasive, non-ionizing, non-thermal ablation technique based on ultrasound.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Comprehensive review of histotripsy mechanism, bioeffects, parameters, instrumentation, preclinical studies, and early human clinical trials. Describes cavitation-based mechanical tissue destruction and potential immunologic effects.",
       "findings": "Good background reference for understanding histotripsy as a noninvasive, non-thermal, non-ionizing ablation platform and how it differs from thermal ablation or radiation-based liver-directed therapies.",
       "notes": "Added from Histotripsy folder in hypo/hyper tumor ZIP. Not a Y90 paper but useful competitive/technology landscape context.",
-      "url": "https://doi.org/10.1080/02656736.2021.1905189",
-      "pmcid": "",
-      "pdfFileName": "2021 Xu Histotripsy the first noninvasive, non-ionizing, non-thermal ablation technique based on ultrasound.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": ""
+      "primaryCategory": "Histotripsy",
+      "product": "ns",
+      "categories": [
+        "Histotripsy"
+      ]
     },
     {
       "id": 2026051020,
@@ -3274,7 +3246,6 @@
       "country": "USA",
       "product": "glass",
       "categories": [
-        "Key Study",
         "HCC"
       ],
       "results": "Multicenter retrospective LEGACY study in solitary unresectable HCC ≤8 cm treated with Y-90 glass microspheres using selective ablative-level dosimetry when possible.",
@@ -3286,7 +3257,7 @@
       "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Key Study"
+      "primaryCategory": "HCC"
     },
     {
       "id": 202605073015,
@@ -3361,23 +3332,26 @@
       "id": 2026050817,
       "year": 2020,
       "title": "Extrahepatic Transarterial Radioembolization to Treat Fibrolamellar Hepatocellular Carcinoma: A Case Report",
+      "country": "USA",
       "authors": "Ljuboja D, Weinstein JL, Ahmed M, Sarwar A",
       "journal": "Radiology Case Reports",
-      "country": "USA",
-      "product": "resin",
-      "categories": [
-        "HCC"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33088374/",
+      "pmcid": "PMC7566208",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/FL-HCC/2020%20Ljuboja%20FL-HCC%20resin%20case%20report.pdf?csf=1&web=1&e=mfHcB2",
+      "pdfFileName": "2020 Ljuboja FL-HCC resin case report.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Case report of a 16-year-old male with unresectable FL-HCC and extrahepatic spread treated with technically successful TARE; imaging showed tumor necrosis and 20% size reduction, with survival of 20 months post-treatment.",
       "findings": "Rare case supporting exploration of Y90 TARE for FL-HCC with metastatic/extrahepatic disease, where standard options are limited.",
       "notes": "Added from FL-HCC folder in Glass vs Resin ZIP.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2020 Ljuboja FL-HCC resin case report.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "FL-HCC",
+      "product": "resin",
+      "categories": [
+        "FL-HCC",
+        "Case Report"
+      ]
     },
     {
       "id": 202605073040,
@@ -3657,26 +3631,28 @@
       "id": 2026050707,
       "year": 2019,
       "title": "A Guide to 90Y Radioembolization and Its Dosimetry",
+      "country": "Canada",
       "authors": "Kim SP, Cohalan C, Kopek N, Enger SA",
       "journal": "Physica Medica",
-      "country": "Canada",
+      "url": "https://doi.org/10.1016/j.ejmp.2019.09.236",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/2019%20a-guide-to-y90-radioembolization-and-its-dosimetry.pdf?csf=1&web=1&e=Kj6RJf",
+      "pdfFileName": "a-guide-to-y90-radioembolization-and-its-dosimetry.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Review paper summarizing Y90 radioembolization workflow, clinical rationale, imaging-based planning and verification, microsphere properties, and emerging dosimetry methods beyond historically simplified approaches such as partition dosimetry.",
+      "findings": "Useful overview article for onboarding or background education because it connects clinical workflow with the rationale behind dosimetry and treatment planning steps.",
+      "notes": "Added from Dosimetry ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
       "product": "both",
       "categories": [
         "Dosimetry",
         "Dosimetry / QA",
         "Dosimetry / Treatment Planning",
         "Glass vs Resin"
-      ],
-      "results": "Review paper summarizing Y90 radioembolization workflow, clinical rationale, imaging-based planning and verification, microsphere properties, and emerging dosimetry methods beyond historically simplified approaches such as partition dosimetry.",
-      "findings": "Useful overview article for onboarding or background education because it connects clinical workflow with the rationale behind dosimetry and treatment planning steps.",
-      "notes": "Added from Dosimetry ZIP.",
-      "url": "https://doi.org/10.1016/j.ejmp.2019.09.236",
-      "pmcid": "",
-      "pdfFileName": "a-guide-to-y90-radioembolization-and-its-dosimetry.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      ]
     },
     {
       "id": 2026051019,
@@ -3712,7 +3688,7 @@
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
       "url": "https://doi.org/10.1007/s00259-019-04340-5",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/Raid%202019%20y90%20dosimetry%20recommendations.pdf?csf=1&web=1&e=fa5hrt",
       "pdfFileName": "Raid 2019 y90 dosimetry recommendations.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -3727,7 +3703,8 @@
         "Dosimetry",
         "Guidelines",
         "HCC",
-        "Dosimetry / Treatment Planning"
+        "Dosimetry / Treatment Planning",
+        "Dosimetry / Dosimetry Steering Committee"
       ]
     },
     {
@@ -4119,24 +4096,26 @@
       "id": 2026050816,
       "year": 2018,
       "title": "Fibrolamellar Hepatocellular Carcinoma: Treatment with Yttrium-90 and Subsequent Surgical Resection",
+      "country": "UK",
       "authors": "Mafeld S, French J, Tiniakos D, Haugk B, Manas D, Littler P",
       "journal": "CardioVascular and Interventional Radiology",
-      "country": "UK",
-      "product": "ns",
-      "categories": [
-        "HCC",
-        "Downstaging"
-      ],
+      "url": "https://doi.org/10.1007/s00270-018-1903-6",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/FL-HCC/2018%20Mafela%20FL%20HCC%20subsequent%20Surgical%20Resection.pdf?csf=1&web=1&e=iFD9WY",
+      "pdfFileName": "2018 Mafela FL HCC subsequent Surgical Resection.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Case report of a 52-year-old female with 9.5-cm FL-HCC initially unsuitable for resection. After TACE followed by Y90 SIRT, tumor volume decreased from 350 to 20 cm3, enabling R0 resection.",
       "findings": "Rare FL-HCC downstaging case showing potential role of Y90 as part of a multimodal pathway toward curative resection.",
       "notes": "Added from FL-HCC folder in Glass vs Resin ZIP.",
-      "url": "https://doi.org/10.1007/s00270-018-1903-6",
-      "pmcid": "",
-      "pdfFileName": "2018 Mafela FL HCC subsequent Surgical Resection.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "FL-HCC",
+      "product": "ns",
+      "categories": [
+        "FL-HCC",
+        "Downstaging"
+      ]
     },
     {
       "id": 202605072051,
@@ -4400,25 +4379,28 @@
       "id": 2026050612,
       "year": 2018,
       "title": "Y90 Radioembolization Dosimetry Using a Simple Semi-quantitative Method in Intrahepatic Cholangiocarcinoma: Glass versus Resin Microspheres",
+      "country": "USA",
       "authors": "Nezami N, Kokabi N, Camacho JC, et al.",
       "journal": "Nuclear Medicine and Biology",
-      "country": "USA",
-      "product": "both",
-      "categories": [
-        "Dosimetry",
-        "Dosimetry / Dose Response",
-        "Glass vs Resin"
-      ],
+      "url": "https://doi.org/10.1016/j.nucmedbio.2018.01.001",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/Nezami%202018%20-%20Y90%20dosimetry%20iCC%20glass%20vs%20resin.pdf?csf=1&web=1&e=wAkYlv",
+      "pdfFileName": "Nezami 2018 - Y90 dosimetry iCC glass vs resin.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "In 10 ICC patients, glass treatment had higher administered activity and higher tumor Y90 uptake than resin; mean tumor dose was approximately 205.7 Gy with glass versus 128.9 Gy with resin.",
       "findings": "Small comparative ICC dosimetry study suggesting higher delivered tumor dose with glass versus resin under the studied treatment approach.",
       "notes": "Added from Comparative / Dose Outcomes - Glass & Resin ZIP folder.",
-      "url": "https://doi.org/10.1016/j.nucmedbio.2018.01.001",
-      "pmcid": "",
-      "pdfFileName": "Nezami 2018 - Y90 dosimetry iCC glass vs resin.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Glass vs Resin",
+      "product": "both",
+      "categories": [
+        "Glass vs Resin",
+        "Dosimetry / Dose Response",
+        "Dosimetry",
+        "Metastases / Intrahepatic Cholangiocarcinoma (ICC)"
+      ]
     },
     {
       "id": 202605072068,
@@ -4626,26 +4608,28 @@
       "id": 2026050803,
       "year": 2017,
       "title": "Comparison of the Adverse Event Profile of TheraSphere with SIR-Spheres for the Treatment of Unresectable Hepatocellular Carcinoma: A Systematic Review",
+      "country": "USA / Canada",
       "authors": "Kallini JR, Gabr A, Thorlund K, et al.",
       "journal": "CardioVascular and Interventional Radiology",
-      "country": "USA / Canada",
+      "url": "https://doi.org/10.1007/s00270-017-1594-4",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/2017%20Kallini%20Comparison%20of%20the%20Adverse%20Event%20Profile.pdf?csf=1&web=1&e=qa7obF",
+      "pdfFileName": "2017 Kallini Comparison of the Adverse Event Profile.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Systematic review comparing adverse event profiles of TheraSphere and SIR-Spheres in unresectable HCC, summarizing gastrointestinal, hepatobiliary, respiratory, and post-embolization syndrome-related events.",
+      "findings": "Useful safety-focused reference for product comparison discussions, especially when physicians ask whether glass and resin have different toxicity patterns.",
+      "notes": "Added from Glass vs Resin ZIP.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Glass vs Resin",
       "product": "both",
       "categories": [
         "Glass vs Resin",
         "Comparative",
         "Complications",
         "HCC"
-      ],
-      "results": "Systematic review comparing adverse event profiles of TheraSphere and SIR-Spheres in unresectable HCC, summarizing gastrointestinal, hepatobiliary, respiratory, and post-embolization syndrome-related events.",
-      "findings": "Useful safety-focused reference for product comparison discussions, especially when physicians ask whether glass and resin have different toxicity patterns.",
-      "notes": "Added from Glass vs Resin ZIP.",
-      "url": "https://doi.org/10.1007/s00270-017-1594-4",
-      "pmcid": "",
-      "pdfFileName": "2017 Kallini Comparison of the Adverse Event Profile.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Glass vs Resin"
+      ]
     },
     {
       "id": 2026051018,
@@ -4908,27 +4892,29 @@
       "id": 2026050614,
       "year": 2017,
       "title": "Resin versus Glass Microspheres for Yttrium-90 TARE: Comparing Survival in Unresectable HCC Using Pretreatment Partition Model Dosimetry",
+      "country": "Switzerland",
       "authors": "Van der Gucht A, Jreige M, Denys A, et al.",
       "journal": "Journal of Nuclear Medicine",
-      "country": "Switzerland",
-      "product": "both",
-      "categories": [
-        "Comparative",
-        "Glass vs Resin",
-        "Dosimetry",
-        "Dosimetry / Dose Response",
-        "HCC"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28082436/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/Van%20Der%20Gucht%202017%20-%20Y90%20resin%20vs%20glass%20Retrspective%20in%20HCC%20Partition%20Dosimetry%2080%20patients.pdf?csf=1&web=1&e=3msW4j",
+      "pdfFileName": "Van Der Gucht 2017 - Y90 resin vs glass Retrspective in HCC Partition Dosimetry 80 patients.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Retrospective HCC comparison using pretreatment partition dosimetry; reported numerically higher but not statistically significant PFS and OS rates in the resin group compared with glass.",
       "findings": "Useful older comparative dataset for glass versus resin discussion, but interpretation should remain cautious because survival differences were not statistically significant.",
       "notes": "Added from Comparative / Dose Outcomes - Glass & Resin ZIP folder.",
-      "url": "https://doi.org/10.2967/jnumed.116.184713",
-      "pmcid": "",
-      "pdfFileName": "Van Der Gucht 2017 - Y90 resin vs glass Retrspective in HCC Partition Dosimetry 80 patients.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Comparative"
+      "primaryCategory": "Glass vs Resin",
+      "product": "both",
+      "categories": [
+        "Glass vs Resin",
+        "Dosimetry",
+        "Dosimetry / Dose Response",
+        "HCC",
+        "Comparative"
+      ]
     },
     {
       "id": 202605072043,
@@ -4997,7 +4983,6 @@
       "product": "resin",
       "categories": [
         "Chemotherapy",
-        "Guidelines / Expert Consensus",
         "Complications"
       ]
     },
@@ -5216,25 +5201,28 @@
       "id": 2026050613,
       "year": 2016,
       "title": "Computational Simulation of the Predicted Dosimetric Impact of Adjuvant Yttrium-90 PET/CT-Guided Percutaneous Ablation Following Radioembolization",
+      "country": "USA",
       "authors": "Pasciak AS, Lin A, Georgiades C, et al.",
       "journal": "EJNMMI Research",
-      "country": "USA",
-      "product": "both",
-      "categories": [
-        "Dosimetry",
-        "Dosimetry / Dose Response",
-        "Combination Therapy"
-      ],
+      "url": "https://doi.org/10.1186/s13550-016-0244-1",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/Pasciak%202016%20-%20Y90%20PET%26CT%20imaging%20and%20RFA%2014%20patients.pdf?csf=1&web=1&e=88BP52",
+      "pdfFileName": "Pasciak 2016 - Y90 PET&CT imaging and RFA 14 patients.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "In a 14-patient simulation cohort, adding PET/CT-guided ablation to underdosed tumor regions increased average absorbed dose by 11.2 Gy, D50 by 11.0 Gy, D70 by 13.3 Gy, D90 by 11.8 Gy, and V100 by 7.2%.",
       "findings": "Conceptual support for using post-Y90 PET/CT to identify undertreated tumor regions and guide adjuvant ablation to improve tumor dose coverage.",
       "notes": "Added from Comparative / Dose Outcomes - Glass & Resin ZIP folder.",
-      "url": "https://doi.org/10.1186/s13550-016-0244-1",
-      "pmcid": "",
-      "pdfFileName": "Pasciak 2016 - Y90 PET&CT imaging and RFA 14 patients.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Glass vs Resin",
+      "product": "both",
+      "categories": [
+        "Glass vs Resin",
+        "Dosimetry / Dose Response",
+        "Combination Therapy",
+        "Dosimetry"
+      ]
     },
     {
       "id": 202605072038,
@@ -5287,9 +5275,21 @@
       "id": 2026050802,
       "year": 2016,
       "title": "Outcomes of Radioembolization in the Treatment of Hepatocellular Carcinoma with Portal Vein Invasion: Resin versus Glass Microspheres",
+      "country": "USA",
       "authors": "Biederman DM, Titano JJ, Tabori NE, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27062356/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/2016%20biederman%20Outcomes%20of%20Radioembolization%20in%20the%20Treatment%20of%20Hepatocellular%20Carcinoma%20with%20Portal%20Vein%20Invasion%20Resin%20versus%20Glass%20Microspheres.pdf?csf=1&web=1&e=waoCb6",
+      "pdfFileName": "2016 biederman Outcomes of Radioembolization in the Treatment of Hepatocellular Carcinoma with Portal Vein Invasion Resin versus Glass Microspheres.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Single-center retrospective study of 90 HCC patients with PVT: resin n=21 and glass n=69. Resin was associated with higher grade 3/4 bilirubin and AST toxicity rates; median OS was 3.7 months for resin and 9.4 months for glass.",
+      "findings": "Frequently cited comparative PVT paper. Results favored glass in survival and toxicity, but interpretation should consider retrospective design and baseline/procedural differences.",
+      "notes": "Added from Glass vs Resin ZIP. Use with caution in external messaging because this is not randomized evidence.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Glass vs Resin",
       "product": "both",
       "categories": [
         "Glass vs Resin",
@@ -5297,43 +5297,35 @@
         "HCC",
         "PVT",
         "Complications"
-      ],
-      "results": "Single-center retrospective study of 90 HCC patients with PVT: resin n=21 and glass n=69. Resin was associated with higher grade 3/4 bilirubin and AST toxicity rates; median OS was 3.7 months for resin and 9.4 months for glass.",
-      "findings": "Frequently cited comparative PVT paper. Results favored glass in survival and toxicity, but interpretation should consider retrospective design and baseline/procedural differences.",
-      "notes": "Added from Glass vs Resin ZIP. Use with caution in external messaging because this is not randomized evidence.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2016 biederman Outcomes of Radioembolization in the Treatment of Hepatocellular Carcinoma with Portal Vein Invasion Resin versus Glass Microspheres.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Glass vs Resin"
+      ]
     },
     {
       "id": 2026050611,
       "year": 2016,
-      "title": "Partition Model-Based 99mTc-MAA SPECT/CT Predictive Dosimetry Compared with 90Y TOF PET/CT Posttreatment Dosimetry in HCC",
+      "title": "Partition Model–Based 99mTc-MAA SPECT/CT Predictive Dosimetry Compared with 90Y TOF PET/CT Posttreatment Dosimetry in Radioembolization of Hepatocellular Carcinoma: A Quantitative Agreement Comparison",
+      "country": "Switzerland",
       "authors": "Gnesin S, Canetti L, Adib S, et al.",
       "journal": "Journal of Nuclear Medicine",
-      "country": "Switzerland",
-      "product": "both",
-      "categories": [
-        "Dosimetry",
-        "Dosimetry / Dose Response",
-        "MAA",
-        "Glass vs Resin",
-        "HCC"
-      ],
+      "url": "https://doi.org/10.2967/jnumed.116.173104",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/Gnesin%20S-2016-Partition%20Model-Based%2099mTc-MAA%20SPECT_CT%20Predictive%20Dosimetry%20Compared%20with%2090Y%20TOF%20PET_CT%20Dosimetry.pdf?csf=1&web=1&e=n0SWCs",
+      "pdfFileName": "Gnesin S-2016-Partition Model-Based 99mTc-MAA SPECT_CT Predictive Dosimetry Compared with 90Y TOF PET_CT Dosimetry.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Quantitative agreement study comparing pretreatment 99mTc-MAA SPECT/CT partition-model predictive dosimetry with posttreatment 90Y TOF PET/CT dosimetry for HCC radioembolization.",
       "findings": "Important dosimetry reference for understanding prediction-versus-delivery agreement and limitations of MAA-based planning compared with posttreatment 90Y PET/CT.",
       "notes": "Added from Comparative / Dose Outcomes - Glass & Resin ZIP folder.",
-      "url": "https://doi.org/10.2967/jnumed.116.173104",
-      "pmcid": "",
-      "pdfFileName": "Gnesin S-2016-Partition Model-Based 99mTc-MAA SPECT_CT Predictive Dosimetry Compared with 90Y TOF PET_CT Dosimetry.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Glass vs Resin",
+      "product": "both",
+      "categories": [
+        "Glass vs Resin",
+        "Dosimetry / Dose Response",
+        "MAA",
+        "HCC",
+        "Dosimetry"
+      ]
     },
     {
       "id": 2026051016,
@@ -5481,7 +5473,6 @@
       "country": "USA",
       "product": "glass",
       "categories": [
-        "Key Study",
         "Comparative",
         "HCC"
       ],
@@ -5493,7 +5484,7 @@
       "pdfFileName": "2016 Salem PREMIERE.pdf",
       "reviewStatus": "AI Draft",
       "abstract": "",
-      "primaryCategory": "Key Study"
+      "primaryCategory": "Comparative"
     },
     {
       "id": 202605072011,
@@ -5676,25 +5667,27 @@
       "id": 2026050801,
       "year": 2015,
       "title": "Radioembolization with Yttrium-90 Microspheres for Patients with Unresectable Hepatocellular Carcinoma",
+      "country": "USA",
       "authors": "Bhangoo MS, Karnani DR, Hein PN, et al.",
       "journal": "Journal of Gastrointestinal Oncology",
-      "country": "USA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26487939/",
+      "pmcid": "PMC4570909",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/2015%20Bhangoo%20Radioembolization%20with%20Yttrium-90%20microspheres%20for%20patients%20with%20unresectable%20hepatocellular%20carcinoma.pdf?csf=1&web=1&e=eOp88T",
+      "pdfFileName": "2015 Bhangoo Radioembolization with Yttrium-90 microspheres for patients with unresectable hepatocellular carcinoma.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Retrospective series of 17 unresectable HCC patients receiving 33 Y90 treatments; 65% received TheraSphere and 35% received SIR-Spheres. Median delivered dose was 100 Gy and median lung shunt fraction was 2.02%.",
+      "findings": "Small real-world HCC series using both glass and resin microspheres; useful as an early clinical-efficacy reference but not designed to compare products head-to-head.",
+      "notes": "Added from Glass vs Resin ZIP. Review exact toxicity and response values before external use.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Glass vs Resin",
       "product": "both",
       "categories": [
         "Glass vs Resin",
         "HCC",
         "Comparative"
-      ],
-      "results": "Retrospective series of 17 unresectable HCC patients receiving 33 Y90 treatments; 65% received TheraSphere and 35% received SIR-Spheres. Median delivered dose was 100 Gy and median lung shunt fraction was 2.02%.",
-      "findings": "Small real-world HCC series using both glass and resin microspheres; useful as an early clinical-efficacy reference but not designed to compare products head-to-head.",
-      "notes": "Added from Glass vs Resin ZIP. Review exact toxicity and response values before external use.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2015 Bhangoo Radioembolization with Yttrium-90 microspheres for patients with unresectable hepatocellular carcinoma.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Glass vs Resin"
+      ]
     },
     {
       "id": 202605073048,
@@ -5814,26 +5807,28 @@
       "id": 2026050615,
       "year": 2014,
       "title": "The Low Hepatic Toxicity per Gray of 90Y Glass Microspheres Is Linked to Their Transport in the Arterial Tree Favoring Nonuniform Trapping",
+      "country": "Belgium / Italy",
       "authors": "Walrand S, Hesse M, Chiesa C, et al.",
       "journal": "Journal of Nuclear Medicine",
-      "country": "Belgium / Italy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24296766/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Glass%20vs%20Resin/Walrand%20S%202014%20-The%20low%20hepatic%20toxicity%20per%20Gray%20of%2090Y%20glass%20microspheres%20%20in%20the%20arterial%20tree.pdf?csf=1&web=1&e=KF23kV",
+      "pdfFileName": "Walrand S 2014 -The low hepatic toxicity per Gray of 90Y glass microspheres  in the arterial tree.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Modeling and imaging analysis explored how nonuniform arterial-tree trapping of glass microspheres may help explain low hepatic toxicity per Gy compared with assumptions based on uniform deposition.",
+      "findings": "Mechanistic reference for why absorbed dose and microsphere distribution matter; supports nuanced discussion of glass microsphere dose tolerance and nonuniform deposition.",
+      "notes": "Added from Comparative / Dose Outcomes - Glass & Resin ZIP folder.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Glass vs Resin",
       "product": "both",
       "categories": [
         "Glass vs Resin",
         "Dosimetry",
         "Radiation Safety & Handling",
         "Dosimetry / Dose Response"
-      ],
-      "results": "Modeling and imaging analysis explored how nonuniform arterial-tree trapping of glass microspheres may help explain low hepatic toxicity per Gy compared with assumptions based on uniform deposition.",
-      "findings": "Mechanistic reference for why absorbed dose and microsphere distribution matter; supports nuanced discussion of glass microsphere dose tolerance and nonuniform deposition.",
-      "notes": "Added from Comparative / Dose Outcomes - Glass & Resin ZIP folder.",
-      "url": "https://doi.org/10.2967/jnumed.113.126839",
-      "pmcid": "",
-      "pdfFileName": "Walrand S 2014 -The low hepatic toxicity per Gray of 90Y glass microspheres  in the arterial tree.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Glass vs Resin"
+      ]
     },
     {
       "id": 202605072035,
@@ -6542,27 +6537,28 @@
       "id": 2026050709,
       "year": 2006,
       "title": "Radioembolization with 90Yttrium Microspheres: A State-of-the-Art Brachytherapy Treatment for Primary and Secondary Liver Malignancies, Part 1: Technical and Methodologic Considerations",
+      "country": "USA / Canada",
       "authors": "Salem R, Thurston KG",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA / Canada",
-      "product": "both",
-      "categories": [
-        "Dosimetry / Treatment Planning",
-        "MAA",
-        "Mapping / Failed Evaluation",
-        "Lung Shunt",
-        "Dosimetry"
-      ],
+      "url": "https://doi.org/10.1097/01.RVI.0000233785.75257.9A",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Dosimetry/Raid%202006%20Radioembolization%20with%2090Yttrium%20Microspheres%20A%20State-of-the-Art%20Brachytherapy%20Treatment%20for%20Primary%20and%20Secondary%20Liver%20Malignancies.pdf?csf=1&web=1&e=Zji8nh",
+      "pdfFileName": "Raid 2006 Radioembolization with 90Yttrium Microspheres A State-of-the-Art Brachytherapy Treatment for Primary and Secondary Liver Malignancies.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Comprehensive technical and methodologic review based on more than 900 Y90 infusions over 5 years, covering patient evaluation, mesenteric angiography, MAA assessment, treatment planning, and procedural considerations for glass and resin microspheres.",
       "findings": "Classic foundational reference for Y90 implementation, mapping, and technical workflow; useful historical anchor for how radioembolization practice was systematized.",
       "notes": "Added from Dosimetry ZIP. Filename uses Raid, but article author is Riad Salem.",
-      "url": "https://doi.org/10.1097/01.RVI.0000233785.75257.9A",
-      "pmcid": "",
-      "pdfFileName": "Raid 2006 Radioembolization with 90Yttrium Microspheres A State-of-the-Art Brachytherapy Treatment for Primary and Secondary Liver Malignancies.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry / Treatment Planning"
+      "primaryCategory": "Dosimetry",
+      "product": "both",
+      "categories": [
+        "Dosimetry",
+        "MAA",
+        "Mapping / Failed Evaluation",
+        "Lung Shunt"
+      ]
     },
     {
       "id": 202605073016,
