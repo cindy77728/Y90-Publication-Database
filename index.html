@@ -1450,6 +1450,45 @@ button.fulltext-link{font:inherit;cursor:pointer;}
   }
 }
 
+
+/* ══════════════════════════════════════════════════════════
+   v5.0.6 — Modal layer fix
+   Fix: Edit Publication modal was hidden behind sticky search/filter bars.
+   Modal overlay now sits above header + sticky filter area.
+   ══════════════════════════════════════════════════════════ */
+:root{
+  --modal-z-overlay:2147483000;
+  --modal-z-content:2147483001;
+}
+body.modal-open{
+  overflow:hidden !important;
+}
+body.modal-open header,
+body.modal-open .library-filter-sticky{
+  pointer-events:none !important;
+}
+.modal-overlay{
+  position:fixed !important;
+  inset:0 !important;
+  z-index:var(--modal-z-overlay) !important;
+  isolation:isolate !important;
+}
+.modal-overlay.open{
+  display:flex !important;
+}
+.modal-overlay .modal{
+  position:relative !important;
+  z-index:var(--modal-z-content) !important;
+}
+.toast{
+  z-index:2147483002 !important;
+}
+@media (max-width:768px){
+  .modal-overlay{
+    z-index:var(--modal-z-overlay) !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -9545,10 +9584,16 @@ function getActiveTabName(){
 }
 function openModal(id){
   if(id==='form-modal') formOpenedFromTab=getActiveTabName();
-  document.getElementById(id).classList.add('open');
+  const modalEl = document.getElementById(id);
+  if(modalEl) modalEl.classList.add('open');
+  document.body.classList.add('modal-open');
 }
 function closeModal(id){
-  document.getElementById(id).classList.remove('open');
+  const modalEl = document.getElementById(id);
+  if(modalEl) modalEl.classList.remove('open');
+  if(!document.querySelector('.modal-overlay.open')){
+    document.body.classList.remove('modal-open');
+  }
   if(id==='form-modal' && formOpenedFromTab==='pubmed'){
     switchTab('pubmed');
   }
