@@ -1510,6 +1510,7 @@ body.modal-open .library-filter-sticky{
       </div>
       <button class="btn btn-secondary" onclick="openCategoryManager()">🏷️ Manage Categories</button>
       <button class="btn btn-green" onclick="saveToGitHub()" id="github-save-btn" title="Save all changes directly to GitHub">☁️ Save to GitHub</button>
+      <div class="stat-pill" id="autosave-pill" title="Auto-save runs every 10 minutes when GitHub is configured" style="display:none;cursor:default">🕐 Auto-save: <strong id="autosave-countdown" style="color:var(--accent3)">10:00</strong></div>
       <button class="btn btn-blue" onclick="exportJSON()">💾 Export JSON</button>
       <button class="btn btn-secondary" onclick="setPdfFolderUrl()">📁 Set PDF Folder</button>
       <button class="btn btn-primary" onclick="openAddModal()">
@@ -13939,6 +13940,162 @@ savePublication = function(){
   window.addEventListener('resize', updateLibraryStickyTop);
   setTimeout(updateLibraryStickyTop, 100);
   setTimeout(updateLibraryStickyTop, 500);
+})();
+</script>
+
+<script>
+/* ══ AUTO-SAVE TO GITHUB ══
+   Runs every 10 minutes when GitHub settings are configured.
+   A silent background save — no button click needed.
+   Shows a live countdown pill in the header.
+*/
+(function() {
+  var AUTO_SAVE_INTERVAL = 10 * 60; // 10 minutes in seconds
+  var secondsLeft = AUTO_SAVE_INTERVAL;
+  var countdownTimer = null;
+  var pill = null;
+  var countdownEl = null;
+
+  function hasGitHubSettings() {
+    try {
+      var s = getGitHubSettings ? getGitHubSettings() : null;
+      return s && s.token && s.owner && s.repo;
+    } catch(e) { return false; }
+  }
+
+  function formatTime(secs) {
+    var m = Math.floor(secs / 60);
+    var s = secs % 60;
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function updatePill() {
+    pill = pill || document.getElementById('autosave-pill');
+    countdownEl = countdownEl || document.getElementById('autosave-countdown');
+    if (!pill || !countdownEl) return;
+
+    if (hasGitHubSettings()) {
+      pill.style.display = '';
+      countdownEl.textContent = formatTime(secondsLeft);
+    } else {
+      pill.style.display = 'none';
+    }
+  }
+
+  async function autoSave() {
+    if (!hasGitHubSettings()) return;
+
+    // Silently call saveToGitHub but don't touch the button if it's mid-save
+    var btn = document.getElementById('github-save-btn');
+    if (btn && btn.disabled) return; // a manual save is already running
+
+    try {
+      var s = getGitHubSettings();
+      var filePath = 'publications.json';
+      var headers = {
+        Authorization: 'Bearer ' + s.token,
+        Accept: 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      };
+      var apiBase = 'https://api.github.com/repos/' + s.owner + '/' + s.repo + '/contents/' + filePath;
+
+      var payload = {
+        version: 'y90-publication-database-v3',
+        savedAt: new Date().toISOString(),
+        categories: typeof ALL_CATEGORIES !== 'undefined' ? ALL_CATEGORIES : [],
+        pdfFolderUrl: typeof pdfFolderUrl !== 'undefined' ? pdfFolderUrl : '',
+        publications: (typeof publications !== 'undefined' ? publications : []).map(function(p) {
+          var c = Object.assign({}, p);
+          delete c.pdfData;
+          return c;
+        })
+      };
+
+      var jsonStr = JSON.stringify(payload, null, 2);
+      var bytes = new TextEncoder().encode(jsonStr);
+      var binary = '';
+      bytes.forEach(function(b) { binary += String.fromCharCode(b); });
+      var encoded = btoa(binary);
+
+      // Get file SHA
+      var fileSha = null;
+      try {
+        var refRes = await fetch(
+          'https://api.github.com/repos/' + s.owner + '/' + s.repo + '/git/ref/heads/' + s.branch,
+          { headers: headers }
+        );
+        if (refRes.ok) {
+          var refData = await refRes.json();
+          var commitSha = refData.object.sha;
+          var commitRes = await fetch(
+            'https://api.github.com/repos/' + s.owner + '/' + s.repo + '/git/commits/' + commitSha,
+            { headers: headers }
+          );
+          var commitData = await commitRes.json();
+          var treeSha = commitData.tree.sha;
+          var treeRes = await fetch(
+            'https://api.github.com/repos/' + s.owner + '/' + s.repo + '/git/trees/' + treeSha,
+            { headers: headers }
+          );
+          var treeData = await treeRes.json();
+          var fileEntry = treeData.tree.find(function(f) { return f.path === filePath; });
+          if (fileEntry) fileSha = fileEntry.sha;
+        }
+      } catch(e) { /* proceed without SHA */ }
+
+      var body = {
+        message: '⏱️ Auto-save — ' + new Date().toLocaleString(),
+        content: encoded,
+        branch: s.branch
+      };
+      if (fileSha) body.sha = fileSha;
+
+      var putRes = await fetch(apiBase, {
+        method: 'PUT',
+        headers: headers,
+        body: JSON.stringify(body)
+      });
+
+      if (putRes.ok) {
+        // Show a subtle success toast
+        if (typeof showToast === 'function') {
+          showToast('🕐 Auto-saved to GitHub', 'success');
+        }
+        console.log('[Auto-save] GitHub save successful at', new Date().toLocaleString());
+      } else {
+        var err = await putRes.json().catch(function() { return {}; });
+        console.warn('[Auto-save] GitHub save failed:', putRes.status, err.message);
+        // Don't alert — just log silently so it's not disruptive
+      }
+    } catch(e) {
+      console.warn('[Auto-save] Error:', e.message);
+    }
+  }
+
+  function tick() {
+    secondsLeft--;
+    if (secondsLeft <= 0) {
+      secondsLeft = AUTO_SAVE_INTERVAL;
+      autoSave();
+    }
+    updatePill();
+  }
+
+  function startAutoSave() {
+    if (countdownTimer) return; // already running
+    secondsLeft = AUTO_SAVE_INTERVAL;
+    updatePill();
+    countdownTimer = setInterval(tick, 1000);
+  }
+
+  // Start once the page is fully loaded
+  window.addEventListener('load', function() {
+    setTimeout(startAutoSave, 1500);
+  });
+
+  // Re-check pill visibility whenever GitHub settings might change
+  // (poll every 5 seconds so pill appears right after settings are saved)
+  setInterval(updatePill, 5000);
 })();
 </script>
 
