@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T03:40:09.906Z",
+  "savedAt": "2026-05-19T03:50:17.923Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -78,6 +78,7 @@
     "Resection",
     "Resection / Downstaging and Bridging",
     "Resection / Lobectomy",
+    "Resection / Transplantation",
     "Resin",
     "RPM",
     "Safety",
@@ -1616,10 +1617,10 @@
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/2024 Lee SBRT and liver transplant for liver cancer.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection / Downstaging and Bridging",
+      "primaryCategory": "Resection / Transplantation",
       "product": "ns",
       "categories": [
-        "Resection / Downstaging and Bridging",
+        "Resection / Transplantation",
         "SBRT",
         "Resection",
         "Dosimetry",
@@ -2029,10 +2030,10 @@
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/2023 Mosenthal M et al 2023 LRT of HCC prior to LT comparison of CPN, response and recurrence.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection / Downstaging and Bridging",
+      "primaryCategory": "Resection / Transplantation",
       "product": "ns",
       "categories": [
-        "Resection / Downstaging and Bridging",
+        "Resection / Transplantation",
         "Comparative",
         "Resection",
         "Dosimetry",
@@ -2522,24 +2523,28 @@
       "id": 202605071102,
       "year": 2022,
       "title": "Hepatocellular carcinoma radiation segmentectomy treatment intensification prior to liver transplantation increases rates of complete pathologic necrosis: an explant analysis of 75 tumors",
+      "country": "USA",
       "authors": "Montazeri SA, De la Garza-Ramos C, Lewis AR, et al.",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Downstaging",
-        "HCC"
-      ],
+      "url": "https://doi.org/10.1007/s00259-022-05776-y",
+      "pmcid": "",
+      "pdfUrl": "",
+      "pdfFileName": "RPM/2022 Montazeri HCC radiation segmentectomy treatment intensification prior to liver transplantation increases rates of complete pathologic necrosis an explant analysis of 75 tumors.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Retrospective single-center explant analysis of 75 HCC tumors treated with radiation segmentectomy prior to liver transplantation, comparing a treatment-intensification cohort with a baseline cohort.",
       "findings": "Supports higher-intensity glass radiation segmentectomy before transplant as a strategy associated with increased complete pathologic necrosis in explant pathology.",
       "notes": "Added from ROWAN ZIP. DOI 10.1007/s00259-022-05776-y.",
-      "url": "https://doi.org/10.1007/s00259-022-05776-y",
-      "pmcid": "",
-      "pdfFileName": "RPM/2022 Montazeri HCC radiation segmentectomy treatment intensification prior to liver transplantation increases rates of complete pathologic necrosis an explant analysis of 75 tumors.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Downstaging"
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "HCC",
+        "Resection / Transplantation",
+        "Radiation Segmentectomy"
+      ]
     },
     {
       "id": 202605073004,
@@ -2870,10 +2875,10 @@
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kwong 2021 LRT bridging to transplant.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection / Downstaging and Bridging",
+      "primaryCategory": "Resection / Transplantation",
       "product": "ns",
       "categories": [
-        "Resection / Downstaging and Bridging",
+        "Resection / Transplantation",
         "Resection",
         "Dosimetry",
         "HCC",
@@ -3358,10 +3363,10 @@
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kardashian 2020 downstaging to transplant multicenter study.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection / Downstaging and Bridging",
+      "primaryCategory": "Resection / Transplantation",
       "product": "ns",
       "categories": [
-        "Resection / Downstaging and Bridging",
+        "Resection / Transplantation",
         "Resection",
         "Dosimetry",
         "HCC"
@@ -3385,10 +3390,10 @@
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Gabr 2020 Therasphere 15 year transplant outcomes.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection / Downstaging and Bridging",
+      "primaryCategory": "Resection / Transplantation",
       "product": "ns",
       "categories": [
-        "Resection / Downstaging and Bridging",
+        "Resection / Transplantation",
         "Resection",
         "Dosimetry",
         "HCC"
@@ -5377,10 +5382,10 @@
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Ettorre GM-2017-Yttrium-90 Radioembolization for Hepatocellular Carcinoma Prior to Liver Transplantation.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection / Downstaging and Bridging",
+      "primaryCategory": "Resection / Transplantation",
       "product": "ns",
       "categories": [
-        "Resection / Downstaging and Bridging",
+        "Resection / Transplantation",
         "Resection",
         "Dosimetry",
         "HCC"
@@ -5776,24 +5781,29 @@
     {
       "id": 202605073022,
       "year": 2015,
-      "title": "Parikh 2015 Downstaging for HCC",
-      "authors": "Parikh- et al.",
-      "journal": "",
+      "title": "Downstaging hepatocellular carcinoma: A systematic review and pooled analysis",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Parikh-2015-Downstaging for HCC.pdf",
-      "url": "",
+      "authors": "Parikh- et al.",
+      "journal": "Liver Transplantation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25981135/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Parikh-2015-Downstaging%20for%20HCC.pdf?csf=1&web=1&e=776twg",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Parikh-2015-Downstaging for HCC.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• Thirteen studies (n = 950 patients) evaluating downstaging success had a pooled success rate of 0.48 (95% CI, 0.39-0.58%).\n• In subgroup analyses, there was no significant difference comparing transarterial chemoembolization (TACE) versus transarterial radioembolization (TARE; P = 0.51), but there were higher success rates in prospective versus retrospective studies (0.68 versus 0.44; P < 0.001).\n• The 12 studies (n = 320 patients) evaluating post-LT HCC recurrence had a pooled recurrence rate of 0.16 (95% CI, 0.11-0.23).\n• There was no significant difference in recurrence rates between TACE and TARE (P = 0.33).\n• In conclusion, the success rate of downstaging HCC to within Milan criteria exceeds 40%; however, posttransplant HCC recurrence rates are high at 16%.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Parikh-2015-Downstaging for HCC.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 2026051015,
@@ -6657,25 +6667,29 @@
     {
       "id": 202605073021,
       "year": 2009,
-      "title": "A Comparative Analysis of Transarterial Downstaging for Hepatocellular Carcinoma: Chemoembolization versus Radioembolization",
+      "title": "A comparative analysis of transarterial downstaging for hepatocellular carcinoma: chemoembolization versus radioembolization",
+      "country": "USA",
       "authors": "Lewandowski RJ, et al.",
       "journal": "American Journal of Transplantation",
-      "country": "USA",
-      "product": "glass",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection",
-        "Comparative"
-      ],
-      "results": "Comparative analysis of TACE versus TARE for transarterial downstaging in HCC.",
-      "findings": "Important downstaging comparator paper supporting TARE as an effective bridge/downstaging strategy for HCC transplant eligibility.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Lewandowski 2009-A comparative Analysis of Transarterial Downstaging for HCC- TACE vs TARE(1).pdf",
-      "url": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19552767/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Lewandowski%202009-A%20comparative%20Analysis%20of%20Transarterial%20Downstaging%20for%20HCC-%20TACE%20vs%20TARE(1).pdf?csf=1&web=1&e=gwbdag",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Lewandowski 2009-A comparative Analysis of Transarterial Downstaging for HCC- TACE vs TARE(1).pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Comparative analysis of TACE versus TARE for transarterial downstaging in HCC.",
+      "findings": "• This study was undertaken to compare the downstaging efficacy of transarterial chemoembolization (TACE) versus transarterial radioembolization.\n• Eighty-six patients were treated with either TACE (n = 43) or transarterial radioembolization with Yttrium-90 microspheres (TARE-Y90; n = 43).\n• Median tumor size was similar (TACE: 5.7 cm, TARE-Y90: 5.6 cm).\n• Partial response rates favored TARE-Y90 versus TACE (61% vs.\n• Time to progression according to UNOS criteria was similar for both groups (18.2 months for TACE vs.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Lewandowski 2009-A comparative Analysis of Transarterial Downstaging for HCC- TACE vs TARE(1).pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Comparative",
+        "Resection",
+        "HCC"
+      ]
     },
     {
       "id": 202605073047,
