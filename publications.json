@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T06:31:18.999Z",
+  "savedAt": "2026-05-19T06:42:16.008Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -4410,25 +4410,26 @@
     {
       "id": 202605073043,
       "year": 2018,
-      "title": "Radiation lobectomy Liver kinetic analysis HCC and metastatic disease",
+      "title": "Kinetic analysis of contralateral liver hypertrophy after radioembolization of primary and metastatic liver tumors",
       "country": "Worldwide",
       "authors": "Orcutt et al.",
-      "journal": "",
-      "url": "",
+      "journal": "Journal of Surgery",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29325784/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Orcutt%20ST%202018-%20Radiation%20lobectomy%20Liver%20kinetic%20analysis%20HCC%20and%20metastic%20disease.pdf?csf=1&web=1&e=avCwdU",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Orcutt ST 2018- Radiation lobectomy Liver kinetic analysis HCC and metastic disease.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• At 1, 3, and 6 months, median degree of hypertrophy was 4%, 8%, and 12% (P <.001), degree of hypertrophy relative to baseline future liver remnants was 11%, 17%, and 31% (P =.015), and kinetic growth rate was 0.8%, 0.5%, and 0.4%/week (P =.002).\n• In patients with baseline standardized future liver remnant <40% (N= 16), median time to reach standardized future liver remnant ≥40% was 7.3 months, with 75% accomplishing standardized future liver remnant ≥40% at 8.2 months.\n• Radioembolization induces hypertrophy of the contralateral lobe to a similar extent as existing methods, although at a lower rate.",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Orcutt ST 2018- Radiation lobectomy Liver kinetic analysis HCC and metastic disease.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Metastases",
       "product": "ns",
       "categories": [
-        "Resection"
+        "Metastases",
+        "Resection / Lobectomy"
       ]
     },
     {
@@ -4899,26 +4900,30 @@
     },
     {
       "id": 202605073045,
-      "year": 2017,
-      "title": "Dosimetric parameters predicting contralateral liver",
-      "authors": "Palard et al.",
-      "journal": "",
+      "year": 2018,
+      "title": "Dosimetric parameters predicting contralateral liver hypertrophy after unilobar radioembolization of hepatocellular carcinoma",
       "country": "France",
-      "product": "ns",
+      "authors": "Palard et al.",
+      "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29177870/",
+      "pmcid": "PMC5787216",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Palard%202017%20-%20Dosimetry%20Parameters%20to%20predict%20Contralateral%20Hypertrophy%20in%20HCC.pdf?csf=1&web=1&e=qDqnyh",
+      "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Palard X_2017_Dosimetric parameters predicting contralateral liv.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
+      "findings": "• 2ROC curves analysis for the identification of the HIL threshold dose predicting a MHT ≥ 10% ROC curves analysis for the identification of the HIL threshold dose predicting a MHT ≥ 10% Using univariate analysis, the MHT ≥10% was significantly associated with HILD (< or ≥88 Gy) example see Fig.\n• 3, HR (< or ≥50%) and Child-Pugh score (A5 versus A6 + B7), the combined variable HILD ≥ 88 Gy and/or TD≥ 205Gy for TV ≥ 100cm 3 (present in 85% of the cases) but not with PVT status, hypersplenism, response ratio, toxicity, treatment line, and TD (TD≥ 205Gy and TV ≥ 100cm 3 vs TD < 205Gy or TV< 100cm 3) (Table 6).\n• This 74-year-old man with a Child A5 cirrhosis was treated with 2.2 GBq of 90Y–loaded glass microspheres injected in the RHA for HCC recurrences in the right lobe after chemoembolization.\n• Median TTP was 11.0 months (CI 95%: 8.5–14.0 months).\n• DCR was 98.6% 3 months after RE (only one progression) and 71.2% at 6 months, with a progression in the treated liver for only 10.9% of the patients and in the non-treated liver for 17.8% of the patients.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Palard X_2017_Dosimetric parameters predicting contralateral liv.pdf",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
       "primaryCategory": "Resection",
+      "product": "glass",
       "categories": [
         "Resection",
-        "Dosimetry"
-      ],
-      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Palard X_2017_Dosimetric parameters predicting contralateral liv.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Palard X_2017_Dosimetric parameters predicting contralateral liv.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 202605072047,
@@ -5616,24 +5621,30 @@
     {
       "id": 202605073041,
       "year": 2016,
-      "title": "RJ 2016 (90) Y radiation lobectomy Outcomes following surgical resection in patients with hepatic tumors and small future liverer r",
-      "authors": "Lewandowski et al.",
-      "journal": "",
+      "title": "(90) Y radiation lobectomy: Outcomes following surgical resection in patients with hepatic tumors and small future liver remnant volumes",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Lewandowski RJ-2016-(90) Y radiation lobectomy_ Outcomes following surgical resection in patients with hepatic tumors and small future liver r.pdf",
-      "url": "",
+      "authors": "Lewandowski et al.",
+      "journal": "Journal of Surgical Oncology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27103352/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Lewandowski%20RJ-2016-(90)%20Y%20radiation%20lobectomy_Outcomes%20following%20surgical%20resection.pdf?csf=1&web=1&e=cWJeXD",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Lewandowski RJ-2016-(90) Y radiation lobectomy_ Outcomes following surgical resection in patients with hepatic tumors and small future liver r.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
+      "findings": "• The median time between RL and post-RL imaging was 40 days (23-190 days); the median time to resection was 86 days (30-210 days).\n• Median FLR increased significantly [pre: 33% (22-43%); post: 43% (29-69%), P < 0.01] to yield a median %FLR hypertrophy of 30% (4-105%).\n• The median hospital stay after resection was 4 days (3-11 days).\n• Median follow up time after surgery was 604 days (144-1,416 days); one death occurred.\n• In this preliminary study, radiation lobectomy was a safe and effective method to achieve remnant liver hypertrophy while providing tumor control.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Lewandowski RJ-2016-(90) Y radiation lobectomy_ Outcomes following surgical resection in patients with hepatic tumors and small future liver r.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Lobectomy",
+      "product": "ns",
+      "categories": [
+        "Resection / Lobectomy",
+        "Resection",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 202605071114,
