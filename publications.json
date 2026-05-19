@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T03:09:56.898Z",
+  "savedAt": "2026-05-19T03:20:00.898Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -1601,25 +1601,31 @@
     {
       "id": 202605073006,
       "year": 2024,
-      "title": "SBRT and liverer transplant for liverer cancer",
-      "authors": "Lee et al.",
-      "journal": "",
+      "title": "Stereotactic Body Radiotherapy and Liver Transplant for Liver Cancer",
       "country": "Korea",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection",
-        "SBRT"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/2024 Lee SBRT and liver transplant for liver cancer.pdf",
-      "url": "",
-      "pmcid": "",
+      "authors": "Lee et al.",
+      "journal": "JAMA Network Open",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11165380/",
+      "pmcid": "PMC11165380",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/2024%20Lee%20SBRT%20and%20liver%20transplant%20for%20liver%20cancer.pdf?csf=1&web=1&e=vrcBiN",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/2024 Lee SBRT and liver transplant for liver cancer.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• The median PFS was 17.6 months (95% CI, 6.6-28.6 months) with a 5-year PFS rate of 39.9% (95% CI, 19.9%-59.9%) (Figure 2A).\n• The median OS was 60.5 months (95% CI, 29.7-91.2 months), with a 5-year OS rate of 51.3% (95% CI, 31.7%-70.9%) (Figure 2B).\n• Patients with CMR in all SBRT-treated lesions had a longer median PFS (not reached; P =.03) and OS (60.5 months; P =.009) compared with those whose tumors did not attain CMR (median PFS, 10.0 months; median OS, 19.9 months) (eFigure 3 in Supplement 2).\n• Patients whose lesions were within the Milan criteria had a trend of longer PFS (median, 27.0 vs 10.0 months; P =.08) and a significantly longer OS (median, 60.5 vs 19.9 months; P =.01) (eFigure 4 in Supplement 2).\n• Those who received DDLT had a significantly longer PFS (median, not reached vs 10.0 months; P =.008) and OS (median, not reached vs 11.2 months; P <.001) (eFigure 5 in Supplement 2).",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/2024 Lee SBRT and liver transplant for liver cancer.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "SBRT",
+        "Resection",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 202605071103,
@@ -4714,24 +4720,30 @@
     {
       "id": 202605073007,
       "year": 2017,
-      "title": "Clinical outcomes of Y90 radioembolization for recurrent HCC following curative resection",
+      "title": "Clinical outcomes of Y90 radioembolization for recurrent hepatocellular carcinoma following curative resection",
+      "country": "USA",
       "authors": "Ali et al.",
       "journal": "",
-      "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Ali R-2017-Clinical outcomes of Y90 radioembolization for recurrent HCC following curative resection.pdf",
-      "url": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28812136/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Ali%20R-2017-Clinical%20outcomes%20of%20Y90%20radioembolization%20for%20recurrent%20HCC%20following%20curative%20resection.pdf?csf=1&web=1&e=h7kFJ9",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Ali R-2017-Clinical outcomes of Y90 radioembolization for recurrent HCC following curative resection.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• The median time from HCC resection to the first radioembolization was 17 months (95% CI: 13-37).\n• The median number of Y90 treatment sessions was 1 (range: 1-5).\n• Grades 1/2/3/4 bilirubin toxicity were seen in nine (22%), four (10%), four (10%), and zero (0%) patients following Y90.\n• Median TTP and OS were 11.3 (CI: 6.5-15.5) and 22.1 months (CI: 10.3-31.3), respectively.\n• Radioembolization is a safe and effective method for treating recurrent HCC following surgical resection, with prolonged TTP and promising survival outcomes.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Ali R-2017-Clinical outcomes of Y90 radioembolization for recurrent HCC following curative resection.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 202605072042,
@@ -4761,25 +4773,30 @@
     {
       "id": 202605073011,
       "year": 2017,
-      "title": "Comparative study of post transplant outcomes in HCC patients treated with chemoembolization or radioembolization",
-      "authors": "Gabr et al.",
-      "journal": "",
+      "title": "Comparative study of post-transplant outcomes in hepatocellular carcinoma patients treated with chemoembolization or radioembolization",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection",
-        "Comparative"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Gabr 2017 EJIR Comparative study of post-transplant outcomes in HCC patients treated with chemoembolization or radioembolization.pdf",
-      "url": "",
+      "authors": "Gabr et al.",
+      "journal": "European Journal of Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28668402/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Gabr%202017%20EJIR%20Comparative%20study%20of%20post-transplant%20outcomes%20in%20HCC%20patients%20treated%20with%20chemoembolization%20or%20radioembolization.pdf?csf=1&web=1&e=mdTF3k",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Gabr 2017 EJIR Comparative study of post-transplant outcomes in HCC patients treated with chemoembolization or radioembolization.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• Time-to-OLT was longer in the Y90 group (Y90: 6.5 months; TACE: 4.8 months; p=0.02).\n• With a median post-OLT follow-up of 26.1 months (IQR: 11.1-49.7), tumor recurrence was found in 6/79 (8%) TACE and 8/93 (9%) Y90 patients.\n• Time-to-recurrence was 26.6 (CI: 7.0-49.5) and 15.9 months (CI: 7.8-46.8) for TACE and Y90, respectively (p=0.48).\n• RFS (Y90: 79 months; TACE: 77 months; p=0.84) and OS (Y90: 57% alive at 100 months; TACE: 84.2 months; p=0.57) were similar.\n• 54/155 patients (Y90: 29; TACE: 25) were downstaged to UNOS T2 or less.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Gabr 2017 EJIR Comparative study of post-transplant outcomes in HCC patients treated with chemoembolization or radioembolization.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Comparative",
+        "Resection",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 2026050803,
@@ -5324,25 +5341,28 @@
     {
       "id": 202605073010,
       "year": 2017,
-      "title": "Yttrium 90 Radioembolization for Hepatocellular Carcinoma Prior to Liver Transplantation",
+      "title": "Yttrium-90 Radioembolization for Hepatocellular Carcinoma Prior to Liver Transplantation",
       "country": "Worldwide",
       "authors": "Ettorre et al.",
-      "journal": "",
-      "url": "",
+      "journal": "World Journal of Surgery",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27495316/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Ettorre%20GM-2017-Yttrium-90%20Radioembolization%20for%20Hepatocellular%20Carcinoma%20Prior%20to%20Liver%20Transplantation.pdf?csf=1&web=1&e=d2CShA",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Ettorre GM-2017-Yttrium-90 Radioembolization for Hepatocellular Carcinoma Prior to Liver Transplantation.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• No patient death was observed in Y90-RE procedure or at LT.\n• From Y90-RE treatment overall survival was 43.9 months.\n• From LT, overall mean survival was 30.2 months with a free survival of 29.6 months.\n• The overall survival after LT analysis between the patients treated with Y90-RE and patients without was not significant (p = 0.113).\n• Free survival analysis was not significant (p = 0.897) between the two populations.",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Ettorre GM-2017-Yttrium-90 Radioembolization for Hepatocellular Carcinoma Prior to Liver Transplantation.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Downstaging and Bridging",
       "product": "ns",
       "categories": [
-        "Resection"
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC"
       ]
     },
     {
@@ -5577,25 +5597,29 @@
     {
       "id": 202605073008,
       "year": 2016,
-      "title": "The role of Y90 in downstaging primary and secondary hepatic malignancies a systematic review Clin Trans Imag",
+      "title": "The role of 90Y-radioembolization in downstaging primary and secondary hepatic malignancies: a systematic review",
       "country": "Worldwide",
       "authors": "Braat et al.",
-      "journal": "",
-      "url": "",
-      "pmcid": "",
-      "pdfUrl": "",
+      "journal": "Clinical and Translational Imaging",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4960274/",
+      "pmcid": "PMC4960274",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Braat%202016%20The%20role%20of%20Y90%20in%20downstaging%20primary%20and%20secondary%20hepatic%20malignancies_%20a%20systematic%20review-Clin%20Trans%20Imag.pdf?csf=1&web=1&e=0zvrGo",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Braat 2016 The role of Y90 in downstaging primary and secondary hepatic malignancies_ a systematic review-Clin Trans Imag.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• The results of RE as a downstaging tool or bridge to LTX are encouraging.\n• However, a better understanding of the dose–response relationships is imperative to prevent both insufficient tumor response and liver failure, especially in bilobar treatments and patients with a compromised liver function.\n• An accurate measurement of the FLR function is essential to determine the feasibility of a safe resection (with HBS or in the future possibly with MRI).",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Braat 2016 The role of Y90 in downstaging primary and secondary hepatic malignancies_ a systematic review-Clin Trans Imag.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
-      "product": "ns",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "both",
       "categories": [
-        "Resection"
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC",
+        "Safety"
       ]
     },
     {
@@ -6408,25 +6432,28 @@
     {
       "id": 202605073009,
       "year": 2012,
-      "title": "J Hep 2012 HCC LRT for patients on transplant list",
+      "title": "Hepatocellular carcinoma locoregional therapies for patients in the waiting list. Impact on transplantability and recurrence rate",
       "country": "Worldwide",
       "authors": "Cescon et al.",
-      "journal": "",
-      "url": "",
+      "journal": "Journal of Hepatology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23041304/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Cescon%20J%20Hep%202012%20HCC%20LRT%20for%20patients%20on%20transplant%20list.pdf?csf=1&web=1&e=4fv7S0",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Cescon J Hep 2012 HCC LRT for patients on transplant list.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• However, for T1 tumors and expected waiting times to LT <6 months, there is no evidence that these treatments are beneficial.\n• TACE, but some studies showed better results of the former in achieving a complete response.\n• Novel molecular markers seem promising for the estimation of prognosis and/or response to treatments.",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Cescon J Hep 2012 HCC LRT for patients on transplant list.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Downstaging and Bridging",
       "product": "ns",
       "categories": [
-        "Resection"
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC"
       ]
     },
     {
