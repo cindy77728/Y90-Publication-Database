@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T02:29:53.874Z",
+  "savedAt": "2026-05-19T02:39:54.873Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -988,12 +988,13 @@
       "notes": "Added from Lung Shunt ZIP folder.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Asian Data",
+      "primaryCategory": "No MAA",
       "product": "ns",
       "categories": [
-        "Asian Data",
+        "No MAA",
         "HCC",
-        "Lung Shunt"
+        "Lung Shunt",
+        "Asian Data"
       ]
     },
     {
@@ -1220,25 +1221,31 @@
     {
       "id": 20260507008,
       "year": 2024,
-      "title": "Comparison of 3 different therapeutic particles in radioembolization of locally advanced intrahepatic cholangiocarcinoma",
+      "title": "Comparison of 3 Different Therapeutic Particles in Radioembolization of Locally Advanced Intrahepatic Cholangiocarcinoma",
+      "country": "Netherlands",
       "authors": "Wagemans MEHM, Kunnen B, Stella M, et al.",
       "journal": "Journal of Nuclear Medicine",
-      "country": "Netherlands",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38176716/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Microsphere%20coverage/2024%20Wagemans%20Comparison%20of%203%20Different%20Therapeutic%20Particles%20in%20Radioembolization%20of%20Locally%20Advanced%20Intrahepatic%20Cholangiocarcinoma.pdf?csf=1&web=1&e=uk0d37",
+      "pdfFileName": "2024 Wagemans Comparison of 3 Different Therapeutic Particles in Radioembolization of Locally Advanced Intrahepatic Cholangiocarcinoma.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Compared three therapeutic particles used for radioembolization in locally advanced intrahepatic cholangiocarcinoma.",
+      "findings": "• Six 90Y-glass, 8 90Y-resin, and 7 166Ho microsphere patients were included for analysis.\n• The mean administered activity was 2.6 GBq for 90Y-glass, 1.5 GBq for 90Y-resin, and 7.0 GBq for 166Ho microspheres.\n• Tumor-absorbed dose and treated-normal-liver-absorbed dose were significantly higher for 90Y-glass than for 90Y-resin and 166Ho microspheres (mean tumor-absorbed dose, 197 Gy for 90Y-glass vs.\n• 73 Gy for 90Y-resin and 50 Gy for 166Ho; mean treated-normal-liver-absorbed dose, 79 Gy for 90Y-glass vs.\n• 37 Gy for 90Y-resin and 31 Gy for 166Ho).",
+      "notes": "Includes particle comparison beyond a simple glass-versus-resin framing.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Microsphere Coverage",
       "product": "both",
       "categories": [
-        "Glass vs Resin",
+        "Microsphere Coverage",
         "Comparative",
-        "Dosimetry"
-      ],
-      "results": "Compared three therapeutic particles used for radioembolization in locally advanced intrahepatic cholangiocarcinoma.",
-      "findings": "Useful comparative particle evidence for ICC, including discussion of differences across therapeutic particle platforms.",
-      "notes": "Includes particle comparison beyond a simple glass-versus-resin framing.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2024 Wagemans Comparison of 3 Different Therapeutic Particles in Radioembolization of Locally Advanced Intrahepatic Cholangiocarcinoma.pdf",
-      "reviewStatus": "AI Draft",
-      "abstract": "",
-      "primaryCategory": "Glass vs Resin"
+        "Dosimetry",
+        "Glass vs Resin",
+        "Metastases / Intrahepatic Cholangiocarcinoma (ICC)",
+        "Safety"
+      ]
     },
     {
       "id": 2026051107,
@@ -1683,12 +1690,13 @@
       "notes": "Added from Dosimetry ZIP.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry",
+      "primaryCategory": "Microsphere Coverage",
       "product": "glass",
       "categories": [
-        "Dosimetry",
+        "Microsphere Coverage",
         "Dosimetry / Voxel-based",
-        "HCC"
+        "HCC",
+        "Dosimetry"
       ]
     },
     {
@@ -5572,23 +5580,28 @@
       "id": 20260507014,
       "year": 2016,
       "title": "Y90 Radioembolization Significantly Prolongs Time to Progression Compared With Chemoembolization in Patients With Hepatocellular Carcinoma",
+      "country": "USA",
       "authors": "Salem R, Gordon AC, Mouli S, et al.",
       "journal": "Gastroenterology",
-      "country": "USA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27575820/",
+      "pmcid": "PMC5124387",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/PREMIERE/2016%20Salem%20PREMIERE.pdf?csf=1&web=1&e=2DQYHA",
+      "pdfFileName": "2016 Salem PREMIERE.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "PREMIERE study comparing Y-90 radioembolization with chemoembolization in HCC, focused on time to progression.",
+      "findings": "• The median TTP (primary endpoint) was significantly longer in the Y90 group: 6.8 months for cTACE vs not reached for Y90 (>26 months), P=.0012 [HR: 0.122, 95% CI, 0.027–0.557, P=.007].\n• TTP remained significantly longer with Y90 (median not reached @ 26 months, 95% CI, 14.5-NC) versus cTACE (4.8 mo, 95% CI, 1.5–7.3, P=.0002) in non-transplanted patients.\n• Overall Survival: Figure 4 presents KM curves (censored to liver transplantation) demonstrating median 17.7 months (95% CI, 8.3-NC) and 18.6 months (95% CI, 7.4–32.5) OS for cTACE and Y90, respectively (P=.99).\n• The original power calculation determined that 55 patients per arm (110 total) were needed to have 80% power to detect a median 10 month TTP for cTACE and 16 months for Y90 (HR=0.625) (two-tailed type I error rate: 10%), with an additional 10% to account for attrition (total planned sample size of 124).\n• At study halting, the actual observed median TTP after 45 patients was 6.8 months for cTACE vs not reached for Y90 (>26 months), P=.0012 [HR: 0.122, 95% CI, 0.027–0.557, P=.007].",
+      "notes": "Important comparative HCC evidence; manually verify exact study design and numbers before slide use.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Key Clinical Data / PREMIERE",
       "product": "glass",
       "categories": [
-        "Comparative",
-        "HCC"
-      ],
-      "results": "PREMIERE study comparing Y-90 radioembolization with chemoembolization in HCC, focused on time to progression.",
-      "findings": "Y-90 radioembolization significantly prolonged time to progression compared with chemoembolization in patients with HCC.",
-      "notes": "Important comparative HCC evidence; manually verify exact study design and numbers before slide use.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2016 Salem PREMIERE.pdf",
-      "reviewStatus": "AI Draft",
-      "abstract": "",
-      "primaryCategory": "Comparative"
+        "Key Clinical Data / PREMIERE",
+        "HCC",
+        "Dosimetry",
+        "Safety"
+      ]
     },
     {
       "id": 202605072011,
@@ -5923,23 +5936,26 @@
       "id": 20260507009,
       "year": 2014,
       "title": "The dosimetric importance of the number of 90Y microspheres in liver transarterial radioembolization (TARE)",
+      "country": "Italy",
       "authors": "Spreafico C, Maccauro M, Mazzaferro V, Chiesa C",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
-      "country": "Italy",
-      "product": "both",
-      "categories": [
-        "Dosimetry",
-        "Glass vs Resin"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24477451/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Microsphere%20coverage/Sprieafico%202014%20The%20dosimetric%20importance%20of%20the%20number%20of%2090Y%20microspheres.pdf?csf=1&web=1&e=6OkyYy",
+      "pdfFileName": "Sprieafico 2014 The dosimetric importance of the number of 90Y microspheres.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Editorial commentary discussing why the number of Y-90 microspheres matters dosimetrically in liver TARE.",
       "findings": "Supports the conceptual point that microsphere number can affect dosimetry and should not be ignored in treatment interpretation.",
       "notes": "Filename appears to spell author as Sprieafico; article author is Spreafico.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "Sprieafico 2014 The dosimetric importance of the number of 90Y microspheres.pdf",
-      "reviewStatus": "AI Draft",
       "abstract": "",
-      "primaryCategory": "Dosimetry"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Microsphere Coverage",
+      "product": "ns",
+      "categories": [
+        "Microsphere Coverage",
+        "Dosimetry"
+      ]
     },
     {
       "id": 2026050615,
@@ -6464,25 +6480,29 @@
       "id": 20260507013,
       "year": 2011,
       "title": "Recommendations of the American Association of Physicists in Medicine on dosimetry, imaging, and quality assurance procedures for 90Y microsphere brachytherapy in the treatment of hepatic malignancies",
+      "country": "USA",
       "authors": "Dezarn WA, Cessna JT, DeWerd LA, et al.",
       "journal": "Medical Physics",
-      "country": "USA",
-      "product": "both",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21928655/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Post-Mortem%20Considerations/2011%20Dezarn%20Recommendations%20of%20the%20American%20Association%20of%20Physicists%20in%20Medicine%20on%20dosimetry.pdf?csf=1&web=1&e=sdWyI7",
+      "pdfFileName": "2011 Dezarn Recommendations of the American Association of Physicists in Medicine on dosimetry.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "AAPM recommendations covering dosimetry, imaging, and quality assurance procedures for Y-90 microsphere brachytherapy.",
+      "findings": "• Yttrium-90 microsphere brachytherapy of the liver exploits the distinctive features of the liver anatomy to treat liver malignancies with beta radiation and is gaining more wide spread clinical use.\n• This report provides a general overview of microsphere liver brachytherapy and assists the treatment team in creating local treatment practices to provide safe and efficient patient treatment.\n• The current dosimetry models are reviewed and suggestions for dosimetry advancement are made.\n• Radioactive material licensing and radiation safety are discussed given the unique requirements of microsphere brachytherapy.",
+      "notes": "AAPM recommendation document.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Post-Mortem Considerations",
+      "product": "ns",
       "categories": [
-        "Dosimetry",
+        "Post-Mortem Considerations",
         "Dosimetry / QA",
         "Radiation Safety & Handling",
-        "Guidelines"
-      ],
-      "results": "AAPM recommendations covering dosimetry, imaging, and quality assurance procedures for Y-90 microsphere brachytherapy.",
-      "findings": "Foundational technical guidance for Y-90 microsphere dosimetry, imaging, QA, and safety procedures.",
-      "notes": "AAPM recommendation document.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2011 Dezarn Recommendations of the American Association of Physicists in Medicine on dosimetry.pdf",
-      "reviewStatus": "AI Draft",
-      "abstract": "",
-      "primaryCategory": "Dosimetry"
+        "Dosimetry",
+        "Safety"
+      ]
     },
     {
       "id": 202605072072,
@@ -6655,23 +6675,27 @@
     {
       "id": 20260507012,
       "year": 2008,
-      "title": "Post-Mortem Considerations of Yttrium-90 (90Y) Microsphere Therapy Procedures",
+      "title": "Post-mortem considerations of Yttrium-90 90Y microsphere therapy procedures",
+      "country": "USA",
       "authors": "Nelson K, Vause PE Jr, Koropova P",
       "journal": "Health Physics",
-      "country": "USA",
-      "product": "both",
-      "categories": [
-        "Radiation Safety & Handling"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18849708/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Post-Mortem%20Considerations/2008%20Nelson%20Post-Mortem%20Considerations%20ofYttrium-90%20(90Y)%20MicrosphereTherapy%20Procedures.pdf?csf=1&web=1&e=PYl6RG",
+      "pdfFileName": "2008 Nelson Post-Mortem Considerations ofYttrium-90 (90Y) MicrosphereTherapy Procedures.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Discusses radiation safety issues and long-lived contaminants relevant to deceased patients after Y-90 microsphere therapy.",
       "findings": "Highlights post-mortem radiation safety considerations, including handling, contamination, and procedural implications after Y-90 microsphere therapy.",
       "notes": "Operational/radiation safety topic.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2008 Nelson Post-Mortem Considerations ofYttrium-90 (90Y) MicrosphereTherapy Procedures.pdf",
-      "reviewStatus": "AI Draft",
       "abstract": "",
-      "primaryCategory": "Radiation Safety & Handling"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Post-Mortem Considerations",
+      "product": "both",
+      "categories": [
+        "Post-Mortem Considerations",
+        "Radiation Safety & Handling"
+      ]
     },
     {
       "id": 202605072006,
