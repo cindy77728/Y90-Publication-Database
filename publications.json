@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-14T08:48:07.981Z",
+  "savedAt": "2026-05-19T02:29:53.874Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -2604,25 +2604,30 @@
     {
       "id": 20260507006,
       "year": 2022,
-      "title": "Optimizing 90Y particle density improves outcomes after radioembolization",
+      "title": "Optimizing 90Y Particle Density Improves Outcomes After Radioembolization",
+      "country": "USA",
       "authors": "Maxwell AWP, Mendoza HG, Sellitti MJ, et al.",
       "journal": "Cardiovascular and Interventional Radiology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "Dosimetry / Dose Response",
-        "Dosimetry",
-        "Dosimetry / Treatment Planning"
-      ],
-      "results": "Evaluated the relationship between Y-90 particle density and outcomes after radioembolization.",
-      "findings": "Supports the concept that optimized particle density may improve treatment outcomes, not only nominal activity or absorbed dose.",
-      "notes": "Product not specified in filename; manually verify product details before final use.",
-      "url": "",
-      "pmcid": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35459960/",
+      "pmcid": "PMC10103908",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Microsphere%20coverage/2022%20Maxwell%20Optimizing%2090Y%20particle%20density%20improves%20outcomes%20after%20radioembolization.pdf?csf=1&web=1&e=tOz0lk",
       "pdfFileName": "2022 Maxwell Optimizing 90Y particle density improves outcomes after radioembolization.pdf",
-      "reviewStatus": "AI Draft",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Evaluated the relationship between Y-90 particle density and outcomes after radioembolization.",
+      "findings": "• Despite these large differences in dose and particle density, there was no difference in local progression-free survival or overall survival after resin versus glass microspheres (Figure 1).\n• However, subgroup analysis (Supplemental Table 1) shows that hypervascular tumors (T:N ratio ≥ 3.3 on MAA scan) have better local progression free survival (LPFS) with glass microspheres, compared to resin (9 versus 2 months, p=0.003).\n• There was a trend towards improved overall survival when hypervascular tumors were treated using glass microspheres (p=0.06), and a trend towards improved overall survival when less vascular tumors were treated using resin microspheres (p=0.08).\n• There was no benefit to using resin microspheres for large tumor volumes, compared to glass, in terms of local progression free survival (p=0.17) or overall survival (p=0.54).\n• Mean tumor dose did not predict local progression free survival (p=0.42) or overall survival (p=0.44) in our patient population (Table 3).",
+      "notes": "Product not specified in filename; manually verify product details before final use.",
       "abstract": "",
-      "primaryCategory": "Dosimetry / Dose Response"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Microsphere Coverage",
+      "product": "both",
+      "categories": [
+        "Microsphere Coverage",
+        "Dosimetry",
+        "Dosimetry / Treatment Planning",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 1,
@@ -2650,24 +2655,27 @@
       "id": 20260507005,
       "year": 2022,
       "title": "Radioembolization for hepatocellular carcinoma: what clinicians need to know",
+      "country": "Korea",
       "authors": "Choi JW, Kim HC",
       "journal": "Journal of Liver Cancer",
-      "country": "Korea",
-      "product": "both",
-      "categories": [
-        "HCC",
-        "Guidelines",
-        "Dosimetry"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37383534/",
+      "pmcid": "PMC10035707",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Microsphere%20coverage/2022%20Choi%20Radioembolization%20for%20hepatocellular%20carcinoma%20what%20clinicians%20need%20to%20know.pdf?csf=1&web=1&e=iDH6iC",
+      "pdfFileName": "2022 Choi Radioembolization for hepatocellular carcinoma what clinicians need to know.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Clinician-oriented review of Y-90 TARE concepts, products, indications, technical considerations, and clinical use in HCC.",
       "findings": "Provides a practical overview for clinicians on Y-90 radioembolization in HCC, including product and workflow considerations.",
       "notes": "Review article.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2022 Choi Radioembolization for hepatocellular carcinoma what clinicians need to know.pdf",
-      "reviewStatus": "AI Draft",
       "abstract": "",
-      "primaryCategory": "HCC"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Microsphere Coverage",
+      "product": "both",
+      "categories": [
+        "Microsphere Coverage",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 2026050605,
@@ -3355,24 +3363,28 @@
       "id": 20260507003,
       "year": 2020,
       "title": "Combination of 1st and 2nd Week Dosing of Glass Yttrium-90 Microspheres for Superselective Radioembolization",
+      "country": "Korea",
       "authors": "Kim HC, Lee M, Lee JH, Paeng JC, Kim YJ, Chung JW",
       "journal": "In Vivo",
-      "country": "Korea",
-      "product": "glass",
-      "categories": [
-        "Dosimetry / QA",
-        "Dosimetry / Treatment Planning",
-        "HCC"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32871812/",
+      "pmcid": "PMC7652468",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Microsphere%20coverage/2020%20Kim%20Combination%20of%201st%20and%202nd%20Week%20Dosing%20of%20Glass%20Yttrium-90%20Microspheres%20for%20Superselective%20Radioembolization.pdf?csf=1&web=1&e=U16dYb",
+      "pdfFileName": "2020 Kim Combination of 1st and 2nd Week Dosing of Glass Yttrium-90 Microspheres for Superselective Radioembolization.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Evaluated combined first- and second-week glass microsphere dosing for superselective radioembolization.",
       "findings": "Supports practical flexibility in glass microsphere vial-week dosing for superselective treatment planning.",
       "notes": "Potentially relevant to small-volume treatments and vial-week logistics.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2020 Kim Combination of 1st and 2nd Week Dosing of Glass Yttrium-90 Microspheres for Superselective Radioembolization.pdf",
-      "reviewStatus": "AI Draft",
       "abstract": "",
-      "primaryCategory": "Dosimetry / QA"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Microsphere Coverage",
+      "product": "glass",
+      "categories": [
+        "Microsphere Coverage",
+        "Dosimetry / Treatment Planning",
+        "HCC",
+        "Dosimetry / QA"
+      ]
     },
     {
       "id": 2026050817,
@@ -3597,24 +3609,28 @@
       "id": 20260507004,
       "year": 2020,
       "title": "The number of microspheres in Y90 radioembolization directly affects normal tissue radiation exposure",
+      "country": "USA",
       "authors": "Pasciak AS, Abiola G, Liddell RP, et al.",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
-      "country": "USA",
-      "product": "both",
-      "categories": [
-        "Dosimetry / TN Ratio",
-        "Dosimetry",
-        "Glass vs Resin"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31741021/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Microsphere%20coverage/2020%20Pasciak%20The%20number%20of%20microspheres%20in%20Y90%20radioembolization%20directly%20affects%20normal%20tissue%20radiation%20exposure.pdf?csf=1&web=1&e=5cGcLs",
+      "pdfFileName": "2020 Pasciak The number of microspheres in Y90 radioembolization directly affects normal tissue radiation exposure.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Investigated how microsphere number influences normal tissue radiation exposure in Y-90 radioembolization.",
       "findings": "Particle number and distribution can materially affect normal tissue exposure, reinforcing that microsphere count is not a neutral variable.",
       "notes": "Useful for particle number versus absorbed dose discussion.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2020 Pasciak The number of microspheres in Y90 radioembolization directly affects normal tissue radiation exposure.pdf",
-      "reviewStatus": "AI Draft",
       "abstract": "",
-      "primaryCategory": "Dosimetry / TN Ratio"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Microsphere Coverage",
+      "product": "both",
+      "categories": [
+        "Microsphere Coverage",
+        "Dosimetry",
+        "Glass vs Resin",
+        "Dosimetry / TN Ratio"
+      ]
     },
     {
       "id": 202605072001,
@@ -6231,25 +6247,28 @@
       "id": 20260507002,
       "year": 2013,
       "title": "The low hepatic toxicity per Gray of 90Y glass microspheres is linked to their transport in the arterial tree favoring a nonuniform trapping as observed in posttherapy PET imaging",
+      "country": "Belgium / Italy",
       "authors": "Walrand S, Hesse M, Chiesa C, Lhommel R, Jamar F",
       "journal": "Journal of Nuclear Medicine",
-      "country": "Belgium / Italy",
-      "product": "glass",
-      "categories": [
-        "Dosimetry",
-        "Dosimetry / Post-treatment",
-        "Radiation Safety & Handling",
-        "Glass vs Resin"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24296766/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Microsphere%20coverage/2013%20Walrand%20The%20Low%20Hepatic%20Toxicity%20per%20Gray%20of%2090Y%20Glass%20Microspheres.PDF?csf=1&web=1&e=ps9mzx",
+      "pdfFileName": "2013 Walrand The Low Hepatic Toxicity per Gray of 90Y Glass Microspheres.PDF",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Compared hepatic toxicity considerations and post-therapy PET observations for glass and resin microsphere transport/distribution.",
       "findings": "Suggests lower hepatic toxicity per Gy with glass may relate to arterial transport and nonuniform microsphere trapping patterns observed on post-treatment imaging.",
       "notes": "Useful for microsphere distribution and normal liver exposure discussion.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "2013 Walrand The Low Hepatic Toxicity per Gray of 90Y Glass Microspheres.PDF",
-      "reviewStatus": "AI Draft",
       "abstract": "",
-      "primaryCategory": "Dosimetry"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Microsphere Coverage",
+      "product": "glass",
+      "categories": [
+        "Microsphere Coverage",
+        "Dosimetry / Post-treatment",
+        "Radiation Safety & Handling",
+        "Dosimetry"
+      ]
     },
     {
       "id": 202605073035,
