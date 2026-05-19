@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T03:30:06.904Z",
+  "savedAt": "2026-05-19T03:40:09.906Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -2854,26 +2854,30 @@
     },
     {
       "id": 202605073020,
-      "year": 2021,
-      "title": "2021 LRT bridging to transplant",
-      "country": "Worldwide",
+      "year": 2022,
+      "title": "National Trends and Waitlist Outcomes of Locoregional Therapy Among Liver Transplant Candidates With Hepatocellular Carcinoma in the United States",
+      "country": "USA",
       "authors": "Kwong et al.",
-      "journal": "",
-      "url": "",
-      "pmcid": "",
-      "pdfUrl": "",
+      "journal": "Clinical Gastroenterology and Hepatology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34358718/",
+      "pmcid": "PMC10306121",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Kwong%202022%20LRT%20bridging%20to%20transplant.pdf?csf=1&web=1&e=4wTGqv",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Kwong 2021 LRT bridging to transplant.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• The median waitlist time increased in more recent years (257 days for patients listed in 2015–2018, compared with 123 days for patients listed in 2003–2006); there was no similar trend for severity of liver disease (MELD) or initial total tumor diameter (Table 1).\n• The majority (67.8%) of patients receiving liver-directed therapy recorded a single LRT; 23.8% had 2 LRTs, 6.2% had 3 LRTs, and 2.2% had 4 or more LRTs.\n• In the multivariable competing-risk analysis for waitlist dropout, adjusting for initial tumor burden and AFP, Child–Pugh class, wait region, and listing era, receipt of no locoregional therapy was associated with an increased risk of waitlist dropout compared with chemoembolization as the first LRT (subhazard ratio [sHR], 1.37; 95% CI, 1.28–1.47) (Table 2).\n• In IPTW-adjusted analysis, radioembolization compared with chemoembolization was associated with a reduced risk of waitlist dropout (sHR, 0.85; 95% CI, 0.81–0.89), as was thermal ablation (sHR, 0.95; 95% CI, 0.91–0.99) (Supplementary Figure 1).\n• A secondary analysis considering the number of LRTs instead of the type of first treatment in the multivariable competing-risk analysis showed a lower risk of waitlis",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kwong 2021 LRT bridging to transplant.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Downstaging and Bridging",
       "product": "ns",
       "categories": [
-        "Resection"
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC",
+        "Safety"
       ]
     },
     {
@@ -3467,25 +3471,31 @@
     {
       "id": 202605073019,
       "year": 2020,
-      "title": "Kurilova2020 Article 90Y RadioembolizationAfterFailPortal Vein Embolization",
-      "authors": "Kurilova et al.",
-      "journal": "",
+      "title": "90Y-Radioembolization After Failed Portal Vein Embolization for Colorectal Liver Metastases: A Case Report",
       "country": "Germany/Europe",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection",
-        "PVT"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kurilova2020_Article_90Y-RadioembolizationAfterFailPVE.pdf",
-      "url": "",
+      "authors": "Kurilova et al.",
+      "journal": "CardioVascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32514612/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Kurilova2020_Article_90Y-RadioembolizationAfterFailPVE.pdf?csf=1&web=1&e=QOx7hL",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Kurilova2020_Article_90Y-RadioembolizationAfterFailPVE.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• This enabled to reach sufficient FLR, provide good local disease control and bridge the patients to extended hepatectomy.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kurilova2020_Article_90Y-RadioembolizationAfterFailPVE.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "PVT",
+        "Metastases / Metastatic Colorectal Cancer (mCRC)",
+        "Dosimetry",
+        "HCC",
+        "Mapping / Failed Evaluation"
+      ]
     },
     {
       "id": 202605072055,
@@ -4506,25 +4516,28 @@
     {
       "id": 202605073018,
       "year": 2018,
-      "title": "Therapies for patients with HCC awaiting liverer transplantation systemic review and meta analysis",
+      "title": "Therapies for patients with hepatocellular carcinoma awaiting liver transplantation: A systematic review and meta-analysis",
       "country": "Worldwide",
       "authors": "Kulik- et al.",
-      "journal": "",
-      "url": "",
+      "journal": "Hepatology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28859222/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Kulik-2018-Therapies%20for%20patients%20with%20HCC%20awaiting%20liver%20transplantation-systemic%20review%20and%20meta%20analysis.pdf?csf=1&web=1&e=V9zeAj",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Kulik-2018-Therapies for patients with HCC awaiting liver transplantation-systemic review and meta analysis.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• In patients with HCC listed for LT, the use of LRT is associated with a nonsignificant trend toward improved waitlist and posttransplant outcomes, though there is a high risk of selection bias in the available evidence. (Hepatology 2018;67:381-400).",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kulik-2018-Therapies for patients with HCC awaiting liver transplantation-systemic review and meta analysis.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Downstaging and Bridging",
       "product": "ns",
       "categories": [
-        "Resection"
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC"
       ]
     },
     {
@@ -6840,46 +6853,30 @@
     {
       "id": 202605073016,
       "year": 2006,
-      "title": "Treatment of HCC Downstaging",
-      "authors": "Kulik et al.",
-      "journal": "",
+      "title": "Yttrium-90 microspheres (TheraSphere) treatment of unresectable hepatocellular carcinoma: downstaging to resection, RFA and bridge to transplantation",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kulik 2006 Treatment of HCC Downstaging.pdf",
-      "url": "",
+      "authors": "Kulik et al.",
+      "journal": "Journal of Surgical Oncology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17048240/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Kulik%202006%20Treatment%20of%20HCC%20Downstaging.pdf?csf=1&web=1&e=rJeqE1",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Kulik 2006 Treatment of HCC Downstaging.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
-    },
-    {
-      "id": 202605073017,
-      "year": 2006,
-      "title": "Yttrium 90 microspheres (TheraSphere) treatment of unresectable hepatocellular carcinoma downstaging to resectio",
-      "authors": "Kulik et al.",
-      "journal": "",
-      "country": "USA",
-      "product": "glass",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kulik LM_2006_Yttrium-90 microspheres (TheraSphere) treatment of unresectable hepatocellular carcinoma_ downstaging to resectio.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Kulik LM_2006_Yttrium-90 microspheres (TheraSphere) treatment of unresectable hepatocellular carcinoma_ downstaging to resectio.pdf",
-      "pdfUrl": "",
+      "findings": "• 11 of 34 (32%) patients treated were downstaged to target lesions measuring 3.0 cm or less.\n• Twenty-three of 35 (66%) were downstaged to either T2 status, lesion < 3.0 cm (RFA candidate), or resection.\n• Median survival by Kaplan-Meier analysis for the entire cohort was 800 days.\n• These data suggest that intra-arterial (90)Y microspheres can be used as a bridge to transplantation, surgical resection, or RFA.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kulik 2006 Treatment of HCC Downstaging.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "glass",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Comparative / Ablation",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 202605072031,
