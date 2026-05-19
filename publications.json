@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T06:09:50.977Z",
+  "savedAt": "2026-05-19T06:21:14.570Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -3982,25 +3982,29 @@
     {
       "id": 202605073038,
       "year": 2019,
-      "title": "Radiation Lobectomy versus Portal Vein Embolization Review",
-      "authors": "Gabr A, et al.",
-      "journal": "",
+      "title": "Neoadjuvant Radiation Lobectomy As an Alternative to Portal Vein Embolization in Hepatocellular Carcinoma",
       "country": "USA",
-      "product": "glass",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection",
-        "Comparative"
-      ],
-      "results": "Review of radiation lobectomy and PVE approaches for FLR hypertrophy and surgical planning.",
-      "findings": "Useful review comparing radiation lobectomy with portal vein embolization as a bridge to resection strategy.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Gabr 2019 - Radiation lobectomy vs PVE review.pdf",
-      "url": "",
+      "authors": "Gabr A, et al.",
+      "journal": "Seminars in Nuclear Medicine",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30954185/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Gabr%202019%20-%20Radiation%20lobectomy%20vs%20PVE%20review.pdf?csf=1&web=1&e=f72jR5",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Gabr 2019 - Radiation lobectomy vs PVE review.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Review of radiation lobectomy and PVE approaches for FLR hypertrophy and surgical planning.",
+      "findings": "• Surgical resection is considered first line and potentially curative for early stage hepatocellular carcinoma.\n• However, many patients presenting with small tumors might not qualify as candidates for surgical resection given their small future liver remnant (FLR); such patients tend to undergo neoadjuvant therapies prior to resection to minimize the risk of hepatic decompensation after major hepatic resection.\n• While there are several techniques for inducing FLR hypertrophy, a recent approach in hepatocellular carcinoma is Y90 radiation lobectomy (RL).\n• RL was discovered serendipitously after noticing contralateral lobar hypertrophy in patients who had ipsilateral lobar Y90 radioembolization.\n• This is now proactively used in bridging patients to surgical resection by inducing FLR hypertrophy.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Gabr 2019 - Radiation lobectomy vs PVE review.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "PVT",
+      "product": "ns",
+      "categories": [
+        "PVT",
+        "Comparative",
+        "Resection / Lobectomy",
+        "HCC"
+      ]
     },
     {
       "id": 202605071001,
@@ -4184,24 +4188,29 @@
     {
       "id": 202605073037,
       "year": 2018,
-      "title": "2018 Y90 as a bridge to Surgical Resection",
-      "authors": "Gabr et al.",
-      "journal": "",
+      "title": "Outcomes of Surgical Resection after Radioembolization for Hepatocellular Carcinoma",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Gabr 2018 - Y90 as a bridge to Surgical Resection.pdf",
-      "url": "",
+      "authors": "Gabr et al.",
+      "journal": "Journal of Vascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30268638/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Gabr%202018%20-%20Y90%20as%20a%20bridge%20to%20Surgical%20Resection.pdf?csf=1&web=1&e=Aiol92",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Gabr 2018 - Y90 as a bridge to Surgical Resection.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• Median time between TARE and resection was 2.9 months (interquartile range [IQR]: 2-5 months).\n• Median FLR hypertrophy after TARE (and before resection) was 23.3% (IQR:10%-48%) for patients who had radiation lobectomy and 9% (IQR: 6%-25%) for patients who had radiation segmentectomy (P =.037).\n• Median augmented hypertrophy of the liver remnant 3 months after resection was 72% (IQR:45%-88%) in patients who had radiation lobectomy and 94% (IQR: 72%-146%) in patients who had radiation segmentectomy.\n• Disease control was achieved in all 31 patients.\n• Median recurrence-free survival was 34.2 months (95% confidence interval,18.7-34.2).",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Gabr 2018 - Y90 as a bridge to Surgical Resection.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection",
+      "product": "ns",
+      "categories": [
+        "Resection",
+        "Resection / Lobectomy",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 202605073033,
@@ -6387,24 +6396,29 @@
     {
       "id": 202605073035,
       "year": 2013,
-      "title": "Volumetric changes after90Y radioembolization for hepatocellular carcinoma in cirrhosis An option to portal v",
-      "authors": "Edeline et al.",
-      "journal": "",
+      "title": "Volumetric changes after (90)y radioembolization for hepatocellular carcinoma in cirrhosis: an option to portal vein embolization in a preoperative setting?",
       "country": "France",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Edeline J._2013_Volumetric changes after90Y radioembolization for hepatocellular carcinoma in cirrhosis_ An option to portal v.pdf",
-      "url": "",
+      "authors": "Edeline et al.",
+      "journal": "Annals of Surgical Oncology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23494107/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Edeline%20J._2013_Volumetric%20changes%20after90Y%20radioembolization%20for%20hepatocellular%20carcinoma%20in%20cirrhosis_%20An%20option%20to%20portal%20v.pdf?csf=1&web=1&e=YGE5Vc",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Edeline J._2013_Volumetric changes after90Y radioembolization for hepatocellular carcinoma in cirrhosis_ An option to portal v.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
+      "findings": "• Median overall survival was 13.5 months.\n• Median treated volume decreased from 938 mL (interquartile range [IQR] = 719) to 702 mL (IQR = 656) (p < 0.001), while median contralateral volume increased from 724 mL (IQR = 541) to 920 mL (IQR = 530) (p < 0.001).\n• The whole liver volume remained stable, with a median volume of 1,702 mL (IQR = 568) versus 1,577 mL (IQR 670), respectively (p = 0.55).\n• The mean maximal increase in contralateral volume was 42 % (95 % confidence interval 16-67).\n• Overall, 13 patients (38.2 %) exhibited increases greater than 30 %, while 13 patients (38.2 %) showed no increase or showed increases less than 10 %.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Edeline J._2013_Volumetric changes after90Y radioembolization for hepatocellular carcinoma in cirrhosis_ An option to portal v.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "PVT",
+      "product": "ns",
+      "categories": [
+        "PVT",
+        "Resection / Lobectomy",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 202605072021,
@@ -6744,24 +6758,29 @@
     {
       "id": 202605073036,
       "year": 2009,
-      "title": "Radiation lobectomy Preliminary findings of hepatic volumetric response to lobar yttrium 90 radioembolization",
-      "authors": "Gaba et al.",
-      "journal": "",
+      "title": "Radiation lobectomy: preliminary findings of hepatic volumetric response to lobar yttrium-90 radioembolization",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Gaba R.C._2009_Radiation lobectomy_ Preliminary findings of hepatic volumetric response to lobar yttrium-90 radioembolization.pdf",
-      "url": "",
+      "authors": "Gaba et al.",
+      "journal": "Annals of Surgical Oncology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19357924/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Gaba%20R.C._2009_Radiation%20lobectomy_%20Preliminary%20findings%20of%20hepatic%20volumetric%20response%20to%20lobar%20yttrium-90%20radioembolization.pdf?csf=1&web=1&e=4c2haa",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Gaba R.C._2009_Radiation lobectomy_ Preliminary findings of hepatic volumetric response to lobar yttrium-90 radioembolization.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
+      "findings": "• No grade 3 or 4 bilirubin toxicities were encountered.\n• Further investigation is necessary to determine contributing factors that may predict this effect.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Gaba R.C._2009_Radiation lobectomy_ Preliminary findings of hepatic volumetric response to lobar yttrium-90 radioembolization.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Lobectomy",
+      "product": "ns",
+      "categories": [
+        "Resection / Lobectomy",
+        "Resection",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 202605072062,
