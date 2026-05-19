@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T06:52:18.007Z",
+  "savedAt": "2026-05-19T07:01:47.941Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -4963,28 +4963,6 @@
       ]
     },
     {
-      "id": 202605073050,
-      "year": 2017,
-      "title": "Liver Resection After Selective Internal Radiation Therapy with Yttrium 90 is Safe and Feasible A Bi institut",
-      "authors": "Wright et al.",
-      "journal": "",
-      "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Wright GP_2017_Liver Resection After Selective Internal Radiation Therapy with Yttrium-90 is Safe and Feasible_ A Bi-institut.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Wright GP_2017_Liver Resection After Selective Internal Radiation Therapy with Yttrium-90 is Safe and Feasible_ A Bi-institut.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
-    },
-    {
       "id": 202605072066,
       "year": 2017,
       "title": "Long-Term Hepatotoxicity of Yttrium-90 Radioembolization as Treatment of Metastatic Neuroendocrine Tumor to the Liver",
@@ -7219,6 +7197,33 @@
         "Dosimetry",
         "Safety",
         "Mapping / Failed Evaluation"
+      ]
+    },
+    {
+      "id": 1779173853832,
+      "year": 2017,
+      "title": "Liver Resection After Selective Internal Radiation Therapy with Yttrium-90 is Safe and Feasible: A Bi-institutional Analysis",
+      "country": "USA",
+      "authors": "Wright GP et al.",
+      "journal": "Annals of Surgical Oncology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27878478/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Wright%20GP_2017_Liver%20Resection%20After%20Selective%20Internal%20Radiation%20Therapy%20with%20Yttrium-90%20is%20Safe%20and%20Feasible_%20A%20Bi-institut.pdf?csf=1&web=1&e=fuyD5N",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• The median time from liver disease diagnosis to Y90 treatment was 5.5 months (range 2-92 months).\n• The median time from Y90 treatment to surgery was 9.5 months (range 3-20 months).\n• At this writing, the median overall survival has not been reached at 25 months.\n• However, for properly selected patients, potential exists for extending disease-free and overall survival in the current era of multimodal therapy for malignant liver disease.",
+      "findings": "• The median time from liver disease diagnosis to Y90 treatment was 5.5 months (range 2-92 months).\n• The median time from Y90 treatment to surgery was 9.5 months (range 3-20 months).\n• At this writing, the median overall survival has not been reached at 25 months.\n• However, for properly selected patients, potential exists for extending disease-free and overall survival in the current era of multimodal therapy for malignant liver disease.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection",
+      "product": "both",
+      "categories": [
+        "Resection",
+        "Safety",
+        "Dosimetry",
+        "HCC"
       ]
     }
   ]
