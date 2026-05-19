@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T06:21:14.570Z",
+  "savedAt": "2026-05-19T06:31:18.999Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -3444,24 +3444,30 @@
     {
       "id": 202605073040,
       "year": 2020,
-      "title": "Gordon2020 Article Yttrium 90PortalVeinRadioembol",
-      "authors": "Gordon et al.",
-      "journal": "",
+      "title": "Yttrium-90 Portal Vein Radioembolization in Sprague-Dawley Rats: Dose-Dependent Imaging and Pathological Changes in Normal Liver",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Gordon2020_Article_Yttrium-90PortalVeinRadioembol.pdf",
-      "url": "",
-      "pmcid": "",
+      "authors": "Gordon et al.",
+      "journal": "CardioVascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32803285/",
+      "pmcid": "PMC7655630",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Gordon2020_Article_Yttrium-90PortalVeinRadioembol.pdf?csf=1&web=1&e=1bf4eH",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Gordon2020_Article_Yttrium-90PortalVeinRadioembol.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
+      "findings": "• Y90 dosing based on baseline MRI in the respective groups was: very high- (4621.7 Gy; n=1), high- (1406.0 ± 440.2 Gy; n=3), medium- (808.2 ± 82.5 Gy; n=2), and low-dose (156.8 ± 58.3 Gy; n=5).\n• The percent growth of the target lobe relative to baseline was −5.0% (95% CI: −17.0–6.9) for high-, medium dose rats compared to +18.6% (95% CI: 7.6–29.7) in the low-dose group (p=0.0043) at 12-weeks.\n• The percentage of liver volume comprised of the target lobe was also decreased at 12-weeks for high/medium-dose rats at 11.4% (95% CI: 9.5–13.4) versus 15.1% (95% CI: 12.6–17.6) in low-dose rats (p=0.0120).\n• The low-dose group demonstrated mild fibrosis within portal triads without necrosis or decellularization.\n• Y90 PVE decreased hepatocyte proliferation in the target lobe for high- and medium-dose rats with 4.5 versus 16.1 Ki67 positive nuclei per field in the target versus non-target lobe, respectively (p=0.0061).",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Gordon2020_Article_Yttrium-90PortalVeinRadioembol.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "PVT",
+      "product": "glass",
+      "categories": [
+        "PVT",
+        "Resection",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 202605073019,
@@ -3960,24 +3966,28 @@
     {
       "id": 202605073046,
       "year": 2019,
-      "title": "R Salem 2019 Modified Lobectomy",
-      "authors": "",
-      "journal": "",
+      "title": "Modified Radiation Lobectomy: An Evolving Paradigm to Convert Patients to Liver Resection Candidacy",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
+      "authors": "",
+      "journal": "Seminars in Interventional Radiology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6823042/",
+      "pmcid": "PMC6823042",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Gabr%202019-Modified%20Lobectomy.pdf?csf=1&web=1&e=XGnmNL",
+      "pdfFileName": "Resection/Curative Intent Lobectomy Resection/R Salem 2019-Modified Lobectomy.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
       "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/R Salem 2019-Modified Lobectomy.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "Resection/Curative Intent Lobectomy Resection/R Salem 2019-Modified Lobectomy.pdf",
-      "pdfUrl": "",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Lobectomy",
+      "product": "ns",
+      "categories": [
+        "Resection / Lobectomy",
+        "Resection",
+        "Dosimetry"
+      ]
     },
     {
       "id": 202605073038,
@@ -4684,24 +4694,28 @@
     {
       "id": 202605073039,
       "year": 2017,
-      "title": "2017 Y90 lobar infusion Factors Associated with contralateral hypertrophy",
-      "authors": "Goebel et al.",
-      "journal": "",
+      "title": "Factors associated with contralateral liver hypertrophy after unilateral radioembolization for hepatocellular carcinoma",
       "country": "Germany/Europe",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Goebel 2017 - Y90 lobar infusion Factors Assoc w contralateral hypertrophy.pdf",
-      "url": "",
-      "pmcid": "",
+      "authors": "Goebel et al.",
+      "journal": "PLoS One",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28708902/",
+      "pmcid": "PMC5510860",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Goebel%202017%20-%20Y90%20lobar%20infusion%20Factors%20Assoc%20w%20contralateral%20hypertrophy.pdf?csf=1&web=1&e=BWZTps",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Goebel 2017 - Y90 lobar infusion Factors Assoc w contralateral hypertrophy.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
+      "findings": "• Stratification by presence or absence of cirrhosis and Child Pugh class (no cirrhosis, 28±3.7 months; Child Pugh A, 32±4.9 months; Child Pugh B, 27±5.7 months; p-value not significant (ns)) did not reveal significant differences in the mean survival.\n• Stratification by the four tumor burden categories (0–25% tumor burden of right liver lobe, 35±4.6 months; 26–50% tumor burden, 25±5.7 months; 51–75% tumor burden, 20±2.8 months; 76–100% tumor burden, 18±2.3 months; p-value ns) did not show significant differences in the mean survival, but stratification by a tumor burden of 0–25% versus >25% did (0–25%…\n• A continuous decrease of absolute right LLV was found after RE (Table 2, Figs 2 and 3) which became significant after more than one month after RE (Table 2).\n• Factors influencing relative liver volume changes after radioembolization: Left rLLV increase/month (within 6 months after RE) was significantly higher in patients without ascites (2.7±1.3%/month) in comparison to patients presenting with ascites (1.9±1.3%/month; p-value = 0.017, Table 3).\n• Left rLLV/month was significantly higher in patients with a platelet count ≥100/nl (2.8±1.4%/month) compared to patients with a plate",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Goebel 2017 - Y90 lobar infusion Factors Assoc w contralateral hypertrophy.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Lobectomy",
+      "product": "glass",
+      "categories": [
+        "Resection / Lobectomy",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 2026051017,
