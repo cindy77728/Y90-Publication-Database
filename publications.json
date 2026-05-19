@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T04:10:24.930Z",
+  "savedAt": "2026-05-19T04:13:27.425Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -644,25 +644,29 @@
     {
       "id": 202605073031,
       "year": 2025,
-      "title": "Downstaging of HCC multicenter cohort study",
+      "title": "Downstaging of hepatocellular carcinoma before liver transplantation: Results from a national multicenter prospective cohort study",
       "country": "Worldwide",
       "authors": "Xu et al.",
-      "journal": "",
-      "url": "",
-      "pmcid": "",
-      "pdfUrl": "",
+      "journal": "Journal of Hepatology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39808828/",
+      "pmcid": "PMC12256641",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Xu%202025%20Downstaging%20of%20HCC%20multicenter%20cohort%20study.pdf?csf=1&web=1&e=nw79if",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Xu 2025 Downstaging of HCC multicenter cohort study.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• There was also no significant difference in the proportion of patients who were foreign-born (27.4% in AC vs 27.6% in UNOS-DS;p=0.17) or spoke a primary language other than English (25.8% in AC vs 26.7% in UNOS-DS;p=0.21).\n• There were no significant differences in liver disease etiology between AC and UNOS-DS (p=0.25), with the proportion of patients with Hepatitis C being the highest in both (46.3% vs 48.8%).\n• A higher proportion of patients in AC had alpha-fetoprotein (AFP) ≥100 ng/ml prior to first LRT compared to UNOS-DS (35.8% vs 22.7%;p<0.01).\n• A higher proportion of patients in AC received Y-90 versus TACE (50.0% vs 41.1%) as first LRT, compared to UNOS-DS which received more TACE than Y-90 (58.0% vs 33.7%;p<0.01).\n• In the AC cohort, the probability of successful downstaging was significantly higher among patients who received Y-90 than those who received TACE (73.8% vs 64.6%;p<0.001) (Figure 2C).",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Xu 2025 Downstaging of HCC multicenter cohort study.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Downstaging and Bridging",
       "product": "ns",
       "categories": [
-        "Resection"
+        "Resection / Downstaging and Bridging",
+        "Resection / Transplantation",
+        "Resection",
+        "Dosimetry",
+        "HCC"
       ]
     },
     {
@@ -6214,25 +6218,31 @@
     },
     {
       "id": 202605073030,
-      "year": 2013,
-      "title": "et al CVIR 2013 Bridging to transplant",
-      "authors": "Xing et al.",
-      "journal": "",
+      "year": 2017,
+      "title": "Bridging Locoregional Therapy Prolongs Survival in Patients Listed for Liver Transplant with Hepatocellular Carcinoma",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Xing et al CVIR 2013 Bridging to transplant.pdf",
-      "url": "",
+      "authors": "Xing et al.",
+      "journal": "CardioVascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27900445/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Xing%20et%20al%20CVIR%202017%20Bridging%20to%20transplant.pdf?csf=1&web=1&e=7dgaBN",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Xing et al CVIR 2013 Bridging to transplant.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• Of 265 listed, 205 underwent OLT (mean follow-up 7.6 years).\n• Median OS from HCC for A/B were 86.4 vs.\n• Median OS from OLT for A/B were 74.6 vs.\n• Median OS from HCC for C/D were 37.1 vs.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Xing et al CVIR 2013 Bridging to transplant.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Resection / Transplantation",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 2026051011,
