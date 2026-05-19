@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T03:50:17.923Z",
+  "savedAt": "2026-05-19T04:00:21.919Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -293,26 +293,30 @@
     },
     {
       "id": 202605073025,
-      "year": 2026,
-      "title": "Liver transplantation beyond or downstaging within Milan for HCC",
+      "year": 2018,
+      "title": "Liver transplantation beyond or downstaging within the Milan criteria for hepatocellular carcinoma",
       "country": "Worldwide",
-      "authors": "Rudnick-liver et al.",
-      "journal": "",
-      "url": "",
+      "authors": "Rudnick et al.",
+      "journal": "Expert Review of Gastroenterology & Hepatology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29231769/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Rudnick-Liver%20transplantation%20beyond%20or%20downstaging%20within%20Milan%20for%20HCC.pdf?csf=1&web=1&e=xm694i",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Rudnick-Liver transplantation beyond or downstaging within Milan for HCC.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• Expert commentary: Patients can be successfully transplanted with HCC beyond Milan criteria, or patients beyond Milan criteria can be downstaged to within Milan criteria and achieve successful post-liver transplant outcomes.",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Rudnick-Liver transplantation beyond or downstaging within Milan for HCC.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Transplantation",
       "product": "ns",
       "categories": [
-        "Resection"
+        "Resection / Transplantation",
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC"
       ]
     },
     {
@@ -4931,24 +4935,30 @@
     {
       "id": 202605073023,
       "year": 2017,
-      "title": "Hepatic artery and biliary complications in liverer transplant recipients with radioembolization bridging treatment for hepato",
-      "authors": "Radunz et al.",
-      "journal": "",
+      "title": "Hepatic artery and biliary complications in liver transplant recipients with radioembolization bridging treatment for hepatocellular carcinoma",
       "country": "Germany/Europe",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Radunz S_2017_Hepatic artery and biliary complications in liver transplant recipients with radioembolization bridging treatment for hepato.pdf",
-      "url": "",
+      "authors": "Radunz et al.",
+      "journal": "Clinical Transplantation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28836737/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Radunz%20S_2017_Hepatic%20artery%20and%20biliary%20complications%20in%20LT%20recipients%20with%20radioembolization%20bridging%20treatment%20for%20hepato.pdf?csf=1&web=1&e=D7BTNV",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Radunz S_2017_Hepatic artery and biliary complications in liver transplant recipients with radioembolization bridging treatment for hepato.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• Radioembolization bridging treatment was applied in 42 patients while 131 patients received other or no forms of bridging treatment.\n• In multivariable analysis, radioembolization was not significantly associated with an increased risk of arterial complications.\n• Considering biliary complications, radioembolization bridging treatment was the only factor significantly associated with decreased odds (OR 0.187 (0.039, 0.892), P =.036).\n• Radioembolization is not associated with higher odds of hepatic artery complications following liver transplantation.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Radunz S_2017_Hepatic artery and biliary complications in liver transplant recipients with radioembolization bridging treatment for hepato.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Complications",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 202605073050,
@@ -5002,24 +5012,31 @@
     {
       "id": 202605073024,
       "year": 2017,
-      "title": "Long Term Outcome After Liver Transplantation for Hepatocellular Carcinoma Following Yttrium 90 Radioembolization",
-      "authors": "Radunz et al.",
-      "journal": "",
+      "title": "Long-Term Outcome After Liver Transplantation for Hepatocellular Carcinoma Following Yttrium-90 Radioembolization Bridging Treatment",
       "country": "Germany/Europe",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Radunz S_2017_Long-Term Outcome After Liver Transplantation for Hepatocellular Carcinoma Following Yttrium-90 Radioembolization.pdf",
-      "url": "",
-      "pmcid": "",
+      "authors": "Radunz et al.",
+      "journal": "Annals of Transplantation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28408731/",
+      "pmcid": "PMC6248013",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Radunz%20S_2017_Long-Term%20Outcome%20After%20Liver%20Transplantation%20for%20Hepatocellular%20Carcinoma%20Following%20Yttrium-90%20Radioembolization.pdf?csf=1&web=1&e=YQ0EFg",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Radunz S_2017_Long-Term Outcome After Liver Transplantation for Hepatocellular Carcinoma Following Yttrium-90 Radioembolization.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• The mean dose administered to target site was 114±12 Gy in the right lobe and 108±17 Gy in the left lobe.\n• In nine patients, pre-treatment AFP was elevated above 200 IU/mL and five of those demonstrated an AFP response, i.e., >50% decline in baseline AFP after bridging treatment, resulting in a statistically significant decrease in AFP levels in this subgroup (p=0.0039).\n• Patients with viable tumor on explant specimen demonstrated significantly higher AFP levels prior to bridging treatment as well as significantly more frequently microvascular invasion (p=0.0425 and p=0.0041, respectively) (Table 1).\n• Survival: Median overall survival was 46 months (Figure 3).\n• Pre- and post-treatment AFP levels were statistically significantly higher among patients with tumor recurrence (p=0.0234 and p=0.0236, respectively) while patients without recurrence expressed stable AFP levels <20 IU/mL pre- and post-treatment.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Radunz S_2017_Long-Term Outcome After Liver Transplantation for Hepatocellular Carcinoma Following Yttrium-90 Radioembolization.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Transplantation",
+      "product": "glass",
+      "categories": [
+        "Resection / Transplantation",
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 2026050808,
