@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T05:59:41.977Z",
+  "savedAt": "2026-05-19T06:09:50.977Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -2896,13 +2896,13 @@
     {
       "id": 202605073034,
       "year": 2021,
-      "title": "2021 Portal Vein Embolization versus Y90 lobectomy for HCC bridge resection",
+      "title": "A comparative study of portal vein embolization versus radiation lobectomy with Yttrium-90 micropheres in preparation for liver resection for initially unresectable hepatocellular carcinoma",
       "country": "Worldwide",
       "authors": "Bekki et al.",
-      "journal": "",
-      "url": "",
+      "journal": "Journal of Surgery",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33648768/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Bekki%202021%20PVE%20versus%20Y90%20lobectomy%20for%20HCC%20bridge%20resection.pdf?csf=1&web=1&e=Wk8ywf",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Bekki 2021 PVE versus Y90 lobectomy for HCC bridge resection.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -2911,12 +2911,13 @@
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Bekki 2021 PVE versus Y90 lobectomy for HCC bridge resection.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "PVT",
       "product": "ns",
       "categories": [
-        "Resection",
+        "PVT",
         "Comparative",
-        "PVT"
+        "Resection",
+        "Resection / Lobectomy"
       ]
     },
     {
@@ -3154,30 +3155,6 @@
       ]
     },
     {
-      "id": 4,
-      "year": 2021,
-      "title": "Lung Shunt Fraction Thresholds and Radiation Pneumonitis After Y90 TARE",
-      "authors": "Kokabi N, et al.",
-      "journal": "CVIR",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "Complications",
-        "Dosimetry",
-        "Lung Shunt",
-        "MAA",
-        "Radiation Pneumonitis"
-      ],
-      "results": "LSF >20%: sensitivity 82%, specificity 67%",
-      "findings": "Traditional LSF cutoffs may overestimate pulmonary toxicity risk. Individualized lung dose calculation recommended.",
-      "notes": "",
-      "url": "",
-      "pmcid": "",
-      "abstract": "",
-      "primaryCategory": "Complications",
-      "reviewStatus": "AI Draft"
-    },
-    {
       "id": 202605072059,
       "year": 2021,
       "title": "Narrative review of the role of yttrium-90 selective internal radiation therapy in the surgical management of colorectal liver metastases",
@@ -3205,24 +3182,29 @@
     {
       "id": 202605073032,
       "year": 2021,
-      "title": "Radiation Lobectomy An Overview of Concept",
-      "authors": "Entezari et al.",
-      "journal": "",
+      "title": "Radiation Lobectomy: An Overview of Concept and Applications, Technical Considerations, Outcomes",
       "country": "USA",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/2021 Entezari Radiation Lobectomy An Overview of Concept.pdf",
-      "url": "",
-      "pmcid": "",
+      "authors": "Entezari et al.",
+      "journal": "Seminars in Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34629708/",
+      "pmcid": "PMC8497080",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/2021%20Entezari%20Radiation%20Lobectomy%20An%20Overview%20of%20Concept.pdf?csf=1&web=1&e=8CZtyB",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/2021 Entezari Radiation Lobectomy An Overview of Concept.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
+      "findings": "• Recently, lobar administration of yttrium-90 (Y90) radioembolization has been utilized to induce FLR hypertrophy while providing disease control, eventually facilitating resection in patients with hepatic malignancy.\n• This has been termed “radiation lobectomy (RL).” The concept is evolving, with modified approaches combining RL and high-dose curative-intent radioembolization (radiation segmentectomy) to achieve tumor ablation.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/2021 Entezari Radiation Lobectomy An Overview of Concept.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Lobectomy",
+      "product": "ns",
+      "categories": [
+        "Resection / Lobectomy",
+        "Resection",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 202605072018,
@@ -4224,25 +4206,27 @@
     {
       "id": 202605073033,
       "year": 2018,
-      "title": "Combination Ipsilateral Lobar and Segmental Radioembolization Using Glass Y90 Microspheres",
+      "title": "Combination Ipsilateral Lobar and Segmental Radioembolization Using Glass Yttrium-90 Microspheres for Treatment of Multifocal Hepatic Malignancies",
       "country": "Worldwide",
       "authors": "Arslan et al.",
-      "journal": "",
-      "url": "",
+      "journal": "Journal of Vascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30055781/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Lobectomy%20Resection/Arslan%20B%202018%20Combination%20Ipsilateral%20Lobar%20and%20Segmental%20Radioembolization%20Using%20Glass%20Y90%20Microspheres.pdf?csf=1&web=1&e=ooS2rV",
       "pdfFileName": "Resection/Curative Intent Lobectomy Resection/Arslan B 2018 Combination Ipsilateral Lobar and Segmental Radioembolization Using Glass Y90 Microspheres.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to radiation lobectomy, future liver remnant hypertrophy, or resection planning; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• Eight patients with primary (n = 6) and metastatic (n = 2) disease of the liver underwent yttrium-90 radioembolization with glass microspheres using a combination of segmental and ipsilateral lobar approach to treat multifocal tumors containing a single dominant tumor.\n• The superselective dose was administered to the dominant tumor, whereas lobar infusion was used for smaller tumors.\n• Assuming uniform distribution, median dose to the segment with dominant tumor was 412.3 Gy and to the remaining lobe was 117.5 Gy.",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Lobectomy Resection/Arslan B 2018 Combination Ipsilateral Lobar and Segmental Radioembolization Using Glass Y90 Microspheres.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Lobectomy",
       "product": "glass",
       "categories": [
-        "Resection"
+        "Resection / Lobectomy",
+        "Resection",
+        "Dosimetry"
       ]
     },
     {
