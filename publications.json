@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T03:20:00.898Z",
+  "savedAt": "2026-05-19T03:30:06.904Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -3339,48 +3339,56 @@
     {
       "id": 202605073015,
       "year": 2020,
-      "title": "2020 downstaging to transplant multicenter study",
+      "title": "Liver Transplantation Outcomes in a U.S. Multicenter Cohort of 789 Patients With Hepatocellular Carcinoma Presenting Beyond Milan Criteria",
       "country": "Worldwide",
       "authors": "Kardashian et al.",
-      "journal": "",
-      "url": "",
+      "journal": "Hepatology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32124453/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Kardashian%202020%20downstaging%20to%20transplant%20multicenter%20study.pdf?csf=1&web=1&e=x2GPKD",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Kardashian 2020 downstaging to transplant multicenter study.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• Clinicopathologic characteristics, overall survival (OS), recurrence-free survival (RFS), and HCC recurrence (HCC-R) were compared between patients within MC (n = 3,570) and beyond MC (n = 789) who were down-staged (DS, n = 465), treated with LRT and not down-staged (LRT-NoDS, n = 242), or untreated (NoLRT-NoDS, n = 82).\n• Five-year post-LT OS and RFS was higher in MC (71.3% and 68.2%) compared with DS (64.3% and 59.5%) and was lowest in NoDS (n = 324; 60.2% and 53.8%; overall P < 0.001).\n• 54%, P = 0.043) and lower 5-year HCC-R (18% vs.\n• Multivariate predictors of down-staging included alpha-fetoprotein response to LRT, pathologic tumor number and size, and wait time >12 months.\n• 26.1%, P < 0.001), even after controlling for clinicopathologic variables (hazard ratio [HR] = 2.33, P < 0.001) and inverse probability of treatment-weighted propensity matching (HR = 1.82, P < 0.001).",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Kardashian 2020 downstaging to transplant multicenter study.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Downstaging and Bridging",
       "product": "ns",
       "categories": [
-        "Resection"
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC"
       ]
     },
     {
       "id": 202605073013,
-      "year": 2020,
-      "title": "2020 Therasphere 15 year transplant outcomes",
-      "authors": "Gabr et al.",
-      "journal": "",
+      "year": 2021,
+      "title": "Liver Transplantation Following Yttrium-90 Radioembolization: 15-Year Experience in 207-Patient Cohort",
       "country": "USA",
-      "product": "glass",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Gabr 2020 Therasphere 15 year transplant outcomes.pdf",
-      "url": "",
+      "authors": "Gabr et al.",
+      "journal": "Hepatology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32416631/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Gabr%202021%20Therasphere%2015%20year%20transplant%20outcomes.pdf?csf=1&web=1&e=AXZxKr",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Gabr 2020 Therasphere 15 year transplant outcomes.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• Long-term outcomes, including overall survival (OS), recurrence-free survival (RFS), disease-specific mortality (DSM), and time-to-recurrence, were reported.\n• OS from LT was 12.5 years, with a median time to LT of 7.5 months [interquartile range, 4.4-10.3].\n• Three-year, 5-year, and 10-year OS rates were 84%, 77%, and 60%, respectively.\n• Twenty-four patients developed recurrence, with a median RFS of 120 (95% confidence interval, 69-150) months.\n• There were no differences in OS/RFS for patients who were bridged or downstaged.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Gabr 2020 Therasphere 15 year transplant outcomes.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 20260507003,
@@ -6582,24 +6590,29 @@
     {
       "id": 202605073014,
       "year": 2010,
-      "title": "Benefit of downsizing hepatocellular carcinoma in a liverer transplant population",
-      "authors": "Jang et al.",
-      "journal": "",
+      "title": "Benefit of downsizing hepatocellular carcinoma in a liver transplant population",
       "country": "Korea",
-      "product": "ns",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
-      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Jang JW_2010_Benefit of downsizing hepatocellular carcinoma in a liver transplant population.pdf",
-      "url": "",
+      "authors": "Jang et al.",
+      "journal": "Alimentary Pharmacology & Therapeutics",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19821808/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/Jang%20JW_2010_Benefit%20of%20downsizing%20hepatocellular%20carcinoma%20in%20a%20liver%20transplant%20population.pdf?csf=1&web=1&e=2kYETQ",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Jang JW_2010_Benefit of downsizing hepatocellular carcinoma in a liver transplant population.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
+      "findings": "• Multivariate analysis indentified alpha-fetoprotein (AFP) levels > or = 100 ng/mL at LT (P = 0.003), maximum tumour size > or = 7 cm (P = 0.002) and the lack of complete necrosis by TACL (P = 0.048) as independent predictors of HCC recurrence after LT.",
+      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Jang JW_2010_Benefit of downsizing hepatocellular carcinoma in a liver transplant population.pdf",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection / Downstaging and Bridging",
+      "product": "ns",
+      "categories": [
+        "Resection / Downstaging and Bridging",
+        "Resection",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 202605072032,
