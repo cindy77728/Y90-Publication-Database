@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T02:59:55.882Z",
+  "savedAt": "2026-05-19T03:09:56.898Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -840,24 +840,27 @@
     {
       "id": 202605071002,
       "year": 2025,
-      "title": "Radiation Segmentectomy for Early Hepatocellular Carcinoma is Curative",
+      "title": "Radiation segmentectomy for early hepatocellular carcinoma is curative",
+      "country": "USA",
       "authors": "Salem R, Padia SA, Toskich BB, Callahan JD, Fowers KD, Geller BS, Johnson GE, Kulik L, Patel TC, Lewandowski RJ, Kim E.",
       "journal": "Journal of Hepatology",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "HCC"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39855352/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Radiation%20segmentectomy/2025%20Salem%20Radiation%20Segmentectomy%20for%20Early%20Hepatocellular%20Carcinoma%20is%20Curative.pdf?csf=1&web=1&e=f7fLd9",
+      "pdfFileName": "Radiation segmentectomy/2024 Salem Radiation Segmentectomy for Early Hepatocellular Carcinoma is Curative.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Expert opinion/review arguing that RADSEG should be recognized as curative for selected early HCC patients, citing ablative tumor dosing, complete pathologic necrosis at >400 Gy, durable time-to-progression, low local recurrence, and comparable outcomes to ablation or surgery in selected patients.",
       "findings": "Strong positioning reference for curative-intent radiation segmentectomy in carefully selected very early/early HCC, especially non-ablatable tumors or challenging locations near critical structures.",
       "notes": "Journal pre-proof; DOI 10.1016/j.jhep.2025.01.005. Added from Radiation segmentectomy ZIP.",
-      "url": "https://doi.org/10.1016/j.jhep.2025.01.005",
-      "pmcid": "",
-      "pdfFileName": "Radiation segmentectomy/2024 Salem Radiation Segmentectomy for Early Hepatocellular Carcinoma is Curative.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "Radiation Segmentectomy",
+      "product": "glass",
+      "categories": [
+        "Radiation Segmentectomy",
+        "HCC"
+      ]
     },
     {
       "id": 2026150702,
@@ -1165,24 +1168,27 @@
       "id": 202605071003,
       "year": 2025,
       "title": "Yttrium-90 Radioembolization Has Become the Most Utilized Bridging Treatment for Liver Transplant Candidates in the United States",
+      "country": "USA",
       "authors": "Salem R, Kwong AJ, Kim N, Sze DY, Mehta N.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "Downstaging",
-        "HCC"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39522866/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Radiation%20segmentectomy/2025%20Salem%20Yttrium-90%20Radioembolization%20Has%20Become%20the%20Most%20Utilized%20Bridging%20Treatment%20for%20Liver%20Transplant%20Candidates%20in%20the%20United%20States.pdf?csf=1&web=1&e=yQnfnJ",
+      "pdfFileName": "Radiation segmentectomy/2024 Salem Yttrium-90 Radioembolization Has Become the Most Utilized Bridging Treatment for Liver Transplant Candidates in the United States.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Letter to the editor updating OPTN bridging/downstaging treatment trends. TARE was reported as the leading bridging modality in 2023 at approximately 35%, while TACE was second at approximately 30%.",
       "findings": "Useful strategic reference showing contemporary U.S. adoption of TARE as a major bridging therapy for liver transplant candidates with HCC, with relevance to radiation segmentectomy and complete pathologic necrosis discussions.",
       "notes": "Added from Radiation segmentectomy ZIP. DOI 10.1016/j.jvir.2024.10.034; published in JVIR Volume 36, February 2025.",
-      "url": "https://doi.org/10.1016/j.jvir.2024.10.034",
-      "pmcid": "",
-      "pdfFileName": "Radiation segmentectomy/2024 Salem Yttrium-90 Radioembolization Has Become the Most Utilized Bridging Treatment for Liver Transplant Candidates in the United States.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Downstaging"
+      "primaryCategory": "Radiation Segmentectomy",
+      "product": "ns",
+      "categories": [
+        "Radiation Segmentectomy",
+        "HCC",
+        "Downstaging"
+      ]
     },
     {
       "id": 2026150804,
@@ -2002,26 +2008,29 @@
     {
       "id": 202605073005,
       "year": 2023,
-      "title": "M et al 2023 LRT of HCC prior to LT comparison of CPN, response and recurrence",
+      "title": "Locoregional Therapies for Hepatocellular Carcinoma prior to Liver Transplant: Comparative Pathologic Necrosis, Radiologic Response, and Recurrence",
       "country": "Worldwide",
       "authors": "Mosenthal et al.",
-      "journal": "",
-      "url": "",
+      "journal": "The Journal of Vascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38123127/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/Curative%20Intent%20Downstaging%20and%20Bridging/2023%20Mosenthal%20M%20et%20al%202023%20LRT%20of%20HCC%20prior%20to%20LT%20comparison%20of%20CPN,%20response%20and%20recurrence.pdf?csf=1&web=1&e=NmlFpU",
       "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/2023 Mosenthal M et al 2023 LRT of HCC prior to LT comparison of CPN, response and recurrence.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Publication related to curative-intent downstaging or bridging strategy before resection/transplant; details should be manually verified against the full text.",
-      "findings": "Useful resection/downstaging/bridging reference for curative-intent Y90 positioning; entered as AI Draft until manual review.",
+      "findings": "• High dose 90Y radiation segmentectomy (≥190 Gy; n = 27) and TACE/ablation (n = 7) showed highest rates of complete pathologic necrosis (CPN)-63% (n = 17) and 71% (n = 5), respectively.\n• Patients with CPN had a mean lesion size of 2.5 cm, compared with 3.2 cm without CPN (P =.04), irrespective of LRT modality.\n• Radiation segmentectomy and multimodal therapy significantly improved CPN rates compared with TACE alone.\n• A LI-RADS treatment response of nonviable did not confidently predict CPN.",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/2023 Mosenthal M et al 2023 LRT of HCC prior to LT comparison of CPN, response and recurrence.pdf",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
+      "primaryCategory": "Resection / Downstaging and Bridging",
       "product": "ns",
       "categories": [
+        "Resection / Downstaging and Bridging",
+        "Comparative",
         "Resection",
-        "Comparative"
+        "Dosimetry",
+        "HCC"
       ]
     },
     {
@@ -2549,7 +2558,8 @@
       "categories": [
         "Comparative / Resection",
         "HCC",
-        "Safety"
+        "Safety",
+        "Resection"
       ]
     },
     {
@@ -2637,23 +2647,26 @@
       "id": 1,
       "year": 2022,
       "title": "Radiation segmentectomy for curative intent of unresectable very early to early stage hepatocellular carcinoma (RASER): a single-centre, single-arm study",
+      "country": "USA",
       "authors": "Kim E, Sher A, Abboud G, Schwartz M, Facciuto M, Tabrizian P, et al.",
       "journal": "The Lancet Gastroenterology & Hepatology",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Dosimetry"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35617978/",
+      "pmcid": "PMC10570824",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/RASER/2022%20RASER.pdf?csf=1&web=1&e=5P9Nf2",
+      "pdfFileName": "RASER/RASER.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Single-center, single-arm RASER study of 29 patients with solitary unresectable very early/early HCC unfavorable for ablation. Initial target lesion CR was 83% and PR was 17%; all patients had objective response and 90% had sustained complete response.",
       "findings": "Key prospective evidence supporting radiation segmentectomy as a potential curative-intent option for selected early HCC patients when ablation is unfavorable.",
       "notes": "Updated from older placeholder RASER entry using the Radiation segmentectomy ZIP PDF. Trial NCT03248375.",
-      "url": "https://doi.org/10.1016/S2468-1253(22)00091-7",
-      "pmcid": "PMC10570824",
       "abstract": "",
-      "pdfFileName": "RASER/RASER.pdf",
-      "pdfUrl": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Key Clinical Data / RASER",
+      "product": "glass",
+      "categories": [
+        "Key Clinical Data / RASER",
+        "Dosimetry"
+      ]
     },
     {
       "id": 20260507005,
@@ -5105,24 +5118,28 @@
       "id": 202605073003,
       "year": 2017,
       "title": "Safety and Efficacy of Y-90 Radioembolization After Prior Major Hepatic Resection",
-      "authors": "Zimmermann M, et al.",
-      "journal": "",
       "country": "Germany/Europe",
-      "product": "ns",
+      "authors": "Zimmermann M, et al.",
+      "journal": "CardioVascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28357572/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resection/2017%20zimmermann%20Safety%20and%20Efficacy%20of%20Y-90%20Radioembolization%20After%20Prior%20Major%20Hepatic%20Resection.pdf?csf=1&web=1&e=fV8rK3",
+      "pdfFileName": "Resection/2017 zimmermann Safety and Efficacy of Y-90 Radioembolization After Prior Major Hepatic Resection.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Study evaluating Y90 radioembolization after prior major hepatic resection.",
+      "findings": "• The mean volume of the liver remnant was 1.471 ± 341 ml, the mean administered amount of activity amounted to 1.31 ± 0.74 GBq, and the calculated mean absorbed dose was 42.8 ± 20.6 Gy.\n• The early response to treatment was generally positive, with only one patient showing signs of progressive disease of the treated area on follow-up examinations within the first 2 months post-RE.\n• None of the 15 patients developed a REILD.\n• Y-90 radioembolization following extended hepatic lobectomy appears to be safe and effective.\n• Although the standard BSA-based dosing seems to suffice to avoid REILD, it results in quite variable liver doses due to variable hypertrophy of the liver remnant post-hepatectomy.",
+      "notes": "Added from Resection ZIP. Source file: Resection/2017 zimmermann Safety and Efficacy of Y-90 Radioembolization After Prior Major Hepatic Resection.pdf",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
       "primaryCategory": "Resection",
+      "product": "resin",
       "categories": [
         "Resection",
-        "Complications"
-      ],
-      "results": "Study evaluating Y90 radioembolization after prior major hepatic resection.",
-      "findings": "Useful safety/efficacy reference for Y90 use in patients with prior major hepatic resection.",
-      "notes": "Added from Resection ZIP. Source file: Resection/2017 zimmermann Safety and Efficacy of Y-90 Radioembolization After Prior Major Hepatic Resection.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "Resection/2017 zimmermann Safety and Efficacy of Y-90 Radioembolization After Prior Major Hepatic Resection.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
+        "Complications",
+        "Dosimetry",
+        "Safety"
+      ]
     },
     {
       "id": 2026050602,
