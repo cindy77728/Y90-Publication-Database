@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T02:49:55.881Z",
+  "savedAt": "2026-05-19T02:59:55.882Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -816,24 +816,26 @@
       "id": 2026150705,
       "year": 2025,
       "title": "Radiation Pneumonitis after Yttrium-90 Radioembolization: A Systematic Review",
+      "country": "USA",
       "authors": "Kis B, Gyano M.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39428065/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Radiation%20Pneumonitis/2025%20Kis%20Radiation%20Pneumonitis%20after%20Yttrium-90.pdf?csf=1&web=1&e=CRxeZR",
+      "pdfFileName": "2025 Kis Radiation Pneumonitis after Yttrium-90.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Systematic review compiling 48 reported radiation pneumonitis cases after Y-90 radioembolization. Mortality was 40%; lung dose was higher in glass-treated cases than resin-treated cases, while hepatopulmonary shunt fraction was not significantly different between groups.",
+      "findings": "Important cautionary review arguing that fixed lung dose thresholds may not be uniformly applicable across devices and that shortcomings in hepatopulmonary shunt calculation should be addressed.",
+      "notes": "Added from PVT ZIP / Radiation Pneumonitis folder.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Radiation Pneumonitis",
       "product": "both",
       "categories": [
         "Radiation Pneumonitis",
         "Complications"
-      ],
-      "results": "Systematic review compiling 48 reported radiation pneumonitis cases after Y-90 radioembolization. Mortality was 40%; lung dose was higher in glass-treated cases than resin-treated cases, while hepatopulmonary shunt fraction was not significantly different between groups.",
-      "findings": "Important cautionary review arguing that fixed lung dose thresholds may not be uniformly applicable across devices and that shortcomings in hepatopulmonary shunt calculation should be addressed.",
-      "notes": "Added from PVT ZIP / Radiation Pneumonitis folder.",
-      "url": "https://doi.org/10.1016/j.jvir.2024.08.031",
-      "pmcid": "",
-      "pdfFileName": "2025 Kis Radiation Pneumonitis after Yttrium-90.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Radiation Pneumonitis"
+      ]
     },
     {
       "id": 202605071002,
@@ -1710,7 +1712,8 @@
         "Microsphere Coverage",
         "Dosimetry / Voxel-based",
         "HCC",
-        "Dosimetry"
+        "Dosimetry",
+        "Radiation Segmentectomy"
       ]
     },
     {
@@ -1844,30 +1847,6 @@
       ]
     },
     {
-      "id": 202605072028,
-      "year": 2023,
-      "title": "E Y90 lung primary liver mets",
-      "country": "Worldwide",
-      "authors": "Alexander et al.",
-      "journal": "",
-      "url": "",
-      "pmcid": "",
-      "pdfUrl": "",
-      "pdfFileName": "metastases/Lung cancer/2023 Alexander E Y90 lung primary liver mets.pdf",
-      "fullTextStatus": "auto",
-      "fullTextNote": "",
-      "results": "Study or review related to Y90 radioembolization for Lung cancer liver metastases / non-HCC liver tumors. Details should be manually verified from the full text.",
-      "findings": "Useful Lung cancer reference for non-HCC/metastases positioning; entered as AI Draft and should be checked against the full paper before external use.",
-      "notes": "Added from metastases ZIP. Source file: metastases/Lung cancer/2023 Alexander E Y90 lung primary liver mets.pdf",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry",
-      "product": "ns",
-      "categories": [
-        "Dosimetry"
-      ]
-    },
-    {
       "id": 2026050708,
       "year": 2023,
       "title": "Evolution of Personalized Dosimetry for Radioembolization of Hepatocellular Carcinoma",
@@ -1992,7 +1971,8 @@
       "product": "both",
       "categories": [
         "Laboratory Investigation",
-        "Safety"
+        "Safety",
+        "Radiation Safety & Handling"
       ]
     },
     {
@@ -2099,26 +2079,28 @@
     {
       "id": 2026150704,
       "year": 2023,
-      "title": "Radiation Pneumonitis Following Yttrium-90 Radioembolization: A Korean Multicenter Study",
+      "title": "Radiation pneumonitis following Yttrium-90 radioembolization: A Korean multicenter study",
+      "country": "Korea",
       "authors": "Kim HC, Kim GM.",
       "journal": "Frontiers in Oncology",
-      "country": "Korea",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36726383/",
+      "pmcid": "PMC9885146",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Radiation%20Pneumonitis/2023%20Kim%20Radiation%20pneumonitis%20following%20Yttrium-90%20radioembolization.pdf?csf=1&web=1&e=8JfwxX",
+      "pdfFileName": "2023 Kim Radiation pneumonitis following Yttrium-90 radioembolization.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Retrospective Korean multicenter study evaluating symptomatic radiation pneumonitis after radioembolization among 782 consecutive patients treated between 2009 and 2021 using glass and resin microspheres with MIRD or partition dosimetry approaches.",
+      "findings": "Useful safety reference for lung toxicity risk after Y-90 radioembolization and for discussions around lung dose estimation, monitoring, and prevention of clinically meaningful radiation pneumonitis.",
+      "notes": "Added from PVT ZIP / Radiation Pneumonitis folder.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Radiation Pneumonitis",
       "product": "both",
       "categories": [
         "Radiation Pneumonitis",
         "Complications",
         "Safety"
-      ],
-      "results": "Retrospective Korean multicenter study evaluating symptomatic radiation pneumonitis after radioembolization among 782 consecutive patients treated between 2009 and 2021 using glass and resin microspheres with MIRD or partition dosimetry approaches.",
-      "findings": "Useful safety reference for lung toxicity risk after Y-90 radioembolization and for discussions around lung dose estimation, monitoring, and prevention of clinically meaningful radiation pneumonitis.",
-      "notes": "Added from PVT ZIP / Radiation Pneumonitis folder.",
-      "url": "https://doi.org/10.3389/fonc.2023.977160",
-      "pmcid": "",
-      "pdfFileName": "2023 Kim Radiation pneumonitis following Yttrium-90 radioembolization.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Radiation Pneumonitis"
+      ]
     },
     {
       "id": 2026050907,
@@ -3986,24 +3968,30 @@
     {
       "id": 202605071001,
       "year": 2019,
-      "title": "Radiation segmentectomy for hepatic malignancies: Indications, devices, dosimetry, procedure, clinical outcomes, and toxicity",
+      "title": "Radiation segmentectomy for hepatic malignancies: Indications, devices, dosimetry, procedure, clinical outcomes, and toxicity of yttrium-90 microspheres",
+      "country": "China",
       "authors": "Zhongzhi J, et al.",
       "journal": "Journal of Interventional Medicine",
-      "country": "China",
-      "product": "glass",
-      "categories": [
-        "Dosimetry"
-      ],
-      "results": "Review article summarizing radiation segmentectomy indications, device considerations, dosimetry, procedural technique, clinical outcomes, and toxicity for hepatic malignancies.",
-      "findings": "Useful background review explaining radiation segmentectomy as selective high-dose Y-90 delivery to limited liver segments, with emphasis on glass microspheres for small-volume, high-activity administrations.",
-      "notes": "Added from Radiation segmentectomy ZIP. Manually verify final author spelling before external use.",
-      "url": "",
-      "pmcid": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34805860/",
+      "pmcid": "PMC8562265",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Radiation%20segmentectomy/2019%20Zhongzhi%20Radiation%20segmentectomy%20for%20hepatic%20malignancies%20Indications,%20devices,.pdf?csf=1&web=1&e=L3Odq1",
       "pdfFileName": "Radiation segmentectomy/2019 Zhongzhi Radiation segmentectomy for hepatic malignancies Indications, devices,.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Review article summarizing radiation segmentectomy indications, device considerations, dosimetry, procedural technique, clinical outcomes, and toxicity for hepatic malignancies.",
+      "findings": "• RS therapy involves superselective administration of Y-90 microspheres to hepatic malignancies.\n• With this technique, a high dose of radiation is delivered to the target tumor and surrounding parenchyma, thus increasing the tumoricidal effect while minimizing side effects.\n• The funder had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.",
+      "notes": "Added from Radiation segmentectomy ZIP. Manually verify final author spelling before external use.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Radiation Segmentectomy",
+      "product": "resin",
+      "categories": [
+        "Radiation Segmentectomy",
+        "Dosimetry",
+        "HCC",
+        "Safety",
+        "Resin"
+      ]
     },
     {
       "id": 202605072022,
