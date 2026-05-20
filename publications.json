@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T08:42:30.103Z",
+  "savedAt": "2026-05-20T08:52:32.121Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -1778,24 +1778,26 @@
     {
       "id": 202605073026,
       "year": 2024,
-      "title": "Y90 Radioembolization Is Becoming the Most Utilized Bridging Locoregional Therapy for Liver Transplant Candidates in the United States",
+      "title": "Yttrium-90 Radioembolization Has Become the Most Utilized Bridging Treatment for Liver Transplant Candidates in the United States",
+      "country": "USA",
       "authors": "Salem R, et al.",
       "journal": "JVIR",
-      "country": "USA",
-      "product": "glass",
-      "primaryCategory": "Resection",
-      "categories": [
-        "Resection"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39522866/",
+      "pmcid": "",
+      "pdfUrl": "",
+      "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Salem 2024 Y90 Bridging LRT of Choice.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Letter/commentary describing the increasing use of Y90 as bridging LRT for transplant candidates in the United States.",
       "findings": "Useful modern positioning reference for Y90 as a bridging locoregional therapy before liver transplantation.",
       "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Salem 2024 Y90 Bridging LRT of Choice.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Salem 2024 Y90 Bridging LRT of Choice.pdf",
-      "pdfUrl": "",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resection",
+      "product": "glass",
+      "categories": [
+        "Resection"
+      ]
     },
     {
       "id": 2026050705,
@@ -2432,25 +2434,30 @@
     {
       "id": 2026150802,
       "year": 2022,
-      "title": "Clinical consensus statement: Selective internal radiation therapy with yttrium-90 resin microspheres for hepatocellular carcinoma in Asia",
+      "title": "Clinical consensus statement: Selective internal radiation therapy with yttrium 90 resin microspheres for hepatocellular carcinoma in Asia",
+      "country": "Asia-Pacific",
       "authors": "Liu DM, Leung TWT, Chow PKH, et al.",
       "journal": "International Journal of Surgery",
-      "country": "Asia / Multicountry",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35662438/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resin/2022%20Liu%20Clinical%20consensus%20statement%20Selective%20internal%20radiation%20therapy%20with%20yttrium%2090%20resin%20microspheres%20for%20HCC%20in%20Asia.pdf?csf=1&web=1&e=2MuHs5",
+      "pdfFileName": "2022 Liu Clinical consensus statement Selective internal radiation therapy with yttrium 90 resin microspheres for HCC in Asia.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Systematic literature review plus modified Delphi process with 10 Asian experts; provides Asia-specific recommendations and a patient selection algorithm for Y90 resin SIRT in HCC.",
+      "findings": "• The experts acknowledged a general lack of evidence relating to use of SIRT in Asia and identified as an unmet need the lack of phase 3 randomized trials comparing clinical outcomes and survival following SIRT versus other therapies for HCC.\n• Through an iterative process, the expert group explored areas of clinical relevance and generated 31 guidance statements and a patient management algorithm that achieved consensus.\n• These recommendations aim to support clinicians in their decision-making and to help them identify and treat patients with HCC using SIRT in Asia.\n• The recommendations also highlight areas in which further clinical trials are needed to define the role of SIRT in management of HCC among Asian populations.",
+      "notes": "Consensus statement for resin microspheres; keep product-specific language clear.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resin",
       "product": "resin",
       "categories": [
+        "Resin",
+        "Guidelines",
+        "Asian Data",
         "HCC",
-        "Resin"
-      ],
-      "primaryCategory": "HCC",
-      "results": "Systematic literature review plus modified Delphi process with 10 Asian experts; provides Asia-specific recommendations and a patient selection algorithm for Y90 resin SIRT in HCC.",
-      "findings": "Useful regional consensus resource for Asia-specific resin SIRT indications, multidisciplinary decision-making, and patient selection framing.",
-      "notes": "Consensus statement for resin microspheres; keep product-specific language clear.",
-      "url": "https://doi.org/10.1016/j.ijsu.2021.106094",
-      "pmcid": "",
-      "pdfFileName": "2022 Liu Clinical consensus statement Selective internal radiation therapy with yttrium 90 resin microspheres for HCC in Asia.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
+        "Dosimetry"
+      ]
     },
     {
       "id": 2026050711,
@@ -2539,24 +2546,27 @@
       "country": "Europe",
       "authors": "Weber M, Lam M, Chiesa C, et al.",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
-      "url": "https://doi.org/10.1007/s00259-021-05600-z",
-      "pmcid": "",
-      "pdfUrl": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35146577/",
+      "pmcid": "PMC8940802",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Guideline/2021%20Weber%20EANM%20procedure%20guideline%20for%C2%A0the%C2%A0treatment%20of%C2%A0liver%20cancer%20and%C2%A0liver%20metastases.pdf?csf=1&web=1&e=yirpHl",
       "pdfFileName": "2021 Weber EANM procedure guideline for#U00a0the#U00a0treatment of#U00a0liver cancer and#U00a0liver metastases.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "EANM procedure guideline for nuclear medicine physicians treating liver cancer and liver metastases with intra-arterial radioactive compounds. The guideline covers patient selection, planning, treatment workflow, safety, and the role of personalized dosimetry.",
-      "findings": "Core guideline reference for radioembolization practice. Particularly useful for guideline-safe statements on multidisciplinary decision-making, patient selection, and personalized dosimetry.",
+      "findings": "• The vast potential of personalized dosimetry has also been shown, resulting in markedly increased response rates and overall survival.\n• The purpose of this guideline is to assist nuclear medicine physicians in:Patient selection: evaluating patients who might be candidates for treatment using intra-arterial radioactive microspheres for primary or secondary liver cancer.Treatment procedures: providing information on treatment methods.Clinical follow-up: understanding and evaluating efficacy…\n• Potentially, at the same prescribed activity, the higher number of resin microspheres may provide a more uniform dose distribution, with a higher biological effect (i.e. toxicity and efficacy), with 166Ho-microspheres falling in between.\n• Resin microspheres are also available at higher specific activity, the so-called 1-, 2- or 3-day calibration, with 3 GBq activity calibrated at day 0, but supplied days before to increase specific activity.\n• In an analysis of over 1000 patients with primary and metastatic liver neoplasms prospectively included in the observational study ‘CIRSE Registry for SIR-Spheres® Therapy (CIRT)’, low overall survival (OS) was mainly associated with extrahepatic dise",
       "notes": "Added from Guideline folder in hypo/hyper tumor ZIP. Published online 2022 from accepted 2021 guideline work.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry",
+      "primaryCategory": "Guidelines / EANM",
       "product": "both",
       "categories": [
-        "Dosimetry",
         "Guidelines / EANM",
         "Dosimetry / Treatment Planning",
-        "HCC"
+        "HCC",
+        "Dosimetry",
+        "Safety",
+        "Mapping / Failed Evaluation",
+        "Resin"
       ]
     },
     {
