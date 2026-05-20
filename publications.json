@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T08:22:22.375Z",
+  "savedAt": "2026-05-20T08:32:27.096Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -2373,23 +2373,25 @@
       "country": "Worldwide",
       "authors": "Lam M, Garin E, Maccauro M, Kappadath SC, Sze DY, et al.",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
-      "url": "https://doi.org/10.1007/s00259-022-05774-0",
-      "pmcid": "",
-      "pdfUrl": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35394152/",
+      "pmcid": "PMC9308596",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/TARGET/TARGET.pdf?csf=1&web=1&e=p2imVA",
       "pdfFileName": "TARGET/TARGET.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Retrospective global multicenter study evaluating relationships between tumor absorbed dose, normal tissue absorbed dose, and clinical outcomes in HCC treated with Y90 glass microspheres.",
-      "findings": "Key multicenter dosimetry reference supporting tumor and normal tissue absorbed dose as central variables for outcome and safety in glass Y90 TARE.",
+      "findings": "• 2Logistic regression curve of probability of alpha fetoprotein (AFP) response 90 days post-treatment by tumor absorbed dose (TAD) for patients with baseline AFP levels of ≥ 200 ng/mL Logistic regression curve of probability of alpha fetoprotein (AFP) response 90 days post-treatment by tumor absorbed dose (TAD) for patients with baseline AFP levels of ≥ 200…\n• Using Cox regression, a significant difference in OS was found across the 3 dose subgroups (p = 0.0052) and specifically between patients who had a TAD < 200 Gy and those with a TAD > 300 Gy (p = 0.0014; Fig.\n• Adverse events: Of the 209 patients included, 131 (62.7%) experienced at least one treatment-related adverse event; of these, 43 (20.6%) patients experienced at least one treatment-related adverse event of grade 3 or higher (Table 3).\n• Multi-compartment dosimetry involves the evaluation of both TAD and NTAD to achieve a balance in safety (NTAD) and efficacy (TAD) and is particularly beneficial in patients undergoing large liver fraction infusions [1, 17].\n• While an association between NTAD and occurrence of ≥ grade 3 hyperbilirubinemia was not identified, recent publications demonstrated that a higher NTAD was well",
       "notes": "Added from ROWAN ZIP. DOI 10.1007/s00259-022-05774-0.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry",
+      "primaryCategory": "Key Clinical Data / TARGET",
       "product": "glass",
       "categories": [
-        "Dosimetry",
+        "Key Clinical Data / TARGET",
         "HCC",
-        "Safety"
+        "Safety",
+        "Dosimetry",
+        "Mapping / Failed Evaluation"
       ]
     },
     {
@@ -3000,23 +3002,27 @@
       "id": 202605071111,
       "year": 2021,
       "title": "Assessment of radiation sensitivity of unresectable intrahepatic cholangiocarcinoma in a series of patients submitted to radioembolization with yttrium-90 resin microspheres",
+      "country": "Italy",
       "authors": "Depalo T, Traino AC, Bargellini I, et al.",
       "journal": "Scientific Reports",
-      "country": "Italy",
-      "product": "resin",
-      "categories": [
-        "Dosimetry"
-      ],
-      "results": "Series evaluating radiation sensitivity and dosimetric relationships in unresectable intrahepatic cholangiocarcinoma treated with Y90 resin microspheres.",
-      "findings": "Useful ICC-focused dosimetry paper for discussions on dose-response and tumor radiosensitivity beyond HCC.",
-      "notes": "Added from ROWAN ZIP. DOI 10.1038/s41598-021-99219-7.",
-      "url": "https://doi.org/10.1038/s41598-021-99219-7",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34611210/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Simplicity/Depalo%202021%20ICC%20dosimetry%20y90%20resin.pdf?csf=1&web=1&e=H5eeca",
       "pdfFileName": "Simplicity/Depalo 2021 ICC dosimetry y90 resin.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Series evaluating radiation sensitivity and dosimetric relationships in unresectable intrahepatic cholangiocarcinoma treated with Y90 resin microspheres.",
+      "findings": "• The essential implementation of the absorbed dose calculation methods should take into account also the specific tumor radiosensitivity, expressed by the α parameter.\n• Tumor absorbed doses were calculated processing the post-therapeutic 90Y-PET/CT images and the pre-treatment contrast-enhanced CT scans.\n• Tumor absorbed dose and pre- and post-treatment tumor volumes were used to calculate α and α3D parameters (dividing targeted liver in n voxels of the same volume with specific voxel absorbed dose).\n• The median of tumor average absorbed dose was 93 Gy (95% CI 81-119) and its correlation with the residual tumor mass was statistically significant.\n• The median of α and α3D parameters was 0.005 Gy-1 (95% CI 0.004-0.008) and 0.007 Gy-1 (95% CI 0.005-0.015), respectively.",
+      "notes": "Added from ROWAN ZIP. DOI 10.1038/s41598-021-99219-7.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Metastases / Intrahepatic Cholangiocarcinoma (ICC)",
+      "product": "resin",
+      "categories": [
+        "Metastases / Intrahepatic Cholangiocarcinoma (ICC)",
+        "Dosimetry",
+        "Resin"
+      ]
     },
     {
       "id": 2026151006,
@@ -3069,31 +3075,9 @@
         "Metastases / Metastatic Colorectal Cancer (mCRC)",
         "Complications",
         "Dosimetry",
-        "Safety"
+        "Safety",
+        "Simplicity"
       ]
-    },
-    {
-      "id": 202605071110,
-      "year": 2021,
-      "title": "Dose–Response and Dose–Toxicity Relationships for Glass 90Y Radioembolization in Patients with Liver Metastases from Colorectal Cancer",
-      "authors": "Alsultan AA, van Roekel C, Barentsz MW, et al.",
-      "journal": "Journal of Nuclear Medicine",
-      "country": "Netherlands",
-      "product": "glass",
-      "categories": [
-        "Dosimetry",
-        "Safety"
-      ],
-      "results": "Personalized-treatment dosimetry analysis exploring dose-response and dose-toxicity relationships for glass Y90 radioembolization in colorectal liver metastases.",
-      "findings": "Important non-HCC dosimetry reference showing that absorbed dose relationships are relevant for both efficacy and toxicity in CRLM treated with glass microspheres.",
-      "notes": "Added from ROWAN ZIP. DOI 10.2967/jnumed.120.255745.",
-      "url": "https://doi.org/10.2967/jnumed.120.255745",
-      "pmcid": "",
-      "pdfFileName": "Simplicity/Alsultan 2021-Dose#U2013Response and Dose#U2013Toxicity Relationships for Glass.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
     },
     {
       "id": 2026050702,
@@ -4204,23 +4188,25 @@
       "id": 202605071109,
       "year": 2019,
       "title": "The value of yttrium-90 PET/CT after hepatic radioembolization: a pictorial essay",
+      "country": "Netherlands",
       "authors": "Alsultan AA, Smits MLJ, Barentsz MW, Braat AJA, Lam MGEH.",
       "journal": "Clinical and Translational Imaging",
-      "country": "Netherlands",
-      "product": "both",
-      "categories": [
-        "Dosimetry"
-      ],
+      "url": "https://doi.org/10.1007/s40336-019-00335-2",
+      "pmcid": "",
+      "pdfUrl": "https://doi.org/10.1007/s40336-019-00335-2",
+      "pdfFileName": "Simplicity/Alsultan 2019 Value of post Y90 PET CT pictoral essay.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Pictorial essay demonstrating clinical applications of Y90 PET/CT after radioembolization using illustrative cases treated with glass and resin microspheres.",
       "findings": "Helpful teaching reference showing how post-treatment PET/CT can visualize microsphere distribution, explain response/toxicity, and support post-treatment assessment.",
       "notes": "Added from ROWAN ZIP. DOI 10.1007/s40336-019-00335-2.",
-      "url": "https://doi.org/10.1007/s40336-019-00335-2",
-      "pmcid": "",
-      "pdfFileName": "Simplicity/Alsultan 2019 Value of post Y90 PET CT pictoral essay.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Simplicity",
+      "product": "both",
+      "categories": [
+        "Simplicity"
+      ]
     },
     {
       "id": 202605072017,
@@ -6056,24 +6042,28 @@
       "id": 202605071113,
       "year": 2014,
       "title": "Multiple Arteries Supplying a Single Tumor Vascular Distribution: Microsphere Administration Options for the Interventional Radiologist Performing Radioembolization",
+      "country": "USA",
       "authors": "Gaba RC, Knuttinen MG, Minocha J, Ray CE Jr.",
       "journal": "Seminars in Interventional Radiology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "Mapping",
-        "Dosimetry / Treatment Planning"
-      ],
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4078137/",
+      "pmcid": "PMC4078137",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/technical/2014%20Ray%20Multiple%20arteries%20supplying%20a%20single%20tumor%20vascular%20distribution%20microsphere%20administration%20options%20for%20the%20interventional%20radiologist%20performing%20radioembolization.pdf?csf=1&web=1&e=QWGeTM",
+      "pdfFileName": "technical/2014 Ray Multiple arteries supplying a single tumor vascular distribution microsphere administration options for the interventional radiologist performing radioembolization.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Technical article describing microsphere administration options when multiple arteries supply a single tumor vascular distribution during radioembolization.",
       "findings": "Practical technical reference for complex arterial anatomy and treatment planning when tumor supply cannot be simplified to one feeder vessel.",
       "notes": "Added from ROWAN ZIP. DOI 10.1055/s-0034-1373794.",
-      "url": "https://doi.org/10.1055/s-0034-1373794",
-      "pmcid": "",
-      "pdfFileName": "technical/2014 Ray Multiple arteries supplying a single tumor vascular distribution microsphere administration options for the interventional radiologist performing radioembolization.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Mapping"
+      "primaryCategory": "Technical",
+      "product": "ns",
+      "categories": [
+        "Technical",
+        "Dosimetry / Treatment Planning",
+        "Mapping",
+        "Dosimetry"
+      ]
     },
     {
       "id": 20260507009,
@@ -6629,21 +6619,25 @@
       "id": 202605071116,
       "year": 2011,
       "title": "Pressure generated by syringes: implications for hydrodissection and injection of dense connective tissue lesions",
+      "country": "USA",
       "authors": "Hayward WAP, Haseler LJ, Kettwich LG, Michael AA, Sibbitt WL Jr, Bankhurst AD.",
       "journal": "Scandinavian Journal of Rheumatology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [],
-      "results": "General technical paper evaluating pressure generated by syringes and implications for injection into dense tissue lesions.",
-      "findings": "Not Y90-specific, but can support general understanding of syringe pressure and injection mechanics when discussing device handling or pressure-related workflow concepts.",
-      "notes": "Added from ROWAN ZIP under injection pressure folder. General injection-pressure reference; not a radioembolization clinical paper. DOI 10.3109/03009742.2011.560892.",
-      "url": "https://doi.org/10.3109/03009742.2011.560892",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21469942/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/technical/injection%20pressure/2011%20Hayward%20Pressure%20generated%20by%20syringes%20implications%20for%20hydrodissection%20and.pdf?csf=1&web=1&e=7FAAmU",
       "pdfFileName": "technical/injection pressure/2011 Hayward Pressure generated by syringes implications for hydrodissection and.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "General technical paper evaluating pressure generated by syringes and implications for injection into dense tissue lesions.",
+      "findings": "• Smaller syringes generated significantly more injection pressure than did larger syringes: 1 mL (363 ± 197 psi), 3 mL (177 ± 96 psi), 5 mL (73 ± 40 psi), 10 mL (53 ± 29 psi), 20 mL (32 ± 18 psi), and 60 mL (19 ± 12 psi).\n• Similarly, smaller syringes were superior to larger syringes for intralesional injection success: 10 mL: 34% (15/44) vs.\n• 1 mL: 100% (70/70) (p < 0.001) and 3 mL: 91% (99/109) (p < 0.001).\n• Smaller syringes (≤ 3 mL) are superior to larger syringes (≥ 5 mL) for successful hydrodissection and high-pressure intralesional injection of dense connective tissue lesions.",
+      "notes": "Added from ROWAN ZIP under injection pressure folder. General injection-pressure reference; not a radioembolization clinical paper. DOI 10.3109/03009742.2011.560892.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": ""
+      "primaryCategory": "Technical / Injection Pressure",
+      "product": "ns",
+      "categories": [
+        "Technical / Injection Pressure"
+      ]
     },
     {
       "id": 20260507013,
