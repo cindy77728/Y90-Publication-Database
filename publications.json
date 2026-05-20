@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T08:12:22.359Z",
+  "savedAt": "2026-05-20T08:22:22.375Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -1538,24 +1538,27 @@
       "id": 202605071108,
       "year": 2024,
       "title": "Phantom study for 90Y liver radioembolization dosimetry with a long axial field-of-view PET/CT",
+      "country": "Switzerland",
       "authors": "Mercolli L, Zeimpekis K, Prenosil GA, et al.",
       "journal": "Physica Medica",
-      "country": "Switzerland",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38281409/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Simplicity/2024%20Mercolli%20Phantom%20study%20for%2090Y%20liver%20radioembolization%20dosimetry%20with%20a%20long%20axial%20field%20of%20view%20PET%20CT.pdf?csf=1&web=1&e=PgxeNv",
+      "pdfFileName": "Simplicity/2024 Mercolli Phantom study for 90Y liver radioembolization dosimetry with a long axial field of view PET CT.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Phantom study comparing Monte Carlo dose calculation with commercial dosimetry software approaches using long axial field-of-view PET/CT for Y90 liver radioembolization.",
+      "findings": "• The image-based dose calculation with Hermes, however, consistently underestimates the dose.\n• We found that only for the smallest phantom sphere there is a statistically significant dependence of the Hermes dose on the image reconstruction parameters and scan time.\n• Our study shows that Simplicit90Y's local deposition model can provide a reliable dose estimate.\n• On the other hand, the image based dose calculation suffers from the suboptimal reconstruction of the 90Y distribution in small structures.",
+      "notes": "Added from ROWAN ZIP. DOI 10.1016/j.ejmp.2024.103296.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
       "product": "ns",
       "categories": [
         "Dosimetry",
-        "Radiation Safety & Handling"
-      ],
-      "results": "Phantom study comparing Monte Carlo dose calculation with commercial dosimetry software approaches using long axial field-of-view PET/CT for Y90 liver radioembolization.",
-      "findings": "Useful technical validation reference for post-treatment Y90 PET/CT dosimetry and software-based dose calculation workflows.",
-      "notes": "Added from ROWAN ZIP. DOI 10.1016/j.ejmp.2024.103296.",
-      "url": "https://doi.org/10.1016/j.ejmp.2024.103296",
-      "pmcid": "",
-      "pdfFileName": "Simplicity/2024 Mercolli Phantom study for 90Y liver radioembolization dosimetry with a long axial field of view PET CT.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+        "Radiation Safety & Handling",
+        "Simplicity"
+      ]
     },
     {
       "id": 202605073102,
@@ -1765,7 +1768,8 @@
         "Dosimetry / Voxel-based",
         "HCC",
         "Dosimetry",
-        "Radiation Segmentectomy"
+        "Radiation Segmentectomy",
+        "Simplicity"
       ]
     },
     {
@@ -2031,25 +2035,28 @@
       "id": 202605071106,
       "year": 2023,
       "title": "Lung shunt fraction calculations before Y-90 transarterial radioembolization: Comparison of accuracy and clinical significance of planar scintigraphy and SPECT/CT",
+      "country": "USA",
       "authors": "Young S, Flanagan S, D’Souza D, et al.",
       "journal": "Diagnostic and Interventional Imaging",
-      "country": "USA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36604211/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Simplicity/2023%20Diagnostic%20Interventional%20Imaging_LSF.pdf?csf=1&web=1&e=EFYcWY",
+      "pdfFileName": "Simplicity/2023 Diagnostic Interventional Imaging_LSF.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Comparison of planar scintigraphy and SPECT/CT approaches for lung shunt fraction calculation before Y90 TARE.",
+      "findings": "Useful technical reference for why LSF methodology matters and why planar versus SPECT/CT estimates may have different clinical implications.",
+      "notes": "Added from ROWAN ZIP. DOI 10.1016/j.diii.2022.12.002.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Lung Shunt",
       "product": "ns",
       "categories": [
         "Lung Shunt",
         "Mapping",
-        "Dosimetry"
-      ],
-      "results": "Comparison of planar scintigraphy and SPECT/CT approaches for lung shunt fraction calculation before Y90 TARE.",
-      "findings": "Useful technical reference for why LSF methodology matters and why planar versus SPECT/CT estimates may have different clinical implications.",
-      "notes": "Added from ROWAN ZIP. DOI 10.1016/j.diii.2022.12.002.",
-      "url": "https://doi.org/10.1016/j.diii.2022.12.002",
-      "pmcid": "",
-      "pdfFileName": "Simplicity/2023 Diagnostic Interventional Imaging_LSF.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Lung Shunt"
+        "Dosimetry",
+        "Simplicity"
+      ]
     },
     {
       "id": 202605073005,
@@ -2263,25 +2270,28 @@
       "id": 202605071107,
       "year": 2023,
       "title": "Voxel-Based Dosimetry Predicts Hepatotoxicity in Hepatocellular Carcinoma Patients Undergoing Radioembolization with 90Y Glass Microspheres",
+      "country": "Germany / USA",
       "authors": "Watanabe M, Grafe H, Theysohn J, et al.",
       "journal": "Journal of Nuclear Medicine",
-      "country": "Germany / USA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37290792/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Simplicity/2023%20Watanabe%20voxel%20based%20heaptotoxicity%20with%20Y90%20glass%20microspheres.pdf?csf=1&web=1&e=GLS93Z",
+      "pdfFileName": "Simplicity/2023 Watanabe voxel based heaptotoxicity with Y90 glass microspheres.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Voxel-based dosimetry study evaluating prediction of hepatotoxicity in HCC patients undergoing Y90 glass microsphere radioembolization.",
+      "findings": "• The area under the curve for prediction of posttherapeutic grade 3+ increases in bilirubin was acceptable for V20 (0.77), V30 (0.78), and V40 (0.79), whereas it was low for AD-WNTLT (0.67).\n• The respective thresholds were 78% (V30), 72% (V40), and 43 Gy (AD-30).\n• Voxel-based dosimetry may more accurately predict hepatotoxicity than multicompartment dosimetry in HCC patients undergoing radioembolization, which could enable dose escalation or deescalation with the intent to optimize treatment response.",
+      "notes": "Added from ROWAN ZIP. DOI 10.2967/jnumed.122.264996.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
       "product": "glass",
       "categories": [
         "Dosimetry",
         "Safety",
-        "HCC"
-      ],
-      "results": "Voxel-based dosimetry study evaluating prediction of hepatotoxicity in HCC patients undergoing Y90 glass microsphere radioembolization.",
-      "findings": "Important safety-oriented dosimetry paper linking spatial dose metrics with hepatotoxicity risk after glass Y90 treatment.",
-      "notes": "Added from ROWAN ZIP. DOI 10.2967/jnumed.122.264996.",
-      "url": "https://doi.org/10.2967/jnumed.122.264996",
-      "pmcid": "",
-      "pdfFileName": "Simplicity/2023 Watanabe voxel based heaptotoxicity with Y90 glass microspheres.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+        "HCC",
+        "Simplicity"
+      ]
     },
     {
       "id": 2026150803,
@@ -3618,24 +3628,26 @@
       "id": 202605071105,
       "year": 2020,
       "title": "Selective internal radiation therapy of hepatic tumors: Morphologic and functional imaging for voxel-based computer-aided dosimetry",
+      "country": "France / Italy",
       "authors": "Skanjeti A, Magand N, Defez D, et al.",
       "journal": "Biomedicine & Pharmacotherapy",
-      "country": "France / Italy",
-      "product": "both",
-      "categories": [
-        "Dosimetry",
-        "Dosimetry / Treatment Planning"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33254427/",
+      "pmcid": "PMC9086651",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Simplicity/2020%20Skanjeti%20SIRT%20morphologic%20and%20functional%20imaging%20voxel%20based%20dosimetry.pdf?csf=1&web=1&e=aQXjMz",
+      "pdfFileName": "Simplicity/2020 Skanjeti SIRT morphologic and functional imaging voxel based dosimetry.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Study evaluating morphologic and functional imaging methods for voxel-based computer-aided dosimetry in SIRT of hepatic tumors.",
       "findings": "Supports the practical role of voxel-level imaging information for more individualized post-treatment assessment and dosimetry-oriented interpretation after SIRT.",
       "notes": "Added from ROWAN ZIP. Duplicate PDF copy in ZIP was skipped. DOI 10.1016/j.biopha.2020.110865.",
-      "url": "https://doi.org/10.1016/j.biopha.2020.110865",
-      "pmcid": "",
-      "pdfFileName": "Simplicity/2020 Skanjeti SIRT morphologic and functional imaging voxel based dosimetry.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Simplicity",
+      "product": "both",
+      "categories": [
+        "Simplicity",
+        "Dosimetry / Treatment Planning"
+      ]
     },
     {
       "id": 20260507011,
