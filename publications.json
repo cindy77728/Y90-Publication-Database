@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T08:02:06.330Z",
+  "savedAt": "2026-05-20T08:12:22.359Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -372,7 +372,7 @@
     {
       "id": 2026050610,
       "year": 2026,
-      "title": "Radioembolization of Colorectal Liver Metastases: Comparative Dose–Response of Resin and Glass Microspheres",
+      "title": "Radioembolization of colorectal liver metastases: comparative dose–response of resin and glass microspheres",
       "country": "Turkey",
       "authors": "Soydal C, Mesci I, Celebioglu EC, et al.",
       "journal": "Nuclear Medicine Communications",
@@ -1668,13 +1668,13 @@
     {
       "id": 202605071103,
       "year": 2024,
-      "title": "SBRT vs. Y90 HCC Treatment Outcomes and Costs",
+      "title": "SBRT vs. Y90: HCC Treatment Outcomes and Costs",
       "country": "USA",
       "authors": "deBettencourt MF, Liu Y, Cotler SJ, Molvar CA, Abdelrahman T, Thomas TO.",
       "journal": "American Journal of Clinical Oncology",
       "url": "https://doi.org/10.1097/COC.0000000000001064",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/SBRT/2024%20deBettencourt%20SBRT%20vs%20Y90%20HCC%20Treatment%20Outcomes%20and%20Costs.pdf?csf=1&web=1&e=ufxkpu",
       "pdfFileName": "SBRT/2024 deBettencourt SBRT vs Y90 HCC Treatment Outcomes and Costs.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
@@ -1683,12 +1683,14 @@
       "notes": "Added from ROWAN ZIP. DOI 10.1097/COC.0000000000001064.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC",
+      "primaryCategory": "SBRT",
       "product": "ns",
       "categories": [
-        "HCC",
+        "SBRT",
         "Comparative",
-        "Cost Effectiveness"
+        "Cost Effectiveness",
+        "Dosimetry",
+        "HCC"
       ]
     },
     {
@@ -2208,25 +2210,29 @@
     {
       "id": 202605071101,
       "year": 2023,
-      "title": "The ROWAN Study: Safety and Efficacy of Transarterial Radioembolization with Y-90 Glass Microspheres and the STRIDE Regimen in Hepatocellular Carcinoma",
+      "title": "The ROWAN study: Safety and efficacy of transarterial radioembolization with Y-90 glass microspheres and the STRIDE regimen in hepatocellular carcinoma.",
+      "country": "USA / Multicenter",
       "authors": "He AR, Toskich BB, et al.",
       "journal": "Journal of Clinical Oncology / ASCO Meeting Abstract",
-      "country": "USA / Multicenter",
-      "product": "glass",
-      "categories": [
-        "Combination Therapy",
-        "HCC"
-      ],
+      "url": "https://ascopubs.org/doi/10.1200/JCO.2023.41.4_suppl.TPS622",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/ROWAN/he-toskich-2023-the-rowan-study-safety-and-efficacy-of-transarterial-radioembolization-with-y-90-glass-microspheres-and.pdf?csf=1&web=1&e=QkOoz9",
+      "pdfFileName": "ROWAN/he-toskich-2023-the-rowan-study-safety-and-efficacy-of-transarterial-radioembolization-with-y-90-glass-microspheres-and.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Trials-in-progress abstract describing ROWAN, a study evaluating Y-90 glass microspheres with the STRIDE regimen in HCC.",
       "findings": "Useful trial-tracking record for the combined locoregional therapy plus immunotherapy strategy using glass microspheres and durvalumab/tremelimumab.",
       "notes": "Added from ROWAN ZIP. Trials-in-progress abstract; review final protocol details before external use.",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "ROWAN/he-toskich-2023-the-rowan-study-safety-and-efficacy-of-transarterial-radioembolization-with-y-90-glass-microspheres-and.pdf",
-      "pdfUrl": "",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Combination Therapy"
+      "primaryCategory": "Key Clinical Data / ROWAN",
+      "product": "glass",
+      "categories": [
+        "Key Clinical Data / ROWAN",
+        "HCC",
+        "Dosimetry",
+        "Safety"
+      ]
     },
     {
       "id": 2026051005,
@@ -2564,24 +2570,26 @@
       "country": "USA",
       "authors": "Montazeri SA, De la Garza-Ramos C, Lewis AR, et al.",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
-      "url": "https://doi.org/10.1007/s00259-022-05776-y",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35441860/",
       "pmcid": "",
-      "pdfUrl": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/RPM/2022%20Montazeri%20HCC%20radiation%20segmentectomy%20prior%20to%20liver%20transplantation%20increases%20rates%20of%20complete%20pathologic%20necrosis.pdf?csf=1&web=1&e=Ta1LNM",
       "pdfFileName": "RPM/2022 Montazeri HCC radiation segmentectomy treatment intensification prior to liver transplantation increases rates of complete pathologic necrosis an explant analysis of 75 tumors.pdf",
       "fullTextStatus": "auto",
       "fullTextNote": "",
       "results": "Retrospective single-center explant analysis of 75 HCC tumors treated with radiation segmentectomy prior to liver transplantation, comparing a treatment-intensification cohort with a baseline cohort.",
-      "findings": "Supports higher-intensity glass radiation segmentectomy before transplant as a strategy associated with increased complete pathologic necrosis in explant pathology.",
+      "findings": "• Specific activity, dose, and treatment activity were significantly higher in the treatment intensification cohort (all p < 0.01), while particles per cubic centimeter of treated liver were not.\n• ROC analysis showed that specific activity ≥ 327 Bq (AUC 0.75, p < 0.001), dose ≥ 446 Gy (AUC 0.69, p = 0.005), and treatment activity ≥ 2.55 Gbq (AUC 0.71, p = 0.002) were predictive of CPN.\n• While dose strongly correlated with pathologic response, specific activity was the most significant independent radiation segmentectomy treatment parameter associated with CPN.",
       "notes": "Added from ROWAN ZIP. DOI 10.1007/s00259-022-05776-y.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection / Downstaging and Bridging",
-      "product": "ns",
+      "primaryCategory": "RPM",
+      "product": "glass",
       "categories": [
-        "Resection / Downstaging and Bridging",
+        "RPM",
         "HCC",
         "Resection / Transplantation",
-        "Radiation Segmentectomy"
+        "Radiation Segmentectomy",
+        "Resection / Downstaging and Bridging",
+        "Dosimetry"
       ]
     },
     {
