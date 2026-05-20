@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T08:58:51.883Z",
+  "savedAt": "2026-05-20T09:02:39.126Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -2231,24 +2231,26 @@
       "id": 2026150803,
       "year": 2023,
       "title": "Voxel-S-value methods adapted to heterogeneous media for quantitative Y-90 microsphere radioembolization dosimetry",
+      "country": "China / Macau",
       "authors": "Chen G, Lu Z, Chen Y, Mok GSP.",
       "journal": "Zeitschrift fur Medizinische Physik",
-      "country": "China / Macau",
-      "product": "both",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36535831/",
+      "pmcid": "PMC10068576",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/China%20paper/2023%20Chen%20Voxel%20value%20methods%20adapted%20to%20heterogeneous%20media%20for%20quantitative%20Y90%20microsphere%20radioembolization%20dosimetry.pdf?csf=1&web=1&e=n1d3RS",
+      "pdfFileName": "2023 Chen Voxel value methods adapted to heterogeneous media for quantitative Y90 microsphere radioembolization dosimetry.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "10 patients analyzed; liver and tumor median absolute absorbed dose errors were <3% for all methods, while tissue-specific lung-kernel methods reduced lung-region errors to <7% versus >20% for methods without lung kernels.",
+      "findings": "• Liver and tumor’s median %AADE of all methods were <3% for three types of imaging data.\n• In the lungs, however, three recently proposed VSV methods provided median %AADEs of less than 7%, whereas the differences exceeded 20% for existing methods that did not use a lung kernel.\n• LiCKLuKD could achieve median %AADE <2% in the liver, upper liver and tumors, and median %AADE <7% in the lungs and lower lungs in three types of data.\n• Methods with tissue-specific kernel and effective correction achieve smaller errors in lungs.\n• LiCKLuKD has comparable results with MC in absorbed dose estimation of Y-90 radioembolization for all target regions.",
+      "notes": "Technical dosimetry methodology paper; not a clinical outcomes study.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry",
+      "product": "ns",
       "categories": [
         "Dosimetry",
         "Glass vs Resin"
-      ],
-      "primaryCategory": "Dosimetry",
-      "results": "10 patients analyzed; liver and tumor median absolute absorbed dose errors were <3% for all methods, while tissue-specific lung-kernel methods reduced lung-region errors to <7% versus >20% for methods without lung kernels.",
-      "findings": "Tissue-specific kernel correction improves Y90 absorbed-dose estimation in heterogeneous regions, especially lung and lung-liver interfaces; LiCKLuKD was closest to Monte Carlo across target regions.",
-      "notes": "Technical dosimetry methodology paper; not a clinical outcomes study.",
-      "url": "https://doi.org/10.1016/j.zemedi.2022.11.003",
-      "pmcid": "",
-      "pdfFileName": "2023 Chen Voxel value methods adapted to heterogeneous media for quantitative Y90 microsphere radioembolization dosimetry.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
+      ]
     },
     {
       "id": 2026050807,
