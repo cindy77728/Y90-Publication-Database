@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T08:32:27.096Z",
+  "savedAt": "2026-05-20T08:42:30.103Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -1034,7 +1034,8 @@
         "No MAA",
         "HCC",
         "Lung Shunt",
-        "Asian Data"
+        "Asian Data",
+        "Technical"
       ]
     },
     {
@@ -1458,27 +1459,29 @@
       "id": 202605071119,
       "year": 2024,
       "title": "Measurement of the Tumor-to-Normal Ratio for Radioembolization of Hepatocellular Carcinoma: A Prospective Study Comparing 2-Dimensional Perfusion Angiography, Technetium-99m Macroaggregated Albumin, and Yttrium-90 SPECT/CT",
+      "country": "USA",
       "authors": "Brunson CP, McGregor HJ, Hennemeyer CT, Patel MV, Woodhead GJ, Young SJ.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
-      "product": "ns",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37783268/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/TN%20ratio/2024%20Brunson%20Measurement%20of%20the%20TN%20Ratio%20for%20Radioembolization%20of%20HCC.pdf?csf=1&web=1&e=ctdAh2",
+      "pdfFileName": "TN ratio/2024 Brunson Measurement of the TN Ratio for Radioembolization of HCC.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Prospective single-arm study comparing T:N ratio estimates from 2D perfusion angiography, Tc-99m MAA SPECT/CT, and Y90 SPECT/CT in HCC radioembolization planning and assessment.",
+      "findings": "• The mean participant age was 64.1 years ± 9.8, and the study included 14 (93%) men and 1 (7%) woman.\n• The mean tumor size was 4.1 cm (SD ± 2.4), and all participants received segmental treatments with glass microspheres.\n• The mean T:N ratio calculated by 99mTc MAA SPECT/CT was 2.28 (SD ± 0.89) vs 2.25 (SD ± 0.99) calculated by 2D perfusion angiography (P =.45).\n• For the 13 participants who underwent selective internal radiation therapy (transarterial radioembolization), there was no significant difference between the T:N ratios calculated by 2D perfusion angiography and post-90Y SPECT/CT (2.25 [SD ± 1.05] vs 1.91 [SD ± 0.39]; P =.12).\n• The T:N ratio calculated by 2D perfusion angiography correlated well with that calculated by 99mTc MAA SPECT/CT.",
+      "notes": "Added from ROWAN ZIP. DOI 10.1016/j.jvir.2023.09.023.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry / TN Ratio",
+      "product": "glass",
       "categories": [
-        "Dosimetry",
         "Dosimetry / TN Ratio",
         "MAA",
         "Mapping",
-        "HCC"
-      ],
-      "results": "Prospective single-arm study comparing T:N ratio estimates from 2D perfusion angiography, Tc-99m MAA SPECT/CT, and Y90 SPECT/CT in HCC radioembolization planning and assessment.",
-      "findings": "Useful paper for comparing how different pre- and post-treatment methods estimate T/N ratio and how this may affect dosimetry interpretation.",
-      "notes": "Added from ROWAN ZIP. DOI 10.1016/j.jvir.2023.09.023.",
-      "url": "https://doi.org/10.1016/j.jvir.2023.09.023",
-      "pmcid": "",
-      "pdfFileName": "TN ratio/2024 Brunson Measurement of the TN Ratio for Radioembolization of HCC.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+        "HCC",
+        "Dosimetry"
+      ]
     },
     {
       "id": 2026050703,
@@ -2348,23 +2351,28 @@
       "id": 202605071120,
       "year": 2022,
       "title": "90Y Radioembolization versus Drug-eluting Bead Chemoembolization for Unresectable Hepatocellular Carcinoma: Results from the TRACE Phase II Randomized Controlled Trial",
-      "authors": "Dhondt E, Lambert B, Hermie L, et al.",
-      "journal": "Radiology",
       "country": "Belgium",
-      "product": "glass",
-      "categories": [
-        "HCC"
-      ],
-      "results": "Phase II randomized controlled TRACE trial comparing Y90 radioembolization with drug-eluting bead TACE in unresectable HCC.",
-      "findings": "Key comparative trial for TARE versus DEB-TACE positioning in unresectable HCC, useful alongside PREMIERE and other TACE-versus-TARE evidence.",
-      "notes": "Added from ROWAN ZIP. DOI 10.1148/radiol.211806.",
-      "url": "https://doi.org/10.1148/radiol.211806",
+      "authors": "Dhondt E, Lambert B, Hermie L, et al.",
+      "journal": "Journal of Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35258371/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/TRACE/2022%20Dhondt%20TRACEtrial.pdf?csf=1&web=1&e=fQusDI",
       "pdfFileName": "TRACE/2022 Dhondt TRACEtrial.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Phase II randomized controlled TRACE trial comparing Y90 radioembolization with drug-eluting bead TACE in unresectable HCC.",
+      "findings": "• Prospective uncontrolled studies suggest that yttrium 90 (90Y) transarterial radioembolization (TARE) is a safe and effective alternative.\n• Purpose To compare the efficacy and safety of TARE with TACE for unresectable HCC.\n• Materials and Methods In this single-center prospective randomized controlled trial (TRACE), 90Y glass TARE was compared with doxorubicin drug-eluting bead (DEB) TACE in participants with intermediate-stage HCC, extended to Eastern Cooperative Oncology Group performance status 1 and those with early-stage HCC not eligible for surgery or thermoablation.\n• The primary end point was time to overall tumor progression (TTP) (Kaplan-Meier analysis) in the intention-to-treat (ITT) and per-protocol (PP) groups.\n• Results At interim analysis, 38 participants (median age, 67 years; IQR, 63-72 years; 33 men) were randomized to the TARE arm and 34 (median age, 68 years; IQR, 61-71 years; 30 men) to the DEB-TACE arm (ITT group).",
+      "notes": "Added from ROWAN ZIP. DOI 10.1148/radiol.211806.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "HCC"
+      "primaryCategory": "Key Clinical Data / TRACE",
+      "product": "glass",
+      "categories": [
+        "Key Clinical Data / TRACE",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 202605071112,
@@ -2817,26 +2825,28 @@
       "id": 202605071118,
       "year": 2022,
       "title": "Realized tumor to normal ratios in hepatocellular carcinoma patients undergoing transarterial radioembolization: a retrospective evaluation",
+      "country": "USA",
       "authors": "Young S, Chen T, Flanagan S, Golzarian J, Sanghvi T.",
       "journal": "European Radiology",
-      "country": "USA",
-      "product": "both",
-      "categories": [
-        "Dosimetry",
-        "Dosimetry / TN Ratio",
-        "Glass vs Resin",
-        "HCC"
-      ],
-      "results": "Retrospective evaluation of 148 patients and 184 TARE procedures assessing realized tumor-to-normal ratios in radiation segmentectomy and the relationship with particle load.",
-      "findings": "Important reference for the particle-density discussion: T/N ratio and particle load can affect realized tumor absorbed dose even when prescribed activity is normalized.",
-      "notes": "Added from ROWAN ZIP. DOI 10.1007/s00330-021-08501-9.",
-      "url": "https://doi.org/10.1007/s00330-021-08501-9",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35032212/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/TN%20ratio/2022%20Young%20tumor%20normal%20ratios%20glass%20vs%20resin.pdf?csf=1&web=1&e=YyeECZ",
       "pdfFileName": "TN ratio/2022 Young tumor normal ratios glass vs resin.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Retrospective evaluation of 148 patients and 184 TARE procedures assessing realized tumor-to-normal ratios in radiation segmentectomy and the relationship with particle load.",
+      "findings": "• The mean TNR in the setting of RS was 2.88 ± 1.60 and was higher for glass as compared to resin microspheres (3.07 ± 1.68 vs 2.24 ± 1.21, p = 0.01).\n• When normalizing the activity of RS treatments to the level required to achieve 400 Gy by unicompartmental calculations, there was found to be significant differences in the predicted tumor absorbed dose when separated by the median tumor dose (601.2 ± 133.3 vs 1146.9 ± 297.5, p < 0.01) or median realized TNR (1119.2 ± 341 Gy vs 635.7 ± 160.2 Gy, p < 0.01).\n• Particle load was found to be associated with TNR on univariate (p < 0.01) and multivariate (p < 0.01) analysis.\n• Significant TNRs are seen in RS and perhaps argue for the use of multi-compartmental dosimetry techniques in this setting and particle load may affect TNR.\n• KEY POINTS: • Tumor to normal ratios were significantly higher in radiation segmentectomies than lobar deliveries. • Tumor to normal ratios were significantly higher when utilizing glass, as compared to resin microspheres. • When creating a model that prescribed the activity required to reach 400 Gy by MIRD, realized tumor dose varied significantly in…",
+      "notes": "Added from ROWAN ZIP. DOI 10.1007/s00330-021-08501-9.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Dosimetry / TN Ratio",
+      "product": "both",
+      "categories": [
+        "Dosimetry / TN Ratio",
+        "Glass vs Resin",
+        "HCC",
+        "Dosimetry"
+      ]
     },
     {
       "id": 2026051004,
@@ -3269,27 +3279,29 @@
     },
     {
       "id": 202605071117,
-      "year": 2021,
+      "year": 2022,
       "title": "Tumour-to-normal tissue (T/N) dosimetry ratios role in assessment of 90Y selective internal radiation therapy (SIRT)",
+      "country": "USA",
       "authors": "Knešaurek K, Martinez RB, Ghesani M.",
       "journal": "British Journal of Radiology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "Dosimetry",
-        "Dosimetry / TN Ratio",
-        "Dosimetry / Treatment Planning"
-      ],
-      "results": "Paper discussing the role of tumor-to-normal tissue dosimetry ratios in assessment of Y90 SIRT.",
-      "findings": "Useful conceptual dosimetry reference for explaining why T/N ratio matters in dose distribution, treatment planning, and response interpretation.",
-      "notes": "Added from ROWAN ZIP.",
-      "url": "",
-      "pmcid": "",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34762514/",
+      "pmcid": "PMC8722260",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/TN%20ratio/2022%20Knesaurek%20Tumour%20to%20normal%20tissue%20dosimetry%20ratios%20role%20in%20assessment%20of%2090Y%20selective%20internal%20radiation%20therapy.pdf?csf=1&web=1&e=lNsZfH",
       "pdfFileName": "TN ratio/2021 Knesaurek Tumour to normal tissue dosimetry ratios role in assessment of 90Y selective internal radiation therapy.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Paper discussing the role of tumor-to-normal tissue dosimetry ratios in assessment of Y90 SIRT.",
+      "findings": "• : For 39 patients, the mean liver, tumour and normal tissue doses (mean ± SD) were, 55.17 ± 26.04 Gy, 911.87 ± 866.54 Gy and 47.79 ± 20.47 Gy, respectively.\n• Among these patients, 31 (79%) showed complete response (CR) and 8 (21%) showed progression of disease (PD).\n• For patients with CR, the mean T/N dose ratio obtained was 24.91 (range 3.09–80.12) and for patients with PD, the mean T/N dose ratio was significantly lower, at 6.69 (range 0.36–14.75).: Our data show that patients with CR have a statistically higher T/N dose ratio than those with PD.\n• Advances in knowledge:: T/N dosimetry ratios can be used for assessing response in patients undergoing locoregional therapy to the liver with 90Y microspheres.",
+      "notes": "Added from ROWAN ZIP.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Dosimetry"
+      "primaryCategory": "Dosimetry / TN Ratio",
+      "product": "ns",
+      "categories": [
+        "Dosimetry / TN Ratio",
+        "Dosimetry / Treatment Planning",
+        "Dosimetry"
+      ]
     },
     {
       "id": 2026051003,
@@ -3561,24 +3573,29 @@
       "id": 202605071115,
       "year": 2020,
       "title": "Radiation Dose during Transarterial Radioembolization: A Dosimetric Comparison of Cone-Beam CT and Angio-CT Technologies",
+      "country": "USA",
       "authors": "Marshall EL, Guajardo S, Sellers E, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33358328/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/technical/2020%20marshall%20Radiation%20Dose%20during%20Transarterial%20Radioembolization%20A%20Dosimetric%20Comparison%20of%20Cone%20Beam%20CT%20and%20Angio%20CT%20Technologies.pdf?csf=1&web=1&e=P4YelJ",
+      "pdfFileName": "technical/2020 marshall Radiation Dose during Transarterial Radioembolization A Dosimetric Comparison of Cone Beam CT and Angio CT Technologies.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Retrospective dosimetric comparison of intraprocedural CT imaging radiation dose between cone-beam CT and angio-CT during TARE procedures for HCC.",
+      "findings": "• The mean effective dose from a single CT scan was 6.42 mSv and 5.99 mSv in the cone-beam CT room and the angio-CT room, respectively (P =.3224), despite the greater field of view and average craniocaudal scan coverage in angio-CT.\n• The mean effective dose summed across all CTs in a procedure was 12.89 mSv and 34.35 mSv in the cone-beam CT room and the angio-CT room, respectively (P =.0018).\n• The mean effective dose per CT scan is comparable between cone-beam CT and angio-CT when considered in direct comparison for a single patient.",
+      "notes": "Added from ROWAN ZIP. DOI 10.1016/j.jvir.2020.10.021.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Radiation Safety & Handling",
       "product": "ns",
       "categories": [
         "Radiation Safety & Handling",
-        "Mapping"
-      ],
-      "results": "Retrospective dosimetric comparison of intraprocedural CT imaging radiation dose between cone-beam CT and angio-CT during TARE procedures for HCC.",
-      "findings": "Useful radiation-safety and workflow reference for comparing imaging platform dose contribution during radioembolization procedures.",
-      "notes": "Added from ROWAN ZIP. DOI 10.1016/j.jvir.2020.10.021.",
-      "url": "https://doi.org/10.1016/j.jvir.2020.10.021",
-      "pmcid": "",
-      "pdfFileName": "technical/2020 marshall Radiation Dose during Transarterial Radioembolization A Dosimetric Comparison of Cone Beam CT and Angio CT Technologies.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Radiation Safety & Handling"
+        "Mapping",
+        "Technical",
+        "Dosimetry",
+        "HCC"
+      ]
     },
     {
       "id": 2026051104,
@@ -5648,24 +5665,30 @@
       "id": 202605071114,
       "year": 2016,
       "title": "Same-day 90Y radioembolization: implementing a new treatment paradigm",
+      "country": "USA",
       "authors": "Gabr A, Kallini JR, Gates VL, et al.",
       "journal": "European Journal of Nuclear Medicine and Molecular Imaging",
-      "country": "USA",
-      "product": "glass",
-      "categories": [
-        "Mapping",
-        "Dosimetry / Treatment Planning"
-      ],
-      "results": "Retrospective study of 78 patients managed with pretreatment angiography, embolization when needed, MAA scintigraphy, and Y90 treatment in a single same-day outpatient encounter.",
-      "findings": "Foundational reference for same-day radioembolization workflow feasibility and streamlined treatment logistics.",
-      "notes": "Added from ROWAN ZIP. DOI 10.1007/s00259-016-3438-x.",
-      "url": "https://doi.org/10.1007/s00259-016-3438-x",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27315059/",
       "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/technical/2016%20Gabr%20Same%20day%2090Y%20radioembolization%20implementing%20a%20new%20treatment%20paradigm.pdf?csf=1&web=1&e=64ej3t",
       "pdfFileName": "technical/2016 Gabr Same day 90Y radioembolization implementing a new treatment paradigm.pdf",
-      "pdfUrl": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Retrospective study of 78 patients managed with pretreatment angiography, embolization when needed, MAA scintigraphy, and Y90 treatment in a single same-day outpatient encounter.",
+      "findings": "• All patients underwent same-day angiography, 99mTc-MAA scintigraphy and 90Y radioembolization.\n• The median number of 90Y vials needed was two (range one to six).\n• The median in-room time was 160 min (75 - 250 min).\n• The median lung dose was 3.5 Gy.\n• This study demonstrated the feasibility of same-day 90Y evaluation and treatment while maintaining the principles of safe and effective 90Y infusion including tumoricidal dosimetry (lobar, segmentectomy), minimization of nontarget flow, and minimization of lung dose.",
+      "notes": "Added from ROWAN ZIP. DOI 10.1007/s00259-016-3438-x.",
       "abstract": "",
       "reviewStatus": "AI Draft",
-      "primaryCategory": "Mapping"
+      "primaryCategory": "Technical",
+      "product": "ns",
+      "categories": [
+        "Technical",
+        "Dosimetry / Treatment Planning",
+        "Mapping",
+        "Dosimetry",
+        "HCC",
+        "Mapping / Failed Evaluation"
+      ]
     },
     {
       "id": 202605073008,
