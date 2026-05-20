@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T08:52:32.121Z",
+  "savedAt": "2026-05-20T08:58:51.883Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -115,30 +115,6 @@
         "HCC",
         "Dosimetry / Treatment Planning",
         "Guidelines"
-      ]
-    },
-    {
-      "id": 202605072027,
-      "year": 2026,
-      "title": "CASTLE-01 Data Summary",
-      "country": "Worldwide",
-      "authors": "",
-      "journal": "",
-      "url": "",
-      "pmcid": "",
-      "pdfUrl": "",
-      "pdfFileName": "metastases/ICC/CASTLE-01 Data Summary.pdf",
-      "fullTextStatus": "auto",
-      "fullTextNote": "",
-      "results": "Study or review related to Y90 radioembolization for ICC liver metastases / non-HCC liver tumors. Details should be manually verified from the full text.",
-      "findings": "Useful ICC reference for non-HCC/metastases positioning; entered as AI Draft and should be checked against the full paper before external use.",
-      "notes": "Added from metastases ZIP. Source file: metastases/ICC/CASTLE-01 Data Summary.pdf",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
-      "product": "ns",
-      "categories": [
-        "Resection"
       ]
     },
     {
@@ -1700,29 +1676,6 @@
       ]
     },
     {
-      "id": 202605071104,
-      "year": 2024,
-      "title": "Stereotactic Body Radiotherapy and Liver Transplant for Liver Cancer: A Nonrandomized Controlled Trial",
-      "authors": "Lee VHF, Vardhanabhuti V, Wong TCL, et al.",
-      "journal": "JAMA Network Open",
-      "country": "Hong Kong",
-      "product": "ns",
-      "categories": [
-        "Downstaging",
-        "HCC"
-      ],
-      "results": "Phase 2 nonrandomized controlled trial evaluating SBRT as bridging therapy before deceased donor liver transplant for previously untreated unresectable HCC.",
-      "findings": "Not a Y90 study, but useful comparator evidence for SBRT as a bridging modality in transplant-oriented HCC discussions.",
-      "notes": "Added from ROWAN ZIP. Included as comparator literature; not Y90-specific. DOI 10.1001/jamanetworkopen.2024.15998.",
-      "url": "https://doi.org/10.1001/jamanetworkopen.2024.15998",
-      "pmcid": "",
-      "pdfFileName": "SBRT/2024 Lee SBRT and liver transplant for liver cancer.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Downstaging"
-    },
-    {
       "id": 2026050814,
       "year": 2024,
       "title": "TARE Plus Chemotherapy for Second-Line Metastatic Colorectal Cancer: Additional Analyses from EPOCH",
@@ -1773,30 +1726,6 @@
         "Dosimetry",
         "Radiation Segmentectomy",
         "Simplicity"
-      ]
-    },
-    {
-      "id": 202605073026,
-      "year": 2024,
-      "title": "Yttrium-90 Radioembolization Has Become the Most Utilized Bridging Treatment for Liver Transplant Candidates in the United States",
-      "country": "USA",
-      "authors": "Salem R, et al.",
-      "journal": "JVIR",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/39522866/",
-      "pmcid": "",
-      "pdfUrl": "",
-      "pdfFileName": "Resection/Curative Intent Downstaging and Bridging/Salem 2024 Y90 Bridging LRT of Choice.pdf",
-      "fullTextStatus": "auto",
-      "fullTextNote": "",
-      "results": "Letter/commentary describing the increasing use of Y90 as bridging LRT for transplant candidates in the United States.",
-      "findings": "Useful modern positioning reference for Y90 as a bridging locoregional therapy before liver transplantation.",
-      "notes": "Added from Resection ZIP. Source file: Resection/Curative Intent Downstaging and Bridging/Salem 2024 Y90 Bridging LRT of Choice.pdf",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Resection",
-      "product": "glass",
-      "categories": [
-        "Resection"
       ]
     },
     {
@@ -3661,30 +3590,6 @@
       ]
     },
     {
-      "id": 20260507011,
-      "year": 2020,
-      "title": "Streamlining radioembolization in UNOS T1/T2 hepatocellular carcinoma by eliminating lung shunt estimation",
-      "authors": "Gabr A, Ranganathan S, Mouli SK, et al.",
-      "journal": "Journal of Hepatology",
-      "country": "USA",
-      "product": "ns",
-      "categories": [
-        "Lung Shunt",
-        "Downstaging",
-        "HCC",
-        "Mapping / Failed Evaluation"
-      ],
-      "results": "Evaluated elimination of lung shunt estimation in selected UNOS T1/T2 HCC patients undergoing selective TARE.",
-      "findings": "Suggests selected early-stage HCC patients planned for selective TARE may be candidates for streamlined workflows without routine lung shunt estimation.",
-      "notes": "Filename is generic without MAA.pdf; entered using article title from PDF.",
-      "url": "https://doi.org/10.1016/j.jhep.2020.02.024",
-      "pmcid": "",
-      "pdfFileName": "without MAA.pdf",
-      "reviewStatus": "AI Draft",
-      "abstract": "",
-      "primaryCategory": "Lung Shunt"
-    },
-    {
       "id": 2026050601,
       "year": 2020,
       "title": "The Cost-Effectiveness of TheraSphere in Patients with Hepatocellular Carcinoma Who Are Eligible for Transarterial Embolization",
@@ -4131,31 +4036,6 @@
       "product": "glass",
       "categories": [
         "Metastases / Intrahepatic Cholangiocarcinoma (ICC)",
-        "Dosimetry"
-      ]
-    },
-    {
-      "id": 202605072053,
-      "year": 2019,
-      "title": "Radiosensitivity of colorectal cancer to 90Y and the radiobiological implications for radioembolisation therapy",
-      "country": "UK",
-      "authors": "Lee et al.",
-      "journal": "Physics in Medicine & Biology",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/31117062/",
-      "pmcid": "PMC6611228",
-      "pdfUrl": "",
-      "pdfFileName": "metastases/mCRC/2019 Lee Radiosensitivity of colorectal cancer to  sup 90 sup Y and the radiobiological implications for radioembolisation therapy.pdf",
-      "fullTextStatus": "auto",
-      "fullTextNote": "",
-      "results": "Study or review related to Y90 radioembolization for mCRC liver metastases / non-HCC liver tumors. Details should be manually verified from the full text.",
-      "findings": "• Results show that the dishes were asymmetrically affected by the dose gradient, based on whether the dishes were above or below the source.\n• Physical dose of 90Y was extrapolated to 100 Gy assuming an increased initial dose rate is not expected to significantly modify the intrinsic radiosensitivity of DLD-1 and HT-29 towards 90Y β− radiation.\n• Extrapolating from the fit parameters, it requires ≈100 Gy of 90Y dose to achieve the same biological cell-killing effect as an EBRT of 30 fractions of 2 Gy.\n• For 90Y dose greater than 32 Gy, EQD is plotted as a dashed line to indicate that these values were extrapolated from measurements acquired at lower doses (<32 Gy)..\n• Discussion: With the increased use of TRT such as 90Y SIRT for liver cancer, there is a pressing need to incorporate radiobiologic information into the decision-making process to optimise dose given during multiple administrations or to combine 90Y SIRT with EBRT, specifically, stereotactic ablative radiotherapy (SABR) for curative intent.",
-      "notes": "Added from metastases ZIP. Source file: metastases/mCRC/2019 Lee Radiosensitivity of colorectal cancer to  sup 90 sup Y and the radiobiological implications for radioembolisation therapy.pdf",
-      "abstract": "",
-      "reviewStatus": "AI Draft",
-      "primaryCategory": "Metastases / Metastatic Colorectal Cancer (mCRC)",
-      "product": "ns",
-      "categories": [
-        "Metastases / Metastatic Colorectal Cancer (mCRC)",
         "Dosimetry"
       ]
     },
@@ -4790,26 +4670,6 @@
         "Mapping / Extrahepatic Accumulation",
         "Dosimetry / Treatment Planning"
       ]
-    },
-    {
-      "id": 202605072049,
-      "year": 2017,
-      "title": "Clinical and imaging-based prognostic factors in radioembolisation of liver metastases from colorectal cancer",
-      "authors": "Willowson et al.",
-      "journal": "",
-      "country": "Netherlands/Australia",
-      "product": "ns",
-      "primaryCategory": "",
-      "categories": [],
-      "results": "Study or review related to Y90 radioembolization for mCRC liver metastases / non-HCC liver tumors. Details should be manually verified from the full text.",
-      "findings": "Useful mCRC reference for non-HCC/metastases positioning; entered as AI Draft and should be checked against the full paper before external use.",
-      "notes": "Added from metastases ZIP. Source file: metastases/mCRC/2017 Willowson Clinical and imaging-based prognostic factors in radioembolisation of liver metastases from colorectal cancer.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "metastases/mCRC/2017 Willowson Clinical and imaging-based prognostic factors in radioembolisation of liver metastases from colorectal cancer.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
     },
     {
       "id": 202605073007,
@@ -5624,26 +5484,6 @@
       ]
     },
     {
-      "id": 202605072003,
-      "year": 2016,
-      "title": "Radioembolization with 90Y glass microspheresspheres for the treatment",
-      "authors": "Fidelman et al.",
-      "journal": "",
-      "country": "USA",
-      "product": "glass",
-      "primaryCategory": "",
-      "categories": [],
-      "results": "Study or review related to Y90 radioembolization for general metastases liver metastases / non-HCC liver tumors. Details should be manually verified from the full text.",
-      "findings": "Useful non-HCC / metastatic liver disease reference for non-HCC/metastases positioning; entered as AI Draft and should be checked against the full paper before external use.",
-      "notes": "Added from metastases ZIP. Source file: metastases/2016 Fidelman Radioembolization with 90Y glass microspheres for the treatment.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "metastases/2016 Fidelman Radioembolization with 90Y glass microspheres for the treatment.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
-    },
-    {
       "id": 202605073041,
       "year": 2016,
       "title": "(90) Y radiation lobectomy: Outcomes following surgical resection in patients with hepatic tumors and small future liver remnant volumes",
@@ -6149,26 +5989,6 @@
         "Radiation Safety & Handling",
         "Dosimetry / Dose Response"
       ]
-    },
-    {
-      "id": 202605072035,
-      "year": 2014,
-      "title": "Twelve year Experience of Radioembolization for Colorectal Hepatic Metastases in 214 Patients",
-      "authors": "Lewandowski et al.",
-      "journal": "",
-      "country": "USA",
-      "product": "ns",
-      "primaryCategory": "",
-      "categories": [],
-      "results": "Study or review related to Y90 radioembolization for mCRC liver metastases / non-HCC liver tumors. Details should be manually verified from the full text.",
-      "findings": "Useful mCRC reference for non-HCC/metastases positioning; entered as AI Draft and should be checked against the full paper before external use.",
-      "notes": "Added from metastases ZIP. Source file: metastases/mCRC/2014 Lewandowski Twelve year Expereience of Radioembolization for Colorectal Hepatic Metastases in 214 Patients.pdf",
-      "url": "",
-      "pmcid": "",
-      "pdfFileName": "metastases/mCRC/2014 Lewandowski Twelve year Expereience of Radioembolization for Colorectal Hepatic Metastases in 214 Patients.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
     },
     {
       "id": 2026050603,
