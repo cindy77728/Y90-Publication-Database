@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T09:23:57.139Z",
+  "savedAt": "2026-05-20T09:25:24.704Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -148,26 +148,30 @@
       "id": 2026150810,
       "year": 2026,
       "title": "Efficacy and safety of Y90 radioembolization combined with targeted therapy and immunotherapy in patients with unresectable hepatocellular carcinoma: a dual-center, retrospective study",
+      "country": "China",
       "authors": "Wang X, Jiang Q, Chen S, et al.",
       "journal": "BMC Cancer",
-      "country": "China",
-      "product": "ns",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41923204/",
+      "pmcid": "PMC13169584",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/China%20paper/2026%20Wang%20Efficacy%20and%20safety%20of%20Y90%20radioembolization%20combined%20with%20targeted%20therapy%20and%20immunotherapy%20in%20patients%20with%20unresectable%20HCC.pdf?csf=1&web=1&e=8dyPJt",
+      "pdfFileName": "2026 Wang Efficacy and safety of Y90 radioembolization combined with targeted therapy and immunotherapy in patients with unresectable HCC.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "32 uHCC patients; ORR 71.9% by mRECIST and 50.0% by RECIST 1.1. Median PFS 10.5 months and median OS 17.0 months. AFP >=400 ng/mL independently predicted worse PFS and OS; grade 3-4 TRAEs occurred in 43.8% with no treatment-related deaths.",
+      "findings": "Real-world data suggest triple-modality TARE plus targeted therapy and immunotherapy may provide encouraging antitumor activity with manageable safety in high-risk uHCC.",
+      "notes": "Accepted article in press; verify final publication details before external use.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Combination Therapy",
+      "product": "resin",
       "categories": [
         "Combination Therapy",
         "HCC",
         "PVT",
-        "Safety"
-      ],
-      "primaryCategory": "Combination Therapy",
-      "results": "32 uHCC patients; ORR 71.9% by mRECIST and 50.0% by RECIST 1.1. Median PFS 10.5 months and median OS 17.0 months. AFP >=400 ng/mL independently predicted worse PFS and OS; grade 3-4 TRAEs occurred in 43.8% with no treatment-related deaths.",
-      "findings": "Real-world data suggest triple-modality TARE plus targeted therapy and immunotherapy may provide encouraging antitumor activity with manageable safety in high-risk uHCC.",
-      "notes": "Accepted article in press; verify final publication details before external use.",
-      "url": "https://doi.org/10.1186/s12885-026-15930-6",
-      "pmcid": "",
-      "pdfFileName": "2026 Wang Efficacy and safety of Y90 radioembolization combined with targeted therapy and immunotherapy in patients with unresectable HCC.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
+        "Safety",
+        "Immunotherapy",
+        "Resin"
+      ]
     },
     {
       "id": 202605073109,
