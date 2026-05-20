@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T07:50:58.044Z",
+  "savedAt": "2026-05-20T08:02:06.330Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -197,24 +197,26 @@
       "id": 202605073109,
       "year": 2026,
       "title": "Feasibility of Radioembolization With Yttrium-90 Resin Microspheres Without Lung Shunt Fraction Measurement for Intrahepatic Cholangiocarcinoma",
+      "country": "Korea",
       "authors": "Lee M, Kim DH, Suh M, Paeng JC, Kim HC",
       "journal": "Korean Journal of Radiology",
-      "country": "Korea",
-      "product": "resin",
-      "primaryCategory": "Resin",
-      "categories": [
-        "Resin",
-        "Lung Shunt"
-      ],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41633394/",
+      "pmcid": "PMC12936570",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resin/2026%20Lee%20Feasibility%20of%20Radioembolization%20With%20Y90%20Resin%20Microspheres%20Without%20LSF%20Measurement%20for%20ICC.pdf?csf=1&web=1&e=CmCDR3",
+      "pdfFileName": "2026 Lee Feasibility of Radioembolization With Y90 Resin Microspheres Without LSF Measurement for ICC.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
       "results": "Single-center retrospective ICC cohort of 23 patients treated with resin microspheres without LSF assessment using defined eligibility criteria; median administered activity was 1.43 GBq.",
       "findings": "Resin no-LSF workflow paper for ICC: supports feasibility of streamlined radioembolization without lung shunt measurement in carefully selected patients using institutional eligibility criteria.",
       "notes": "Added from Resin ZIP. Review selection criteria carefully before any field use.",
-      "url": "https://doi.org/10.3348/kjr.2025.1558",
-      "pmcid": "",
-      "pdfFileName": "2026 Lee Feasibility of Radioembolization With Y90 Resin Microspheres Without LSF Measurement for ICC.pdf",
-      "pdfUrl": "",
       "abstract": "",
-      "reviewStatus": "AI Draft"
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resin",
+      "product": "resin",
+      "categories": [
+        "Resin",
+        "Lung Shunt"
+      ]
     },
     {
       "id": 2026150815,
@@ -263,7 +265,8 @@
         "Dosimetry / Dose Response",
         "HCC",
         "Dosimetry / Treatment Planning",
-        "Large Tumor"
+        "Large Tumor",
+        "Resin"
       ]
     },
     {
