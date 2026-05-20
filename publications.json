@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-19T07:01:47.941Z",
+  "savedAt": "2026-05-20T07:40:03.043Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -1488,25 +1488,30 @@
     {
       "id": 202605073103,
       "year": 2024,
-      "title": "Multicenter Evaluation of the Safety and Efficacy of Selective Internal Radiation Therapy with Yttrium-90 Resin Microspheres in Taiwan: Data from the RESIN Registry",
+      "title": "Multicenter evaluation of the safety and efficacy of selective internal radiation therapy with yttrium-90 resin microspheres in Taiwan: data from the RESIN registry",
+      "country": "Taiwan",
       "authors": "Lee RC, Liang PC, Liang HL, et al.",
       "journal": "Journal of Gastroenterology and Hepatology",
-      "country": "Taiwan",
-      "product": "resin",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38615197/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resin/2024%20LeeMulticenter%20evaluation%20of%20the%20safety%20and%20efficacy%20of%20selective%20internal%20radiation%20therapy%20with%20yttrium-90%20resin%20microspheres%20in%20Taiwan%20data%20from%20th.pdf?csf=1&web=1&e=wEG5LR",
+      "pdfFileName": "2024 LeeMulticenter evaluation of the safety and efficacy of selective internal radiation therapy with yttrium-90 resin microspheres in Taiwan data from th.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Multicenter Taiwan RESIN registry analysis including 107 patients; HCC and mCRC cohorts were evaluated for safety and efficacy after Y90 resin SIRT.",
+      "findings": "• ORR was 55.41% (HCC) and 33.33% (mCRC).\n• Of 58 HCC patients with 6-month post-SIRT data, 13.79% (n = 8) had resection, transplantation, transarterial chemoembolization, or radiofrequency ablation as the result of down-staging or down-sizing of their lesions.\n• Median OS was 24.07 (HCC) and 12.66 (mCRC) months.\n• Safety and efficacy outcomes with the routine use of SIRT with 90Y resin microspheres in Taiwan are consistent with published data.",
+      "notes": "Added from Resin ZIP. Review source values before external use.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
       "primaryCategory": "Resin",
+      "product": "resin",
       "categories": [
         "Resin",
-        "PVT"
-      ],
-      "results": "Multicenter Taiwan RESIN registry analysis including 107 patients; HCC and mCRC cohorts were evaluated for safety and efficacy after Y90 resin SIRT.",
-      "findings": "Useful Asia/Taiwan real-world resin evidence showing safety and efficacy across HCC and mCRC practice, with HCC indications including TACE failure and PVT.",
-      "notes": "Added from Resin ZIP. Review source values before external use.",
-      "url": "https://doi.org/10.1111/jgh.16556",
-      "pmcid": "",
-      "pdfFileName": "2024 LeeMulticenter evaluation of the safety and efficacy of selective internal radiation therapy with yttrium-90 resin microspheres in Taiwan data from th.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
+        "PVT",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ]
     },
     {
       "id": 202605071108,
@@ -1534,26 +1539,29 @@
     {
       "id": 202605073102,
       "year": 2024,
-      "title": "Predictive Dosimetry and Outcomes of Hepatocellular Carcinoma Treated by Y90 Resin Microsphere Radioembolization: A Retrospective Analysis Using 99mTc-MAA SPECT/CT and Planning Software",
+      "title": "Predictive Dosimetry and Outcomes of Hepatocellular Carcinoma Treated by Yttrium-90 Resin Microsphere Radioembolization: A Retrospective Analysis Using Technetium-99m Macroaggregated Albumin SPECT/CT and Planning Software",
+      "country": "USA",
       "authors": "Doyle PW, Workman CS, Grice JV, et al.",
       "journal": "Journal of Vascular and Interventional Radiology",
-      "country": "USA",
-      "product": "resin",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38246416/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resin/2024%20Doyle%20Predictive%20dosimetry%20and%20outcomes%20using%20RESIN.pdf?csf=1&web=1&e=pgPdue",
+      "pdfFileName": "2024 Doyle Predictive dosimetry and outcomes using RESIN.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "Median absorbed dose to tumor was higher in objective responders than nonresponders; 157 Gy predicted high probabilities of objective response and 1-year PFS in the model.",
+      "findings": "• The median follow-up period was 148 days (interquartile range [IQR], 92-273 days).\n• The median ADT of OR was 141.9 Gy (IQR, 89.4-215.8 Gy) compared with the median ADT of NR treatments of 70.8 Gy (IQR, 42.0-135.3 Gy; P <.001).\n• Only ADT was predictive of response (hazard ratio = 2.79 [95% confidence interval {CI}: 1.44-5.40]; P =.003).\n• At 6 months, an ADT of 157 Gy predicted 90.0% (95% CI: 41.3%-98.3%) probability of OR.\n• At 1 year, an ADT of 157 Gy predicted 91.6% (95% CI: 78.3%-100%) probability of progression-free survival.",
+      "notes": "Added from Resin ZIP. Journal pre-proof; verify final citation details before use.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
       "primaryCategory": "Resin",
+      "product": "resin",
       "categories": [
         "Resin",
         "Dosimetry",
-        "MAA"
-      ],
-      "results": "Median absorbed dose to tumor was higher in objective responders than nonresponders; 157 Gy predicted high probabilities of objective response and 1-year PFS in the model.",
-      "findings": "Resin-specific predictive dosimetry paper supporting that tumor absorbed dose, estimated from MAA SPECT/CT and planning software, is strongly associated with response and PFS in HCC.",
-      "notes": "Added from Resin ZIP. Journal pre-proof; verify final citation details before use.",
-      "url": "https://doi.org/10.1016/j.jvir.2023.11.026",
-      "pmcid": "",
-      "pdfFileName": "2024 Doyle Predictive dosimetry and outcomes using RESIN.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
+        "MAA",
+        "HCC"
+      ]
     },
     {
       "id": 2026151002,
@@ -2071,7 +2079,8 @@
       "categories": [
         "Immunotherapy",
         "HCC",
-        "Combination Therapy"
+        "Combination Therapy",
+        "Resin"
       ]
     },
     {
@@ -4491,26 +4500,29 @@
       "id": 202605073101,
       "year": 2018,
       "title": "SIRveNIB: Selective Internal Radiation Therapy Versus Sorafenib in Asia-Pacific Patients With Hepatocellular Carcinoma",
+      "country": "Asia-Pacific",
       "authors": "Chow PKH, Gandhi M, Tan SB, et al.",
       "journal": "Journal of Clinical Oncology",
-      "country": "Asia-Pacific",
-      "product": "resin",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29498924/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resin/2018%20Chow%20SIRveNIB%20Selective%20Internal%20Radiation%20Therapy%20Versus%20Sorafenib%20in%20APAC%20Patients%20With%20HCC.pdf?csf=1&web=1&e=Xai3PV",
+      "pdfFileName": "2018 Chow SIRveNIB Selective Internal Radiation Therapy Versus Sorafenib in APAC Patients With HCC.pdf",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "n=360 randomized in APAC; median OS 8.8 months with SIRT vs 10.0 months with sorafenib; fewer grade ≥3 AEs and fewer treatment-emergent AEs with SIRT.",
+      "findings": "Important resin microsphere comparator trial: SIRT did not improve OS versus sorafenib in APAC HCC, but showed a more favorable safety profile and remains useful for positioning differences between survival endpoint and tolerability.",
+      "notes": "Added from Resin ZIP. Review before external use.",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
       "primaryCategory": "Resin",
+      "product": "resin",
       "categories": [
         "Resin",
         "Comparative",
         "Chemotherapy",
-        "PVT"
-      ],
-      "results": "n=360 randomized in APAC; median OS 8.8 months with SIRT vs 10.0 months with sorafenib; fewer grade ≥3 AEs and fewer treatment-emergent AEs with SIRT.",
-      "findings": "Important resin microsphere comparator trial: SIRT did not improve OS versus sorafenib in APAC HCC, but showed a more favorable safety profile and remains useful for positioning differences between survival endpoint and tolerability.",
-      "notes": "Added from Resin ZIP. Review before external use.",
-      "url": "https://doi.org/10.1200/JCO.2017.76.0892",
-      "pmcid": "",
-      "pdfFileName": "2018 Chow SIRveNIB Selective Internal Radiation Therapy Versus Sorafenib in APAC Patients With HCC.pdf",
-      "pdfUrl": "",
-      "abstract": "",
-      "reviewStatus": "AI Draft"
+        "PVT",
+        "Asian Data"
+      ]
     },
     {
       "id": 202605072052,
