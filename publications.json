@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-20T09:25:24.704Z",
+  "savedAt": "2026-05-21T10:49:46.455Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7170,6 +7170,31 @@
         "Safety",
         "Dosimetry",
         "HCC"
+      ]
+    },
+    {
+      "id": 1779360493162,
+      "year": 2014,
+      "title": "Early arterial stasis during resin-based yttrium-90 radioembolization: incidence and preliminary outcomes",
+      "country": "USA",
+      "authors": "Peachy Mae Piana, Voichita Bar, Laura Doyle, Rani Anne, Takami Sato, David J Eschelman et al.",
+      "journal": "HPB",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23782387/",
+      "pmcid": "PMC3967885",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Korea%20paper/2014%20Piana%20Early%20arterial%20stasis%20during%20resin%20based%20Y90%20incidence%20and%20preliminary%20outcomes.pdf?csf=1&web=1&e=bE7OTo",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• The mean ± standard deviation T: N ratio was 3.03 ± 1.54 and 3.66 ± 2.79 in patients with and without stasis, respectively (P = NS).\n• Rates of partial response and stable disease were similar in the stasis (88.3%) and non-stasis (76.0%) groups (P = NS).\n• Whole-liver therapy reduced the incidence of stasis.",
+      "findings": "• The mean ± standard deviation T: N ratio was 3.03 ± 1.54 and 3.66 ± 2.79 in patients with and without stasis, respectively (P = NS).\n• Rates of partial response and stable disease were similar in the stasis (88.3%) and non-stasis (76.0%) groups (P = NS).\n• Whole-liver therapy reduced the incidence of stasis.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resin",
+      "product": "resin",
+      "categories": [
+        "Resin",
+        "Complications"
       ]
     }
   ]
