@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-21T10:49:46.455Z",
+  "savedAt": "2026-05-21T10:53:04.374Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7195,6 +7195,34 @@
       "categories": [
         "Resin",
         "Complications"
+      ]
+    },
+    {
+      "id": 1779360777486,
+      "year": 2016,
+      "title": "Radioembolization Is a Safe and Effective Treatment for Hepatocellular Carcinoma with Portal Vein Thrombosis: A Propensity Score Analysis",
+      "country": "Korea",
+      "authors": "Young Youn Cho, Minjong Lee, Hyo-Cheol Kim, Jin Wook Chung et al.",
+      "journal": "PLoS One",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27149067/",
+      "pmcid": "PMC4858257",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/PVT/2016%20Cho%20Radioembolization%20Is%20a%20Safe%20and%20Effective%20Treatment%20for%20HCC%20with%20Portal%20Vein%20Thrombosis.pdf?csf=1&web=1&e=tRN7Fr",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• At 6 months, the response rate was 6.3% (2/32) and the disease control rate was 34.4% (11/32).\n• Compared to the sorafenib group, the radioembolization group showed a superior response rate at 3 months (P = 0.01).\n• The median OS and TTP of the radioembolization group and the sorafenib group were not significantly different (13.8 months and 10.0 months, P = 0.23; and 6.0 months and 6.0 months, P = 0.08), respectively (Fig 2).\n• No differences in OS (P = 0.97) or TTP (P = 0.34) were observed (Fig 3), even after we applied IPW.",
+      "findings": "• At 6 months, the response rate was 6.3% (2/32) and the disease control rate was 34.4% (11/32).\n• Compared to the sorafenib group, the radioembolization group showed a superior response rate at 3 months (P = 0.01).\n• The median OS and TTP of the radioembolization group and the sorafenib group were not significantly different (13.8 months and 10.0 months, P = 0.23; and 6.0 months and 6.0 months, P = 0.08), respectively (Fig 2).\n• No differences in OS (P = 0.97) or TTP (P = 0.34) were observed (Fig 3), even after we applied IPW.\n• Few studies have reported that radioembolization can be delivered with positive outcomes in HCC patients with PVT, and those studies reported median OS ranging from 5.6 to 13.8 months [17, 23–26].",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "PVT",
+      "product": "resin",
+      "categories": [
+        "PVT",
+        "Resin",
+        "Dosimetry",
+        "HCC",
+        "Safety"
       ]
     }
   ]
