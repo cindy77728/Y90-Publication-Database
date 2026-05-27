@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-05-21T10:53:04.374Z",
+  "savedAt": "2026-05-27T06:05:42.095Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7223,6 +7223,56 @@
         "Dosimetry",
         "HCC",
         "Safety"
+      ]
+    },
+    {
+      "id": 1779854294515,
+      "year": 2026,
+      "title": "Tumor absorbed dose and outcomes after Y-90 glass radioembolization for colorectal liver metastases: does dose escalation improve survival in real-world practice?",
+      "country": "Turkey",
+      "authors": "Topcuoglu OM, Uzunoglu B, Orhan T, et al.",
+      "journal": "Eur J Nucl Med Mol Imaging",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42168645/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/metastases/mCRC/2026%20Topcuoglu%20Tumor%20absorbed%20dose%20and%20outcomes%20after%20Y90%20glass%20radioembolization%20for%20colorectal%20liver%20metastases%20does%20dose%20escalation%20improve%20survival%20in%20real-world%20practice.pdf?csf=1&web=1&e=6ciFGX",
+      "pdfFileName": "",
+      "fullTextStatus": "paywall",
+      "fullTextNote": "",
+      "results": "• A total of seventy-eight patients with a mean age of 69.9±11.2 years (range 41 to 91 years) were included.\n• The median tumor dose and the median OS were 171.5 Gy (IQR; 147-200 Gy) and 8.9 months ( IQR; 5-14 months), respectively.\n• The median TAD for groups 1 (n=46) and 2 (n=32) was 150 Gy (IQR; 122-166 Gy) and 202 Gy (IQR; 195-232 Gy), respectively.\n• The median OS and hPFS for group 1 versus group 2 were 9.4 months (IQR; 6.7-17.7 months) and 5.2 months (IQR; 4-6.7 months) versus 7.1 months (IQR; 5-10.7 months) and 5.5 months (IQR; 4.2-6.7 months), respectively and were not significantly different (p =.107 and p =.663, respectively).",
+      "findings": "• In a real-world population of heavily pretreated patients with CRCLM, escalation of TAD beyond 189 Gy did not translate into improved survival, highlighting the dominant impact of advanced disease burden and extrahepatic progression.\n• A total of seventy-eight patients with a mean age of 69.9±11.2 years (range 41 to 91 years) were included.\n• The median tumor dose and the median OS were 171.5 Gy (IQR; 147-200 Gy) and 8.9 months ( IQR; 5-14 months), respectively.\n• The median TAD for groups 1 (n=46) and 2 (n=32) was 150 Gy (IQR; 122-166 Gy) and 202 Gy (IQR; 195-232 Gy), respectively.",
+      "notes": "",
+      "abstract": "PURPOSE: To assess the dose-response and dose-survival outcomes of yttrium-90 (Y90) transarterial radioembolization (TARE) using Therasphere microspheres in patients with colorectal cancer liver metastases (CRCLM). MATERIAL AND METHODS: Between May 2014 and December 2024, patients with chemorefractory CRCLM who underwent Y90 TARE using glass microspheres were retrospectively included. Patients were divided into two groups according to tumour absorbed dose (TAD): TAD<189 Gy (group 1) and TAD ≥189 Gy (group 2). The primary outcomes were overall survival (OS) and hepatic progression-free survival (hPFS). The secondary outcome was the objective response rate (ORR). RESULTS: A total of seventy-eight patients with a mean age of 69.9±11.2 years (range 41 to 91 years) were included. The median tumor dose and the median OS were 171.5 Gy (IQR; 147-200 Gy) and 8.9 months ( IQR; 5-14 months), respectively. The median TAD for groups 1 (n=46) and 2 (n=32) was 150 Gy (IQR; 122-166 Gy) and 202 Gy (IQR; 195-232 Gy), respectively. The median OS and hPFS for group 1 versus group 2 were 9.4 months (IQR; 6.7-17.7 months) and 5.2 months (IQR; 4-6.7 months) versus 7.1 months (IQR; 5-10.7 months) and 5.5 months (IQR; 4.2-6.7 months), respectively and were not significantly different (p =.107 and p =.663, respectively). The ORR did not differ significantly between the two groups (p =.943). CONCLUSION: In a real-world population of heavily pretreated patients with CRCLM, escalation of TAD beyond 189 Gy did not translate into improved survival, highlighting the dominant impact of advanced disease burden and extrahepatic progression.",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Metastases / Metastatic Colorectal Cancer (mCRC)",
+      "product": "glass",
+      "categories": [
+        "Metastases / Metastatic Colorectal Cancer (mCRC)",
+        "Dosimetry"
+      ]
+    },
+    {
+      "id": 1779855010516,
+      "year": 2026,
+      "title": "Portal vein embolization versus radiation lobectomy as pre-treatment for major liver resection for colorectal liver metastases: functional assessment of the future liver remnant.",
+      "country": "Netherlands",
+      "authors": "Ramdhani K, van Rees RCM, Andel D, et al.",
+      "journal": "Angiogenesis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42162452/",
+      "pmcid": "PMC13190528",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/metastases/mCRC/2026%20Ramdhani%20Portal%20vein%20embolization%20versus%20radiation%20lobectomy%20as%20pretreatment%20for%20major%20liver%20resection%20for%20mCRC%20functional%20assessment%20of%20the%20future%20liver%20remnan.pdf?csf=1&web=1&e=42o4WG",
+      "pdfFileName": "",
+      "fullTextStatus": "paywall",
+      "fullTextNote": "",
+      "results": "• Ten PVE- and ten RL-treated patients were included.\n• The median duration to achieve sufficient FLR function was longer for RL- than PVE-treated patients (75 days (64-85) vs 31 days (28-54.5), p = 0.002).\n• RL showed a non-significant higher median functional increase (58.6% vs 51.1%, p = 0.940) and a significantly higher voluminal increase (65.7% vs 36.8%, p = 0.049) compared to PVE.",
+      "findings": "• RL represents a feasible alternative to PVE with comparable functional outcomes, particularly in patients with lower baseline FLR function or need for simultaneous tumor control.\n• This warrants prospective studies with optimized RL protocols to better define the functional outcomes and clinical applications of RL versus PVE.\n• Ten PVE- and ten RL-treated patients were included.\n• The median duration to achieve sufficient FLR function was longer for RL- than PVE-treated patients (75 days (64-85) vs 31 days (28-54.5), p = 0.002).",
+      "notes": "",
+      "abstract": "INTRODUCTION: Insufficiency of the future liver remnant (FLR) precludes surgery for liver tumors as it is associated with post-hepatectomy liver failure (PHLF). A common strategy to induce pre-operative FLR hypertrophy is portal vein embolization of the tumor bearing liver lobe. More recently, transarterial radio-embolization (radiation lobectomy, RL) has been employed. Direct functional assessment using 99mTc-mebrofenin-hepatobiliary-scintigraphy (HBS) predicts FLR sufficiency more accurately than conventional volume assessment. However, studies describing dynamic functional assessment of the FLR after RL as induction for surgery are currently lacking. This study aims to compare FLR functional changes after PVE and RL. METHODS: This non-interventional retrospective single-center cohort study was performed between 2016 and 2024. Patients with colorectal liver metastases (CRLM) who underwent PVE or RL because of an insufficient FLR (HBS < 2.7%/min/m2) were included. Induction of sufficient FLR function was the primary outcome. RESULTS: Ten PVE- and ten RL-treated patients were included. The median duration to achieve sufficient FLR function was longer for RL- than PVE-treated patients (75 days (64-85) vs 31 days (28-54.5), p = 0.002). RL showed a non-significant higher median functional increase (58.6% vs 51.1%, p = 0.940) and a significantly higher voluminal increase (65.7% vs 36.8%, p = 0.049) compared to PVE. PHLF and resection margins were comparable among groups. There was no 90 day mortality. CONCLUSION: RL represents a feasible alternative to PVE with comparable functional outcomes, particularly in patients with lower baseline FLR function or need for simultaneous tumor control. This warrants prospective studies with optimized RL protocols to better define the functional outcomes and clinical applications of RL versus PVE.",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Metastases / Metastatic Colorectal Cancer (mCRC)",
+      "product": "ns",
+      "categories": [
+        "Metastases / Metastatic Colorectal Cancer (mCRC)",
+        "Dosimetry"
       ]
     }
   ]
