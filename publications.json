@@ -1,6 +1,6 @@
 {
-  "version": "y90-publication-database-v5",
-  "exportedAt": "2026-06-02T07:27:23.550Z",
+  "version": "y90-publication-database-v3",
+  "savedAt": "2026-06-02T07:35:52.268Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7299,8 +7299,7 @@
       "categories": [
         "Metastases / Ovarian Cancer",
         "Metastases"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780381921651,
@@ -7325,8 +7324,7 @@
       "categories": [
         "Technical",
         "HCC"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780382131462,
@@ -7352,8 +7350,7 @@
         "Metastases / Neuroendocrine Tumors (NETs)",
         "Dosimetry",
         "Safety"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780382507326,
@@ -7381,8 +7378,7 @@
         "Downstaging",
         "Resection / Transplantation",
         "Resection"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780382821278,
@@ -7409,8 +7405,7 @@
         "HCC",
         "Comparative",
         "Resection / Transplantation"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780383803826,
@@ -7437,8 +7432,7 @@
         "Dosimetry",
         "HCC",
         "Comparative / cTACE"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780383984998,
@@ -7465,8 +7459,7 @@
         "Dosimetry",
         "Safety",
         "Metastases / Metastatic Colorectal Cancer (mCRC)"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780384242032,
@@ -7492,8 +7485,7 @@
         "Lung Shunt",
         "Technical",
         "MAA"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780384700348,
@@ -7519,8 +7511,7 @@
         "Metastases / Metastatic Colorectal Cancer (mCRC)",
         "Downstaging",
         "Resection / Downstaging and Bridging"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780384829145,
@@ -7545,8 +7536,7 @@
       "categories": [
         "Immunotherapy",
         "HCC"
-      ],
-      "pdfData": null
+      ]
     }
   ]
 }
