@@ -1510,6 +1510,7 @@ body.modal-open .library-filter-sticky{
       </div>
       <button class="btn btn-secondary" onclick="openCategoryManager()">🏷️ Manage Categories</button>
       <button class="btn btn-green" onclick="saveToGitHub()" id="github-save-btn" title="Save all changes directly to GitHub">☁️ Save to GitHub</button>
+      <button class="btn btn-blue" onclick="resetGitHubTokenAndOpenSettings()" id="github-settings-btn" title="Open GitHub settings and replace/reset token">⚙️ GitHub Settings / Reset Token</button>
       <div class="stat-pill" id="autosave-pill" title="Auto-save runs every 10 minutes when GitHub is configured" style="display:none;cursor:default">🕐 Auto-save: <strong id="autosave-countdown" style="color:var(--accent3)">10:00</strong></div>
       <button class="btn btn-blue" onclick="exportJSON()">💾 Export JSON</button>
       <button class="btn btn-secondary" onclick="setPdfFolderUrl()">📁 Set PDF Folder</button>
@@ -13683,6 +13684,60 @@ function toggleMobileMenu(){
 
 
 // ══════════════════════════════════════════════════════════
+// GitHub Settings / Reset Token helper
+// Added to make token replacement explicit instead of forcing users to clear localStorage.
+// ══════════════════════════════════════════════════════════
+function getGitHubSettings(){
+  return {
+    token:  localStorage.getItem('y90ghToken')  || '',
+    owner:  localStorage.getItem('y90ghOwner')  || 'cindy77728',
+    repo:   localStorage.getItem('y90ghRepo')   || 'Y90-Publication-Database',
+    branch: localStorage.getItem('y90ghBranch') || 'main'
+  };
+}
+
+function saveGitHubSettings({token, owner, repo, branch}){
+  localStorage.setItem('y90ghToken',  (token  || '').trim());
+  localStorage.setItem('y90ghOwner',  (owner  || 'cindy77728').trim());
+  localStorage.setItem('y90ghRepo',   (repo   || 'Y90-Publication-Database').trim());
+  localStorage.setItem('y90ghBranch', (branch || 'main').trim() || 'main');
+}
+
+function openGitHubSettingsModal(){
+  const s = getGitHubSettings();
+  const tokenEl  = document.getElementById('gh-token');
+  const ownerEl  = document.getElementById('gh-owner');
+  const repoEl   = document.getElementById('gh-repo');
+  const branchEl = document.getElementById('gh-branch');
+  if(tokenEl)  tokenEl.value  = s.token;
+  if(ownerEl)  ownerEl.value  = s.owner;
+  if(repoEl)   repoEl.value   = s.repo;
+  if(branchEl) branchEl.value = s.branch;
+  openModal('github-settings-modal');
+}
+
+function resetGitHubTokenAndOpenSettings(){
+  localStorage.removeItem('y90ghToken');
+  if(!localStorage.getItem('y90ghOwner'))  localStorage.setItem('y90ghOwner',  'cindy77728');
+  if(!localStorage.getItem('y90ghRepo'))   localStorage.setItem('y90ghRepo',   'Y90-Publication-Database');
+  if(!localStorage.getItem('y90ghBranch')) localStorage.setItem('y90ghBranch', 'main');
+  openGitHubSettingsModal();
+  showToast('Old GitHub token cleared. Paste your new token, then save settings.', 'info');
+}
+
+function saveGitHubSettingsFromForm(){
+  saveGitHubSettings({
+    token:  document.getElementById('gh-token')?.value || '',
+    owner:  document.getElementById('gh-owner')?.value || 'cindy77728',
+    repo:   document.getElementById('gh-repo')?.value || 'Y90-Publication-Database',
+    branch: document.getElementById('gh-branch')?.value || 'main'
+  });
+  closeModal('github-settings-modal');
+  showToast('GitHub settings saved. Click ☁️ Save to GitHub to push your changes.', 'success');
+}
+
+
+// ══════════════════════════════════════════════════════════
 // v5.7 — Preserve Library / PubMed context after editing
 // Keeps the same search, filters, active category, view mode, and scroll position
 // after Save, Cancel, or × from the publication edit modal.
@@ -13845,6 +13900,7 @@ savePublication = function(){
         <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
       </label>
       <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="localStorage.removeItem('y90ghToken'); document.getElementById('gh-token').value=''; showToast('GitHub token cleared. Paste a new token.', 'info')">Reset Token</button>
         <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
         <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings & Close</button>
       </div>
@@ -13881,6 +13937,7 @@ savePublication = function(){
         <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
       </label>
       <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="localStorage.removeItem('y90ghToken'); document.getElementById('gh-token').value=''; showToast('GitHub token cleared. Paste a new token.', 'info')">Reset Token</button>
         <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
         <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings</button>
       </div>
@@ -13917,6 +13974,7 @@ savePublication = function(){
         <input id="gh-branch" type="text" placeholder="main" style="width:100%;margin-top:6px">
       </label>
       <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:6px">
+        <button class="btn btn-secondary" onclick="localStorage.removeItem('y90ghToken'); document.getElementById('gh-token').value=''; showToast('GitHub token cleared. Paste a new token.', 'info')">Reset Token</button>
         <button class="btn btn-secondary" onclick="closeModal('github-settings-modal')">Cancel</button>
         <button class="btn btn-green" onclick="saveGitHubSettingsFromForm()">Save Settings</button>
       </div>
