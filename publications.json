@@ -1,6 +1,6 @@
 {
-  "version": "y90-publication-database-v3",
-  "savedAt": "2026-06-02T07:35:52.268Z",
+  "version": "y90-publication-database-v5",
+  "exportedAt": "2026-06-03T03:31:32.099Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7537,6 +7537,118 @@
         "Immunotherapy",
         "HCC"
       ]
+    },
+    {
+      "id": 1780455636555,
+      "year": 2002,
+      "title": "Satellite lesions in patients with small hepatocellular carcinoma with reference to clinicopathologic features",
+      "country": "Japan",
+      "authors": "Takuji Okusaka, Shuichi Okada, Hideki Ueno et al.",
+      "journal": "American Cancer Society",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12404287/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Radiation%20segmentectomy/2002%20Okusaka%20Satellite%20lesions%20in%20patients%20with%20small%20HCC.pdf?csf=1&web=1&e=iimWAt",
+      "pdfFileName": "2002 Okusaka Satellite lesions in patients with small HCC",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• Of the clinicopathologic factors investigated, the macroscopic type and tumor differentiation were significantly associated with the prevalence of satellite lesions.\n• The satellite lesions were located 0.5 cm or less from the main tumor in 8 (33%) specimens, 0.6-1.0 cm in 12 (50%), and 1.1-2.0 cm in 4 (17%).\n• In the single nodular type with extranodular growth, confluent multinodular type, and poorly differentiated HCC, extensive treatment achieving a large safety margin and/or frequent posttreatment follow-up examinations may be needed because of the high prevalence of satellite lesions.",
+      "findings": "• Of the clinicopathologic factors investigated, the macroscopic type and tumor differentiation were significantly associated with the prevalence of satellite lesions.\n• A significantly higher prevalence of satellite lesions was observed in poorly differentiated HCC than in well and moderately differentiated HCC.\n• The satellite lesions were located 0.5 cm or less from the main tumor in 8 (33%) specimens, 0.6-1.0 cm in 12 (50%), and 1.1-2.0 cm in 4 (17%).\n• However, all satellite lesions located more than 1.0 cm from the main tumor coexisted with poorly differentiated HCC, which were the single nodular type with extranodular growth or the confluent multinodular type.\n• In the single nodular type with extranodular growth, confluent multinodular type, and poorly differentiated HCC, extensive treatment achieving a large safety margin and/or frequent posttreatment follow-up examinations may be needed because of the high prevalence of satellite lesions.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Radiation Segmentectomy",
+      "product": "ns",
+      "categories": [
+        "Radiation Segmentectomy",
+        "HCC",
+        "Safety"
+      ],
+      "pdfData": null
+    },
+    {
+      "id": 1780456041782,
+      "year": 2025,
+      "title": "Same-Day versus Multiday Planning/Treatment Radioembolization with Yttrium-90 Resin Microspheres in Patients with Liver Cancer ≥5 cm",
+      "country": "Korea",
+      "authors": "Hyo-Cheol Kim, Minseok Suh, Jin Chul Paeng, Jin Woo Choi",
+      "journal": "Journal of Vascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40882836/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resin/2025%20Kim%20Same%20Day%20versus%20Multiday%20Planning%20Treatment%20Y90%20Resin%20in%20Patients%20with%20Liver%20Cancer%205%20cm.pdf?csf=1&web=1&e=1Yxd0i",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• Among 80 patients who were scheduled to receive same-day radioembolization, 4 were excluded because of a high estimated lung dose, leading to the rejection of the radioembolization procedure.\n• The remaining 76 patients (median tumor size, 8.3 cm) were treated with resin microspheres, using a median activity of 2.7 GBq.\n• The median time interval from the initiation of planning angiography to the completion of radioembolization was 215 minutes.\n• Among patients with hepatocellular carcinoma, the objective response rates by modified Response Evaluation Criteria in Solid Tumors were 87.7% (50/57) for same-day radioembolization and 89.2% (99/111) for multiday radioembolization (P =.776).",
+      "findings": "• Among 80 patients who were scheduled to receive same-day radioembolization, 4 were excluded because of a high estimated lung dose, leading to the rejection of the radioembolization procedure.\n• The remaining 76 patients (median tumor size, 8.3 cm) were treated with resin microspheres, using a median activity of 2.7 GBq.\n• The median time interval from the initiation of planning angiography to the completion of radioembolization was 215 minutes.\n• Among patients with hepatocellular carcinoma, the objective response rates by modified Response Evaluation Criteria in Solid Tumors were 87.7% (50/57) for same-day radioembolization and 89.2% (99/111) for multiday radioembolization (P =.776).\n• The overall incidences of Grade 3 or higher adverse events were 15.8% (12/76) for same-day radioembolization and 21.7% (26/120) for multiday radioembolization (P =.312).",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resin",
+      "product": "resin",
+      "categories": [
+        "Resin",
+        "Technical",
+        "Mapping",
+        "Dosimetry",
+        "HCC",
+        "Safety"
+      ],
+      "pdfData": null
+    },
+    {
+      "id": 1780456432070,
+      "year": 2025,
+      "title": "Ultra-selective radiation segmentectomy for early-stage hepatocellular carcinoma",
+      "country": "USA",
+      "authors": "Christopher D Malone, Tharun Alamuri, Sam Meiselman et al.",
+      "journal": "JHEP Reports",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12890445/",
+      "pmcid": "PMC12890445",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Radiation%20segmentectomy/2025%20Malone%20Ultra%20selective%20radiation%20segmentectomy%20for%20early%20stage%20HCC.pdf?csf=1&web=1&e=LlGYer",
+      "pdfFileName": "2025 Malone Ultra selective radiation segmentectomy for early stage HCC",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• At first imaging follow-up (median 3.1 months, IQR 3.0-3.3 months, total range 0.8-5.6 months), complete response (CR) by mRECIST was observed in 26 (66.6%) tumors and partial response (PR) in the remaining 13 (33.3%).\n• With a median time to last clinical follow-up of 18.3 months (range 7.5-29.7 months), the median localized PFS was not reached in the entire cohort and when censoring those that underwent liver transplant (Fig.\n• The 18-month local PFS rate was 88%.\n• 1Local PFS, censored to last follow-up, liver transplant, or additional local treatment (if applicable).Median local PFS was not reached.",
+      "findings": "• At first imaging follow-up (median 3.1 months, IQR 3.0-3.3 months, total range 0.8-5.6 months), complete response (CR) by mRECIST was observed in 26 (66.6%) tumors and partial response (PR) in the remaining 13 (33.3%).\n• With a median time to last clinical follow-up of 18.3 months (range 7.5-29.7 months), the median localized PFS was not reached in the entire cohort and when censoring those that underwent liver transplant (Fig.\n• The 18-month local PFS rate was 88%.\n• 1Local PFS, censored to last follow-up, liver transplant, or additional local treatment (if applicable).Median local PFS was not reached.\n• AA, administered activity; CR, complete response; Dx, minimum dose received by x% of tumor volume; MIRDRx, prescribed dose to the PV (MIRD); NLvoxel, mean dose to the non-tumor tissue in the PV; PD, progressive disease; PR, partial response; PV, perfused volume; PVliver, % liver volume occupied by PVl; PVvoxel, voxel mean dose to PV; SA, specific activity;…",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Radiation Segmentectomy",
+      "product": "glass",
+      "categories": [
+        "Radiation Segmentectomy",
+        "HCC",
+        "Technical",
+        "Dosimetry",
+        "Safety"
+      ],
+      "pdfData": null
+    },
+    {
+      "id": 1780456693085,
+      "year": 2014,
+      "title": "Early arterial stasis during resin-based yttrium-90 radioembolization: incidence and preliminary outcomes",
+      "country": "USA",
+      "authors": "Peachy Mae Piana, Voichita Bar, Laura Doyle, Rani Anne et al.",
+      "journal": "HPB",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23782387/",
+      "pmcid": "PMC3967885",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resin/2014%20Piana%20Early%20arterial%20stasis%20during%20resin%20based%20y90%20radioembolization%20incidence%20and%20preliminary%20outcomes.pdf?csf=1&web=1&e=2UmARu",
+      "pdfFileName": "2014 Piana Early arterial stasis during resin based y90 radioembolization incidence and preliminary outcomes",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• The mean ± standard deviation T: N ratio was 3.03 ± 1.54 and 3.66 ± 2.79 in patients with and without stasis, respectively (P = NS).\n• Rates of partial response and stable disease were similar in the stasis (88.3%) and non-stasis (76.0%) groups (P = NS).\n• Whole-liver therapy reduced the incidence of stasis.",
+      "findings": "• The mean ± standard deviation T: N ratio was 3.03 ± 1.54 and 3.66 ± 2.79 in patients with and without stasis, respectively (P = NS).\n• Rates of partial response and stable disease were similar in the stasis (88.3%) and non-stasis (76.0%) groups (P = NS).\n• Whole-liver therapy reduced the incidence of stasis.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resin",
+      "product": "resin",
+      "categories": [
+        "Resin",
+        "Safety"
+      ],
+      "pdfData": null
     }
   ]
 }
