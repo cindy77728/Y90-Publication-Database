@@ -1,6 +1,6 @@
 {
-  "version": "y90-publication-database-v5",
-  "exportedAt": "2026-06-03T03:31:32.099Z",
+  "version": "y90-publication-database-v3",
+  "savedAt": "2026-06-03T03:42:17.531Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7562,8 +7562,7 @@
         "Radiation Segmentectomy",
         "HCC",
         "Safety"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780456041782,
@@ -7592,8 +7591,7 @@
         "Dosimetry",
         "HCC",
         "Safety"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780456432070,
@@ -7621,8 +7619,7 @@
         "Technical",
         "Dosimetry",
         "Safety"
-      ],
-      "pdfData": null
+      ]
     },
     {
       "id": 1780456693085,
@@ -7647,8 +7644,7 @@
       "categories": [
         "Resin",
         "Safety"
-      ],
-      "pdfData": null
+      ]
     }
   ]
 }
