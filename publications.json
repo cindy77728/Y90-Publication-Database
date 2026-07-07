@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-06-09T07:11:02.067Z",
+  "savedAt": "2026-07-07T12:23:44.374Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7644,6 +7644,34 @@
       "categories": [
         "Resin",
         "Safety"
+      ]
+    },
+    {
+      "id": 1783426892504,
+      "year": 2026,
+      "title": "High-Dose Radioembolization with Resin Microspheres Limited by Lung Shunt for Localized Hepatocellular Carcinoma: Virtual Tumor Absorbed Dose as a Predictor of Complete Response",
+      "country": "Korea",
+      "authors": "Hyo-Cheol Kim, Myungsu Lee, Do Hoon Kim, Jin Woo Choi et al.",
+      "journal": "Journal of Vascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41638619/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Resin/2026%20Kim%20High%20Dose%20Radioembolization%20with%20Resin%20Microspheres%20Limited%20by%20Lung%20Shunt%20for%20Localized%20HCC%20Virtual%20Tumor%20Absorbed%20Dose%20as%20a%20Predictor%20of%20CR.pdf?csf=1&web=1&e=dXrmQv",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• Mean tumor size was 8.6 cm (median size, 7.9 cm; interquartile range [IQR], 5.6-10.2 cm), and 68 patients (42.5%) had single nodular tumor.\n• Median mAD, pre-TAD, post-TAD, and vTAD were 178 Gy (IQR, 124-228 Gy), 375 Gy (IQR, 219-514 Gy), 427 Gy (IQR, 283-605 Gy), and 728 Gy (IQR, 417-1,105 Gy), respectively.\n• Multivariate analysis identified vTAD >597 Gy as the independent predictor of CR (P =.004).\n• A vTAD ≥600 Gy represents a practical and reliable threshold for predicting CR in resin-based TARE.",
+      "findings": "• Mean tumor size was 8.6 cm (median size, 7.9 cm; interquartile range [IQR], 5.6-10.2 cm), and 68 patients (42.5%) had single nodular tumor.\n• Median mAD, pre-TAD, post-TAD, and vTAD were 178 Gy (IQR, 124-228 Gy), 375 Gy (IQR, 219-514 Gy), 427 Gy (IQR, 283-605 Gy), and 728 Gy (IQR, 417-1,105 Gy), respectively.\n• Multivariate analysis identified vTAD >597 Gy as the independent predictor of CR (P =.004).\n• A vTAD ≥600 Gy represents a practical and reliable threshold for predicting CR in resin-based TARE.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Resin",
+      "product": "resin",
+      "categories": [
+        "Resin",
+        "Lung Shunt",
+        "Dosimetry",
+        "HCC",
+        "Mapping / Failed Evaluation"
       ]
     }
   ]
