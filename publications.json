@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-07-17T14:24:54.158Z",
+  "savedAt": "2026-07-22T01:51:42.891Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -69,6 +69,7 @@
     "Metastases / Uveal Melanoma",
     "Microsphere Coverage",
     "No MAA",
+    "Particle Number",
     "Post-Mortem Considerations",
     "Publication Summary",
     "PVT",
@@ -7672,6 +7673,34 @@
         "Dosimetry",
         "HCC",
         "Mapping / Failed Evaluation"
+      ]
+    },
+    {
+      "id": 1784685032464,
+      "year": 2016,
+      "title": "A Microdosimetric Analysis of Absorbed Dose to Tumor as a Function of Number of Microspheres per Unit Volume in 90Y Radioembolization",
+      "country": "USA",
+      "authors": "Alexander S Pasciak, Austin C Bourgeois, Yong C Bradley et al.",
+      "journal": "Journal of Nuclear Medicine",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26912424/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Particle/2016%20Pasciak%20A%20Microdosimetric%20Analysis%20of%20Absorbed%20Dose%20to%20Tumor%20as%20a%20Function%20of%20Number%20of%20Microspheres%20per%20Unit%20Volume%20in%20Y90.pdf?csf=1&web=1&e=Tsgb46",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• Decreasing the microsphere-number density resulted in a decrease in D70, the minimum dose to 70% of the tumor.\n• The slope of the dose-volume histogram also decreased with decreasing microsphere-number density in all tumors.\n• Although D70 was decreased at a low microsphere-number density, one can compensate for decreases by an increase in the average tumor-absorbed dose, that is, by increasing the radioembolization treatment dose.\n• Differences in microsphere-number density may have an effect on microscopic tumor absorbed-dose inhomogeneity.",
+      "findings": "• Decreasing the microsphere-number density resulted in a decrease in D70, the minimum dose to 70% of the tumor.\n• The slope of the dose-volume histogram also decreased with decreasing microsphere-number density in all tumors.\n• Compared with a density of 50,000 spheres/mL, decreases in D70 were statistically significant below 20,000 spheres/mL.\n• Although D70 was decreased at a low microsphere-number density, one can compensate for decreases by an increase in the average tumor-absorbed dose, that is, by increasing the radioembolization treatment dose.\n• Differences in microsphere-number density may have an effect on microscopic tumor absorbed-dose inhomogeneity.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Dosimetry / TN Ratio",
+      "product": "both",
+      "categories": [
+        "Dosimetry / TN Ratio",
+        "Comparative",
+        "Resin",
+        "Dosimetry",
+        "Particle Number"
       ]
     }
   ]
