@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-07-22T01:51:42.891Z",
+  "savedAt": "2026-07-22T15:53:15.971Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7701,6 +7701,32 @@
         "Resin",
         "Dosimetry",
         "Particle Number"
+      ]
+    },
+    {
+      "id": 1784735584553,
+      "year": 2026,
+      "title": "Ablative Radioembolization Dosing Thresholds for Glass Microspheres Predictive of Complete Imaging Response and Survival in Patients with Hepatocellular Carcinomas Larger than 4 cm: a Multi-institution Retrospective Analysis",
+      "country": "USA",
+      "authors": "Kurt T Pianka, Breanna M Collins, Sarah Placek et al.",
+      "journal": "Journal of Vascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42468839/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Large%20tumor/Pianka%20et%20al%20Complete%20Response%20larger%20tumor%20HCC.pdf?csf=1&web=1&e=Mf5Vpk",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• 58 patients (51.8%) had CR three months post-TARE.\n• CR was associated with improved overall survival (OS).\n• Post-hoc estimated doses were significantly higher in patients with CR: 592 versus 316 Gy single-compartment perfused dose, 482 versus 213 Gy D95, and 828 versus 401 Gy D50.\n• Multiple dose thresholds correlated with CR and overall survival including D95.",
+      "findings": "• 58 patients (51.8%) had CR three months post-TARE.\n• CR was associated with improved overall survival (OS).\n• Post-hoc estimated doses were significantly higher in patients with CR: 592 versus 316 Gy single-compartment perfused dose, 482 versus 213 Gy D95, and 828 versus 401 Gy D50.\n• Multiple dose thresholds correlated with CR and overall survival including D95.\n• Area under the curve (AUC) by receiver operating characteristic (ROC) analysis and modeled complete response probability did not differ significantly between single-compartment and voxel-based dose estimates.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Large Tumor",
+      "product": "glass",
+      "categories": [
+        "Large Tumor",
+        "Dosimetry",
+        "HCC"
       ]
     }
   ]
