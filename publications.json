@@ -1,6 +1,6 @@
 {
   "version": "y90-publication-database-v3",
-  "savedAt": "2026-07-22T15:53:15.971Z",
+  "savedAt": "2026-07-24T07:03:19.426Z",
   "categories": [
     "Asian Data",
     "Balloon Occlusion",
@@ -7727,6 +7727,33 @@
         "Large Tumor",
         "Dosimetry",
         "HCC"
+      ]
+    },
+    {
+      "id": 1784876448382,
+      "year": 2017,
+      "title": "Safety and Efficacy of Transarterial Radioembolization Combined with Chemoembolization for Bilobar Hepatocellular Carcinoma: A Single-Center Retrospective Study",
+      "country": "Korea",
+      "authors": "Joon Ho Kwon, Gyoung Min Kim, Kichang Han et al.",
+      "journal": "CardioVascular and Interventional Radiology",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29067511/",
+      "pmcid": "",
+      "pdfUrl": "https://bostonscientific-my.sharepoint.com/:b:/r/personal/cindy_cheng_bsci_com/Documents/Documents/Therasphere/paper/Comparative/cTACE/2017%20Kwon%20Safety%20and%20Efficacy%20of%20Transarterial%20Radioembolization%20Combined%20with%20Chemoembolization%20for%20Bilobar%20HCC%20A%20Single%20Center%20Retrospective%20Study.pdf?csf=1&web=1&e=25ed3P",
+      "pdfFileName": "",
+      "fullTextStatus": "auto",
+      "fullTextNote": "",
+      "results": "• The mean yttrium-90 microspheres used in TARE were 2.8 GBq (range; 1.0-3.5 GBq), and the mean doses of doxorubicin and iodized oil were 24.5 mg and 5.2 mL, respectively, for TACE.\n• The median time-to-progression of patients was 10.0 months, and the median overall survival was 27.3 months.",
+      "findings": "• The mean yttrium-90 microspheres used in TARE were 2.8 GBq (range; 1.0-3.5 GBq), and the mean doses of doxorubicin and iodized oil were 24.5 mg and 5.2 mL, respectively, for TACE.\n• The median time-to-progression of patients was 10.0 months, and the median overall survival was 27.3 months.\n• Combined radioembolization and chemoembolization appears to be a safe and effective treatment modality for bilobar HCC.",
+      "notes": "",
+      "abstract": "",
+      "reviewStatus": "AI Draft",
+      "primaryCategory": "Combination Therapy",
+      "product": "resin",
+      "categories": [
+        "Combination Therapy",
+        "Dosimetry",
+        "HCC",
+        "Safety"
       ]
     }
   ]
